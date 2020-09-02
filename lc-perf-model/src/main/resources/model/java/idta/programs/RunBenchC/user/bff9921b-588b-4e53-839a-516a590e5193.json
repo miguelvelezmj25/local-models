@@ -1,1 +1,73 @@
-{"region":"bff9921b-588b-4e53-839a-516a590e5193","model":{"!MV_STORE":0.0,"(MV_STORE && COMPRESS)":5416000.0,"(MV_STORE && !COMPRESS)":5361000.0},"modelToMin":{"!MV_STORE":0.0,"(MV_STORE && COMPRESS)":5311000.0,"(MV_STORE && !COMPRESS)":0.0},"modelToMax":{"!MV_STORE":0.0,"(MV_STORE && COMPRESS)":5512000.0,"(MV_STORE && !COMPRESS)":5629000.0},"modelToDiff":{"!MV_STORE":0.0,"(MV_STORE && COMPRESS)":201000.0,"(MV_STORE && !COMPRESS)":5629000.0},"modelToSampleVariance":{"!MV_STORE":0.0,"(MV_STORE && COMPRESS)":4.146571428571429E9,"(MV_STORE && !COMPRESS)":7.573381557971017E12},"modelToConfidenceInterval":{"!MV_STORE":[0.0,0.0],"(MV_STORE && COMPRESS)":[5370165.371385813,5477834.628614187],"(MV_STORE && !COMPRESS)":[2024525.0432168203,4348641.623449845]},"modelToCoefficientOfVariation":{"!MV_STORE":0.0,"(MV_STORE && COMPRESS)":0.0,"(MV_STORE && !COMPRESS)":0.0},"modelToPerfHumanReadable":{"!MV_STORE":"0.0000000","(MV_STORE && COMPRESS)":"0.0054160","(MV_STORE && !COMPRESS)":"0.0053610"},"modelToMinHumanReadable":{"!MV_STORE":"0.0000000","(MV_STORE && COMPRESS)":"0.0053110","(MV_STORE && !COMPRESS)":"0.0000000"},"modelToMaxHumanReadable":{"!MV_STORE":"0.0000000","(MV_STORE && COMPRESS)":"0.0055120","(MV_STORE && !COMPRESS)":"0.0056290"},"modelToDiffHumanReadable":{"!MV_STORE":"0.0000000","(MV_STORE && COMPRESS)":"0.0002010","(MV_STORE && !COMPRESS)":"0.0056290"},"modelToSampleVarianceHumanReadble":{"!MV_STORE":"0.0000000","(MV_STORE && COMPRESS)":"0.0000000","(MV_STORE && !COMPRESS)":"0.0000076"},"modelToConfidenceIntervalHumanReadable":{"!MV_STORE":["0.0000000","0.0000000"],"(MV_STORE && COMPRESS)":["0.0053702","0.0054778"],"(MV_STORE && !COMPRESS)":["0.0020245","0.0043486"]},"modelToCoefficientOfVariationHumanReadable":{"!MV_STORE":"0.0000000","(MV_STORE && COMPRESS)":"0.0000000","(MV_STORE && !COMPRESS)":"0.0000000"}}
+{
+  "region" : "bff9921b-588b-4e53-839a-516a590e5193",
+  "model" : {
+    "!MV_STORE" : 0.0,
+    "(MV_STORE && COMPRESS)" : 5416000.0,
+    "(MV_STORE && !COMPRESS)" : 5361000.0
+  },
+  "modelToMin" : {
+    "!MV_STORE" : 0.0,
+    "(MV_STORE && COMPRESS)" : 5311000.0,
+    "(MV_STORE && !COMPRESS)" : 0.0
+  },
+  "modelToMax" : {
+    "!MV_STORE" : 0.0,
+    "(MV_STORE && COMPRESS)" : 5512000.0,
+    "(MV_STORE && !COMPRESS)" : 5629000.0
+  },
+  "modelToDiff" : {
+    "!MV_STORE" : 0.0,
+    "(MV_STORE && COMPRESS)" : 201000.0,
+    "(MV_STORE && !COMPRESS)" : 5629000.0
+  },
+  "modelToSampleVariance" : {
+    "!MV_STORE" : 0.0,
+    "(MV_STORE && COMPRESS)" : 4.146571428571429E9,
+    "(MV_STORE && !COMPRESS)" : 7.573381557971017E12
+  },
+  "modelToConfidenceInterval" : {
+    "!MV_STORE" : [ 0.0, 0.0 ],
+    "(MV_STORE && COMPRESS)" : [ 5370165.371385813, 5477834.628614187 ],
+    "(MV_STORE && !COMPRESS)" : [ 2024525.0432168203, 4348641.623449845 ]
+  },
+  "modelToCoefficientOfVariation" : {
+    "!MV_STORE" : 0.0,
+    "(MV_STORE && COMPRESS)" : 0.0,
+    "(MV_STORE && !COMPRESS)" : 0.0
+  },
+  "modelToPerfHumanReadable" : {
+    "!MV_STORE" : "0.0000000",
+    "(MV_STORE && COMPRESS)" : "0.0054160",
+    "(MV_STORE && !COMPRESS)" : "0.0053610"
+  },
+  "modelToMinHumanReadable" : {
+    "!MV_STORE" : "0.0000000",
+    "(MV_STORE && COMPRESS)" : "0.0053110",
+    "(MV_STORE && !COMPRESS)" : "0.0000000"
+  },
+  "modelToMaxHumanReadable" : {
+    "!MV_STORE" : "0.0000000",
+    "(MV_STORE && COMPRESS)" : "0.0055120",
+    "(MV_STORE && !COMPRESS)" : "0.0056290"
+  },
+  "modelToDiffHumanReadable" : {
+    "!MV_STORE" : "0.0000000",
+    "(MV_STORE && COMPRESS)" : "0.0002010",
+    "(MV_STORE && !COMPRESS)" : "0.0056290"
+  },
+  "modelToSampleVarianceHumanReadble" : {
+    "!MV_STORE" : "0.0000000",
+    "(MV_STORE && COMPRESS)" : "0.0000000",
+    "(MV_STORE && !COMPRESS)" : "0.0000076"
+  },
+  "modelToConfidenceIntervalHumanReadable" : {
+    "!MV_STORE" : [ "0.0000000", "0.0000000" ],
+    "(MV_STORE && COMPRESS)" : [ "0.0053702", "0.0054778" ],
+    "(MV_STORE && !COMPRESS)" : [ "0.0020245", "0.0043486" ]
+  },
+  "modelToCoefficientOfVariationHumanReadable" : {
+    "!MV_STORE" : "0.0000000",
+    "(MV_STORE && COMPRESS)" : "0.0000000",
+    "(MV_STORE && !COMPRESS)" : "0.0000000"
+  }
+}

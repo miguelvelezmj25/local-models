@@ -1,6 +1,7 @@
 package edu.cmu.cs.mvelezce.lc.builder;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import edu.cmu.cs.mvelezce.analysis.BaseAnalysis;
 import edu.cmu.cs.mvelezce.java.results.processed.PerformanceEntry;
 import edu.cmu.cs.mvelezce.lc.model.LocalPerformanceModel;
@@ -90,9 +91,12 @@ public abstract class BasePerformanceModelBuilder<D, RD> extends BaseAnalysis<Pe
     for (LocalPerformanceModel<RD> localModel : results.getLocalModels()) {
       String outputFile = this.outputDir() + "/" + localModel.getRegion() + Options.DOT_JSON;
       File file = new File(outputFile);
-      file.getParentFile().mkdirs();
+      if (!file.getParentFile().exists() && !file.getParentFile().mkdirs()) {
+        throw new RuntimeException("Could not create parent file dirs");
+      }
 
       ObjectMapper mapper = new ObjectMapper();
+      mapper.enable(SerializationFeature.INDENT_OUTPUT);
       mapper.writeValue(file, localModel);
     }
   }

@@ -1,1 +1,59 @@
-{"region":"64841702-3ae4-4310-a7c9-dc98d403c4c1","model":{"AUTOCOMMIT":1.59845E7,"!AUTOCOMMIT":3.4319E7},"modelToMin":{"AUTOCOMMIT":0.0,"!AUTOCOMMIT":0.0},"modelToMax":{"AUTOCOMMIT":1.47765E8,"!AUTOCOMMIT":1.27068E8},"modelToDiff":{"AUTOCOMMIT":1.47765E8,"!AUTOCOMMIT":1.27068E8},"modelToSampleVariance":{"AUTOCOMMIT":2.580666174608871E15,"!AUTOCOMMIT":2.5269911223054435E15},"modelToConfidenceInterval":{"AUTOCOMMIT":[2.8006866505837295E7,6.463775849416271E7],"!AUTOCOMMIT":[3.016880677475906E7,6.641675572524094E7]},"modelToCoefficientOfVariation":{"AUTOCOMMIT":1.1052370201969735,"!AUTOCOMMIT":1.0490577125154081},"modelToPerfHumanReadable":{"AUTOCOMMIT":"0.0159845","!AUTOCOMMIT":"0.0343190"},"modelToMinHumanReadable":{"AUTOCOMMIT":"0.0000000","!AUTOCOMMIT":"0.0000000"},"modelToMaxHumanReadable":{"AUTOCOMMIT":"0.1477650","!AUTOCOMMIT":"0.1270680"},"modelToDiffHumanReadable":{"AUTOCOMMIT":"0.1477650","!AUTOCOMMIT":"0.1270680"},"modelToSampleVarianceHumanReadble":{"AUTOCOMMIT":"0.0025807","!AUTOCOMMIT":"0.0025270"},"modelToConfidenceIntervalHumanReadable":{"AUTOCOMMIT":["0.0280069","0.0646378"],"!AUTOCOMMIT":["0.0301688","0.0664168"]},"modelToCoefficientOfVariationHumanReadable":{"AUTOCOMMIT":"1.1052370","!AUTOCOMMIT":"1.0490577"}}
+{
+  "region" : "64841702-3ae4-4310-a7c9-dc98d403c4c1",
+  "model" : {
+    "AUTOCOMMIT" : 1.59845E7,
+    "!AUTOCOMMIT" : 3.4319E7
+  },
+  "modelToMin" : {
+    "AUTOCOMMIT" : 0.0,
+    "!AUTOCOMMIT" : 0.0
+  },
+  "modelToMax" : {
+    "AUTOCOMMIT" : 1.47765E8,
+    "!AUTOCOMMIT" : 1.27068E8
+  },
+  "modelToDiff" : {
+    "AUTOCOMMIT" : 1.47765E8,
+    "!AUTOCOMMIT" : 1.27068E8
+  },
+  "modelToSampleVariance" : {
+    "AUTOCOMMIT" : 2.5806661746088705E15,
+    "!AUTOCOMMIT" : 2.5269911223054435E15
+  },
+  "modelToConfidenceInterval" : {
+    "AUTOCOMMIT" : [ 2.8006866505837295E7, 6.463775849416271E7 ],
+    "!AUTOCOMMIT" : [ 3.016880677475906E7, 6.641675572524094E7 ]
+  },
+  "modelToCoefficientOfVariation" : {
+    "AUTOCOMMIT" : 1.1052370201969735,
+    "!AUTOCOMMIT" : 1.0490577125154081
+  },
+  "modelToPerfHumanReadable" : {
+    "AUTOCOMMIT" : "0.0159845",
+    "!AUTOCOMMIT" : "0.0343190"
+  },
+  "modelToMinHumanReadable" : {
+    "AUTOCOMMIT" : "0.0000000",
+    "!AUTOCOMMIT" : "0.0000000"
+  },
+  "modelToMaxHumanReadable" : {
+    "AUTOCOMMIT" : "0.1477650",
+    "!AUTOCOMMIT" : "0.1270680"
+  },
+  "modelToDiffHumanReadable" : {
+    "AUTOCOMMIT" : "0.1477650",
+    "!AUTOCOMMIT" : "0.1270680"
+  },
+  "modelToSampleVarianceHumanReadble" : {
+    "AUTOCOMMIT" : "0.0025807",
+    "!AUTOCOMMIT" : "0.0025270"
+  },
+  "modelToConfidenceIntervalHumanReadable" : {
+    "AUTOCOMMIT" : [ "0.0280069", "0.0646378" ],
+    "!AUTOCOMMIT" : [ "0.0301688", "0.0664168" ]
+  },
+  "modelToCoefficientOfVariationHumanReadable" : {
+    "AUTOCOMMIT" : "1.1052370",
+    "!AUTOCOMMIT" : "1.0490577"
+  }
+}

@@ -1,1 +1,73 @@
-{"region":"2dff8237-a7eb-4801-a4eb-fcdb344b5424","model":{"!MV_STORE":0.0,"(MV_STORE && AUTOCOMMIT)":1.0439E7,"(MV_STORE && !AUTOCOMMIT)":2.1239E7},"modelToMin":{"!MV_STORE":0.0,"(MV_STORE && AUTOCOMMIT)":0.0,"(MV_STORE && !AUTOCOMMIT)":1.045E7},"modelToMax":{"!MV_STORE":0.0,"(MV_STORE && AUTOCOMMIT)":2.0809E7,"(MV_STORE && !AUTOCOMMIT)":3.1968E7},"modelToDiff":{"!MV_STORE":0.0,"(MV_STORE && AUTOCOMMIT)":2.0809E7,"(MV_STORE && !AUTOCOMMIT)":2.1518E7},"modelToSampleVariance":{"!MV_STORE":0.0,"(MV_STORE && AUTOCOMMIT)":4.3291069583333336E13,"(MV_STORE && !AUTOCOMMIT)":5.0848063583333336E13},"modelToConfidenceInterval":{"!MV_STORE":[0.0,0.0],"(MV_STORE && AUTOCOMMIT)":[5013606.338433617,1.2025643661566384E7],"(MV_STORE && !AUTOCOMMIT)":[1.778764905130081E7,2.538710094869919E7]},"modelToCoefficientOfVariation":{"!MV_STORE":0.0,"(MV_STORE && AUTOCOMMIT)":0.0,"(MV_STORE && !AUTOCOMMIT)":0.3354831839685706},"modelToPerfHumanReadable":{"!MV_STORE":"0.0000000","(MV_STORE && AUTOCOMMIT)":"0.0104390","(MV_STORE && !AUTOCOMMIT)":"0.0212390"},"modelToMinHumanReadable":{"!MV_STORE":"0.0000000","(MV_STORE && AUTOCOMMIT)":"0.0000000","(MV_STORE && !AUTOCOMMIT)":"0.0104500"},"modelToMaxHumanReadable":{"!MV_STORE":"0.0000000","(MV_STORE && AUTOCOMMIT)":"0.0208090","(MV_STORE && !AUTOCOMMIT)":"0.0319680"},"modelToDiffHumanReadable":{"!MV_STORE":"0.0000000","(MV_STORE && AUTOCOMMIT)":"0.0208090","(MV_STORE && !AUTOCOMMIT)":"0.0215180"},"modelToSampleVarianceHumanReadble":{"!MV_STORE":"0.0000000","(MV_STORE && AUTOCOMMIT)":"0.0000433","(MV_STORE && !AUTOCOMMIT)":"0.0000508"},"modelToConfidenceIntervalHumanReadable":{"!MV_STORE":["0.0000000","0.0000000"],"(MV_STORE && AUTOCOMMIT)":["0.0050136","0.0120256"],"(MV_STORE && !AUTOCOMMIT)":["0.0177876","0.0253871"]},"modelToCoefficientOfVariationHumanReadable":{"!MV_STORE":"0.0000000","(MV_STORE && AUTOCOMMIT)":"0.0000000","(MV_STORE && !AUTOCOMMIT)":"0.3354832"}}
+{
+  "region" : "2dff8237-a7eb-4801-a4eb-fcdb344b5424",
+  "model" : {
+    "!MV_STORE" : 0.0,
+    "(MV_STORE && AUTOCOMMIT)" : 1.0439E7,
+    "(MV_STORE && !AUTOCOMMIT)" : 2.1239E7
+  },
+  "modelToMin" : {
+    "!MV_STORE" : 0.0,
+    "(MV_STORE && AUTOCOMMIT)" : 0.0,
+    "(MV_STORE && !AUTOCOMMIT)" : 1.045E7
+  },
+  "modelToMax" : {
+    "!MV_STORE" : 0.0,
+    "(MV_STORE && AUTOCOMMIT)" : 2.0809E7,
+    "(MV_STORE && !AUTOCOMMIT)" : 3.1968E7
+  },
+  "modelToDiff" : {
+    "!MV_STORE" : 0.0,
+    "(MV_STORE && AUTOCOMMIT)" : 2.0809E7,
+    "(MV_STORE && !AUTOCOMMIT)" : 2.1518E7
+  },
+  "modelToSampleVariance" : {
+    "!MV_STORE" : 0.0,
+    "(MV_STORE && AUTOCOMMIT)" : 4.3291069583333336E13,
+    "(MV_STORE && !AUTOCOMMIT)" : 5.0848063583333336E13
+  },
+  "modelToConfidenceInterval" : {
+    "!MV_STORE" : [ 0.0, 0.0 ],
+    "(MV_STORE && AUTOCOMMIT)" : [ 5013606.338433617, 1.2025643661566384E7 ],
+    "(MV_STORE && !AUTOCOMMIT)" : [ 1.778764905130081E7, 2.538710094869919E7 ]
+  },
+  "modelToCoefficientOfVariation" : {
+    "!MV_STORE" : 0.0,
+    "(MV_STORE && AUTOCOMMIT)" : 0.0,
+    "(MV_STORE && !AUTOCOMMIT)" : 0.3354831839685706
+  },
+  "modelToPerfHumanReadable" : {
+    "!MV_STORE" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT)" : "0.0104390",
+    "(MV_STORE && !AUTOCOMMIT)" : "0.0212390"
+  },
+  "modelToMinHumanReadable" : {
+    "!MV_STORE" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT)" : "0.0000000",
+    "(MV_STORE && !AUTOCOMMIT)" : "0.0104500"
+  },
+  "modelToMaxHumanReadable" : {
+    "!MV_STORE" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT)" : "0.0208090",
+    "(MV_STORE && !AUTOCOMMIT)" : "0.0319680"
+  },
+  "modelToDiffHumanReadable" : {
+    "!MV_STORE" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT)" : "0.0208090",
+    "(MV_STORE && !AUTOCOMMIT)" : "0.0215180"
+  },
+  "modelToSampleVarianceHumanReadble" : {
+    "!MV_STORE" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT)" : "0.0000433",
+    "(MV_STORE && !AUTOCOMMIT)" : "0.0000508"
+  },
+  "modelToConfidenceIntervalHumanReadable" : {
+    "!MV_STORE" : [ "0.0000000", "0.0000000" ],
+    "(MV_STORE && AUTOCOMMIT)" : [ "0.0050136", "0.0120256" ],
+    "(MV_STORE && !AUTOCOMMIT)" : [ "0.0177876", "0.0253871" ]
+  },
+  "modelToCoefficientOfVariationHumanReadable" : {
+    "!MV_STORE" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT)" : "0.0000000",
+    "(MV_STORE && !AUTOCOMMIT)" : "0.3354832"
+  }
+}

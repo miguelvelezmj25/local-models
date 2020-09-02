@@ -1,1 +1,45 @@
-{"region":"00000000-0000-0000-0000-000000000000","model":{"True":1.514552E9},"modelToMin":{"True":1.49944E9},"modelToMax":{"True":1.521608E9},"modelToDiff":{"True":2.2168E7},"modelToSampleVariance":{"True":1.7973358362859363E13},"modelToConfidenceInterval":{"True":[1.5134436789334388E9,1.5148403766221166E9]},"modelToCoefficientOfVariation":{"True":0.002804796341552989},"modelToPerfHumanReadable":{"True":"1.5145520"},"modelToMinHumanReadable":{"True":"1.4994400"},"modelToMaxHumanReadable":{"True":"1.5216080"},"modelToDiffHumanReadable":{"True":"0.0221680"},"modelToSampleVarianceHumanReadble":{"True":"0.0000180"},"modelToConfidenceIntervalHumanReadable":{"True":["1.5134437","1.5148404"]},"modelToCoefficientOfVariationHumanReadable":{"True":"0.0028048"}}
+{
+  "region" : "00000000-0000-0000-0000-000000000000",
+  "model" : {
+    "True" : 1.514552E9
+  },
+  "modelToMin" : {
+    "True" : 1.49944E9
+  },
+  "modelToMax" : {
+    "True" : 1.521608E9
+  },
+  "modelToDiff" : {
+    "True" : 2.2168E7
+  },
+  "modelToSampleVariance" : {
+    "True" : 1.7973358362859375E13
+  },
+  "modelToConfidenceInterval" : {
+    "True" : [ 1.5134436789334388E9, 1.5148403766221166E9 ]
+  },
+  "modelToCoefficientOfVariation" : {
+    "True" : 0.0028047963415529895
+  },
+  "modelToPerfHumanReadable" : {
+    "True" : "1.5145520"
+  },
+  "modelToMinHumanReadable" : {
+    "True" : "1.4994400"
+  },
+  "modelToMaxHumanReadable" : {
+    "True" : "1.5216080"
+  },
+  "modelToDiffHumanReadable" : {
+    "True" : "0.0221680"
+  },
+  "modelToSampleVarianceHumanReadble" : {
+    "True" : "0.0000180"
+  },
+  "modelToConfidenceIntervalHumanReadable" : {
+    "True" : [ "1.5134437", "1.5148404" ]
+  },
+  "modelToCoefficientOfVariationHumanReadable" : {
+    "True" : "0.0028048"
+  }
+}
