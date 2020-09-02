@@ -62,7 +62,7 @@ public class CSVConfigGenerator {
 
     String outputDir =
         CSVConfigGenerator.OUTPUT_DIR
-            + "/eval/java/programs/"
+            + "/configs/java/programs/"
             + this.programName
             + "/"
             + this.measuredTime
