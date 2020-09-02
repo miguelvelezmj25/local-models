@@ -10,6 +10,8 @@
     <version>0.1.0-SNAPSHOT</version>
     <modules>
         <module>lc-perf-model</module>
+        <module>lc-perf-behavior</module>
+        <module>cc-perf-model-exhaustive</module>
     </modules>
 
     <name>locee</name>
