@@ -1,0 +1,36 @@
+[
+  {
+    "packageName": "edu.cmu.cs.mvelezce.analysis",
+    "className": "CleanConstraints",
+    "methodSignature": "foo(ZZ)V",
+    "decisionIndex": 1,
+    "info": [],
+    "prettyConstraints": [
+      "A",
+      "(!A && B)",
+      "(!A && !B)"
+    ],
+    "id": "9a849ac0-5c40-405d-9cfb-718602c13a0d",
+    "startBlock": "2137745924",
+    "endBlocks": [
+      "exit"
+    ]
+  },
+  {
+    "packageName": "edu.cmu.cs.mvelezce.analysis",
+    "className": "CleanConstraints",
+    "methodSignature": "main([Ljava/lang/String;)V",
+    "decisionIndex": 1,
+    "info": [],
+    "prettyConstraints": [
+      "A",
+      "(!A && B)",
+      "(!A && !B)"
+    ],
+    "id": "aa1d714e-1ae7-4801-8fb0-07e70c255ea3",
+    "startBlock": "775558858",
+    "endBlocks": [
+      "exit"
+    ]
+  }
+]

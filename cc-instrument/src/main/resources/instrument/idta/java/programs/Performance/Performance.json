@@ -1,0 +1,53 @@
+[
+  {
+    "packageName": "edu.cmu.cs.mvelezce.analysis",
+    "className": "Performance",
+    "methodSignature": "foo(Z)I",
+    "decisionIndex": 1,
+    "info": [
+      "(A && B)",
+      "(A && !B)",
+      "(!A && !B)",
+      "(!A && B)"
+    ],
+    "id": "8fa09a8b-dbce-4460-bc21-0004cb510d8c",
+    "startBlock": "752011518",
+    "endBlocks": [
+      "exit"
+    ]
+  },
+  {
+    "packageName": "edu.cmu.cs.mvelezce.analysis",
+    "className": "Performance",
+    "methodSignature": "getFactors(I)[I",
+    "decisionIndex": -1,
+    "info": [
+      "(A && B)",
+      "(A && !B)",
+      "(!A && !B)",
+      "(!A && B)"
+    ],
+    "id": "a3bc4472-3adc-4f87-8d15-fd45ba34d65c",
+    "startBlock": "1526305386",
+    "endBlocks": [
+      "exit"
+    ]
+  },
+  {
+    "packageName": "edu.cmu.cs.mvelezce.analysis",
+    "className": "Performance",
+    "methodSignature": "run([Ljava/lang/String;)V",
+    "decisionIndex": 1,
+    "info": [
+      "(A && B)",
+      "(A && !B)",
+      "(!A && !B)",
+      "(!A && B)"
+    ],
+    "id": "60a4b87d-893f-455e-85cc-b6330f3e945e",
+    "startBlock": "32393008",
+    "endBlocks": [
+      "exit"
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+[{"packageName":"edu.cmu.cs.mvelezce.analysis","className":"StaticMethodCall","methodSignature":"main([Ljava/lang/String;)V","decisionIndex":1,"info":[],"prettyConstraints":["!A","A","(A && B)","(A && !B)"],"id":"585aebb4-cb20-455d-b038-3d7a8eac7e25","startBlock":"779991188","endBlocks":["exit"]}]
