@@ -1,0 +1,115 @@
+{
+  "region" : "6a2a5373-8e8b-442b-8882-74b6e26fbaac",
+  "model" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 5410500.0,
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 2706500.0,
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 2730000.0,
+    "(MV_STORE && AUTOCOMMIT)" : 0.0,
+    "(MV_STORE && !AUTOCOMMIT)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 6037000.0
+  },
+  "modelToMin" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && AUTOCOMMIT)" : 0.0,
+    "(MV_STORE && !AUTOCOMMIT)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 0.0
+  },
+  "modelToMax" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 1.1024E7,
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 2.1305E7,
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 1.0573E7,
+    "(MV_STORE && AUTOCOMMIT)" : 1.1304E7,
+    "(MV_STORE && !AUTOCOMMIT)" : 1.0524E7,
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 1.0891E7
+  },
+  "modelToDiff" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 1.1024E7,
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 2.1305E7,
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 1.0573E7,
+    "(MV_STORE && AUTOCOMMIT)" : 1.1304E7,
+    "(MV_STORE && !AUTOCOMMIT)" : 1.0524E7,
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 1.0891E7
+  },
+  "modelToSampleVariance" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 2.0216774125E13,
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 6.026540998214286E13,
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 2.2140517125E13,
+    "(MV_STORE && AUTOCOMMIT)" : 7.986276E12,
+    "(MV_STORE && !AUTOCOMMIT)" : 1.0125229583333334E13,
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 1.3803387553571428E13
+  },
+  "modelToConfidenceInterval" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : [ 2294868.511580317, 9812881.488419684 ],
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : [ 0.0, 1.2492472236825515E7 ],
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : [ 110586.32202838222, 7978163.677971618 ],
+    "(MV_STORE && AUTOCOMMIT)" : [ 0.0, 2212369.103937991 ],
+    "(MV_STORE && !AUTOCOMMIT)" : [ 0.0, 3351201.9540396836 ],
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : [ 3739813.9559285305, 9951936.04407147 ]
+  },
+  "modelToCoefficientOfVariation" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && AUTOCOMMIT)" : 0.0,
+    "(MV_STORE && !AUTOCOMMIT)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 0.0
+  },
+  "modelToPerfHumanReadable" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0054105",
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0027065",
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0027300",
+    "(MV_STORE && AUTOCOMMIT)" : "0.0000000",
+    "(MV_STORE && !AUTOCOMMIT)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0060370"
+  },
+  "modelToMinHumanReadable" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT)" : "0.0000000",
+    "(MV_STORE && !AUTOCOMMIT)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000"
+  },
+  "modelToMaxHumanReadable" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0110240",
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0213050",
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0105730",
+    "(MV_STORE && AUTOCOMMIT)" : "0.0113040",
+    "(MV_STORE && !AUTOCOMMIT)" : "0.0105240",
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0108910"
+  },
+  "modelToDiffHumanReadable" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0110240",
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0213050",
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0105730",
+    "(MV_STORE && AUTOCOMMIT)" : "0.0113040",
+    "(MV_STORE && !AUTOCOMMIT)" : "0.0105240",
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0108910"
+  },
+  "modelToSampleVarianceHumanReadble" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000202",
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000603",
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0000221",
+    "(MV_STORE && AUTOCOMMIT)" : "0.0000080",
+    "(MV_STORE && !AUTOCOMMIT)" : "0.0000101",
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0000138"
+  },
+  "modelToConfidenceIntervalHumanReadable" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : [ "0.0022949", "0.0098129" ],
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : [ "0.0000000", "0.0124925" ],
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : [ "0.0001106", "0.0079782" ],
+    "(MV_STORE && AUTOCOMMIT)" : [ "0.0000000", "0.0022124" ],
+    "(MV_STORE && !AUTOCOMMIT)" : [ "0.0000000", "0.0033512" ],
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : [ "0.0037398", "0.0099519" ]
+  },
+  "modelToCoefficientOfVariationHumanReadable" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT)" : "0.0000000",
+    "(MV_STORE && !AUTOCOMMIT)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000"
+  }
+}

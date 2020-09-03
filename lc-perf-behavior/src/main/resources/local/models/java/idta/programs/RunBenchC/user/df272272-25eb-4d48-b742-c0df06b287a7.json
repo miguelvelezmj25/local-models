@@ -1,0 +1,143 @@
+{
+  "region" : "df272272-25eb-4d48-b742-c0df06b287a7",
+  "model" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 1.8455E7,
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 1.06735E7,
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0
+  },
+  "modelToMin" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0
+  },
+  "modelToMax" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 2.135E7,
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 1.6037E7,
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0
+  },
+  "modelToDiff" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 2.135E7,
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 1.6037E7,
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0
+  },
+  "modelToSampleVariance" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 5.580749542857143E13,
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 2.7853365714285715E13,
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0
+  },
+  "modelToConfidenceInterval" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : [ 0.0, 0.0 ],
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : [ 0.0, 0.0 ],
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : [ 9620054.655629953, 2.2110945344370045E7 ],
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : [ 0.0, 0.0 ],
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : [ 0.0, 0.0 ],
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : [ 6892291.909479822, 1.5716708090520177E7 ],
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : [ 0.0, 0.0 ],
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : [ 0.0, 0.0 ]
+  },
+  "modelToCoefficientOfVariation" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 0.4855751626667734,
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 0.0,
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : 0.48145028054784567,
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : 0.0,
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : 0.0
+  },
+  "modelToPerfHumanReadable" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0184550",
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0106735",
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000"
+  },
+  "modelToMinHumanReadable" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000"
+  },
+  "modelToMaxHumanReadable" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0213500",
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0160370",
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000"
+  },
+  "modelToDiffHumanReadable" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0213500",
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0160370",
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000"
+  },
+  "modelToSampleVarianceHumanReadble" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0000558",
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0000279",
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000"
+  },
+  "modelToConfidenceIntervalHumanReadable" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : [ "0.0000000", "0.0000000" ],
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : [ "0.0000000", "0.0000000" ],
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : [ "0.0096201", "0.0221109" ],
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : [ "0.0000000", "0.0000000" ],
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : [ "0.0000000", "0.0000000" ],
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : [ "0.0068923", "0.0157167" ],
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : [ "0.0000000", "0.0000000" ],
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : [ "0.0000000", "0.0000000" ]
+  },
+  "modelToCoefficientOfVariationHumanReadable" : {
+    "(!MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.4855752",
+    "(MV_STORE && !AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000",
+    "(!MV_STORE && AUTOCOMMIT && !PAGE_SIZE)" : "0.4814503",
+    "(MV_STORE && AUTOCOMMIT && PAGE_SIZE)" : "0.0000000",
+    "(MV_STORE && !AUTOCOMMIT && !PAGE_SIZE)" : "0.0000000"
+  }
+}

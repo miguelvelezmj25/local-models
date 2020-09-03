@@ -1,0 +1,101 @@
+{
+  "region" : "4d6711ad-5d75-4ad1-a5fe-7021dda18345",
+  "model" : {
+    "MV_STORE" : 0.0,
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : 0.0,
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : 0.0,
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : 2722000.0,
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : 0.0
+  },
+  "modelToMin" : {
+    "MV_STORE" : 0.0,
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : 0.0,
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : 0.0,
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : 0.0,
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : 0.0
+  },
+  "modelToMax" : {
+    "MV_STORE" : 0.0,
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : 1.0447E7,
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : 0.0,
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : 1.0557E7,
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : 7080000.0
+  },
+  "modelToDiff" : {
+    "MV_STORE" : 0.0,
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : 1.0447E7,
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : 0.0,
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : 1.0557E7,
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : 7080000.0
+  },
+  "modelToSampleVariance" : {
+    "MV_STORE" : 0.0,
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : 1.3642476125E13,
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : 0.0,
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : 2.2162123642857145E13,
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : 6.2658E12
+  },
+  "modelToConfidenceInterval" : {
+    "MV_STORE" : [ 0.0, 0.0 ],
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : [ 0.0, 4393778.694548782 ],
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : [ 0.0, 0.0 ],
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : [ 139542.33457713667, 8010957.665422863 ],
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : [ 0.0, 2977692.4626596514 ]
+  },
+  "modelToCoefficientOfVariation" : {
+    "MV_STORE" : 0.0,
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : 0.0,
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : 0.0,
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : 0.0,
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : 0.0
+  },
+  "modelToPerfHumanReadable" : {
+    "MV_STORE" : "0.0000000",
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : "0.0000000",
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : "0.0000000",
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : "0.0027220",
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : "0.0000000"
+  },
+  "modelToMinHumanReadable" : {
+    "MV_STORE" : "0.0000000",
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : "0.0000000",
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : "0.0000000",
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : "0.0000000",
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : "0.0000000"
+  },
+  "modelToMaxHumanReadable" : {
+    "MV_STORE" : "0.0000000",
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : "0.0104470",
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : "0.0000000",
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : "0.0105570",
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : "0.0070800"
+  },
+  "modelToDiffHumanReadable" : {
+    "MV_STORE" : "0.0000000",
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : "0.0104470",
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : "0.0000000",
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : "0.0105570",
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : "0.0070800"
+  },
+  "modelToSampleVarianceHumanReadble" : {
+    "MV_STORE" : "0.0000000",
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : "0.0000136",
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : "0.0000000",
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : "0.0000222",
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : "0.0000063"
+  },
+  "modelToConfidenceIntervalHumanReadable" : {
+    "MV_STORE" : [ "0.0000000", "0.0000000" ],
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : [ "0.0000000", "0.0043938" ],
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : [ "0.0000000", "0.0000000" ],
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : [ "0.0001395", "0.0080110" ],
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : [ "0.0000000", "0.0029777" ]
+  },
+  "modelToCoefficientOfVariationHumanReadable" : {
+    "MV_STORE" : "0.0000000",
+    "(!PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : "0.0000000",
+    "(PAGE_SIZE && !MV_STORE && !FILE_LOCK)" : "0.0000000",
+    "(!PAGE_SIZE && !MV_STORE && FILE_LOCK)" : "0.0000000",
+    "(PAGE_SIZE && !MV_STORE && FILE_LOCK)" : "0.0000000"
+  }
+}

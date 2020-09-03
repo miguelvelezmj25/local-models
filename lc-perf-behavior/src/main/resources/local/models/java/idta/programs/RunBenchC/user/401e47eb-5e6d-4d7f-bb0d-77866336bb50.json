@@ -1,0 +1,87 @@
+{
+  "region" : "401e47eb-5e6d-4d7f-bb0d-77866336bb50",
+  "model" : {
+    "(!FILE_LOCK && !MV_STORE)" : 7.16595E7,
+    "(FILE_LOCK && !MV_STORE)" : 7.2266E7,
+    "(FILE_LOCK && MV_STORE)" : 1.0794E7,
+    "(!FILE_LOCK && MV_STORE)" : 1.0598E7
+  },
+  "modelToMin" : {
+    "(!FILE_LOCK && !MV_STORE)" : 6.8415E7,
+    "(FILE_LOCK && !MV_STORE)" : 6.8106E7,
+    "(FILE_LOCK && MV_STORE)" : 1.0317E7,
+    "(!FILE_LOCK && MV_STORE)" : 5318000.0
+  },
+  "modelToMax" : {
+    "(!FILE_LOCK && !MV_STORE)" : 8.329E7,
+    "(FILE_LOCK && !MV_STORE)" : 7.9341E7,
+    "(FILE_LOCK && MV_STORE)" : 2.1275E7,
+    "(!FILE_LOCK && MV_STORE)" : 1.6106E7
+  },
+  "modelToDiff" : {
+    "(!FILE_LOCK && !MV_STORE)" : 1.4875E7,
+    "(FILE_LOCK && !MV_STORE)" : 1.1235E7,
+    "(FILE_LOCK && MV_STORE)" : 1.0958E7,
+    "(!FILE_LOCK && MV_STORE)" : 1.0788E7
+  },
+  "modelToSampleVariance" : {
+    "(!FILE_LOCK && !MV_STORE)" : 2.1226049983333332E13,
+    "(FILE_LOCK && !MV_STORE)" : 1.2082751529166666E13,
+    "(FILE_LOCK && MV_STORE)" : 1.0966628995833334E13,
+    "(!FILE_LOCK && MV_STORE)" : 1.42396748E13
+  },
+  "modelToConfidenceInterval" : {
+    "(!FILE_LOCK && !MV_STORE)" : [ 7.137788539986803E7, 7.628786460013197E7 ],
+    "(FILE_LOCK && !MV_STORE)" : [ 7.098981939085922E7, 7.469430560914078E7 ],
+    "(FILE_LOCK && MV_STORE)" : [ 1.0981440696132991E7, 1.4510684303867009E7 ],
+    "(!FILE_LOCK && MV_STORE)" : [ 8136717.480918368, 1.2158282519081632E7 ]
+  },
+  "modelToCoefficientOfVariation" : {
+    "(!FILE_LOCK && !MV_STORE)" : 0.06337503235678152,
+    "(FILE_LOCK && !MV_STORE)" : 0.04846565325010734,
+    "(FILE_LOCK && MV_STORE)" : 0.26387236812489406,
+    "(!FILE_LOCK && MV_STORE)" : 0.3776803224902726
+  },
+  "modelToPerfHumanReadable" : {
+    "(!FILE_LOCK && !MV_STORE)" : "0.0716595",
+    "(FILE_LOCK && !MV_STORE)" : "0.0722660",
+    "(FILE_LOCK && MV_STORE)" : "0.0107940",
+    "(!FILE_LOCK && MV_STORE)" : "0.0105980"
+  },
+  "modelToMinHumanReadable" : {
+    "(!FILE_LOCK && !MV_STORE)" : "0.0684150",
+    "(FILE_LOCK && !MV_STORE)" : "0.0681060",
+    "(FILE_LOCK && MV_STORE)" : "0.0103170",
+    "(!FILE_LOCK && MV_STORE)" : "0.0053180"
+  },
+  "modelToMaxHumanReadable" : {
+    "(!FILE_LOCK && !MV_STORE)" : "0.0832900",
+    "(FILE_LOCK && !MV_STORE)" : "0.0793410",
+    "(FILE_LOCK && MV_STORE)" : "0.0212750",
+    "(!FILE_LOCK && MV_STORE)" : "0.0161060"
+  },
+  "modelToDiffHumanReadable" : {
+    "(!FILE_LOCK && !MV_STORE)" : "0.0148750",
+    "(FILE_LOCK && !MV_STORE)" : "0.0112350",
+    "(FILE_LOCK && MV_STORE)" : "0.0109580",
+    "(!FILE_LOCK && MV_STORE)" : "0.0107880"
+  },
+  "modelToSampleVarianceHumanReadble" : {
+    "(!FILE_LOCK && !MV_STORE)" : "0.0000212",
+    "(FILE_LOCK && !MV_STORE)" : "0.0000121",
+    "(FILE_LOCK && MV_STORE)" : "0.0000110",
+    "(!FILE_LOCK && MV_STORE)" : "0.0000142"
+  },
+  "modelToConfidenceIntervalHumanReadable" : {
+    "(!FILE_LOCK && !MV_STORE)" : [ "0.0713779", "0.0762879" ],
+    "(FILE_LOCK && !MV_STORE)" : [ "0.0709898", "0.0746943" ],
+    "(FILE_LOCK && MV_STORE)" : [ "0.0109814", "0.0145107" ],
+    "(!FILE_LOCK && MV_STORE)" : [ "0.0081367", "0.0121583" ]
+  },
+  "modelToCoefficientOfVariationHumanReadable" : {
+    "(!FILE_LOCK && !MV_STORE)" : "0.0633750",
+    "(FILE_LOCK && !MV_STORE)" : "0.0484657",
+    "(FILE_LOCK && MV_STORE)" : "0.2638724",
+    "(!FILE_LOCK && MV_STORE)" : "0.3776803"
+  }
+}

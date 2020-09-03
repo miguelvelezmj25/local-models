@@ -1,0 +1,45 @@
+{
+  "region" : "00000000-0000-0000-0000-000000000000",
+  "model" : {
+    "True" : 1.6094325E9
+  },
+  "modelToMin" : {
+    "True" : 1.57177E9
+  },
+  "modelToMax" : {
+    "True" : 1.68355E9
+  },
+  "modelToDiff" : {
+    "True" : 1.1178E8
+  },
+  "modelToSampleVariance" : {
+    "True" : 5.413986807239584E14
+  },
+  "modelToConfidenceInterval" : {
+    "True" : [ 1.608161254543876E9, 1.619785589206124E9 ]
+  },
+  "modelToCoefficientOfVariation" : {
+    "True" : 0.014472893818983569
+  },
+  "modelToPerfHumanReadable" : {
+    "True" : "1.6094325"
+  },
+  "modelToMinHumanReadable" : {
+    "True" : "1.5717700"
+  },
+  "modelToMaxHumanReadable" : {
+    "True" : "1.6835500"
+  },
+  "modelToDiffHumanReadable" : {
+    "True" : "0.1117800"
+  },
+  "modelToSampleVarianceHumanReadble" : {
+    "True" : "0.0005414"
+  },
+  "modelToConfidenceIntervalHumanReadable" : {
+    "True" : [ "1.6081613", "1.6197856" ]
+  },
+  "modelToCoefficientOfVariationHumanReadable" : {
+    "True" : "0.0144729"
+  }
+}
