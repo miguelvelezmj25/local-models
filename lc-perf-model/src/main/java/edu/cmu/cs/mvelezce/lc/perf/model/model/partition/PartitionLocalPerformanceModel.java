@@ -119,4 +119,14 @@ public class PartitionLocalPerformanceModel extends LocalPerformanceModel<Partit
 
     throw new RuntimeException("The model appears to be empty");
   }
+
+  /**
+   * Returns the configs to partition map to reset it when evaluating the execution time of local
+   * models
+   *
+   * @return the configs to partition map
+   */
+  public static Map<Set<String>, Partition> getConfigToPartition() {
+    return CONFIG_TO_PARTITION;
+  }
 }
