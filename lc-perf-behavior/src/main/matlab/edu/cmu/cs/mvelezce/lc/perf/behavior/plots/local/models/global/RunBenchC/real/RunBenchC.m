@@ -1,6 +1,6 @@
 figure("Visible", false);
 
-train = readtable('../../../../../../../../../../../../../../resources/configs/local/models/global/java/programs/configs/java/programs/RunBenchC/real/RunBenchC.csv');
+train = readtable('../../../../../../../../../../../../../../resources/configs/local/models/global/java/programs/configs/java/programs/RunBenchC/user/RunBenchC.csv');
 times = table2array(train(:,17:17));
 times = sort(times);
 

@@ -24,7 +24,10 @@ public class LocalModelFiltererTest {
     PerformanceModel<Partition> model = builder.analyze(args);
 
     LocalModelFilterer filterer =
-        new LocalModelFilterer.Builder(programName, BaseExecutor.REAL).model(model).build();
+        new LocalModelFilterer.Builder(programName, BaseExecutor.REAL)
+            .model(model)
+            .threshold(0.1)
+            .build();
     args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
@@ -40,7 +43,10 @@ public class LocalModelFiltererTest {
     PerformanceModel<Partition> model = builder.analyze(args);
 
     LocalModelFilterer filterer =
-        new LocalModelFilterer.Builder(programName, BaseExecutor.USER).model(model).build();
+        new LocalModelFilterer.Builder(programName, BaseExecutor.USER)
+            .model(model)
+            .threshold(0.1)
+            .build();
     args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
@@ -56,7 +62,10 @@ public class LocalModelFiltererTest {
     PerformanceModel<Partition> model = builder.analyze(args);
 
     LocalModelFilterer filterer =
-        new LocalModelFilterer.Builder(programName, BaseExecutor.REAL).model(model).build();
+        new LocalModelFilterer.Builder(programName, BaseExecutor.REAL)
+            .model(model)
+            .threshold(0.1)
+            .build();
     args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
@@ -72,7 +81,10 @@ public class LocalModelFiltererTest {
     PerformanceModel<Partition> model = builder.analyze(args);
 
     LocalModelFilterer filterer =
-        new LocalModelFilterer.Builder(programName, BaseExecutor.USER).model(model).build();
+        new LocalModelFilterer.Builder(programName, BaseExecutor.USER)
+            .model(model)
+            .threshold(0.1)
+            .build();
     args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";

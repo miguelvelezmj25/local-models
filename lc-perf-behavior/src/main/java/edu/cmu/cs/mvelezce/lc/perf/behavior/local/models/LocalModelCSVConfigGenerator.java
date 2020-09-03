@@ -34,6 +34,17 @@ public class LocalModelCSVConfigGenerator extends AbstractCSVConfigGenerator {
 
   @Override
   public void generateCSVFile() throws IOException {
+    File rootDir =
+        new File(
+            LocalModelCSVConfigGenerator.OUTPUT_DIR
+                + "/configs/java/programs/"
+                + this.getProgramName()
+                + "/"
+                + this.getMeasuredTime());
+    if (rootDir.exists()) {
+      FileUtils.forceDelete(rootDir);
+    }
+
     for (LocalPerformanceModel<Partition> localModel : this.getModel().getLocalModels()) {
       StringBuilder result = new StringBuilder();
       Set<String> options = this.getLocalModelOptions(localModel);
@@ -59,16 +70,8 @@ public class LocalModelCSVConfigGenerator extends AbstractCSVConfigGenerator {
         result.append("\n");
       }
 
-      String outputDir =
-          LocalModelCSVConfigGenerator.OUTPUT_DIR
-              + "/configs/java/programs/"
-              + this.getProgramName()
-              + "/"
-              + this.getMeasuredTime()
-              + "/"
-              + localModel.getRegion()
-              + Options.DOT_CSV;
-      File outputFile = new File(outputDir);
+      String outputDir = localModel.getRegion() + Options.DOT_CSV;
+      File outputFile = new File(rootDir, outputDir);
       if (outputFile.exists()) {
         FileUtils.forceDelete(outputFile);
       } else if (!outputFile.getParentFile().exists() && !outputFile.getParentFile().mkdirs()) {
