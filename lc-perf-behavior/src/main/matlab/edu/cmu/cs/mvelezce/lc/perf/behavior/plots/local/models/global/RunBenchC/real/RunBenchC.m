@@ -1,7 +1,7 @@
 figure("Visible", false);
 
-train = readtable('../../../../../../../../../../../../../resources/configs/local/models/global/java/programs/configs/java/programs/IndexFiles/real/IndexFiles.csv');
-times = table2array(train(:,18:18));
+train = readtable('../../../../../../../../../../../../../../resources/configs/local/models/global/java/programs/configs/java/programs/RunBenchC/real/RunBenchC.csv');
+times = table2array(train(:,17:17));
 times = sort(times);
 
 count = [];
@@ -11,7 +11,7 @@ end
 
 plot(count,times,'k','LineWidth',3);
 
-title('Apache Lucene', 'Fontsize',80);
+title('H2', 'Fontsize',80);
 xlabel('Configurations');
 ylabel('Performance (s)');
 
@@ -31,4 +31,4 @@ res=300;%resolution
 size=[filewidth fileheight]*scale;
 set(gcf,'paperunits',paperunits,'paperposition',[0 0 size]);
 set(gcf, 'PaperSize', size);
-saveas(gcf,'IndexFiles',filetype)
+saveas(gcf,'RunBenchC',filetype)
