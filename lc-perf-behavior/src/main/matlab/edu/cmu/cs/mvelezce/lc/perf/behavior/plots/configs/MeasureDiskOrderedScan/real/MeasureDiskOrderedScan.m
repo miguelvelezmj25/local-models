@@ -15,7 +15,7 @@ title('Berkeley DB', 'Fontsize',80);
 xlabel('Configurations');
 ylabel('Performance (s)');
 
-ylim([4.0, 28.0]);
+ylim([floor(times(1)) * 1.0, ceil(times(length(times))) * 1.0]);
 
 set(gca,'FontSize',20);
 set(gca,'xtick',[])

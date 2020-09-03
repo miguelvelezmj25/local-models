@@ -15,7 +15,7 @@ title('H2', 'Fontsize',80);
 xlabel('Configurations');
 ylabel('Performance (s)');
 
-ylim([3.0, 89.0]);
+ylim([floor(times(1)) * 1.0, ceil(times(length(times))) * 1.0]);
 
 set(gca,'FontSize',20);
 set(gca,'xtick',[])
