@@ -11,6 +11,10 @@ import edu.cmu.cs.mvelezce.java.execute.BaseExecutor;
 import edu.cmu.cs.mvelezce.lc.perf.behavior.AbstractCSVConfigGenerator;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.LocalPerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.PerformanceModel;
+import edu.cmu.cs.mvelezce.lc.perf.model.model.idta.Berkeley.BerkeleyIDTAPerformanceModel;
+import edu.cmu.cs.mvelezce.lc.perf.model.model.idta.Convert.ConvertIDTAPerformanceModel;
+import edu.cmu.cs.mvelezce.lc.perf.model.model.idta.Lucene.LuceneIDTAPerformanceModel;
+import edu.cmu.cs.mvelezce.lc.perf.model.model.idta.RunBenchC.RunBenchCIDTAPerformanceModel;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -28,6 +32,7 @@ public class GlobalModelCSVConfigGeneratorTest {
     String[] args = new String[0];
     Set<LocalPerformanceModel<Partition>> relevantLocalModels = filterer.analyze(args);
     PerformanceModel<Partition> model = new PerformanceModel<>(relevantLocalModels);
+    model = BerkeleyIDTAPerformanceModel.toBerkeleyIDTAPerformanceModel(model);
     BaseCompression gtCompression = new GTCompression(programName);
     args = new String[0];
     Set<Set<String>> configs = gtCompression.analyze(args);
@@ -46,6 +51,7 @@ public class GlobalModelCSVConfigGeneratorTest {
     String[] args = new String[0];
     Set<LocalPerformanceModel<Partition>> relevantLocalModels = filterer.analyze(args);
     PerformanceModel<Partition> model = new PerformanceModel<>(relevantLocalModels);
+    model = LuceneIDTAPerformanceModel.toLuceneIDTAPerformanceModel(model);
     BaseCompression gtCompression = new GTCompression(programName);
     args = new String[0];
     Set<Set<String>> configs = gtCompression.analyze(args);
@@ -64,6 +70,7 @@ public class GlobalModelCSVConfigGeneratorTest {
     String[] args = new String[0];
     Set<LocalPerformanceModel<Partition>> relevantLocalModels = filterer.analyze(args);
     PerformanceModel<Partition> model = new PerformanceModel<>(relevantLocalModels);
+    model = ConvertIDTAPerformanceModel.toConvertIDTAPerformanceModel(model);
     BaseCompression gtCompression = new GTCompression(programName);
     args = new String[0];
     Set<Set<String>> configs = gtCompression.analyze(args);
@@ -82,6 +89,7 @@ public class GlobalModelCSVConfigGeneratorTest {
     String[] args = new String[0];
     Set<LocalPerformanceModel<Partition>> relevantLocalModels = filterer.analyze(args);
     PerformanceModel<Partition> model = new PerformanceModel<>(relevantLocalModels);
+    model = RunBenchCIDTAPerformanceModel.toRunBenchCIDTAPerformanceModel(model);
     BaseCompression gtCompression = new GTCompression(programName);
     args = new String[0];
     Set<Set<String>> configs = gtCompression.analyze(args);
