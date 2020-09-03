@@ -1,16 +1,21 @@
 package edu.cmu.cs.mvelezce.lc.perf.behavior.local.models;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import edu.cmu.cs.mvelezce.analysis.BaseAnalysis;
 import edu.cmu.cs.mvelezce.explorer.idta.partition.Partition;
+import edu.cmu.cs.mvelezce.lc.perf.model.builder.partition.BasePartitionPerformanceModelBuilder;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.LocalPerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.PerformanceModel;
+import edu.cmu.cs.mvelezce.lc.perf.model.model.idta.IDTALocalPerformanceModel;
 import edu.cmu.cs.mvelezce.utils.config.Options;
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -30,6 +35,22 @@ public class LocalModelFilterer extends BaseAnalysis<Set<LocalPerformanceModel<P
     this.model = builder.model;
     this.measuredTime = builder.measuredTime;
     this.threshold = builder.threshold;
+  }
+
+  @Override
+  public Set<LocalPerformanceModel<Partition>> analyze(String[] args) throws IOException {
+    Options.getCommandLine(args);
+    File file = new File(this.outputDir());
+    Options.checkIfDeleteResult(file);
+    if (file.exists()) {
+      return this.readFromFile(file);
+    }
+
+    Set<LocalPerformanceModel<Partition>> relevantLocalModels = this.analyze();
+    if (Options.checkIfSave()) {
+      this.writeToFile(relevantLocalModels);
+    }
+    return relevantLocalModels;
   }
 
   @Override
@@ -81,8 +102,48 @@ public class LocalModelFilterer extends BaseAnalysis<Set<LocalPerformanceModel<P
   }
 
   @Override
-  public Set<LocalPerformanceModel<Partition>> readFromFile(File file) {
-    throw new UnsupportedOperationException("Implement");
+  public Set<LocalPerformanceModel<Partition>> readFromFile(File dir) throws IOException {
+    Collection<File> files = FileUtils.listFiles(dir, new String[] {"json"}, false);
+    Set<LocalPerformanceModel<Partition>> relevantLocalModels = new HashSet<>();
+
+    for (File file : files) {
+      ObjectMapper mapper = new ObjectMapper();
+      LocalPerformanceModel<String> readLocalModel =
+          mapper.readValue(file, new TypeReference<LocalPerformanceModel<String>>() {});
+      LocalPerformanceModel<Partition> localModel =
+          new IDTALocalPerformanceModel(
+              readLocalModel.getRegion(),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToData(readLocalModel.getModel()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToData(
+                  readLocalModel.getModelToMin()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToData(
+                  readLocalModel.getModelToMax()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToData(
+                  readLocalModel.getModelToDiff()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToData(
+                  readLocalModel.getModelToSampleVariance()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToCI(
+                  readLocalModel.getModelToConfidenceInterval()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToData(
+                  readLocalModel.getModelToCoefficientOfVariation()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableData(
+                  readLocalModel.getModelToPerfHumanReadable()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableData(
+                  readLocalModel.getModelToMinHumanReadable()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableData(
+                  readLocalModel.getModelToMaxHumanReadable()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableData(
+                  readLocalModel.getModelToDiffHumanReadable()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableData(
+                  readLocalModel.getModelToSampleVarianceHumanReadble()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableCI(
+                  readLocalModel.getModelToConfidenceIntervalHumanReadable()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableData(
+                  readLocalModel.getModelToCoefficientOfVariationHumanReadable()));
+      relevantLocalModels.add(localModel);
+    }
+
+    return relevantLocalModels;
   }
 
   @Override

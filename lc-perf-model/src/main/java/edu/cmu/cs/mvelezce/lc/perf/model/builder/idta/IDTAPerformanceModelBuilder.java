@@ -199,22 +199,32 @@ public class IDTAPerformanceModelBuilder extends BasePartitionPerformanceModelBu
       LocalPerformanceModel<Partition> localModel =
           new IDTALocalPerformanceModel(
               readLocalModel.getRegion(),
-              this.parsePartitionsToData(readLocalModel.getModel()),
-              this.parsePartitionsToData(readLocalModel.getModelToMin()),
-              this.parsePartitionsToData(readLocalModel.getModelToMax()),
-              this.parsePartitionsToData(readLocalModel.getModelToDiff()),
-              this.parsePartitionsToData(readLocalModel.getModelToSampleVariance()),
-              this.parsePartitionsToCI(readLocalModel.getModelToConfidenceInterval()),
-              this.parsePartitionsToData(readLocalModel.getModelToCoefficientOfVariation()),
-              this.parsePartitionsToHumanReadableData(readLocalModel.getModelToPerfHumanReadable()),
-              this.parsePartitionsToHumanReadableData(readLocalModel.getModelToMinHumanReadable()),
-              this.parsePartitionsToHumanReadableData(readLocalModel.getModelToMaxHumanReadable()),
-              this.parsePartitionsToHumanReadableData(readLocalModel.getModelToDiffHumanReadable()),
-              this.parsePartitionsToHumanReadableData(
+              BasePartitionPerformanceModelBuilder.parsePartitionsToData(readLocalModel.getModel()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToData(
+                  readLocalModel.getModelToMin()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToData(
+                  readLocalModel.getModelToMax()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToData(
+                  readLocalModel.getModelToDiff()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToData(
+                  readLocalModel.getModelToSampleVariance()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToCI(
+                  readLocalModel.getModelToConfidenceInterval()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToData(
+                  readLocalModel.getModelToCoefficientOfVariation()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableData(
+                  readLocalModel.getModelToPerfHumanReadable()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableData(
+                  readLocalModel.getModelToMinHumanReadable()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableData(
+                  readLocalModel.getModelToMaxHumanReadable()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableData(
+                  readLocalModel.getModelToDiffHumanReadable()),
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableData(
                   readLocalModel.getModelToSampleVarianceHumanReadble()),
-              this.parsePartitionsToHumanReadableCI(
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableCI(
                   readLocalModel.getModelToConfidenceIntervalHumanReadable()),
-              this.parsePartitionsToHumanReadableData(
+              BasePartitionPerformanceModelBuilder.parsePartitionsToHumanReadableData(
                   readLocalModel.getModelToCoefficientOfVariationHumanReadable()));
       localModels.add(localModel);
     }

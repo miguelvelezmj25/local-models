@@ -5,10 +5,11 @@ import edu.cmu.cs.mvelezce.adapters.indexFiles.BaseIndexFilesAdapter;
 import edu.cmu.cs.mvelezce.adapters.measureDiskOrderedScan.BaseMeasureDiskOrderedScanAdapter;
 import edu.cmu.cs.mvelezce.adapters.runBenchC.BaseRunBenchCAdapter;
 import edu.cmu.cs.mvelezce.analysis.BaseAnalysis;
-import edu.cmu.cs.mvelezce.exhaustive.builder.gt.GroundTruthExhaustiveModelBuilder;
 import edu.cmu.cs.mvelezce.explorer.idta.partition.Partition;
 import edu.cmu.cs.mvelezce.java.execute.BaseExecutor;
-import edu.cmu.cs.mvelezce.model.PerformanceModel;
+import edu.cmu.cs.mvelezce.lc.perf.behavior.AbstractCSVConfigGenerator;
+import edu.cmu.cs.mvelezce.lc.perf.model.exhaustive.builder.gt.GroundTruthExhaustiveModelBuilder;
+import edu.cmu.cs.mvelezce.lc.perf.model.model.PerformanceModel;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -25,7 +26,7 @@ public class CSVConfigGeneratorTest {
     String[] args = new String[0];
     PerformanceModel<Partition> model = builder.analyze(args);
 
-    CSVConfigGenerator generator =
+    AbstractCSVConfigGenerator generator =
         new CSVConfigGenerator(programName, options, model, BaseExecutor.REAL);
     generator.generateCSVFile();
   }
@@ -39,7 +40,7 @@ public class CSVConfigGeneratorTest {
     String[] args = new String[0];
     PerformanceModel<Partition> model = builder.analyze(args);
 
-    CSVConfigGenerator generator =
+    AbstractCSVConfigGenerator generator =
         new CSVConfigGenerator(programName, options, model, BaseExecutor.REAL);
     generator.generateCSVFile();
   }
@@ -53,7 +54,7 @@ public class CSVConfigGeneratorTest {
     String[] args = new String[0];
     PerformanceModel<Partition> model = builder.analyze(args);
 
-    CSVConfigGenerator generator =
+    AbstractCSVConfigGenerator generator =
         new CSVConfigGenerator(programName, options, model, BaseExecutor.USER);
     generator.generateCSVFile();
   }
@@ -67,7 +68,7 @@ public class CSVConfigGeneratorTest {
     String[] args = new String[0];
     PerformanceModel<Partition> model = builder.analyze(args);
 
-    CSVConfigGenerator generator =
+    AbstractCSVConfigGenerator generator =
         new CSVConfigGenerator(programName, options, model, BaseExecutor.REAL);
     generator.generateCSVFile();
   }

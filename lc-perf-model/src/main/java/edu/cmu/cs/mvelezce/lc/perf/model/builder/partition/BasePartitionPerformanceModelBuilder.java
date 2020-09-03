@@ -146,7 +146,7 @@ public abstract class BasePartitionPerformanceModelBuilder
     return model;
   }
 
-  protected Map<Partition, String> parsePartitionsToHumanReadableData(
+  public static Map<Partition, String> parsePartitionsToHumanReadableData(
       Map<String, String> localHumanReadableData) {
     Map<Partition, String> partitionsToHumanReadableData = new HashMap<>();
 
@@ -158,7 +158,7 @@ public abstract class BasePartitionPerformanceModelBuilder
     return partitionsToHumanReadableData;
   }
 
-  protected Map<Partition, List<String>> parsePartitionsToHumanReadableCI(
+  public static Map<Partition, List<String>> parsePartitionsToHumanReadableCI(
       Map<String, List<String>> localHumanReadableData) {
     Map<Partition, List<String>> partitionsToHumanReadableData = new HashMap<>();
 
@@ -170,7 +170,7 @@ public abstract class BasePartitionPerformanceModelBuilder
     return partitionsToHumanReadableData;
   }
 
-  protected Map<Partition, Double> parsePartitionsToData(Map<String, Double> localModel) {
+  public static Map<Partition, Double> parsePartitionsToData(Map<String, Double> localModel) {
     Map<Partition, Double> partitionsToData = new HashMap<>();
 
     for (Map.Entry<String, Double> entry : localModel.entrySet()) {
@@ -181,7 +181,8 @@ public abstract class BasePartitionPerformanceModelBuilder
     return partitionsToData;
   }
 
-  protected Map<Partition, List<Double>> parsePartitionsToCI(Map<String, List<Double>> localModel) {
+  public static Map<Partition, List<Double>> parsePartitionsToCI(
+      Map<String, List<Double>> localModel) {
     Map<Partition, List<Double>> partitionsToData = new HashMap<>();
 
     for (Map.Entry<String, List<Double>> entry : localModel.entrySet()) {

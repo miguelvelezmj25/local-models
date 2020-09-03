@@ -1,9 +1,8 @@
-package edu.cmu.cs.mvelezce.lc.perf.behavior.configs;
+package edu.cmu.cs.mvelezce.lc.perf.behavior.local.models;
 
 import edu.cmu.cs.mvelezce.explorer.idta.partition.Partition;
-import edu.cmu.cs.mvelezce.explorer.utils.ConstraintUtils;
 import edu.cmu.cs.mvelezce.lc.perf.behavior.AbstractCSVConfigGenerator;
-import edu.cmu.cs.mvelezce.lc.perf.model.model.LocalPerformanceModel;
+import edu.cmu.cs.mvelezce.lc.perf.behavior.configs.CSVConfigGenerator;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.PerformanceModel;
 import edu.cmu.cs.mvelezce.utils.config.Options;
 import org.apache.commons.io.FileUtils;
@@ -11,19 +10,24 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class CSVConfigGenerator extends AbstractCSVConfigGenerator {
-  public static final String OUTPUT_DIR = "../lc-perf-behavior/src/main/resources";
+public class GlobalModelCSVConfigGenerator extends AbstractCSVConfigGenerator {
+  private static final String OUTPUT_DIR =
+      CSVConfigGenerator.OUTPUT_DIR + "/configs/local/models/global/java/programs/";
 
-  protected CSVConfigGenerator(
+  private final Set<Set<String>> configs;
+
+  public GlobalModelCSVConfigGenerator(
       String programName,
       List<String> options,
       PerformanceModel<Partition> model,
-      String measuredTime) {
+      String measuredTime,
+      Set<Set<String>> configs) {
     super(programName, options, model, measuredTime);
+
+    this.configs = configs;
   }
 
   @Override
@@ -36,8 +40,7 @@ public class CSVConfigGenerator extends AbstractCSVConfigGenerator {
     result.append("time");
     result.append("\n");
 
-    Set<Set<String>> configs = this.getConfigs();
-    for (Set<String> config : configs) {
+    for (Set<String> config : this.configs) {
       for (String option : this.getOptions()) {
         if (config.contains(option)) {
           result.append("1");
@@ -52,7 +55,7 @@ public class CSVConfigGenerator extends AbstractCSVConfigGenerator {
     }
 
     String outputDir =
-        CSVConfigGenerator.OUTPUT_DIR
+        GlobalModelCSVConfigGenerator.OUTPUT_DIR
             + "/configs/java/programs/"
             + this.getProgramName()
             + "/"
@@ -70,19 +73,5 @@ public class CSVConfigGenerator extends AbstractCSVConfigGenerator {
     writer.write(result.toString());
     writer.flush();
     writer.close();
-  }
-
-  private Set<Set<String>> getConfigs() {
-    Set<LocalPerformanceModel<Partition>> localModels = this.getModel().getLocalModels();
-    if (localModels.size() != 1) {
-      throw new IllegalArgumentException("Expected 1 local model. Got " + localModels.size());
-    }
-
-    Set<Set<String>> configs = new HashSet<>();
-    LocalPerformanceModel<Partition> localModel = localModels.iterator().next();
-    for (Partition partition : localModel.getModel().keySet()) {
-      configs.add(ConstraintUtils.toConfig(partition.getFeatureExpr(), this.getOptions()));
-    }
-    return configs;
   }
 }

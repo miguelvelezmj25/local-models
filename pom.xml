@@ -11,9 +11,11 @@
     <modules>
         <module>lc-perf-model</module>
         <module>lc-perf-behavior</module>
-        <module>cc-perf-model-exhaustive</module>
+        <module>lc-perf-model-exhaustive</module>
         <module>cc-execute</module>
         <module>cc-instrument</module>
+        <module>lc-perf-model-e2e</module>
+        <module>cc-compress</module>
     </modules>
 
     <name>locee</name>
