@@ -1,3 +1,6 @@
+// ANTI_ALIASING and SCALE increase the execution time.
+// Found ANTI_ALIASING option in the code
+
 {
   "region" : "b8bd8e58-f287-4f45-8ebb-ccf2ff695ecc",
   "influenceModel" : {

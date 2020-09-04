@@ -1,3 +1,9 @@
+// Enabeling DRY_RUN results in this region taking 0s. When there are 3 options, DRY_RUN seems to increase the execution
+// time, but it is just how the model is constructed that balances things.
+// ENABLING SCALE increase the execution time
+
+// Nothing is executed, just takes time because it is called multiple times. Wasting CPU.
+
 {
   "region" : "3a0d7063-f9b5-4fee-8881-5f546c0e45ae",
   "influenceModel" : {
