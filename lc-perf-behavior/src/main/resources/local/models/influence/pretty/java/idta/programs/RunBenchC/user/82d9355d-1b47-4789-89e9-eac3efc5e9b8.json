@@ -1,3 +1,5 @@
+// Enabling MV_STORE results in this region taking 0s.
+// Enabling PAGE_SIZE and DEFRAG_ALWAYS increase the executiong time significantly!
 {
   "region" : "82d9355d-1b47-4789-89e9-eac3efc5e9b8",
   "influenceModel" : {

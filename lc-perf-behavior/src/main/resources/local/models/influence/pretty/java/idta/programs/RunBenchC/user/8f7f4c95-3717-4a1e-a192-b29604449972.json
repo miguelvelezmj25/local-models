@@ -1,3 +1,4 @@
+// Enabling MV_STORE results in this region taking 0s.
 {
   "region" : "8f7f4c95-3717-4a1e-a192-b29604449972",
   "influenceModel" : {
