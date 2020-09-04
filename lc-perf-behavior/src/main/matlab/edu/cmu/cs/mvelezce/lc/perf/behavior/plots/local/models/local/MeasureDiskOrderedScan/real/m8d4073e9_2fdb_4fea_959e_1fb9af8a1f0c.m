@@ -9,10 +9,10 @@ for i=1:length(times)
     count = [count; i];
 end
 
-plot(count,times,'k','LineWidth',3);
+plot(count,times,'Marker','x','MarkerEdgeColor','b','MarkerSize', 8, 'Color','k','LineWidth',2);
 
 title('8d4073e9-2fdb-4fea-959e-1fb9af8a1f0c', 'Fontsize',80);
-xlabel('Configurations');
+xlabel(strcat('Configurations (',int2str(length(times)),')'));
 ylabel('Performance (s)');
 
 ylim([floor(times(1)) * 1.0, ceil(times(length(times))) * 1.0]);
