@@ -6,14 +6,19 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import edu.cmu.cs.mvelezce.analysis.Analysis;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.LocalPerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.PerformanceModel;
+import edu.cmu.cs.mvelezce.lc.perf.model.model.influence.LocalPerformanceInfluenceModel;
 import edu.cmu.cs.mvelezce.utils.config.Options;
+import edu.cmu.cs.mvelezce.utils.configurations.ConfigHelper;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.*;
 
 public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenceModel> {
+
+  private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.00");
 
   public static final String OUTPUT_DIR =
       "../lc-perf-behavior/"
@@ -75,10 +80,55 @@ public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenc
       influenceModel.put(config, entry.getValue());
     }
 
-    Set<Map.Entry<Set<String>, String>> influenceModelSet = influenceModel.entrySet();
+    if (influenceModel.isEmpty()) {
+      return new PrettyLocalInfluenceModel(
+          readLocalModel.getRegion(), influenceModel, new LinkedHashMap<>());
+    }
+
+    sortInfluenceModel(influenceModel);
+    LinkedHashMap<Set<String>, String> executions = getExecutions(readLocalModel);
+    return new PrettyLocalInfluenceModel(readLocalModel.getRegion(), influenceModel, executions);
+  }
+
+  private LinkedHashMap<Set<String>, String> getExecutions(
+      LocalPerformanceModel<String> readLocalModel) {
+    LinkedHashMap<Set<String>, Double> influenceModel = getInfluenceModel(readLocalModel);
+    LocalPerformanceInfluenceModel localInfluenceModel =
+        new LocalPerformanceInfluenceModel(
+            readLocalModel.getRegion(), influenceModel, new LinkedHashMap<>());
+
+    Set<String> options = new HashSet<>();
+    for (String s : readLocalModel.getModel().keySet()) {
+      options.addAll(toConfig(s));
+    }
+    options.remove("");
+    Set<Set<String>> configs = ConfigHelper.getConfigurations(options);
+
+    LinkedHashMap<Set<String>, String> executions = new LinkedHashMap<>();
+    List<String> optionsList = new ArrayList<>(options);
+    for (Set<String> config : configs) {
+      double time = localInfluenceModel.evaluate(config, optionsList);
+      executions.put(config, DECIMAL_FORMAT.format(time / 1E9));
+    }
+    sortInfluenceModel(executions);
+    return executions;
+  }
+
+  private LinkedHashMap<Set<String>, Double> getInfluenceModel(
+      LocalPerformanceModel<String> readLocalModel) {
+    LinkedHashMap<Set<String>, Double> influenceModel = new LinkedHashMap<>();
+    for (Map.Entry<String, Double> entry : readLocalModel.getModel().entrySet()) {
+      Set<String> config = toConfig(entry.getKey());
+      config.remove("");
+      influenceModel.put(config, entry.getValue());
+    }
+    return influenceModel;
+  }
+
+  private void sortInfluenceModel(LinkedHashMap<Set<String>, String> configsToValues) {
+    Set<Map.Entry<Set<String>, String>> influenceModelSet = configsToValues.entrySet();
     List<Map.Entry<Set<String>, String>> influenceModelList = new ArrayList<>(influenceModelSet);
-    Collections.sort(
-        influenceModelList,
+    influenceModelList.sort(
         (entry1, entry2) -> {
           Double v1 = Math.abs(Double.parseDouble(entry1.getValue()));
           Double v2 = Math.abs(Double.parseDouble(entry2.getValue()));
@@ -86,11 +136,10 @@ public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenc
           return v2.compareTo(v1);
         });
 
-    influenceModel.clear();
+    configsToValues.clear();
     for (Map.Entry<Set<String>, String> map : influenceModelList) {
-      influenceModel.put(map.getKey(), map.getValue());
+      configsToValues.put(map.getKey(), map.getValue());
     }
-    return new PrettyLocalInfluenceModel(readLocalModel.getRegion(), influenceModel);
   }
 
   private Set<String> toConfig(String entry) {

@@ -6,5 +6,23 @@
     "[MV_STORE, DEFRAG_ALWAYS, COMPRESS]" : "-0.18",
     "[AUTOCOMMIT, MV_STORE, COMPRESS]" : "-0.16",
     "[MV_STORE, COMPRESS]" : "0.13"
+  },
+  "executions" : {
+    "[MV_STORE, COMPRESS]" : "0.45",
+    "[MV_STORE, DEFRAG_ALWAYS]" : "0.41",
+    "[AUTOCOMMIT, MV_STORE, DEFRAG_ALWAYS]" : "0.40",
+    "[AUTOCOMMIT, MV_STORE]" : "0.39",
+    "[AUTOCOMMIT, MV_STORE, COMPRESS, DEFRAG_ALWAYS]" : "0.37",
+    "[MV_STORE, COMPRESS, DEFRAG_ALWAYS]" : "0.36",
+    "[AUTOCOMMIT, MV_STORE, COMPRESS]" : "0.35",
+    "[MV_STORE]" : "0.33",
+    "[]" : "0.00",
+    "[AUTOCOMMIT, COMPRESS]" : "0.00",
+    "[AUTOCOMMIT, DEFRAG_ALWAYS]" : "0.00",
+    "[COMPRESS]" : "0.00",
+    "[COMPRESS, DEFRAG_ALWAYS]" : "0.00",
+    "[AUTOCOMMIT, COMPRESS, DEFRAG_ALWAYS]" : "0.00",
+    "[AUTOCOMMIT]" : "0.00",
+    "[DEFRAG_ALWAYS]" : "0.00"
   }
 }

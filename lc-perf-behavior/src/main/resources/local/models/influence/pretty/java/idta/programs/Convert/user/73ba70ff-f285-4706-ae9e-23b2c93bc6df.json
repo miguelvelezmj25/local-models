@@ -2,5 +2,11 @@
   "region" : "73ba70ff-f285-4706-ae9e-23b2c93bc6df",
   "influenceModel" : {
     "[]" : "0.11"
+  },
+  "executions" : {
+    "[PLATFORM]" : "0.11",
+    "[]" : "0.11",
+    "[CLEAN]" : "0.11",
+    "[PLATFORM, CLEAN]" : "0.11"
   }
 }

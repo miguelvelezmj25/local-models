@@ -2,5 +2,11 @@
   "region" : "de3e2785-7c84-46cb-ab39-81da597effbb",
   "influenceModel" : {
     "[]" : "0.19"
+  },
+  "executions" : {
+    "[MAX_MEMORY, ENV_IS_LOCKING]" : "0.19",
+    "[]" : "0.19",
+    "[MAX_MEMORY]" : "0.19",
+    "[ENV_IS_LOCKING]" : "0.19"
   }
 }

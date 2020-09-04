@@ -3,5 +3,9 @@
   "influenceModel" : {
     "[MAX_TOKEN_LENGTH]" : "0.38",
     "[]" : "0.32"
+  },
+  "executions" : {
+    "[MAX_TOKEN_LENGTH]" : "0.70",
+    "[]" : "0.32"
   }
 }
