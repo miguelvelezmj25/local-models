@@ -1,3 +1,6 @@
+// Enabling SCALE increases execution time.
+// Enabling SKIP_SCALING results in this region never being executed
+// Enabeling DRY_RUN results in this region taking 0s.
 {
   "region" : "06b88092-4ab1-4e19-bd19-b25d4e930ce3",
   "influenceModel" : {
