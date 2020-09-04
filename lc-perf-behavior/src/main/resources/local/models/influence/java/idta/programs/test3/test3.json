@@ -1,11 +1,15 @@
 {
   "localModels" : [ {
-    "region" : "d41c0686-98b4-4cc8-ba07-4b77bb061820",
+    "region" : "cfd20c2f-5d12-4432-9852-912492f80c66",
     "model" : {
-      "[]" : 3.0E9,
-      "[A]" : -1.0E9,
-      "[B]" : 2.0E9,
-      "[A, B]" : -2.0E9
+      "[]" : 0.0,
+      "[A]" : 2.0E9,
+      "[B]" : 5.0E9,
+      "[C]" : 3.0E9,
+      "[A, B]" : -5.0E9,
+      "[A, C]" : -3.0E9,
+      "[B, C]" : -3.0E9,
+      "[A, B, C]" : 3.0E9
     },
     "modelToMin" : { },
     "modelToMax" : { },
@@ -14,10 +18,14 @@
     "modelToConfidenceInterval" : { },
     "modelToCoefficientOfVariation" : { },
     "modelToPerfHumanReadable" : {
-      "[]" : "3.00",
-      "[A]" : "-1.00",
-      "[B]" : "2.00",
-      "[A, B]" : "-2.00"
+      "[]" : "0.00",
+      "[A]" : "2.00",
+      "[B]" : "5.00",
+      "[C]" : "3.00",
+      "[A, B]" : "-5.00",
+      "[A, C]" : "-3.00",
+      "[B, C]" : "-3.00",
+      "[A, B, C]" : "3.00"
     },
     "modelToMinHumanReadable" : { },
     "modelToMaxHumanReadable" : { },

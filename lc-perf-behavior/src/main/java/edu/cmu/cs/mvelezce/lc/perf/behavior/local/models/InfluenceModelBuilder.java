@@ -4,14 +4,13 @@ import edu.cmu.cs.mvelezce.explorer.idta.partition.Partition;
 import edu.cmu.cs.mvelezce.explorer.utils.ConstraintUtils;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.LocalPerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.PerformanceModel;
+import edu.cmu.cs.mvelezce.lc.perf.model.model.idta.IDTALocalPerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.pretty.idta.IDTAPrettyBuilder;
 import edu.cmu.cs.mvelezce.utils.config.Options;
 import edu.cmu.cs.mvelezce.utils.configurations.ConfigHelper;
 import scala.collection.JavaConversions;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class InfluenceModelBuilder extends IDTAPrettyBuilder {
 
@@ -34,7 +33,59 @@ public class InfluenceModelBuilder extends IDTAPrettyBuilder {
       return toPerfModel(localModel);
     }
 
-    throw new UnsupportedOperationException("Implement");
+    LocalPerformanceModel<Partition> fullLocalModel =
+        addMissingPartitions(localModel, allPartitions, new ArrayList<>(allOptions));
+    return toPerfModel(fullLocalModel);
+  }
+
+  private static LocalPerformanceModel<Partition> addMissingPartitions(
+      LocalPerformanceModel<Partition> localModel,
+      Set<Partition> allPartitions,
+      List<String> options) {
+    Map<Partition, Double> model = new HashMap<>();
+    for (Partition partition : allPartitions) {
+      model.put(partition, 0.0);
+    }
+
+    LocalPerformanceModel<Partition> idtaModel =
+        new IDTALocalPerformanceModel(
+            localModel.getRegion(),
+            localModel.getModel(),
+            localModel.getModelToMin(),
+            localModel.getModelToMax(),
+            localModel.getModelToDiff(),
+            localModel.getModelToSampleVariance(),
+            localModel.getModelToConfidenceInterval(),
+            localModel.getModelToCoefficientOfVariation(),
+            localModel.getModelToPerfHumanReadable(),
+            localModel.getModelToMinHumanReadable(),
+            localModel.getModelToMaxHumanReadable(),
+            localModel.getModelToDiffHumanReadable(),
+            localModel.getModelToDiffHumanReadable(),
+            localModel.getModelToConfidenceIntervalHumanReadable(),
+            localModel.getModelToCoefficientOfVariationHumanReadable());
+    for (Partition partition : allPartitions) {
+      Set<String> config = ConstraintUtils.toConfig(partition.getFeatureExpr(), options);
+      double time = idtaModel.evaluate(config, options);
+      model.put(partition, time);
+    }
+
+    return new LocalPerformanceModel<>(
+        localModel.getRegion(),
+        model,
+        new HashMap<>(),
+        new HashMap<>(),
+        new HashMap<>(),
+        new HashMap<>(),
+        new HashMap<>(),
+        new HashMap<>(),
+        new HashMap<>(),
+        new HashMap<>(),
+        new HashMap<>(),
+        new HashMap<>(),
+        new HashMap<>(),
+        new HashMap<>(),
+        new HashMap<>());
   }
 
   private static PerformanceModel<Partition> toPerfModel(
