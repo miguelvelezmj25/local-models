@@ -17,7 +17,7 @@ import java.util.*;
 
 public class IDTAPrettyBuilder extends BasePartitionPrettyBuilder {
 
-  private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.000");
+  private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.00");
   private static final String OUTPUT_DIR =
       "../lc-perf-model/" + Options.DIRECTORY + "/model/java/pretty/idta/programs";
 

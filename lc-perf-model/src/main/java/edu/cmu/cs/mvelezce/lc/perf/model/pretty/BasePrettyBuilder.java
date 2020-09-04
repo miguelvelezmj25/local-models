@@ -1,6 +1,7 @@
 package edu.cmu.cs.mvelezce.lc.perf.model.pretty;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import edu.cmu.cs.mvelezce.analysis.BaseAnalysis;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.LocalPerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.PerformanceModel;
@@ -55,6 +56,7 @@ public abstract class BasePrettyBuilder<T> extends BaseAnalysis<PerformanceModel
     file.getParentFile().mkdirs();
 
     ObjectMapper mapper = new ObjectMapper();
+    mapper.enable(SerializationFeature.INDENT_OUTPUT);
     mapper.writeValue(file, results);
   }
 
