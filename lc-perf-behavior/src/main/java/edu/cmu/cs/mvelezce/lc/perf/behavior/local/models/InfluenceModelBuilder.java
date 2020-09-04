@@ -19,7 +19,7 @@ import java.util.*;
 
 public class InfluenceModelBuilder extends IDTAPrettyBuilder {
 
-  private static final String OUTPUT_DIR =
+  public static final String OUTPUT_DIR =
       "../lc-perf-behavior/" + Options.DIRECTORY + "/local/models/influence/java/idta/programs";
 
   private final String measuredTime;

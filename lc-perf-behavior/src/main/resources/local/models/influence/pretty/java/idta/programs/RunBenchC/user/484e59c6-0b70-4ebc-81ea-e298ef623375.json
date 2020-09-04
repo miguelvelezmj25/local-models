@@ -1,0 +1,11 @@
+{
+  "region" : "484e59c6-0b70-4ebc-81ea-e298ef623375",
+  "influenceModel" : {
+    "[MV_STORE, COMPRESS]" : "0.26",
+    "[DEFRAG_ALWAYS]" : "0.25",
+    "[MV_STORE, DEFRAG_ALWAYS]" : "-0.21",
+    "[MV_STORE, DEFRAG_ALWAYS, COMPRESS]" : "-0.19",
+    "[AUTOCOMMIT, MV_STORE, COMPRESS]" : "-0.14",
+    "[AUTOCOMMIT, MV_STORE, DEFRAG_ALWAYS, COMPRESS]" : "0.13"
+  }
+}

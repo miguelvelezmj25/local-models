@@ -1,0 +1,11 @@
+{
+  "region" : "fdb3753d-1983-4d4d-bd22-4701d80ee6ba",
+  "influenceModel" : {
+    "[]" : "0.21",
+    "[SEQUENTIAL]" : "-0.21",
+    "[MAX_MEMORY]" : "-0.19",
+    "[MAX_MEMORY, SEQUENTIAL]" : "0.19",
+    "[CACHE_MODE, MAX_MEMORY, TEMPORARY]" : "0.11",
+    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, SEQUENTIAL]" : "-0.11"
+  }
+}

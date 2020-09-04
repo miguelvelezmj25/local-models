@@ -1,0 +1,7 @@
+{
+  "region" : "4bc1fda2-a46c-49f4-b7ca-f834f0a1e0f1",
+  "influenceModel" : {
+    "[RAM_BUFFER_SIZE_MB, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "0.12",
+    "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "-0.12"
+  }
+}

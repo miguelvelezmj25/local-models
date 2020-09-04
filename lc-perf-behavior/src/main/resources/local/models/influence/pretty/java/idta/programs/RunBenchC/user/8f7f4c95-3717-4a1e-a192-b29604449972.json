@@ -1,0 +1,13 @@
+{
+  "region" : "8f7f4c95-3717-4a1e-a192-b29604449972",
+  "influenceModel" : {
+    "[PAGE_SIZE, DEFRAG_ALWAYS]" : "1.50",
+    "[PAGE_SIZE, MV_STORE, DEFRAG_ALWAYS]" : "-1.50",
+    "[CACHE_SIZE, DEFRAG_ALWAYS]" : "0.83",
+    "[CACHE_SIZE, MV_STORE, DEFRAG_ALWAYS]" : "-0.83",
+    "[DEFRAG_ALWAYS]" : "0.34",
+    "[MV_STORE, DEFRAG_ALWAYS]" : "-0.34",
+    "[CACHE_SIZE, PAGE_SIZE, FILE_LOCK, DEFRAG_ALWAYS]" : "0.14",
+    "[CACHE_SIZE, PAGE_SIZE, FILE_LOCK, MV_STORE, DEFRAG_ALWAYS]" : "-0.14"
+  }
+}

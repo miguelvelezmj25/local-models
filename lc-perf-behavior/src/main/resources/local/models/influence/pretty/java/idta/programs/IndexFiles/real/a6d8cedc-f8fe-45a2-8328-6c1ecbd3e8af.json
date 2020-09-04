@@ -1,0 +1,7 @@
+{
+  "region" : "a6d8cedc-f8fe-45a2-8328-6c1ecbd3e8af",
+  "influenceModel" : {
+    "[]" : "0.15",
+    "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "-0.11"
+  }
+}

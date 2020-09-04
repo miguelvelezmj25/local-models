@@ -1,0 +1,7 @@
+{
+  "region" : "ebac5991-a015-4954-a2c1-1a590caec3d7",
+  "influenceModel" : {
+    "[CACHE_MODE, TEMPORARY]" : "-0.12",
+    "[TEMPORARY]" : "0.11"
+  }
+}

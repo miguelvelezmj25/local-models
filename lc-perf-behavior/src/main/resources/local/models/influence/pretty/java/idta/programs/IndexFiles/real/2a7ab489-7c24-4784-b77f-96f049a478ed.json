@@ -1,0 +1,7 @@
+{
+  "region" : "2a7ab489-7c24-4784-b77f-96f049a478ed",
+  "influenceModel" : {
+    "[MAX_TOKEN_LENGTH]" : "0.38",
+    "[]" : "0.32"
+  }
+}

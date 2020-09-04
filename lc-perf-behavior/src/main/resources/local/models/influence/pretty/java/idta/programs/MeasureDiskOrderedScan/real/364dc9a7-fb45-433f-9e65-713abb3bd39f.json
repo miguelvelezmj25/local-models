@@ -1,0 +1,9 @@
+{
+  "region" : "364dc9a7-fb45-433f-9e65-713abb3bd39f",
+  "influenceModel" : {
+    "[TEMPORARY]" : "0.60",
+    "[CACHE_MODE, TEMPORARY]" : "-0.60",
+    "[MAX_MEMORY, TEMPORARY, DUPLICATES, SEQUENTIAL, ENV_IS_LOCKING]" : "0.12",
+    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, DUPLICATES, SEQUENTIAL, ENV_IS_LOCKING]" : "-0.12"
+  }
+}
