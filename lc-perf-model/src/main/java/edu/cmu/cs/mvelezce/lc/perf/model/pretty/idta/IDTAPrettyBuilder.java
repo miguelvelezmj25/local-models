@@ -36,7 +36,9 @@ public class IDTAPrettyBuilder extends BasePartitionPrettyBuilder {
 
     // Base time
     if (perfModel.size() == 1) {
-      influenceModel.put(new HashSet<>(), perfModel.entrySet().iterator().next().getValue());
+      Set<String> key = new HashSet<>();
+      key.add("True");
+      influenceModel.put(key, perfModel.entrySet().iterator().next().getValue());
 
       return new LocalPerformanceInfluenceModel(
           localModel.getRegion(), influenceModel, toHumanReadable(influenceModel));

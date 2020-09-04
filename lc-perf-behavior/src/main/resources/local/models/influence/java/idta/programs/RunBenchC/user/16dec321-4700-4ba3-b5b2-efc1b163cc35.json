@@ -1,0 +1,37 @@
+{
+  "localModels" : [ {
+    "region" : "16dec321-4700-4ba3-b5b2-efc1b163cc35",
+    "model" : {
+      "[]" : 7.66985E7,
+      "[PAGE_SIZE]" : 4.2256E7,
+      "[AUTOCOMMIT]" : -2.0934E7,
+      "[MV_STORE]" : -3.1617E7,
+      "[AUTOCOMMIT, MV_STORE]" : 2.33075E7,
+      "[PAGE_SIZE, MV_STORE]" : -4.21255E7,
+      "[PAGE_SIZE, AUTOCOMMIT]" : -1.86105E7,
+      "[PAGE_SIZE, AUTOCOMMIT, MV_STORE]" : 1.8709E7
+    },
+    "modelToMin" : { },
+    "modelToMax" : { },
+    "modelToDiff" : { },
+    "modelToSampleVariance" : { },
+    "modelToConfidenceInterval" : { },
+    "modelToCoefficientOfVariation" : { },
+    "modelToPerfHumanReadable" : {
+      "[]" : "0.08",
+      "[PAGE_SIZE]" : "0.04",
+      "[AUTOCOMMIT]" : "-0.02",
+      "[MV_STORE]" : "-0.03",
+      "[AUTOCOMMIT, MV_STORE]" : "0.02",
+      "[PAGE_SIZE, MV_STORE]" : "-0.04",
+      "[PAGE_SIZE, AUTOCOMMIT]" : "-0.02",
+      "[PAGE_SIZE, AUTOCOMMIT, MV_STORE]" : "0.02"
+    },
+    "modelToMinHumanReadable" : { },
+    "modelToMaxHumanReadable" : { },
+    "modelToDiffHumanReadable" : { },
+    "modelToSampleVarianceHumanReadble" : { },
+    "modelToConfidenceIntervalHumanReadable" : { },
+    "modelToCoefficientOfVariationHumanReadable" : { }
+  } ]
+}

@@ -1,0 +1,25 @@
+{
+  "localModels" : [ {
+    "region" : "18a76b92-5dfa-46cb-8d46-0616be38cbe5",
+    "model" : {
+      "[]" : 1.149396E9,
+      "[MAX_TOKEN_LENGTH]" : 2974000.0
+    },
+    "modelToMin" : { },
+    "modelToMax" : { },
+    "modelToDiff" : { },
+    "modelToSampleVariance" : { },
+    "modelToConfidenceInterval" : { },
+    "modelToCoefficientOfVariation" : { },
+    "modelToPerfHumanReadable" : {
+      "[]" : "1.15",
+      "[MAX_TOKEN_LENGTH]" : "0.00"
+    },
+    "modelToMinHumanReadable" : { },
+    "modelToMaxHumanReadable" : { },
+    "modelToDiffHumanReadable" : { },
+    "modelToSampleVarianceHumanReadble" : { },
+    "modelToConfidenceIntervalHumanReadable" : { },
+    "modelToCoefficientOfVariationHumanReadable" : { }
+  } ]
+}

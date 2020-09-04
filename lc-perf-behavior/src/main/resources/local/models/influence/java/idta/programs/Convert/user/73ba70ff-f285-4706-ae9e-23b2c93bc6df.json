@@ -1,0 +1,29 @@
+{
+  "localModels" : [ {
+    "region" : "73ba70ff-f285-4706-ae9e-23b2c93bc6df",
+    "model" : {
+      "[]" : 1.09644E8,
+      "[PLATFORM]" : 0.0,
+      "[CLEAN]" : -1052000.0,
+      "[PLATFORM, CLEAN]" : 3788000.0
+    },
+    "modelToMin" : { },
+    "modelToMax" : { },
+    "modelToDiff" : { },
+    "modelToSampleVariance" : { },
+    "modelToConfidenceInterval" : { },
+    "modelToCoefficientOfVariation" : { },
+    "modelToPerfHumanReadable" : {
+      "[]" : "0.11",
+      "[PLATFORM]" : "0.00",
+      "[CLEAN]" : "-0.00",
+      "[PLATFORM, CLEAN]" : "0.00"
+    },
+    "modelToMinHumanReadable" : { },
+    "modelToMaxHumanReadable" : { },
+    "modelToDiffHumanReadable" : { },
+    "modelToSampleVarianceHumanReadble" : { },
+    "modelToConfidenceIntervalHumanReadable" : { },
+    "modelToCoefficientOfVariationHumanReadable" : { }
+  } ]
+}

@@ -1,10 +1,16 @@
 package edu.cmu.cs.mvelezce.lc.perf.behavior.local.models;
 
+import edu.cmu.cs.mvelezce.adapters.convert.BaseConvertAdapter;
+import edu.cmu.cs.mvelezce.adapters.indexFiles.BaseIndexFilesAdapter;
+import edu.cmu.cs.mvelezce.adapters.measureDiskOrderedScan.BaseMeasureDiskOrderedScanAdapter;
+import edu.cmu.cs.mvelezce.adapters.runBenchC.BaseRunBenchCAdapter;
 import edu.cmu.cs.mvelezce.explorer.idta.IDTA;
 import edu.cmu.cs.mvelezce.explorer.idta.partition.Partition;
 import edu.cmu.cs.mvelezce.explorer.utils.FeatureExprUtils;
+import edu.cmu.cs.mvelezce.java.execute.BaseExecutor;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.LocalPerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.PerformanceModel;
+import edu.cmu.cs.mvelezce.lc.perf.model.model.partition.PartitionLocalPerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.pretty.BasePrettyBuilder;
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,6 +19,82 @@ import java.io.IOException;
 import java.util.*;
 
 public class InfluenceModelBuilderTest {
+
+  @Test
+  public void berkeleyDB() throws IOException, InterruptedException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
+    LocalModelFilterer filterer =
+        new LocalModelFilterer.Builder(programName, BaseExecutor.REAL).build();
+    String[] args = new String[0];
+    Set<LocalPerformanceModel<Partition>> relevantLocalModels = filterer.analyze(args);
+
+    for (LocalPerformanceModel<Partition> localModel : relevantLocalModels) {
+      BasePrettyBuilder<Partition> analysis =
+          new InfluenceModelBuilder(programName, BaseExecutor.REAL, localModel);
+      args = new String[2];
+      args[0] = "-delres";
+      args[1] = "-saveres";
+      analysis.analyze(args);
+      PartitionLocalPerformanceModel.getConfigToPartition().clear();
+    }
+  }
+
+  @Test
+  public void lucene() throws IOException, InterruptedException {
+    String programName = BaseIndexFilesAdapter.PROGRAM_NAME;
+    LocalModelFilterer filterer =
+        new LocalModelFilterer.Builder(programName, BaseExecutor.REAL).build();
+    String[] args = new String[0];
+    Set<LocalPerformanceModel<Partition>> relevantLocalModels = filterer.analyze(args);
+
+    for (LocalPerformanceModel<Partition> localModel : relevantLocalModels) {
+      BasePrettyBuilder<Partition> analysis =
+          new InfluenceModelBuilder(programName, BaseExecutor.REAL, localModel);
+      args = new String[2];
+      args[0] = "-delres";
+      args[1] = "-saveres";
+      analysis.analyze(args);
+      PartitionLocalPerformanceModel.getConfigToPartition().clear();
+    }
+  }
+
+  @Test
+  public void convert() throws IOException, InterruptedException {
+    String programName = BaseConvertAdapter.PROGRAM_NAME;
+    LocalModelFilterer filterer =
+        new LocalModelFilterer.Builder(programName, BaseExecutor.USER).build();
+    String[] args = new String[0];
+    Set<LocalPerformanceModel<Partition>> relevantLocalModels = filterer.analyze(args);
+
+    for (LocalPerformanceModel<Partition> localModel : relevantLocalModels) {
+      BasePrettyBuilder<Partition> analysis =
+          new InfluenceModelBuilder(programName, BaseExecutor.USER, localModel);
+      args = new String[2];
+      args[0] = "-delres";
+      args[1] = "-saveres";
+      analysis.analyze(args);
+      PartitionLocalPerformanceModel.getConfigToPartition().clear();
+    }
+  }
+
+  @Test
+  public void runBenchC() throws IOException, InterruptedException {
+    String programName = BaseRunBenchCAdapter.PROGRAM_NAME;
+    LocalModelFilterer filterer =
+        new LocalModelFilterer.Builder(programName, BaseExecutor.USER).build();
+    String[] args = new String[0];
+    Set<LocalPerformanceModel<Partition>> relevantLocalModels = filterer.analyze(args);
+
+    for (LocalPerformanceModel<Partition> localModel : relevantLocalModels) {
+      BasePrettyBuilder<Partition> analysis =
+          new InfluenceModelBuilder(programName, BaseExecutor.USER, localModel);
+      args = new String[2];
+      args[0] = "-delres";
+      args[1] = "-saveres";
+      analysis.analyze(args);
+      PartitionLocalPerformanceModel.getConfigToPartition().clear();
+    }
+  }
 
   @Test
   public void test1() throws IOException, InterruptedException {
@@ -29,12 +111,8 @@ public class InfluenceModelBuilderTest {
     LocalPerformanceModel<Partition> localModel = getLocalModel(perfModel);
 
     String programName = "test1";
-    List<String> options = new ArrayList<>();
-    options.add("A");
-    options.add("B");
-
     BasePrettyBuilder<Partition> analysis =
-        new InfluenceModelBuilder(programName, options, localModel);
+        new InfluenceModelBuilder(programName, BaseExecutor.REAL, localModel);
     String[] args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
@@ -55,6 +133,9 @@ public class InfluenceModelBuilderTest {
     configsToTimes.put(config3, toNano(2.0));
     configsToTimes.put(config4, toNano(2.0));
 
+    List<String> options = new ArrayList<>();
+    options.add("A");
+    options.add("B");
     assertEqualPredictions(influenceModel, configsToTimes, options);
   }
 
@@ -71,12 +152,8 @@ public class InfluenceModelBuilderTest {
     LocalPerformanceModel<Partition> localModel = getLocalModel(perfModel);
 
     String programName = "test2";
-    List<String> options = new ArrayList<>();
-    options.add("A");
-    options.add("B");
-
     BasePrettyBuilder<Partition> analysis =
-        new InfluenceModelBuilder(programName, options, localModel);
+        new InfluenceModelBuilder(programName, BaseExecutor.REAL, localModel);
     String[] args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
@@ -97,6 +174,9 @@ public class InfluenceModelBuilderTest {
     configsToTimes.put(config3, toNano(2.0));
     configsToTimes.put(config4, toNano(2.0));
 
+    List<String> options = new ArrayList<>();
+    options.add("A");
+    options.add("B");
     assertEqualPredictions(influenceModel, configsToTimes, options);
   }
 
@@ -115,13 +195,8 @@ public class InfluenceModelBuilderTest {
     LocalPerformanceModel<Partition> localModel = getLocalModel(perfModel);
 
     String programName = "test3";
-    List<String> options = new ArrayList<>();
-    options.add("A");
-    options.add("B");
-    options.add("C");
-
     BasePrettyBuilder<Partition> analysis =
-        new InfluenceModelBuilder(programName, options, localModel);
+        new InfluenceModelBuilder(programName, BaseExecutor.REAL, localModel);
     String[] args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
@@ -158,6 +233,10 @@ public class InfluenceModelBuilderTest {
     configsToTimes.put(config7, toNano(2.0));
     configsToTimes.put(config8, toNano(2.0));
 
+    List<String> options = new ArrayList<>();
+    options.add("A");
+    options.add("B");
+    options.add("C");
     assertEqualPredictions(influenceModel, configsToTimes, options);
   }
 
@@ -183,7 +262,7 @@ public class InfluenceModelBuilderTest {
 
   private LocalPerformanceModel<Partition> getLocalModel(Map<Partition, Double> perfModel) {
     return new LocalPerformanceModel<>(
-        UUID.randomUUID(),
+        UUID.fromString("f7569165-c46d-4b4d-ada6-9e23736b1608"),
         perfModel,
         new HashMap<>(),
         new HashMap<>(),

@@ -1,0 +1,53 @@
+{
+  "localModels" : [ {
+    "region" : "962a8c87-1c7f-4a33-9d55-16ff0a475033",
+    "model" : {
+      "[]" : 4.60113E8,
+      "[RAM_BUFFER_SIZE_MB]" : -2.320255E8,
+      "[MAX_BUFFERED_DOCS]" : -2.48815E8,
+      "[MAX_TOKEN_LENGTH]" : -9021000.0,
+      "[COMMIT_ON_CLOSE]" : -2.77335E7,
+      "[RAM_BUFFER_SIZE_MB, COMMIT_ON_CLOSE]" : 2.46992E8,
+      "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS]" : 2.320255E8,
+      "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : 2.24915E8,
+      "[RAM_BUFFER_SIZE_MB, MAX_TOKEN_LENGTH]" : 9021000.0,
+      "[MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : 2.55155E7,
+      "[MAX_BUFFERED_DOCS, COMMIT_ON_CLOSE]" : 2.326505E8,
+      "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, COMMIT_ON_CLOSE]" : -2.46992E8,
+      "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : -2.166185E8,
+      "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : -9021000.0,
+      "[RAM_BUFFER_SIZE_MB, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : -2.4141E7,
+      "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : 2.4141E7
+    },
+    "modelToMin" : { },
+    "modelToMax" : { },
+    "modelToDiff" : { },
+    "modelToSampleVariance" : { },
+    "modelToConfidenceInterval" : { },
+    "modelToCoefficientOfVariation" : { },
+    "modelToPerfHumanReadable" : {
+      "[]" : "0.46",
+      "[RAM_BUFFER_SIZE_MB]" : "-0.23",
+      "[MAX_BUFFERED_DOCS]" : "-0.25",
+      "[MAX_TOKEN_LENGTH]" : "-0.01",
+      "[COMMIT_ON_CLOSE]" : "-0.03",
+      "[RAM_BUFFER_SIZE_MB, COMMIT_ON_CLOSE]" : "0.25",
+      "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS]" : "0.23",
+      "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : "0.22",
+      "[RAM_BUFFER_SIZE_MB, MAX_TOKEN_LENGTH]" : "0.01",
+      "[MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "0.03",
+      "[MAX_BUFFERED_DOCS, COMMIT_ON_CLOSE]" : "0.23",
+      "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, COMMIT_ON_CLOSE]" : "-0.25",
+      "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "-0.22",
+      "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : "-0.01",
+      "[RAM_BUFFER_SIZE_MB, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "-0.02",
+      "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "0.02"
+    },
+    "modelToMinHumanReadable" : { },
+    "modelToMaxHumanReadable" : { },
+    "modelToDiffHumanReadable" : { },
+    "modelToSampleVarianceHumanReadble" : { },
+    "modelToConfidenceIntervalHumanReadable" : { },
+    "modelToCoefficientOfVariationHumanReadable" : { }
+  } ]
+}

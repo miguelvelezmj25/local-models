@@ -1,15 +1,20 @@
 package edu.cmu.cs.mvelezce.lc.perf.behavior.local.models;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import edu.cmu.cs.mvelezce.explorer.idta.partition.Partition;
 import edu.cmu.cs.mvelezce.explorer.utils.ConstraintUtils;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.LocalPerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.PerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.idta.IDTALocalPerformanceModel;
+import edu.cmu.cs.mvelezce.lc.perf.model.model.partition.PartitionLocalPerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.pretty.idta.IDTAPrettyBuilder;
 import edu.cmu.cs.mvelezce.utils.config.Options;
 import edu.cmu.cs.mvelezce.utils.configurations.ConfigHelper;
 import scala.collection.JavaConversions;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 public class InfluenceModelBuilder extends IDTAPrettyBuilder {
@@ -17,15 +22,25 @@ public class InfluenceModelBuilder extends IDTAPrettyBuilder {
   private static final String OUTPUT_DIR =
       "../lc-perf-behavior/" + Options.DIRECTORY + "/local/models/influence/java/idta/programs";
 
+  private final String measuredTime;
+  private final String region;
+
   public InfluenceModelBuilder(
-      String programName, Collection<String> options, LocalPerformanceModel<Partition> localModel) {
-    super(programName, options, getBFModel(localModel));
+      String programName, String measuredTime, LocalPerformanceModel<Partition> localModel) {
+    super(programName, getAllOptions(localModel), getBFModel(localModel));
+
+    this.measuredTime = measuredTime;
+    this.region = localModel.getRegion().toString();
   }
 
   /** Adds entries for implied partitions to build a performance-influence model. */
   private static PerformanceModel<Partition> getBFModel(
       LocalPerformanceModel<Partition> localModel) {
     Set<String> allOptions = getAllOptions(localModel);
+    if (allOptions.isEmpty()) {
+      return toPerfModel(localModel);
+    }
+
     Set<Set<String>> allConfigs = ConfigHelper.getConfigurations(allOptions);
     Set<Partition> allPartitions = getAllPartitions(allConfigs, allOptions);
     Set<Partition> missingPartitions = getMissingPartitions(localModel, allPartitions);
@@ -42,6 +57,7 @@ public class InfluenceModelBuilder extends IDTAPrettyBuilder {
       LocalPerformanceModel<Partition> localModel,
       Set<Partition> allPartitions,
       List<String> options) {
+    Map<Set<String>, Partition> x = PartitionLocalPerformanceModel.getConfigToPartition();
     Map<Partition, Double> model = new HashMap<>();
     for (Partition partition : allPartitions) {
       model.put(partition, 0.0);
@@ -134,7 +150,43 @@ public class InfluenceModelBuilder extends IDTAPrettyBuilder {
   }
 
   @Override
+  public PerformanceModel<Set<String>> analyze(String[] args) throws IOException {
+    Options.getCommandLine(args);
+    File file = new File(this.outputDir());
+    Options.checkIfDeleteResult(file);
+    if (file.exists()) {
+      return this.readFromFile(file);
+    }
+
+    PerformanceModel<Set<String>> influenceModel = this.analyze();
+    if (Options.checkIfSave()) {
+      this.writeToFile(influenceModel);
+    }
+    return influenceModel;
+  }
+
+  @Override
+  public void writeToFile(PerformanceModel<Set<String>> model) throws IOException {
+    String outputFile = this.outputDir();
+    File file = new File(outputFile);
+    if (!file.getParentFile().exists() && !file.getParentFile().mkdirs()) {
+      throw new RuntimeException("Could not create parent dirs");
+    }
+
+    ObjectMapper mapper = new ObjectMapper();
+    mapper.enable(SerializationFeature.INDENT_OUTPUT);
+    mapper.writeValue(file, model);
+  }
+
+  @Override
   public String outputDir() {
-    return OUTPUT_DIR + "/" + this.getProgramName();
+    return OUTPUT_DIR
+        + "/"
+        + this.getProgramName()
+        + "/"
+        + this.measuredTime
+        + "/"
+        + this.region
+        + Options.DOT_JSON;
   }
 }

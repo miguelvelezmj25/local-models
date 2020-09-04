@@ -1,0 +1,53 @@
+{
+  "localModels" : [ {
+    "region" : "05fcfc01-8d37-4345-a79a-a660f81fcca4",
+    "model" : {
+      "[]" : 2.9327E7,
+      "[PAGE_SIZE]" : 2.1109E7,
+      "[AUTOCOMMIT]" : 3.9422E7,
+      "[FILE_LOCK]" : 4768500.0,
+      "[MV_STORE]" : -2.9327E7,
+      "[PAGE_SIZE, FILE_LOCK]" : 337000.0,
+      "[FILE_LOCK, MV_STORE]" : -4768500.0,
+      "[AUTOCOMMIT, FILE_LOCK]" : -1.51855E7,
+      "[AUTOCOMMIT, MV_STORE]" : -3.9422E7,
+      "[PAGE_SIZE, MV_STORE]" : -2.1109E7,
+      "[PAGE_SIZE, AUTOCOMMIT]" : 5.82585E7,
+      "[PAGE_SIZE, AUTOCOMMIT, MV_STORE]" : -5.82585E7,
+      "[AUTOCOMMIT, FILE_LOCK, MV_STORE]" : 1.51855E7,
+      "[PAGE_SIZE, FILE_LOCK, MV_STORE]" : -337000.0,
+      "[PAGE_SIZE, AUTOCOMMIT, FILE_LOCK]" : -2.4532E7,
+      "[PAGE_SIZE, AUTOCOMMIT, FILE_LOCK, MV_STORE]" : 2.4532E7
+    },
+    "modelToMin" : { },
+    "modelToMax" : { },
+    "modelToDiff" : { },
+    "modelToSampleVariance" : { },
+    "modelToConfidenceInterval" : { },
+    "modelToCoefficientOfVariation" : { },
+    "modelToPerfHumanReadable" : {
+      "[]" : "0.03",
+      "[PAGE_SIZE]" : "0.02",
+      "[AUTOCOMMIT]" : "0.04",
+      "[FILE_LOCK]" : "0.00",
+      "[MV_STORE]" : "-0.03",
+      "[PAGE_SIZE, FILE_LOCK]" : "0.00",
+      "[FILE_LOCK, MV_STORE]" : "-0.00",
+      "[AUTOCOMMIT, FILE_LOCK]" : "-0.02",
+      "[AUTOCOMMIT, MV_STORE]" : "-0.04",
+      "[PAGE_SIZE, MV_STORE]" : "-0.02",
+      "[PAGE_SIZE, AUTOCOMMIT]" : "0.06",
+      "[PAGE_SIZE, AUTOCOMMIT, MV_STORE]" : "-0.06",
+      "[AUTOCOMMIT, FILE_LOCK, MV_STORE]" : "0.02",
+      "[PAGE_SIZE, FILE_LOCK, MV_STORE]" : "-0.00",
+      "[PAGE_SIZE, AUTOCOMMIT, FILE_LOCK]" : "-0.02",
+      "[PAGE_SIZE, AUTOCOMMIT, FILE_LOCK, MV_STORE]" : "0.02"
+    },
+    "modelToMinHumanReadable" : { },
+    "modelToMaxHumanReadable" : { },
+    "modelToDiffHumanReadable" : { },
+    "modelToSampleVarianceHumanReadble" : { },
+    "modelToConfidenceIntervalHumanReadable" : { },
+    "modelToCoefficientOfVariationHumanReadable" : { }
+  } ]
+}

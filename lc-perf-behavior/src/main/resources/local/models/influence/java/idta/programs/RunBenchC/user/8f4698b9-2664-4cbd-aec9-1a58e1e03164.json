@@ -1,0 +1,37 @@
+{
+  "localModels" : [ {
+    "region" : "8f4698b9-2664-4cbd-aec9-1a58e1e03164",
+    "model" : {
+      "[]" : 0.0,
+      "[AUTOCOMMIT]" : 0.0,
+      "[MV_STORE]" : 3.18325E7,
+      "[COMPRESS]" : 0.0,
+      "[AUTOCOMMIT, COMPRESS]" : 0.0,
+      "[AUTOCOMMIT, MV_STORE]" : 5.8399E7,
+      "[MV_STORE, COMPRESS]" : -2830000.0,
+      "[AUTOCOMMIT, MV_STORE, COMPRESS]" : 4.9832E7
+    },
+    "modelToMin" : { },
+    "modelToMax" : { },
+    "modelToDiff" : { },
+    "modelToSampleVariance" : { },
+    "modelToConfidenceInterval" : { },
+    "modelToCoefficientOfVariation" : { },
+    "modelToPerfHumanReadable" : {
+      "[]" : "0.00",
+      "[AUTOCOMMIT]" : "0.00",
+      "[MV_STORE]" : "0.03",
+      "[COMPRESS]" : "0.00",
+      "[AUTOCOMMIT, COMPRESS]" : "0.00",
+      "[AUTOCOMMIT, MV_STORE]" : "0.06",
+      "[MV_STORE, COMPRESS]" : "-0.00",
+      "[AUTOCOMMIT, MV_STORE, COMPRESS]" : "0.05"
+    },
+    "modelToMinHumanReadable" : { },
+    "modelToMaxHumanReadable" : { },
+    "modelToDiffHumanReadable" : { },
+    "modelToSampleVarianceHumanReadble" : { },
+    "modelToConfidenceIntervalHumanReadable" : { },
+    "modelToCoefficientOfVariationHumanReadable" : { }
+  } ]
+}
