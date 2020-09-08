@@ -1,5 +1,8 @@
 {
   "region" : "e2efc427-995d-4449-871c-7e6d27ff0da6",
+  "packageName" : "com.mortennobel.imagescaling",
+  "className" : "ResampleOp",
+  "methodSignature" : "doFilter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
   "influenceModel" : {
     "[SKIP_UPSCALING, SCALE]" : "-0.26",
     "[SCALE]" : "0.20",

@@ -1,5 +1,8 @@
 {
   "region" : "3ad5f7f9-9558-4f02-b4a5-964c55b6cd5c",
+  "packageName" : "at.favre.tools.dconvert.util",
+  "className" : "ImageUtil",
+  "methodSignature" : "read(Ljavax/imageio/stream/ImageInputStream;Lat/favre/tools/dconvert/arg/ImageType;)Lat/favre/tools/dconvert/util/LoadedImage;",
   "influenceModel" : {
     "[]" : "0.43"
   },

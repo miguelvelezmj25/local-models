@@ -4,6 +4,9 @@
 
 {
   "region" : "06b88092-4ab1-4e19-bd19-b25d4e930ce3",
+  "packageName" : "com.mortennobel.imagescaling",
+  "className" : "ResampleOp",
+  "methodSignature" : "verticalFromWorkToDst([[B[BII)V",
   "influenceModel" : {
     "[SKIP_UPSCALING, SCALE]" : "-99.32",
     "[SCALE]" : "95.30",

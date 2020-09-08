@@ -6,6 +6,9 @@
 
 {
   "region" : "3a0d7063-f9b5-4fee-8881-5f546c0e45ae",
+  "packageName" : "com.mortennobel.imagescaling",
+  "className" : "AdvancedResizeOp",
+  "methodSignature" : "fireProgressChanged(F)V",
   "influenceModel" : {
     "[SKIP_UPSCALING, SCALE]" : "-2.31",
     "[SCALE]" : "1.77",

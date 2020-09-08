@@ -3,6 +3,9 @@
 
 {
   "region" : "d94c3725-d5a3-4b0e-aa83-e362adc66923",
+  "packageName" : "com.mortennobel.imagescaling",
+  "className" : "ResampleOp",
+  "methodSignature" : "horizontallyFromSrcToWork(Ljava/awt/image/BufferedImage;[[BII)V",
   "influenceModel" : {
     "[SKIP_UPSCALING, SCALE]" : "-15.79",
     "[SCALE]" : "11.04",

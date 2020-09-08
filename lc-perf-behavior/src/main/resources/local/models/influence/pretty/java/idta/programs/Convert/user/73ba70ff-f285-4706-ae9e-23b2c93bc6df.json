@@ -1,5 +1,8 @@
 {
   "region" : "73ba70ff-f285-4706-ae9e-23b2c93bc6df",
+  "packageName" : "at.favre.tools.dconvert",
+  "className" : "DConvert",
+  "methodSignature" : "execute(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V",
   "influenceModel" : {
     "[]" : "0.11"
   },

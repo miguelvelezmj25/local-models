@@ -1,5 +1,8 @@
 {
   "region" : "0e953a06-815e-4056-9389-a1fe02b65f4a",
+  "packageName" : "com.mortennobel.imagescaling",
+  "className" : "ImageUtils",
+  "methodSignature" : "setBGRPixels([BLjava/awt/image/BufferedImage;IIII)V",
   "influenceModel" : {
     "[SKIP_UPSCALING, SCALE]" : "-0.21",
     "[SCALE]" : "0.18",

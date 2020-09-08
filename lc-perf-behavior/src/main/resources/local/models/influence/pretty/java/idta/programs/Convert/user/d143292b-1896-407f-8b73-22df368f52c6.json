@@ -1,5 +1,8 @@
 {
   "region" : "d143292b-1896-407f-8b73-22df368f52c6",
+  "packageName" : "com.mortennobel.imagescaling",
+  "className" : "ImageUtils",
+  "methodSignature" : "getPixelsBGR(Ljava/awt/image/BufferedImage;II[B[I)[B",
   "influenceModel" : {
     "[]" : "0.85",
     "[DRY_RUN]" : "-0.85",

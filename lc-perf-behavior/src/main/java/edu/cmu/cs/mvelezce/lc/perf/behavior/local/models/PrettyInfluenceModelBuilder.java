@@ -7,6 +7,7 @@ import edu.cmu.cs.mvelezce.analysis.Analysis;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.LocalPerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.PerformanceModel;
 import edu.cmu.cs.mvelezce.lc.perf.model.model.influence.LocalPerformanceInfluenceModel;
+import edu.cmu.cs.mvelezce.region.java.JavaRegion;
 import edu.cmu.cs.mvelezce.utils.config.Options;
 import edu.cmu.cs.mvelezce.utils.configurations.ConfigHelper;
 import org.apache.commons.io.FileUtils;
@@ -27,15 +28,15 @@ public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenc
 
   private final String programName;
   private final String measuredTime;
-  private final String region;
+  private final JavaRegion region;
   private final double threshold;
 
-  public PrettyInfluenceModelBuilder(String programName, String measuredTime, String region) {
+  public PrettyInfluenceModelBuilder(String programName, String measuredTime, JavaRegion region) {
     this(programName, measuredTime, region, 0.0);
   }
 
   public PrettyInfluenceModelBuilder(
-      String programName, String measuredTime, String region, double threshold) {
+      String programName, String measuredTime, JavaRegion region, double threshold) {
     this.programName = programName;
     this.measuredTime = measuredTime;
     this.region = region;
@@ -52,7 +53,7 @@ public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenc
                 + "/"
                 + this.measuredTime
                 + "/"
-                + this.region
+                + this.region.getId()
                 + Options.DOT_JSON);
     if (!file.exists()) {
       throw new IllegalArgumentException(
@@ -61,7 +62,7 @@ public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenc
               + "."
               + this.measuredTime
               + " "
-              + this.region);
+              + this.region.getId());
     }
 
     ObjectMapper mapper = new ObjectMapper();
@@ -76,18 +77,32 @@ public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenc
         continue;
       }
 
-      Set<String> config = toConfig(entry.getKey());
-      influenceModel.put(config, entry.getValue());
+      Set<String> terms = toTerms(entry.getKey());
+      if (terms.size() > 2) {
+        continue;
+      }
+      influenceModel.put(terms, entry.getValue());
     }
 
     if (influenceModel.isEmpty()) {
       return new PrettyLocalInfluenceModel(
-          readLocalModel.getRegion(), influenceModel, new LinkedHashMap<>());
+          readLocalModel.getRegion(),
+          this.region.getRegionPackage(),
+          this.region.getRegionClass(),
+          this.region.getRegionMethodSignature(),
+          influenceModel,
+          new LinkedHashMap<>());
     }
 
     sortInfluenceModel(influenceModel);
     LinkedHashMap<Set<String>, String> executions = getExecutions(readLocalModel);
-    return new PrettyLocalInfluenceModel(readLocalModel.getRegion(), influenceModel, executions);
+    return new PrettyLocalInfluenceModel(
+        readLocalModel.getRegion(),
+        this.region.getRegionPackage(),
+        this.region.getRegionClass(),
+        this.region.getRegionMethodSignature(),
+        influenceModel,
+        executions);
   }
 
   private LinkedHashMap<Set<String>, String> getExecutions(
@@ -99,7 +114,7 @@ public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenc
 
     Set<String> options = new HashSet<>();
     for (String s : readLocalModel.getModel().keySet()) {
-      options.addAll(toConfig(s));
+      options.addAll(toTerms(s));
     }
     options.remove("");
     Set<Set<String>> configs = ConfigHelper.getConfigurations(options);
@@ -118,9 +133,9 @@ public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenc
       LocalPerformanceModel<String> readLocalModel) {
     LinkedHashMap<Set<String>, Double> influenceModel = new LinkedHashMap<>();
     for (Map.Entry<String, Double> entry : readLocalModel.getModel().entrySet()) {
-      Set<String> config = toConfig(entry.getKey());
-      config.remove("");
-      influenceModel.put(config, entry.getValue());
+      Set<String> terms = toTerms(entry.getKey());
+      terms.remove("");
+      influenceModel.put(terms, entry.getValue());
     }
     return influenceModel;
   }
@@ -142,7 +157,7 @@ public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenc
     }
   }
 
-  private Set<String> toConfig(String entry) {
+  private Set<String> toTerms(String entry) {
     int startOptionIndex = entry.indexOf("[") + 1;
     int endOptionIndex = entry.lastIndexOf("]");
     String optionsString = entry.substring(startOptionIndex, endOptionIndex);
@@ -204,7 +219,7 @@ public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenc
         + "/"
         + this.measuredTime
         + "/"
-        + this.region
+        + this.region.getId()
         + Options.DOT_JSON;
   }
 }

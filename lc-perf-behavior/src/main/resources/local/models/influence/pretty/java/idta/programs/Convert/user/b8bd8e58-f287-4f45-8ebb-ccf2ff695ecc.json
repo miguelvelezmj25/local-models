@@ -3,6 +3,9 @@
 
 {
   "region" : "b8bd8e58-f287-4f45-8ebb-ccf2ff695ecc",
+  "packageName" : "at.favre.tools.dconvert.converters.scaling",
+  "className" : "ImageHandler",
+  "methodSignature" : "scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
   "influenceModel" : {
     "[ANTI_ALIASING, SCALE]" : "13.41",
     "[SKIP_UPSCALING, SCALE]" : "-4.15",
