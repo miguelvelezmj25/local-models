@@ -1,17 +1,13 @@
 {
   "region" : "cbf72162-2713-4693-b59f-b17e1c7c1113",
+  "packageName" : "com.sleepycat.je.txn",
+  "className" : "LockManager",
+  "methodSignature" : "attemptLockInternal(Ljava/lang/Long;Lcom/sleepycat/je/txn/Locker;Lcom/sleepycat/je/txn/LockType;ZZI)Lcom/sleepycat/je/txn/LockAttemptResult;",
   "influenceModel" : {
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, SEQUENTIAL]" : "-0.37",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY]" : "0.32",
-    "[CACHE_MODE, TEMPORARY, SEQUENTIAL]" : "0.28",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, DUPLICATES, SEQUENTIAL]" : "0.24",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, DUPLICATES]" : "-0.22",
-    "[CACHE_MODE, TEMPORARY, DUPLICATES, SEQUENTIAL]" : "-0.21",
     "[CACHE_MODE, TEMPORARY]" : "0.18",
     "[TEMPORARY]" : "0.16",
     "[MAX_MEMORY, TEMPORARY]" : "-0.14",
-    "[TEMPORARY, SEQUENTIAL]" : "-0.14",
-    "[MAX_MEMORY, TEMPORARY, SEQUENTIAL]" : "0.13"
+    "[TEMPORARY, SEQUENTIAL]" : "-0.14"
   },
   "executions" : {
     "[CACHE_MODE, MAX_MEMORY, TEMPORARY, ENV_IS_LOCKING]" : "0.57",

@@ -1,5 +1,8 @@
 {
   "region" : "ff3c884e-8060-4f4d-929d-429cd3e6675b",
+  "packageName" : "com.sleepycat.je.log",
+  "className" : "LogManager",
+  "methodSignature" : "getLogEntryFromLogSource(JILcom/sleepycat/je/log/LogSource;Z)Lcom/sleepycat/je/log/WholeEntry;",
   "influenceModel" : {
     "[]" : "0.31",
     "[MAX_MEMORY]" : "-0.31",
@@ -7,8 +10,7 @@
     "[MAX_MEMORY, SEQUENTIAL]" : "0.31",
     "[TEMPORARY]" : "0.29",
     "[MAX_MEMORY, TEMPORARY]" : "-0.29",
-    "[TEMPORARY, SEQUENTIAL]" : "-0.29",
-    "[MAX_MEMORY, TEMPORARY, SEQUENTIAL]" : "0.29"
+    "[TEMPORARY, SEQUENTIAL]" : "-0.29"
   },
   "executions" : {
     "[TEMPORARY, DUPLICATES]" : "0.76",

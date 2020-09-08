@@ -1,8 +1,10 @@
 {
   "region" : "c2384d2c-a93c-49e9-a6fb-8b10b6b028d3",
+  "packageName" : "com.sleepycat.je.tree",
+  "className" : "IN",
+  "methodSignature" : "getEntryInMemorySize(I)J",
   "influenceModel" : {
     "[TEMPORARY]" : "0.15",
-    "[MAX_MEMORY, TEMPORARY, SEQUENTIAL]" : "0.14",
     "[MAX_MEMORY, TEMPORARY]" : "-0.13",
     "[TEMPORARY, SEQUENTIAL]" : "-0.13",
     "[]" : "0.12",

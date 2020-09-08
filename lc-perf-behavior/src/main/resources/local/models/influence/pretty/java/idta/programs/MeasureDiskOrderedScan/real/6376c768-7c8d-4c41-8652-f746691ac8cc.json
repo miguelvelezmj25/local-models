@@ -1,10 +1,12 @@
 {
   "region" : "6376c768-7c8d-4c41-8652-f746691ac8cc",
+  "packageName" : "com.sleepycat.je.tree",
+  "className" : "IN",
+  "methodSignature" : "fetchINWithNoLatch(I[BLcom/sleepycat/je/tree/SearchResult;Lcom/sleepycat/je/CacheMode;)Lcom/sleepycat/je/tree/IN;",
   "influenceModel" : {
     "[TEMPORARY]" : "0.12",
     "[MAX_MEMORY, TEMPORARY]" : "-0.12",
-    "[TEMPORARY, SEQUENTIAL]" : "-0.11",
-    "[MAX_MEMORY, TEMPORARY, SEQUENTIAL]" : "0.11"
+    "[TEMPORARY, SEQUENTIAL]" : "-0.11"
   },
   "executions" : {
     "[CACHE_MODE, TEMPORARY, ENV_IS_LOCKING]" : "0.25",

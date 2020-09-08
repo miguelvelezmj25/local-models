@@ -1,10 +1,9 @@
 {
   "region" : "602343e4-178e-47d8-9d23-3de4ea84b261",
+  "packageName" : "com.sleepycat.je.tree",
+  "className" : "Tree",
+  "methodSignature" : "searchSplitsAllowed(Lcom/sleepycat/je/tree/IN;[BLcom/sleepycat/je/CacheMode;Ljava/util/Comparator;)Lcom/sleepycat/je/tree/BIN;",
   "influenceModel" : {
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY]" : "0.33",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, SEQUENTIAL]" : "-0.27",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, DUPLICATES]" : "-0.15",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, DUPLICATES, SEQUENTIAL]" : "0.13",
     "[DUPLICATES, SEQUENTIAL]" : "0.11",
     "[CACHE_MODE, TEMPORARY]" : "0.11"
   },

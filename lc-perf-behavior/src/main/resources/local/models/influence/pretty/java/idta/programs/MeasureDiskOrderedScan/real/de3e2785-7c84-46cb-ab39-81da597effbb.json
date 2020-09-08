@@ -1,5 +1,8 @@
 {
   "region" : "de3e2785-7c84-46cb-ab39-81da597effbb",
+  "packageName" : "com.sleepycat.je.dbi",
+  "className" : "EnvironmentImpl",
+  "methodSignature" : "<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/dbi/RepConfigProxy;)V",
   "influenceModel" : {
     "[]" : "0.19"
   },

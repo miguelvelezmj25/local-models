@@ -1,14 +1,13 @@
 {
   "region" : "8d4073e9-2fdb-4fea-959e-1fb9af8a1f0c",
+  "packageName" : "com.sleepycat.je.tree",
+  "className" : "INKeyRep$Default",
+  "methodSignature" : "compact(Lcom/sleepycat/je/tree/IN;)Lcom/sleepycat/je/tree/INKeyRep;",
   "influenceModel" : {
     "[TEMPORARY]" : "0.31",
     "[MAX_MEMORY, TEMPORARY]" : "-0.31",
     "[TEMPORARY, DUPLICATES]" : "-0.31",
     "[TEMPORARY, SEQUENTIAL]" : "-0.31",
-    "[TEMPORARY, DUPLICATES, SEQUENTIAL]" : "0.31",
-    "[MAX_MEMORY, TEMPORARY, DUPLICATES]" : "0.31",
-    "[MAX_MEMORY, TEMPORARY, SEQUENTIAL]" : "0.31",
-    "[MAX_MEMORY, TEMPORARY, DUPLICATES, SEQUENTIAL]" : "-0.31",
     "[DUPLICATES, SEQUENTIAL]" : "0.13",
     "[]" : "0.12",
     "[MAX_MEMORY]" : "-0.12",
@@ -16,13 +15,7 @@
     "[MAX_MEMORY, DUPLICATES]" : "0.12",
     "[MAX_MEMORY, SEQUENTIAL]" : "0.12",
     "[CACHE_MODE, TEMPORARY]" : "-0.12",
-    "[CACHE_MODE, TEMPORARY, DUPLICATES]" : "0.12",
-    "[MAX_MEMORY, DUPLICATES, SEQUENTIAL]" : "-0.12",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY]" : "0.12",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, DUPLICATES]" : "-0.12",
-    "[SEQUENTIAL]" : "-0.11",
-    "[CACHE_MODE, TEMPORARY, SEQUENTIAL]" : "0.11",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, SEQUENTIAL]" : "-0.11"
+    "[SEQUENTIAL]" : "-0.11"
   },
   "executions" : {
     "[TEMPORARY, ENV_IS_LOCKING]" : "0.49",

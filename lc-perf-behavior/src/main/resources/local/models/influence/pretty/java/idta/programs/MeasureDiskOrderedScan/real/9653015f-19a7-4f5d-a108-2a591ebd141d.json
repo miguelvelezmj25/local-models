@@ -1,32 +1,23 @@
+// TEMPORARY decreases execution time, where as, overall, it increases the execution time
+
 {
   "region" : "9653015f-19a7-4f5d-a108-2a591ebd141d",
+  "packageName" : "com.sleepycat.je.tree",
+  "className" : "IN",
+  "methodSignature" : "findEntry([BZZLjava/util/Comparator;)I",
   "influenceModel" : {
     "[DUPLICATES]" : "0.62",
     "[DUPLICATES, SEQUENTIAL]" : "-0.62",
     "[MAX_MEMORY, DUPLICATES]" : "-0.62",
-    "[MAX_MEMORY, DUPLICATES, SEQUENTIAL]" : "0.62",
-    "[MAX_MEMORY, TEMPORARY, DUPLICATES]" : "0.60",
     "[TEMPORARY, DUPLICATES]" : "-0.59",
-    "[TEMPORARY, DUPLICATES, SEQUENTIAL]" : "0.59",
-    "[MAX_MEMORY, TEMPORARY, DUPLICATES, SEQUENTIAL]" : "-0.58",
-    "[CACHE_MODE, TEMPORARY, SEQUENTIAL]" : "0.46",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, DUPLICATES]" : "0.45",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, SEQUENTIAL]" : "-0.32",
     "[]" : "0.28",
     "[MAX_MEMORY]" : "-0.28",
     "[SEQUENTIAL]" : "-0.28",
     "[MAX_MEMORY, SEQUENTIAL]" : "0.28",
     "[CACHE_MODE, TEMPORARY]" : "0.25",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, DUPLICATES, SEQUENTIAL]" : "-0.22",
     "[TEMPORARY]" : "-0.18",
     "[MAX_MEMORY, TEMPORARY]" : "0.18",
-    "[TEMPORARY, SEQUENTIAL]" : "0.18",
-    "[MAX_MEMORY, TEMPORARY, SEQUENTIAL]" : "-0.17",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY]" : "0.14",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, ENV_IS_LOCKING]" : "0.13",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, DUPLICATES, SEQUENTIAL, ENV_IS_LOCKING]" : "-0.13",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, DUPLICATES, ENV_IS_LOCKING]" : "-0.12",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, SEQUENTIAL, ENV_IS_LOCKING]" : "0.11"
+    "[TEMPORARY, SEQUENTIAL]" : "0.18"
   },
   "executions" : {
     "[CACHE_MODE, MAX_MEMORY, TEMPORARY, DUPLICATES, ENV_IS_LOCKING]" : "0.97",

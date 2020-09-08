@@ -1,10 +1,11 @@
 {
   "region" : "364dc9a7-fb45-433f-9e65-713abb3bd39f",
+  "packageName" : "com.sleepycat.je.dbi",
+  "className" : "CursorImpl",
+  "methodSignature" : "lockAfterLsnChange(Lcom/sleepycat/je/dbi/DatabaseImpl;JJLcom/sleepycat/je/txn/Locker;)V",
   "influenceModel" : {
     "[TEMPORARY]" : "0.60",
-    "[CACHE_MODE, TEMPORARY]" : "-0.60",
-    "[MAX_MEMORY, TEMPORARY, DUPLICATES, SEQUENTIAL, ENV_IS_LOCKING]" : "0.12",
-    "[CACHE_MODE, MAX_MEMORY, TEMPORARY, DUPLICATES, SEQUENTIAL, ENV_IS_LOCKING]" : "-0.12"
+    "[CACHE_MODE, TEMPORARY]" : "-0.60"
   },
   "executions" : {
     "[MAX_MEMORY, TEMPORARY]" : "0.61",
