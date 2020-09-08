@@ -1,5 +1,8 @@
 {
   "region" : "1845f2d5-245d-4319-9192-7bab2db347f0",
+  "packageName" : "org.apache.lucene.core.analysis",
+  "className" : "CharacterUtils",
+  "methodSignature" : "toLowerCase([CII)V",
   "influenceModel" : {
     "[]" : "1.56"
   },

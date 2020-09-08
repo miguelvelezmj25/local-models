@@ -1,8 +1,12 @@
 {
   "region" : "d00bd24e-d3cc-43b2-a983-b87c78f50186",
+  "packageName" : "org.apache.lucene.core.codecs.lucene50",
+  "className" : "ForUtil",
+  "methodSignature" : "writeBlock([I[BLorg/apache/lucene/core/store/IndexOutput;)V",
   "influenceModel" : {
     "[]" : "0.28",
     "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : "0.17",
+    "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "-0.16",
     "[RAM_BUFFER_SIZE_MB]" : "-0.14",
     "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS]" : "0.14",
     "[MAX_BUFFERED_DOCS]" : "-0.11"

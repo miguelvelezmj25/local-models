@@ -1,5 +1,8 @@
 {
   "region" : "da309e3c-32fb-443c-af43-1478956538da",
+  "packageName" : "org.apache.lucene.core.index",
+  "className" : "FreqProxTermsWriterPerField$FreqProxPostingsArray",
+  "methodSignature" : "<init>(IZZZ)V",
   "influenceModel" : {
     "[]" : "0.17"
   },

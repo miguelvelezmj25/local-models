@@ -1,15 +1,23 @@
 {
   "region" : "a906b1ce-41b0-4a67-80d7-f65b69efd683",
+  "packageName" : "org.apache.lucene.core.util",
+  "className" : "MSBRadixSorter",
+  "methodSignature" : "reorder(II[I[II)V",
   "influenceModel" : {
     "[]" : "1.27",
     "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : "0.63",
     "[MAX_BUFFERED_DOCS]" : "-0.62",
     "[MAX_BUFFERED_DOCS, COMMIT_ON_CLOSE]" : "0.60",
+    "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "-0.57",
     "[RAM_BUFFER_SIZE_MB]" : "-0.55",
     "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS]" : "0.55",
     "[RAM_BUFFER_SIZE_MB, COMMIT_ON_CLOSE]" : "0.54",
+    "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, COMMIT_ON_CLOSE]" : "-0.54",
+    "[RAM_BUFFER_SIZE_MB, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "0.19",
+    "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "-0.19",
     "[MAX_TOKEN_LENGTH]" : "0.17",
-    "[RAM_BUFFER_SIZE_MB, MAX_TOKEN_LENGTH]" : "-0.17"
+    "[RAM_BUFFER_SIZE_MB, MAX_TOKEN_LENGTH]" : "-0.17",
+    "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : "0.17"
   },
   "executions" : {
     "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "1.48",

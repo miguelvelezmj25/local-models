@@ -1,5 +1,8 @@
 {
   "region" : "4e81520c-1b33-49b6-9756-28b947e2ea3e",
+  "packageName" : "org.apache.lucene.core.index",
+  "className" : "TermsHashPerField",
+  "methodSignature" : "add()V",
   "influenceModel" : {
     "[]" : "5.82",
     "[MAX_TOKEN_LENGTH]" : "0.18"

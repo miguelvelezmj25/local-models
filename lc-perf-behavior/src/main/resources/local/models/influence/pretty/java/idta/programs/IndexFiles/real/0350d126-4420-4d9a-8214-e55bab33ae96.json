@@ -1,5 +1,8 @@
 {
   "region" : "0350d126-4420-4d9a-8214-e55bab33ae96",
+  "packageName" : "org.apache.lucene.core.analysis.standard",
+  "className" : "StandardTokenizer",
+  "methodSignature" : "incrementToken()Z",
   "influenceModel" : {
     "[]" : "0.87"
   },

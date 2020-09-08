@@ -1,0 +1,28 @@
+{
+  "region" : "4bc1fda2-a46c-49f4-b7ca-f834f0a1e0f1",
+  "packageName" : "org.apache.lucene.core.store",
+  "className" : "DataOutput",
+  "methodSignature" : "writeVLong(J)V",
+  "influenceModel" : {
+    "[RAM_BUFFER_SIZE_MB, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "0.12",
+    "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "-0.12"
+  },
+  "executions" : {
+    "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "0.14",
+    "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "0.14",
+    "[RAM_BUFFER_SIZE_MB, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "0.12",
+    "[RAM_BUFFER_SIZE_MB, MAX_TOKEN_LENGTH]" : "0.06",
+    "[RAM_BUFFER_SIZE_MB]" : "0.06",
+    "[MAX_TOKEN_LENGTH]" : "0.05",
+    "[MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "0.05",
+    "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : "0.04",
+    "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : "0.04",
+    "[]" : "0.00",
+    "[MAX_BUFFERED_DOCS]" : "0.00",
+    "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, COMMIT_ON_CLOSE]" : "0.00",
+    "[RAM_BUFFER_SIZE_MB, COMMIT_ON_CLOSE]" : "0.00",
+    "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS]" : "0.00",
+    "[COMMIT_ON_CLOSE]" : "0.00",
+    "[MAX_BUFFERED_DOCS, COMMIT_ON_CLOSE]" : "0.00"
+  }
+}

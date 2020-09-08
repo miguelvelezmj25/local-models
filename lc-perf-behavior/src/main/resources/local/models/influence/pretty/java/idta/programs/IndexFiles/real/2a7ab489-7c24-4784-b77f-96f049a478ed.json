@@ -1,5 +1,8 @@
 {
   "region" : "2a7ab489-7c24-4784-b77f-96f049a478ed",
+  "packageName" : "org.apache.lucene.core.util",
+  "className" : "BytesRefHash",
+  "methodSignature" : "rehash(IZ)V",
   "influenceModel" : {
     "[MAX_TOKEN_LENGTH]" : "0.38",
     "[]" : "0.32"

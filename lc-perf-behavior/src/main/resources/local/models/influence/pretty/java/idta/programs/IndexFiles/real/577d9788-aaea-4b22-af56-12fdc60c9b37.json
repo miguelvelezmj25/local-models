@@ -1,5 +1,8 @@
 {
   "region" : "577d9788-aaea-4b22-af56-12fdc60c9b37",
+  "packageName" : "org.apache.lucene.core.util",
+  "className" : "BytesRefHash",
+  "methodSignature" : "findHash(Lorg/apache/lucene/core/util/BytesRef;)I",
   "influenceModel" : {
     "[]" : "0.42"
   },

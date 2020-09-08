@@ -30,17 +30,23 @@ public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenc
   private final String measuredTime;
   private final JavaRegion region;
   private final double threshold;
+  private final int termsThreshold;
 
   public PrettyInfluenceModelBuilder(String programName, String measuredTime, JavaRegion region) {
-    this(programName, measuredTime, region, 0.0);
+    this(programName, measuredTime, region, 0.0, -1);
   }
 
   public PrettyInfluenceModelBuilder(
-      String programName, String measuredTime, JavaRegion region, double threshold) {
+      String programName,
+      String measuredTime,
+      JavaRegion region,
+      double threshold,
+      int termsThreshold) {
     this.programName = programName;
     this.measuredTime = measuredTime;
     this.region = region;
     this.threshold = threshold;
+    this.termsThreshold = termsThreshold;
   }
 
   @Override
@@ -78,7 +84,7 @@ public class PrettyInfluenceModelBuilder implements Analysis<PrettyLocalInfluenc
       }
 
       Set<String> terms = toTerms(entry.getKey());
-      if (terms.size() > 2) {
+      if (this.termsThreshold != -1 && terms.size() > this.termsThreshold) {
         continue;
       }
       influenceModel.put(terms, entry.getValue());

@@ -1,5 +1,8 @@
 {
   "region" : "d1dbf992-4b8a-4acf-a84d-6eefd44ee51b",
+  "packageName" : "org.apache.lucene.core.util",
+  "className" : "AttributeSource",
+  "methodSignature" : "clearAttributes()V",
   "influenceModel" : {
     "[]" : "0.75"
   },

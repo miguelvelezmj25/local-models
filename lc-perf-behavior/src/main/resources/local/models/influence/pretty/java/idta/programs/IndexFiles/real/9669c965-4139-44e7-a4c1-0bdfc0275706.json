@@ -1,5 +1,8 @@
 {
   "region" : "9669c965-4139-44e7-a4c1-0bdfc0275706",
+  "packageName" : "org.apache.lucene.core.util",
+  "className" : "Sorter",
+  "methodSignature" : "binarySort(III)V",
   "influenceModel" : {
     "[]" : "0.15"
   },

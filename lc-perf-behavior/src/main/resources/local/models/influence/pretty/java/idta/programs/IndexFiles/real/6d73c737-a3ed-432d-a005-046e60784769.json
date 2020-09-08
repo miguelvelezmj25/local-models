@@ -1,10 +1,15 @@
 {
   "region" : "6d73c737-a3ed-432d-a005-046e60784769",
+  "packageName" : "org.apache.lucene.core.codecs",
+  "className" : "PushPostingsWriterBase",
+  "methodSignature" : "writeTerm(Lorg/apache/lucene/core/util/BytesRef;Lorg/apache/lucene/core/index/TermsEnum;Lorg/apache/lucene/core/util/FixedBitSet;)Lorg/apache/lucene/core/codecs/BlockTermState;",
   "influenceModel" : {
     "[]" : "0.69",
+    "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "-0.40",
     "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : "0.38",
     "[MAX_BUFFERED_DOCS, COMMIT_ON_CLOSE]" : "0.33",
     "[RAM_BUFFER_SIZE_MB, COMMIT_ON_CLOSE]" : "0.32",
+    "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, COMMIT_ON_CLOSE]" : "-0.32",
     "[MAX_BUFFERED_DOCS]" : "-0.31",
     "[RAM_BUFFER_SIZE_MB]" : "-0.30",
     "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS]" : "0.30"

@@ -1,5 +1,8 @@
 {
   "region" : "8698fd37-6152-43d9-90d7-496233f170d1",
+  "packageName" : "org.apache.lucene.core.util",
+  "className" : "IOUtils",
+  "methodSignature" : "fsync(Ljava/nio/file/Path;Z)V",
   "influenceModel" : {
     "[COMMIT_ON_CLOSE]" : "0.39"
   },

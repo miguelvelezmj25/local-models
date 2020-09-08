@@ -1,7 +1,11 @@
 {
   "region" : "a6d8cedc-f8fe-45a2-8328-6c1ecbd3e8af",
+  "packageName" : "org.apache.lucene.core.codecs.blocktree",
+  "className" : "BlockTreeTermsWriter$TermsWriter",
+  "methodSignature" : "write(Lorg/apache/lucene/core/util/BytesRef;Lorg/apache/lucene/core/index/TermsEnum;)V",
   "influenceModel" : {
-    "[]" : "0.15"
+    "[]" : "0.15",
+    "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "-0.11"
   },
   "executions" : {
     "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : "0.16",

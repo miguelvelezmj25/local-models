@@ -1,7 +1,11 @@
 {
   "region" : "70b3a8e6-59b8-4d9b-8653-7c22b2262359",
+  "packageName" : "org.apache.lucene.core.util",
+  "className" : "IntroSorter",
+  "methodSignature" : "quicksort(III)V",
   "influenceModel" : {
-    "[]" : "0.16"
+    "[]" : "0.16",
+    "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "-0.11"
   },
   "executions" : {
     "[]" : "0.16",

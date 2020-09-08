@@ -1,5 +1,8 @@
 {
   "region" : "692d5c4f-6813-4e7c-81e6-84c38e92dd5e",
+  "packageName" : "org.apache.lucene.core.codecs.blocktree",
+  "className" : "BlockTreeTermsWriter",
+  "methodSignature" : "write(Lorg/apache/lucene/core/index/Fields;)V",
   "influenceModel" : {
     "[]" : "0.16"
   },

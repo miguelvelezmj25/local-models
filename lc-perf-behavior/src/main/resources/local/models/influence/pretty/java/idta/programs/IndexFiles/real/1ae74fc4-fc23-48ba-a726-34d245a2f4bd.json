@@ -1,5 +1,8 @@
 {
   "region" : "1ae74fc4-fc23-48ba-a726-34d245a2f4bd",
+  "packageName" : "org.apache.lucene.core.analysis",
+  "className" : "CharArrayMap",
+  "methodSignature" : "getSlot([CII)I",
   "influenceModel" : {
     "[]" : "0.55"
   },

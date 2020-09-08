@@ -1,5 +1,8 @@
 {
   "region" : "38cb5f02-8792-41fe-a63f-f0704de0cfaf",
+  "packageName" : "org.apache.lucene.core.analysis.standard",
+  "className" : "StandardTokenizerImpl",
+  "methodSignature" : "getNextToken()I",
   "influenceModel" : {
     "[]" : "4.71"
   },

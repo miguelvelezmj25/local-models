@@ -1,13 +1,18 @@
 {
   "region" : "962a8c87-1c7f-4a33-9d55-16ff0a475033",
+  "packageName" : "org.apache.lucene.core.util.packed",
+  "className" : "PackedInts$MutableImpl",
+  "methodSignature" : "<init>(II)V",
   "influenceModel" : {
     "[]" : "0.46",
     "[MAX_BUFFERED_DOCS]" : "-0.25",
     "[RAM_BUFFER_SIZE_MB, COMMIT_ON_CLOSE]" : "0.25",
+    "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS, COMMIT_ON_CLOSE]" : "-0.25",
     "[RAM_BUFFER_SIZE_MB]" : "-0.23",
     "[RAM_BUFFER_SIZE_MB, MAX_BUFFERED_DOCS]" : "0.23",
     "[MAX_BUFFERED_DOCS, COMMIT_ON_CLOSE]" : "0.23",
-    "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : "0.22"
+    "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH]" : "0.22",
+    "[MAX_BUFFERED_DOCS, MAX_TOKEN_LENGTH, COMMIT_ON_CLOSE]" : "-0.22"
   },
   "executions" : {
     "[]" : "0.46",
