@@ -1,10 +1,10 @@
 {
   "region" : "0907e476-9db9-4b6e-a5bc-623355502b7f",
+  "packageName" : "org.h2.mvstore",
+  "className" : "MVMap",
+  "methodSignature" : "operate(Ljava/lang/Object;Ljava/lang/Object;Lorg/h2/mvstore/MVMap$DecisionMaker;)Ljava/lang/Object;",
   "influenceModel" : {
     "[MV_STORE]" : "0.33",
-    "[AUTOCOMMIT, MV_STORE, DEFRAG_ALWAYS, COMPRESS]" : "0.19",
-    "[MV_STORE, DEFRAG_ALWAYS, COMPRESS]" : "-0.18",
-    "[AUTOCOMMIT, MV_STORE, COMPRESS]" : "-0.16",
     "[MV_STORE, COMPRESS]" : "0.13"
   },
   "executions" : {

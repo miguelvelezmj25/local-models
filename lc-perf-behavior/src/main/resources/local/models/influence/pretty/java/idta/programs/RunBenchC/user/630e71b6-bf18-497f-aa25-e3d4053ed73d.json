@@ -1,16 +1,10 @@
 {
   "region" : "630e71b6-bf18-497f-aa25-e3d4053ed73d",
+  "packageName" : "org.h2.store.fs",
+  "className" : "FileDisk",
+  "methodSignature" : "read(Ljava/nio/ByteBuffer;)I",
   "influenceModel" : {
-    "[PAGE_SIZE, DEFRAG_ALWAYS]" : "0.21",
-    "[PAGE_SIZE, MV_STORE, DEFRAG_ALWAYS]" : "-0.21",
-    "[CACHE_SIZE, PAGE_SIZE, AUTOCOMMIT, FILE_LOCK, DEFRAG_ALWAYS]" : "-0.15",
-    "[CACHE_SIZE, PAGE_SIZE, AUTOCOMMIT, FILE_LOCK, MV_STORE, DEFRAG_ALWAYS]" : "0.15",
-    "[PAGE_SIZE, FILE_LOCK, DEFRAG_ALWAYS]" : "-0.12",
-    "[CACHE_SIZE, PAGE_SIZE, FILE_LOCK, DEFRAG_ALWAYS]" : "0.12",
-    "[PAGE_SIZE, AUTOCOMMIT, FILE_LOCK, DEFRAG_ALWAYS]" : "0.12",
-    "[PAGE_SIZE, FILE_LOCK, MV_STORE, DEFRAG_ALWAYS]" : "0.12",
-    "[CACHE_SIZE, PAGE_SIZE, FILE_LOCK, MV_STORE, DEFRAG_ALWAYS]" : "-0.12",
-    "[PAGE_SIZE, AUTOCOMMIT, FILE_LOCK, MV_STORE, DEFRAG_ALWAYS]" : "-0.12"
+    "[PAGE_SIZE, DEFRAG_ALWAYS]" : "0.21"
   },
   "executions" : {
     "[PAGE_SIZE, AUTOCOMMIT, FILE_LOCK, DEFRAG_ALWAYS]" : "0.28",

@@ -1,14 +1,12 @@
 {
   "region" : "3a1918f1-45b3-4c0d-a926-8e32f882e75e",
+  "packageName" : "org.h2.store",
+  "className" : "FileStore",
+  "methodSignature" : "seek(J)V",
   "influenceModel" : {
     "[PAGE_SIZE, DEFRAG_ALWAYS]" : "0.48",
-    "[PAGE_SIZE, MV_STORE, DEFRAG_ALWAYS]" : "-0.48",
-    "[CACHE_SIZE, PAGE_SIZE, FILE_LOCK, DEFRAG_ALWAYS]" : "0.16",
-    "[CACHE_SIZE, PAGE_SIZE, FILE_LOCK, MV_STORE, DEFRAG_ALWAYS]" : "-0.16",
     "[DEFRAG_ALWAYS]" : "0.15",
-    "[MV_STORE, DEFRAG_ALWAYS]" : "-0.15",
-    "[CACHE_SIZE, PAGE_SIZE, AUTOCOMMIT, FILE_LOCK, DEFRAG_ALWAYS]" : "-0.13",
-    "[CACHE_SIZE, PAGE_SIZE, AUTOCOMMIT, FILE_LOCK, MV_STORE, DEFRAG_ALWAYS]" : "0.13"
+    "[MV_STORE, DEFRAG_ALWAYS]" : "-0.15"
   },
   "executions" : {
     "[CACHE_SIZE, PAGE_SIZE, FILE_LOCK, DEFRAG_ALWAYS]" : "0.67",
