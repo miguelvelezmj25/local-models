@@ -16,6 +16,7 @@
         <module>cc-instrument</module>
         <module>lc-perf-model-e2e</module>
         <module>cc-compress</module>
+        <module>lc-profiler-analysis</module>
     </modules>
 
     <name>locee</name>
