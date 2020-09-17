@@ -1,0 +1,23 @@
+{
+  "stack" : [ {
+    "className" : "edu.cmu.cs.mvelezce.perf.ExpensiveCalls",
+    "methodName" : "getFactors",
+    "methodSignature" : "()V",
+    "selfTime" : 4432098.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.EarlyReturn",
+    "methodName" : "moo",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 453436.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.EarlyReturn",
+    "methodName" : "foo",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.EarlyReturn",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}
