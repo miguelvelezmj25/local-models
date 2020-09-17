@@ -3,11 +3,11 @@ package edu.cmu.cs.mvelezce.lc.stack.analysis.stack;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class Stack {
+public class CallStack<T> {
 
-  private final Deque<Integer> stack = new ArrayDeque<Integer>();
+  private final Deque<T> stack = new ArrayDeque<>();
 
-  public Deque<Integer> getStack() {
+  public Deque<T> getStack() {
     return stack;
   }
 }
