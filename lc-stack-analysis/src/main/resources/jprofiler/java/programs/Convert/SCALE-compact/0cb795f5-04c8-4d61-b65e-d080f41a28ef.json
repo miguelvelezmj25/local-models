@@ -1,0 +1,23 @@
+{
+  "stack" : [ {
+    "className" : "java.lang.ClassLoader",
+    "methodName" : "loadClass",
+    "methodSignature" : "(Ljava/lang/String;)Ljava/lang/Class;",
+    "selfTime" : 10897.0
+  }, {
+    "className" : "at.favre.tools.dconvert.converters.APlatformConverter",
+    "methodName" : "convert",
+    "methodSignature" : "(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+    "selfTime" : 5496.0
+  }, {
+    "className" : "at.favre.tools.dconvert.WorkerHandler$Worker",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "java.util.concurrent.ThreadPoolExecutor$Worker",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  } ]
+}

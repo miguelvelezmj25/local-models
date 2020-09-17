@@ -1,0 +1,13 @@
+{
+  "stack" : [ {
+    "className" : "com.mortennobel.imagescaling.ResampleOp",
+    "methodName" : "verticalFromWorkToDst",
+    "methodSignature" : "([[B[BII)V",
+    "selfTime" : 6370876.0
+  }, {
+    "className" : "com.mortennobel.imagescaling.ResampleOp$2",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  } ]
+}

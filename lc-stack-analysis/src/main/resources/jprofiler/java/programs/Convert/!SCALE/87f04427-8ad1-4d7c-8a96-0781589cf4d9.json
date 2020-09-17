@@ -1,0 +1,23 @@
+{
+  "stack" : [ {
+    "className" : "at.favre.tools.dconvert.WorkerHandler",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/util/List;Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/WorkerHandler$Callback;)V",
+    "selfTime" : 5867.0
+  }, {
+    "className" : "at.favre.tools.dconvert.DConvert",
+    "methodName" : "execute",
+    "methodSignature" : "(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 5655.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

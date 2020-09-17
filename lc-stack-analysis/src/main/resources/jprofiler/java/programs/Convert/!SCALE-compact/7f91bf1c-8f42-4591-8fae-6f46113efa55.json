@@ -1,0 +1,28 @@
+{
+  "stack" : [ {
+    "className" : "java.util.concurrent.ThreadPoolExecutor",
+    "methodName" : "execute",
+    "methodSignature" : "(Ljava/lang/Runnable;)V",
+    "selfTime" : 6063.0
+  }, {
+    "className" : "at.favre.tools.dconvert.WorkerHandler",
+    "methodName" : "start",
+    "methodSignature" : "(Ljava/util/List;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.DConvert",
+    "methodName" : "execute",
+    "methodSignature" : "(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

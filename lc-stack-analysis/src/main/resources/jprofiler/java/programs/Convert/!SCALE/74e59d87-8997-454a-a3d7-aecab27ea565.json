@@ -1,0 +1,28 @@
+{
+  "stack" : [ {
+    "className" : "at.favre.tools.dconvert.arg.EPlatform",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 6179.0
+  }, {
+    "className" : "at.favre.tools.dconvert.arg.Arguments",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 5281.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "upScalingAlgo",
+    "methodSignature" : "(Z)Ljava/lang/String;",
+    "selfTime" : 5660.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 5655.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

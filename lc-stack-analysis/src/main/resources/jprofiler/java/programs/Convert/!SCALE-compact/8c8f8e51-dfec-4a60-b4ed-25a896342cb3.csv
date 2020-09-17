@@ -1,0 +1,7 @@
+java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;,0.006
+at.favre.tools.dconvert.arg.Arguments.getOutCompressionForType(Lat/favre/tools/dconvert/arg/EOutputCompressionMode;Lat/favre/tools/dconvert/arg/ImageType;)Ljava/util/List;,0
+at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;,0
+at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;,0
+at.favre.tools.dconvert.WorkerHandler$Worker.run()V,0
+java.util.concurrent.ThreadPoolExecutor$Worker.run()V,0
+

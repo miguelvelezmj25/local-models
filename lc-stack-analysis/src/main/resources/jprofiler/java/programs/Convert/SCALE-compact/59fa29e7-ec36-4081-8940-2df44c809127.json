@@ -1,0 +1,18 @@
+{
+  "stack" : [ {
+    "className" : "java.lang.ClassLoader",
+    "methodName" : "loadClass",
+    "methodSignature" : "(Ljava/lang/String;)Ljava/lang/Class;",
+    "selfTime" : 5479.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

@@ -1,0 +1,23 @@
+{
+  "stack" : [ {
+    "className" : "sun.awt.image.ByteInterleavedRaster",
+    "methodName" : "getDataElements",
+    "methodSignature" : "(IIIILjava/lang/Object;)Ljava/lang/Object;",
+    "selfTime" : 718319.0
+  }, {
+    "className" : "com.mortennobel.imagescaling.ImageUtils",
+    "methodName" : "getPixelsBGR",
+    "methodSignature" : "(Ljava/awt/image/BufferedImage;II[B[I)[B",
+    "selfTime" : 7801.0
+  }, {
+    "className" : "com.mortennobel.imagescaling.ResampleOp",
+    "methodName" : "horizontallyFromSrcToWork",
+    "methodSignature" : "(Ljava/awt/image/BufferedImage;[[BII)V",
+    "selfTime" : 4910767.0
+  }, {
+    "className" : "com.mortennobel.imagescaling.ResampleOp$1",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  } ]
+}

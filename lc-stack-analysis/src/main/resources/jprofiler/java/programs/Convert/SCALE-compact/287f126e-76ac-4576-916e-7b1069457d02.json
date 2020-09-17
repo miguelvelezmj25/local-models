@@ -1,0 +1,33 @@
+{
+  "stack" : [ {
+    "className" : "com.sun.imageio.plugins.jpeg.JPEGImageWriter",
+    "methodName" : "getDefaultWriteParam",
+    "methodSignature" : "()Ljavax/imageio/ImageWriteParam;",
+    "selfTime" : 6239.0
+  }, {
+    "className" : "at.favre.tools.dconvert.converters.scaling.ImageHandler",
+    "methodName" : "compressJpeg",
+    "methodSignature" : "(Ljava/awt/image/BufferedImage;Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;FLjava/io/File;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.converters.scaling.ImageHandler",
+    "methodName" : "saveToFile",
+    "methodSignature" : "(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.converters.APlatformConverter",
+    "methodName" : "convert",
+    "methodSignature" : "(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+    "selfTime" : 5496.0
+  }, {
+    "className" : "at.favre.tools.dconvert.WorkerHandler$Worker",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "java.util.concurrent.ThreadPoolExecutor$Worker",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  } ]
+}

@@ -1,0 +1,18 @@
+{
+  "stack" : [ {
+    "className" : "com.mortennobel.imagescaling.ImageUtils",
+    "methodName" : "getPixelsBGR",
+    "methodSignature" : "(Ljava/awt/image/BufferedImage;II[B[I)[B",
+    "selfTime" : 444800.0
+  }, {
+    "className" : "com.mortennobel.imagescaling.ResampleOp",
+    "methodName" : "horizontallyFromSrcToWork",
+    "methodSignature" : "(Ljava/awt/image/BufferedImage;[[BII)V",
+    "selfTime" : 1.311758E7
+  }, {
+    "className" : "com.mortennobel.imagescaling.ResampleOp$1",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  } ]
+}

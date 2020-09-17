@@ -13,6 +13,7 @@ import edu.cmu.cs.mvelezce.utils.config.Options;
 import org.apache.commons.io.FileUtils;
 
 import java.io.*;
+import java.text.DecimalFormat;
 import java.util.*;
 
 public class JProfilerCallTreeBuilder implements Analysis<Void> {
@@ -27,7 +28,7 @@ public class JProfilerCallTreeBuilder implements Analysis<Void> {
   private static final String CLOSE_TREE = "</tree>";
   private static final String OPEN_NODE = "<node";
   private static final String CLOSE_NODE = "</node>";
-  private static final String CLOSE_TAG = "/>";
+  private static final String FILTERED_TRUE = "filtered=\"true\"";
 
   private final String programName;
 
@@ -48,8 +49,14 @@ public class JProfilerCallTreeBuilder implements Analysis<Void> {
     File snapshotsDir = new File(SNAPSHOTS_ROOT + "/" + this.programName);
     Collection<File> snapshots = FileUtils.listFiles(snapshotsDir, new String[] {"jps"}, false);
     for (File snapshot : snapshots) {
+      long start = System.nanoTime();
       this.export(snapshot.getPath());
+      long end = System.nanoTime();
+      System.out.println("Time to export call tree: " + time(start, end));
+      start = System.nanoTime();
       Collection<CallStack<CallStackEntry>> callStacks = this.getCallStacks();
+      end = System.nanoTime();
+      System.out.println("Time get call stacks: " + time(start, end));
       this.saveCallStacks(snapshot.getName(), callStacks);
       this.savePrettyCallStacks(snapshot.getName(), callStacks);
     }
@@ -118,24 +125,20 @@ public class JProfilerCallTreeBuilder implements Analysis<Void> {
     String line;
 
     while ((line = reader.readLine()) != null) {
-      if (line.contains(OPEN_TREE)) {
-        callStack = new CallStack<>();
-      } else if (line.contains(CLOSE_TREE)) {
-        if (callStack.getStack().isEmpty()) {
-          throw new RuntimeException("The stack of nodes is empty");
+      if (line.contains(CLOSE_TREE)) {
+        if (!callStack.getStack().isEmpty()) {
+          throw new RuntimeException("The stack of nodes is not empty");
         }
-        callStack.getStack().removeFirst();
-      } else if (line.contains(OPEN_NODE)) {
+      } else if (line.contains(OPEN_NODE) && !line.contains(FILTERED_TRUE)) {
         CallTreeNode node =
             xmlMapper.readValue(line + CLOSE_NODE, new TypeReference<CallTreeNode>() {});
         callStack.getStack().addFirst(node);
-      } else if (line.contains(CLOSE_NODE)) {
-        if (callStack.getStack().peek() == null) {
-          throw new UnsupportedOperationException("Handle case");
-        } else if (callStack.getStack().peek().getLeaf()) {
-          callStacks.add(this.getCallStack(callStack));
-        }
 
+        if (node.getLeaf()) {
+          callStacks.add(this.getCallStack(callStack));
+          callStack.getStack().removeFirst();
+        }
+      } else if (line.contains(CLOSE_NODE)) {
         callStack.getStack().removeFirst();
       }
     }
@@ -161,6 +164,13 @@ public class JProfilerCallTreeBuilder implements Analysis<Void> {
       callStack.getStack().addFirst(entry);
     }
     return callStack;
+  }
+
+  private static String time(long start, long end) {
+    double time = (1.0 * end) - start;
+    time = time / 1E9;
+    DecimalFormat format = new DecimalFormat("#.###");
+    return format.format(time) + "s";
   }
 
   @Override

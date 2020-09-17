@@ -1,0 +1,5 @@
+sun.awt.image.ByteInterleavedRaster.getDataElements(IIIILjava/lang/Object;)Ljava/lang/Object;,0.524
+com.mortennobel.imagescaling.ImageUtils.getPixelsBGR(Ljava/awt/image/BufferedImage;II[B[I)[B,0.005
+com.mortennobel.imagescaling.ResampleOp.horizontallyFromSrcToWork(Ljava/awt/image/BufferedImage;[[BII)V,12.708
+com.mortennobel.imagescaling.ResampleOp$1.run()V,0
+

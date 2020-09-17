@@ -1,0 +1,23 @@
+{
+  "stack" : [ {
+    "className" : "at.favre.tools.dconvert.util.DensityBucketUtil",
+    "methodName" : "getDensityBucketsWithFactorScale",
+    "methodSignature" : "(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;F)Ljava/util/Map;",
+    "selfTime" : 13116.0
+  }, {
+    "className" : "at.favre.tools.dconvert.util.DensityBucketUtil",
+    "methodName" : "getDensityBuckets",
+    "methodSignature" : "(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;FZ)Ljava/util/Map;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.converters.APlatformConverter",
+    "methodName" : "convert",
+    "methodSignature" : "(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+    "selfTime" : 12966.0
+  }, {
+    "className" : "at.favre.tools.dconvert.WorkerHandler$Worker",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  } ]
+}

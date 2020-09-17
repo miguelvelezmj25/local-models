@@ -1,0 +1,23 @@
+{
+  "stack" : [ {
+    "className" : "at.favre.tools.dconvert.arg.Arguments",
+    "methodName" : "getOutCompressionForType",
+    "methodSignature" : "(Lat/favre/tools/dconvert/arg/EOutputCompressionMode;Lat/favre/tools/dconvert/arg/ImageType;)Ljava/util/List;",
+    "selfTime" : 5718.0
+  }, {
+    "className" : "at.favre.tools.dconvert.converters.scaling.ImageHandler",
+    "methodName" : "saveToFile",
+    "methodSignature" : "(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.converters.APlatformConverter",
+    "methodName" : "convert",
+    "methodSignature" : "(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+    "selfTime" : 31045.0
+  }, {
+    "className" : "at.favre.tools.dconvert.WorkerHandler$Worker",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  } ]
+}

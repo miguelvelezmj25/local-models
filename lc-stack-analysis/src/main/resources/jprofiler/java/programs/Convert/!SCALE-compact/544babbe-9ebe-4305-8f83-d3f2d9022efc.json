@@ -1,0 +1,28 @@
+{
+  "stack" : [ {
+    "className" : "java.lang.ClassLoader",
+    "methodName" : "loadClass",
+    "methodSignature" : "(Ljava/lang/String;)Ljava/lang/Class;",
+    "selfTime" : 5258.0
+  }, {
+    "className" : "at.favre.tools.dconvert.arg.Arguments",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "upScalingAlgo",
+    "methodSignature" : "(Z)Ljava/lang/String;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}
