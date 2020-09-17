@@ -14,7 +14,7 @@ import java.util.UUID;
 
 public class CallStackSelector {
 
-  private final String OUTPUT_DIR = Options.DIRECTORY + "/relevant/callstacks/java/programs";
+  public static final String OUTPUT_DIR = Options.DIRECTORY + "/relevant/callstacks/java/programs";
 
   private final String programName;
   private final String optionValue1;
