@@ -18,7 +18,6 @@ import java.util.*;
 
 public class JProfilerCallTreeBuilder implements Analysis<Void> {
 
-  private static final String OUTPUT_DIR = Options.DIRECTORY + "/jprofiler/java/programs";
   private static final String SNAPSHOTS_ROOT =
       "../lc-profiler-analysis/src/main/resources/jprofiler/snapshots/java/programs/";
   private static final String JPROFILER_11_EXPORT_CMD_OSX =
@@ -29,6 +28,8 @@ public class JProfilerCallTreeBuilder implements Analysis<Void> {
   private static final String OPEN_NODE = "<node";
   private static final String CLOSE_NODE = "</node>";
   private static final String FILTERED_TRUE = "filtered=\"true\"";
+
+  public static final String OUTPUT_DIR = Options.DIRECTORY + "/jprofiler/java/programs";
 
   private final String programName;
 

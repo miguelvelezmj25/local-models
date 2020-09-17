@@ -1,0 +1,28 @@
+{
+  "stack" : [ {
+    "className" : "edu.cmu.cs.mvelezce.perf.MooInfluence",
+    "methodName" : "checkProgress",
+    "methodSignature" : "()V",
+    "selfTime" : 5463.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.MooInfluence",
+    "methodName" : "moo",
+    "methodSignature" : "(I)V",
+    "selfTime" : 5044454.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.MooInfluence",
+    "methodName" : "bar",
+    "methodSignature" : "(I)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.MooInfluence",
+    "methodName" : "foo",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.MooInfluence",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

@@ -1,0 +1,7 @@
+edu.cmu.cs.mvelezce.perf.ExpensiveCalls.getFactors()V,4.432
+edu.cmu.cs.mvelezce.perf.MooInfluence.moo(I)V,0.475
+edu.cmu.cs.mvelezce.perf.MooInfluence.bar(I)V,0
+edu.cmu.cs.mvelezce.perf.MooInfluence.foo(Z)V,0
+edu.cmu.cs.mvelezce.perf.MooInfluence.main([Ljava/lang/String;)V,0
+
+
