@@ -1,0 +1,28 @@
+{
+  "stack" : [ {
+    "className" : "edu.cmu.cs.mvelezce.perf.LoopCallingStackMoo",
+    "methodName" : "getFactors",
+    "methodSignature" : "()V",
+    "selfTime" : 4574452.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.LoopCallingStackMoo",
+    "methodName" : "moo",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.LoopCallingStackMoo",
+    "methodName" : "bar",
+    "methodSignature" : "(I)V",
+    "selfTime" : 531862.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.LoopCallingStackMoo",
+    "methodName" : "foo",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.LoopCallingStackMoo",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

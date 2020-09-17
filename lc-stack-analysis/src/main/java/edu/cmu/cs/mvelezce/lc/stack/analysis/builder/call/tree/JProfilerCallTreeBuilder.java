@@ -1,6 +1,8 @@
 package edu.cmu.cs.mvelezce.lc.stack.analysis.builder.call.tree;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.mijecu25.meme.utils.execute.Executor;
 import edu.cmu.cs.mvelezce.analysis.Analysis;
@@ -10,16 +12,10 @@ import edu.cmu.cs.mvelezce.lc.stack.analysis.stack.entry.CallStackEntry;
 import edu.cmu.cs.mvelezce.utils.config.Options;
 import org.apache.commons.io.FileUtils;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
-public class JProfilerCallTreeBuilder implements Analysis<Collection<Object>> {
+public class JProfilerCallTreeBuilder implements Analysis<Void> {
 
   private static final String OUTPUT_DIR = Options.DIRECTORY + "/jprofiler/java/programs";
   private static final String SNAPSHOTS_ROOT =
@@ -40,32 +36,64 @@ public class JProfilerCallTreeBuilder implements Analysis<Collection<Object>> {
   }
 
   @Override
-  public Collection<Object> analyze(String[] args) throws IOException, InterruptedException {
+  public Void analyze(String[] args) throws IOException, InterruptedException {
     Options.getCommandLine(args);
     File file = new File(this.outputDir());
     Options.checkIfDeleteResult(file);
-    if (file.exists()) {
-      return this.readFromFile(file);
-    }
-
-    Collection<Object> result = this.analyze();
-    if (Options.checkIfSave()) {
-      this.writeToFile(result);
-    }
-    return result;
+    return this.analyze();
   }
 
   @Override
-  public Collection<Object> analyze() throws IOException, InterruptedException {
+  public Void analyze() throws IOException, InterruptedException {
     File snapshotsDir = new File(SNAPSHOTS_ROOT + "/" + this.programName);
     Collection<File> snapshots = FileUtils.listFiles(snapshotsDir, new String[] {"jps"}, false);
     for (File snapshot : snapshots) {
       this.export(snapshot.getPath());
       Collection<CallStack<CallStackEntry>> callStacks = this.getCallStacks();
-      throw new UnsupportedOperationException("implement");
+      this.saveCallStacks(snapshot.getName(), callStacks);
+      this.savePrettyCallStacks(snapshot.getName(), callStacks);
     }
 
-    throw new UnsupportedOperationException("implement");
+    return null;
+  }
+
+  private void savePrettyCallStacks(
+      String snapshotName, Collection<CallStack<CallStackEntry>> callStacks) throws IOException {
+    snapshotName = snapshotName.replaceAll(".jps", "");
+    for (CallStack<CallStackEntry> callStack : callStacks) {
+      StringBuilder prettyCallStack = new StringBuilder();
+      for (CallStackEntry entry : callStack.getStack()) {
+        prettyCallStack.append(entry.prettyPrint());
+        prettyCallStack.append("\n");
+      }
+
+      String outputFile = this.outputDir() + "/" + snapshotName + "/" + UUID.randomUUID() + ".csv";
+      File file = new File(outputFile);
+      if (!file.getParentFile().exists() && !file.getParentFile().mkdirs()) {
+        throw new RuntimeException("Could not create parent file dirs");
+      }
+
+      try (PrintWriter out = new PrintWriter(outputFile)) {
+        out.println(prettyCallStack.toString());
+      }
+    }
+  }
+
+  private void saveCallStacks(String snapshotName, Collection<CallStack<CallStackEntry>> callStacks)
+      throws IOException {
+    snapshotName = snapshotName.replaceAll(".jps", "");
+    for (CallStack<CallStackEntry> callStack : callStacks) {
+      String outputFile =
+          this.outputDir() + "/" + snapshotName + "/" + UUID.randomUUID() + Options.DOT_JSON;
+      File file = new File(outputFile);
+      if (!file.getParentFile().exists() && !file.getParentFile().mkdirs()) {
+        throw new RuntimeException("Could not create parent file dirs");
+      }
+
+      ObjectMapper mapper = new ObjectMapper();
+      mapper.enable(SerializationFeature.INDENT_OUTPUT);
+      mapper.writeValue(file, callStack);
+    }
   }
 
   private void export(String snapshotFile) throws IOException, InterruptedException {
@@ -136,17 +164,17 @@ public class JProfilerCallTreeBuilder implements Analysis<Collection<Object>> {
   }
 
   @Override
-  public void writeToFile(Collection<Object> result) {
-    throw new UnsupportedOperationException("implement");
-  }
-
-  @Override
-  public Collection<Object> readFromFile(File file) {
-    throw new UnsupportedOperationException("implement");
-  }
-
-  @Override
   public String outputDir() {
     return OUTPUT_DIR + "/" + this.programName;
+  }
+
+  @Override
+  public void writeToFile(Void result) {
+    throw new UnsupportedOperationException("Method should not be called");
+  }
+
+  @Override
+  public Void readFromFile(File file) {
+    throw new UnsupportedOperationException("Method should not be called");
   }
 }
