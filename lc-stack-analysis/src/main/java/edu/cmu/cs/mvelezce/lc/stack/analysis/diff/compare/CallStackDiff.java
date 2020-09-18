@@ -135,7 +135,7 @@ public class CallStackDiff {
     }
   }
 
-  private String getTable(List<DiffRow> rows, String optionValue, boolean right) {
+  private static String getTable(List<DiffRow> rows, String optionValue, boolean right) {
     StringBuilder table = new StringBuilder();
     table.append("<table>");
     table.append("<tr>");
@@ -150,8 +150,8 @@ public class CallStackDiff {
       String line = right ? row.getNewLine() : row.getOldLine();
       if (!line.isEmpty()) {
         String[] entries = line.split(",");
-        String method = this.addBackground(entries[0]);
-        String time = this.addBackground(entries[1]);
+        String method = addBackground(compressMethod(entries[0]));
+        String time = addBackground(entries[1]);
         table
             .append("<td>")
             .append(method)
@@ -168,7 +168,25 @@ public class CallStackDiff {
     return table.toString();
   }
 
-  private String addBackground(String entry) {
+  private static String compressMethod(String fullyQualifiedMethod) {
+    String[] entries = fullyQualifiedMethod.split("\\.");
+    StringBuilder result = new StringBuilder();
+    for (int i = 0; i < (entries.length - 2); i++) {
+      result.append(entries[i].charAt(0)).append(".");
+    }
+
+    String className = entries[entries.length - 2];
+    className = className.substring(0, Math.min(className.length(), 10));
+    result.append(className).append(".");
+
+    String methodName = entries[entries.length - 1];
+    methodName = methodName.substring(0, Math.min(methodName.indexOf("("), 10));
+    result.append(methodName).append("()");
+
+    return result.toString();
+  }
+
+  private static String addBackground(String entry) {
     if (entry.contains(OLD_TAG)) {
       entry = entry.replaceAll(OLD_TAG, "");
       entry = DELETION.replace("${text}", "" + entry);
