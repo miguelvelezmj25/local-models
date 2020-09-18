@@ -5,24 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>edu.cmu.cs.mvelezce</groupId>
-    <artifactId>locee</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>lc-compress</artifactId>
     <version>0.1.0-SNAPSHOT</version>
-    <modules>
-        <module>lc-perf-model</module>
-        <module>lc-perf-behavior</module>
-        <module>lc-perf-model-exhaustive</module>
-        <module>cc-execute</module>
-        <module>cc-instrument</module>
-        <module>lc-perf-model-e2e</module>
-        <module>cc-compress</module>
-        <module>lc-profiler-analysis</module>
-        <module>lc-stack-analysis</module>
-        <module>lc-adapters</module>
-        <module>lc-compress</module>
-    </modules>
 
-    <name>locee</name>
+    <name>lc-compress</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -38,6 +24,46 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mijecu25</groupId>
+            <artifactId>meme</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.cmu.cs.mvelezce</groupId>
+            <artifactId>cc-compress</artifactId>
+            <version>0.2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.cmu.cs.mvelezce</groupId>
+            <artifactId>cc-analysis</artifactId>
+            <version>0.2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.cmu.cs.mvelezce</groupId>
+            <artifactId>cc-utils</artifactId>
+            <version>0.2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.cmu.cs.mvelezce</groupId>
+            <artifactId>cc-adapters</artifactId>
+            <version>0.2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.8.9</version>
         </dependency>
     </dependencies>
 
@@ -84,9 +110,8 @@
                     <version>3.0.0</version>
                 </plugin>
                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.3</version>
+                    <version>3.8.0</version>
                     <configuration>
                         <source>1.8</source>
                         <target>1.8</target>
