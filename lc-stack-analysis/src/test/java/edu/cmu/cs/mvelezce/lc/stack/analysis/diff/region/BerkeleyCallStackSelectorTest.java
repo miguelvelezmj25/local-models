@@ -34,4 +34,18 @@ public class BerkeleyCallStackSelectorTest {
             "(Ljava/nio/ByteBuffer;JLcom/sleepycat/je/utilint/VLSN;)Ljava/nio/ByteBuffer;");
     selector.select();
   }
+
+  @Test
+  public void readFromFileInternal() throws IOException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
+    CallStackSelector selector =
+        new CallStackSelector(
+            programName,
+            "TEMPORARY",
+            "!TEMPORARY",
+            "com.sleepycat.je.log.FileManager",
+            "readFromFileInternal",
+            "(Ljava/io/RandomAccessFile;Ljava/nio/ByteBuffer;JJ)V");
+    selector.select();
+  }
 }

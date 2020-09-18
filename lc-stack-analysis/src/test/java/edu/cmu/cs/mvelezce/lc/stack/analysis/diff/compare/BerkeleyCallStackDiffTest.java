@@ -35,4 +35,18 @@ public class BerkeleyCallStackDiffTest {
             "(Ljava/nio/ByteBuffer;JLcom/sleepycat/je/utilint/VLSN;)Ljava/nio/ByteBuffer;");
     differ.diff();
   }
+
+  @Test
+  public void readFromFileInternal() throws IOException, DiffException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
+    CallStackDiff differ =
+        new CallStackDiff(
+            programName,
+            "TEMPORARY",
+            "!TEMPORARY",
+            "com.sleepycat.je.log.FileManager",
+            "readFromFileInternal",
+            "(Ljava/io/RandomAccessFile;Ljava/nio/ByteBuffer;JJ)V");
+    differ.diff();
+  }
 }
