@@ -48,4 +48,18 @@ public class ConvertCallStackSelectorTest {
             "(Ljava/awt/image/BufferedImage;[[BII)V");
     selector.select();
   }
+
+  @Test
+  public void compressJpeg() throws IOException {
+    String programName = BaseConvertAdapter.PROGRAM_NAME;
+    CallStackSelector selector =
+        new CallStackSelector(
+            programName,
+            "SCALE",
+            "!SCALE",
+            "at.favre.tools.dconvert.converters.scaling.ImageHandler",
+            "compressJpeg",
+            "(Ljava/awt/image/BufferedImage;Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;FLjava/io/File;)V");
+    selector.select();
+  }
 }

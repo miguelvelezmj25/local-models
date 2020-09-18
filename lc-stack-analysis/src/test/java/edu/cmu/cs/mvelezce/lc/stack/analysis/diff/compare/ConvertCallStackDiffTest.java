@@ -49,4 +49,19 @@ public class ConvertCallStackDiffTest {
             "(Ljava/awt/image/BufferedImage;[[BII)V");
     differ.diff();
   }
+
+  @Test
+  public void compressJpeg() throws IOException, DiffException {
+    String programName = BaseConvertAdapter.PROGRAM_NAME;
+    CallStackDiff differ =
+        new CallStackDiff(
+            programName,
+            "SCALE",
+            "!SCALE",
+            "at.favre.tools.dconvert.converters.scaling.ImageHandler",
+            "compressJpeg",
+            "(Ljava/awt/image/BufferedImage;Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;FLjava/io/File;)V");
+
+    differ.diff();
+  }
 }
