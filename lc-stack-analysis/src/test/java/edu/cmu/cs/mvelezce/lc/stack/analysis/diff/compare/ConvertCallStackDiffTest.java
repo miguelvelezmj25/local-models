@@ -35,4 +35,18 @@ public class ConvertCallStackDiffTest {
             "([[B[BII)V");
     differ.diff();
   }
+
+  @Test
+  public void horizontallyFromSrcToWork() throws IOException, DiffException {
+    String programName = BaseConvertAdapter.PROGRAM_NAME;
+    CallStackDiff differ =
+        new CallStackDiff(
+            programName,
+            "SCALE",
+            "!SCALE",
+            "com.mortennobel.imagescaling.ResampleOp",
+            "horizontallyFromSrcToWork",
+            "(Ljava/awt/image/BufferedImage;[[BII)V");
+    differ.diff();
+  }
 }

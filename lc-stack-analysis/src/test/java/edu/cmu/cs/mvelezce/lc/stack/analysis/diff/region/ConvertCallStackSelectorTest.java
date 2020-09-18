@@ -34,4 +34,18 @@ public class ConvertCallStackSelectorTest {
             "([[B[BII)V");
     selector.select();
   }
+
+  @Test
+  public void horizontallyFromSrcToWork() throws IOException {
+    String programName = BaseConvertAdapter.PROGRAM_NAME;
+    CallStackSelector selector =
+        new CallStackSelector(
+            programName,
+            "SCALE",
+            "!SCALE",
+            "com.mortennobel.imagescaling.ResampleOp",
+            "horizontallyFromSrcToWork",
+            "(Ljava/awt/image/BufferedImage;[[BII)V");
+    selector.select();
+  }
 }
