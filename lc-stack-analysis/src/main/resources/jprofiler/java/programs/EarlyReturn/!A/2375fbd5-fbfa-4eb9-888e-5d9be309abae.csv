@@ -1,6 +1,0 @@
-edu.cmu.cs.mvelezce.perf.ExpensiveCalls.getFactors()V,4.313
-edu.cmu.cs.mvelezce.perf.EarlyReturn.bar()V,0.526
-edu.cmu.cs.mvelezce.perf.EarlyReturn.moo(Z)V,0.453
-edu.cmu.cs.mvelezce.perf.EarlyReturn.foo(Z)V,0
-edu.cmu.cs.mvelezce.perf.EarlyReturn.main([Ljava/lang/String;)V,0
-

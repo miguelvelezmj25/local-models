@@ -53,6 +53,8 @@ public class CallStackDiff {
                 + "/"
                 + this.programName
                 + "/"
+                + this.methodName
+                + "/"
                 + this.optionValue1
                 + "-"
                 + this.optionValue2);
@@ -119,6 +121,8 @@ public class CallStackDiff {
                 + "/"
                 + this.programName
                 + "/"
+                + this.methodName
+                + "/"
                 + this.optionValue1
                 + "-"
                 + this.optionValue2);
@@ -144,16 +148,20 @@ public class CallStackDiff {
     for (DiffRow row : rows) {
       table.append("<tr>");
       String line = right ? row.getNewLine() : row.getOldLine();
-      String[] entries = line.split(",");
-      String method = this.addBackground(entries[0]);
-      String time = this.addBackground(entries[1]);
-      table
-          .append("<td>")
-          .append(method)
-          .append("</td><td align =\"right\">")
-          .append(time)
-          .append("</td>")
-          .append("\n");
+      if (!line.isEmpty()) {
+        String[] entries = line.split(",");
+        String method = this.addBackground(entries[0]);
+        String time = this.addBackground(entries[1]);
+        table
+            .append("<td>")
+            .append(method)
+            .append("</td><td align =\"right\">")
+            .append(time)
+            .append("</td>")
+            .append("\n");
+      } else {
+        table.append("<td>&nbsp</td>");
+      }
       table.append("</tr>");
     }
     table.append("</table>");
