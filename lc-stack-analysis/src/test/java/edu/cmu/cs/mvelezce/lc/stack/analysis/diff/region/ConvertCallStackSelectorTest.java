@@ -62,4 +62,18 @@ public class ConvertCallStackSelectorTest {
             "(Ljava/awt/image/BufferedImage;Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;FLjava/io/File;)V");
     selector.select();
   }
+
+  @Test
+  public void scale() throws IOException {
+    String programName = BaseConvertAdapter.PROGRAM_NAME;
+    CallStackSelector selector =
+        new CallStackSelector(
+            programName,
+            "SCALE",
+            "!SCALE",
+            "at.favre.tools.dconvert.converters.scaling.ImageHandler",
+            "scale",
+            "(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;");
+    selector.select();
+  }
 }

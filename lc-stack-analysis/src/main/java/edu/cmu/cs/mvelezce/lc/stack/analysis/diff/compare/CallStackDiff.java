@@ -204,6 +204,8 @@ public class CallStackDiff {
       String line = right ? row.getNewLine() : row.getOldLine();
       if (!line.isEmpty()) {
         String[] entries = line.split(",");
+        entries[0] = entries[0].replaceAll("&lt;", "<");
+        entries[0] = entries[0].replaceAll("&gt;", ">");
         String method = addBackground(compressMethod(entries[0]));
         Pair<String, String> times = allMethodsToTimes.get(removeTags(entries[0]));
         DiffRow timesDiff = compareTimes(times);
