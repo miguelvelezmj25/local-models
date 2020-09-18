@@ -1,0 +1,83 @@
+{
+  "stack" : [ {
+    "className" : "com.sleepycat.je.tree.IN",
+    "methodName" : "getTarget",
+    "methodSignature" : "(I)Lcom/sleepycat/je/tree/Node;",
+    "selfTime" : 10907.0
+  }, {
+    "className" : "com.sleepycat.je.tree.BIN",
+    "methodName" : "evictLNInternal",
+    "methodSignature" : "(IZ)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.tree.BIN",
+    "methodName" : "evictLN",
+    "methodSignature" : "(IZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.CursorImpl",
+    "methodName" : "evictLN",
+    "methodSignature" : "(ZZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.CursorImpl",
+    "methodName" : "performCacheModeLNEviction",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.CursorImpl",
+    "methodName" : "performCacheModeEviction",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/CursorImpl;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.CursorImpl",
+    "methodName" : "removeCursorAndPerformCacheEviction",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/CursorImpl;)V",
+    "selfTime" : 5458.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.CursorImpl",
+    "methodName" : "close",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/CursorImpl;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.CursorImpl",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Cursor",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Database",
+    "methodName" : "put",
+    "methodSignature" : "(Lcom/sleepycat/je/Transaction;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/Put;Lcom/sleepycat/je/WriteOptions;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Database",
+    "methodName" : "putNoOverwrite",
+    "methodSignature" : "(Lcom/sleepycat/je/Transaction;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;)Lcom/sleepycat/je/OperationStatus;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "populate",
+    "methodSignature" : "()V",
+    "selfTime" : 207229.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

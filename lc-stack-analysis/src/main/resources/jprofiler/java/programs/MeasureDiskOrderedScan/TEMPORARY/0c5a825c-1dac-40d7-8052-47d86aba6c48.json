@@ -1,0 +1,93 @@
+{
+  "stack" : [ {
+    "className" : "com.sleepycat.je.tree.IN",
+    "methodName" : "trackProvisionalObsolete",
+    "methodSignature" : "(Lcom/sleepycat/je/tree/IN;J)V",
+    "selfTime" : 5302.0
+  }, {
+    "className" : "com.sleepycat.je.tree.IN",
+    "methodName" : "logInternal",
+    "methodSignature" : "(Lcom/sleepycat/je/tree/IN;Lcom/sleepycat/je/log/entry/INLogEntry;ZZLcom/sleepycat/je/log/Provisional;ZLcom/sleepycat/je/tree/IN;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.tree.IN",
+    "methodName" : "log",
+    "methodSignature" : "(ZLcom/sleepycat/je/log/Provisional;ZLcom/sleepycat/je/tree/IN;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.recovery.Checkpointer",
+    "methodName" : "logDirtyIN",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/tree/IN;ILcom/sleepycat/je/log/Provisional;Lcom/sleepycat/je/recovery/Checkpointer$FlushStats;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.recovery.Checkpointer",
+    "methodName" : "flushIN",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/DatabaseImpl;Lcom/sleepycat/je/recovery/Checkpointer$CheckpointReference;Lcom/sleepycat/je/recovery/DirtyINMap;IZLcom/sleepycat/je/recovery/Checkpointer$FlushStats;Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.recovery.Checkpointer",
+    "methodName" : "flushDirtyNodes",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/recovery/DirtyINMap;JZLcom/sleepycat/je/recovery/Checkpointer$FlushStats;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.recovery.Checkpointer",
+    "methodName" : "doCheckpoint",
+    "methodSignature" : "(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.EnvironmentImpl",
+    "methodName" : "invokeCheckpoint",
+    "methodSignature" : "(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.recovery.RecoveryManager",
+    "methodName" : "recover",
+    "methodSignature" : "(Z)Lcom/sleepycat/je/recovery/RecoveryInfo;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.EnvironmentImpl",
+    "methodName" : "finishInit",
+    "methodSignature" : "(Lcom/sleepycat/je/EnvironmentConfig;)Z",
+    "selfTime" : 5224.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DbEnvPool",
+    "methodName" : "getEnvironment",
+    "methodSignature" : "(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+    "selfTime" : 17400.0
+  }, {
+    "className" : "com.sleepycat.je.Environment",
+    "methodName" : "makeEnvironmentImpl",
+    "methodSignature" : "(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+    "selfTime" : 5995.0
+  }, {
+    "className" : "com.sleepycat.je.Environment",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Environment",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "open",
+    "methodSignature" : "()V",
+    "selfTime" : 5128.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

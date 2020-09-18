@@ -1,0 +1,123 @@
+{
+  "stack" : [ {
+    "className" : "com.sleepycat.je.txn.LockManager",
+    "methodName" : "attemptLockInternal",
+    "methodSignature" : "(Ljava/lang/Long;Lcom/sleepycat/je/txn/Locker;Lcom/sleepycat/je/txn/LockType;ZZI)Lcom/sleepycat/je/txn/LockAttemptResult;",
+    "selfTime" : 5301.0
+  }, {
+    "className" : "com.sleepycat.je.txn.SyncedLockManager",
+    "methodName" : "attemptLock",
+    "methodSignature" : "(Ljava/lang/Long;Lcom/sleepycat/je/txn/Locker;Lcom/sleepycat/je/txn/LockType;ZZ)Lcom/sleepycat/je/txn/LockAttemptResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.txn.LockManager",
+    "methodName" : "lock",
+    "methodSignature" : "(JLcom/sleepycat/je/txn/Locker;Lcom/sleepycat/je/txn/LockType;JZZLcom/sleepycat/je/dbi/DatabaseImpl;)Lcom/sleepycat/je/txn/LockGrantType;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.txn.Txn",
+    "methodName" : "lockInternal",
+    "methodSignature" : "(JLcom/sleepycat/je/txn/LockType;ZZLcom/sleepycat/je/dbi/DatabaseImpl;)Lcom/sleepycat/je/txn/LockResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.txn.Locker",
+    "methodName" : "nonBlockingLock",
+    "methodSignature" : "(JLcom/sleepycat/je/txn/LockType;ZLcom/sleepycat/je/dbi/DatabaseImpl;)Lcom/sleepycat/je/txn/LockResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.tree.LN",
+    "methodName" : "logInternal",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/dbi/DatabaseImpl;Lcom/sleepycat/je/txn/Locker;Lcom/sleepycat/je/txn/WriteLockInfo;Z[BIZZJIZZLcom/sleepycat/je/log/ReplicationContext;)Lcom/sleepycat/je/log/LogItem;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.tree.LN",
+    "methodName" : "optionalLog",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/dbi/DatabaseImpl;Lcom/sleepycat/je/txn/Locker;Lcom/sleepycat/je/txn/WriteLockInfo;Z[BIZZJIZLcom/sleepycat/je/log/ReplicationContext;)Lcom/sleepycat/je/log/LogItem;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.CursorImpl",
+    "methodName" : "insertRecordInternal",
+    "methodSignature" : "([BLcom/sleepycat/je/tree/LN;Lcom/sleepycat/je/dbi/ExpirationInfo;ZLcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/log/ReplicationContext;)Lcom/sleepycat/je/utilint/Pair;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.CursorImpl",
+    "methodName" : "insertRecord",
+    "methodSignature" : "([BLcom/sleepycat/je/tree/LN;ZLcom/sleepycat/je/log/ReplicationContext;)Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DbTree",
+    "methodName" : "doCreateDb",
+    "methodSignature" : "(Lcom/sleepycat/je/txn/Locker;Ljava/lang/String;Lcom/sleepycat/je/DatabaseConfig;Lcom/sleepycat/je/txn/HandleLocker;Lcom/sleepycat/je/tree/NameLN;Lcom/sleepycat/je/log/ReplicationContext;)Lcom/sleepycat/je/dbi/DatabaseImpl;",
+    "selfTime" : 5401.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DbTree",
+    "methodName" : "createInternalDb",
+    "methodSignature" : "(Lcom/sleepycat/je/txn/Locker;Ljava/lang/String;Lcom/sleepycat/je/DatabaseConfig;)Lcom/sleepycat/je/dbi/DatabaseImpl;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DbTree",
+    "methodName" : "openNonRepInternalDB",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/DbType;)Lcom/sleepycat/je/dbi/DatabaseImpl;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.cleaner.UtilizationProfile",
+    "methodName" : "openFileSummaryDatabase",
+    "methodSignature" : "()Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.cleaner.UtilizationProfile",
+    "methodName" : "populateCache",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/StartupTracker$Counter;Lcom/sleepycat/je/recovery/RecoveryInfo;Ljava/util/Set;Ljava/util/Set;)Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.recovery.RecoveryManager",
+    "methodName" : "recover",
+    "methodSignature" : "(Z)Lcom/sleepycat/je/recovery/RecoveryInfo;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.EnvironmentImpl",
+    "methodName" : "finishInit",
+    "methodSignature" : "(Lcom/sleepycat/je/EnvironmentConfig;)Z",
+    "selfTime" : 5700.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DbEnvPool",
+    "methodName" : "getEnvironment",
+    "methodSignature" : "(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+    "selfTime" : 17265.0
+  }, {
+    "className" : "com.sleepycat.je.Environment",
+    "methodName" : "makeEnvironmentImpl",
+    "methodSignature" : "(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Environment",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Environment",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "open",
+    "methodSignature" : "()V",
+    "selfTime" : 6479.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

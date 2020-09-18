@@ -1,0 +1,13 @@
+{
+  "stack" : [ {
+    "className" : "com.sleepycat.je.log.FileDeletionDetector",
+    "methodName" : "processLogFileDeleteEvents",
+    "methodSignature" : "()V",
+    "selfTime" : 24172.0
+  }, {
+    "className" : "com.sleepycat.je.log.FileDeletionDetector$FileDeleteDetectTask",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 5771.0
+  } ]
+}

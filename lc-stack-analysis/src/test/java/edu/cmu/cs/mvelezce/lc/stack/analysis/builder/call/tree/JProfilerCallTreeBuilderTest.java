@@ -1,6 +1,7 @@
 package edu.cmu.cs.mvelezce.lc.stack.analysis.builder.call.tree;
 
 import edu.cmu.cs.mvelezce.adapters.convert.BaseConvertAdapter;
+import edu.cmu.cs.mvelezce.adapters.measureDiskOrderedScan.BaseMeasureDiskOrderedScanAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.barInfluence.BaseBarInfluenceAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.diffStacks.BaseDiffStacksAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.earlyReturn.BaseEarlyReturnAdapter;
@@ -54,6 +55,16 @@ public class JProfilerCallTreeBuilderTest {
   @Test
   public void Convert() throws IOException, InterruptedException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
+    JProfilerCallTreeBuilder builder = new JProfilerCallTreeBuilder(programName);
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+    builder.analyze(args);
+  }
+
+  @Test
+  public void MeasureDiskOrderedScan() throws IOException, InterruptedException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     JProfilerCallTreeBuilder builder = new JProfilerCallTreeBuilder(programName);
     String[] args = new String[2];
     args[0] = "-delres";

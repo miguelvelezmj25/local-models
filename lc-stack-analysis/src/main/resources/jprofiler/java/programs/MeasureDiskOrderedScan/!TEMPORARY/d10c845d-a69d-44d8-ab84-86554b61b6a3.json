@@ -1,0 +1,118 @@
+{
+  "stack" : [ {
+    "className" : "com.sleepycat.je.log.LogBufferPool",
+    "methodName" : "writeBufferToFile",
+    "methodSignature" : "(Lcom/sleepycat/je/log/LogBuffer;Z)V",
+    "selfTime" : 5360.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogBufferPool",
+    "methodName" : "writeDirty",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "flushInternal",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "flushBeforeSync",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.FSyncManager",
+    "methodName" : "flushAndSync",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "log",
+    "methodSignature" : "(Lcom/sleepycat/je/log/LogParams;)Lcom/sleepycat/je/log/LogItem;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.txn.Txn",
+    "methodName" : "logCommitEntry",
+    "methodSignature" : "(Lcom/sleepycat/je/Durability$SyncPolicy;Ljava/util/Collection;)Lcom/sleepycat/je/log/LogItem;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.txn.Txn",
+    "methodName" : "commit",
+    "methodSignature" : "(Lcom/sleepycat/je/Durability;)J",
+    "selfTime" : 5474.0
+  }, {
+    "className" : "com.sleepycat.je.txn.Txn",
+    "methodName" : "commit",
+    "methodSignature" : "()J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.txn.Txn",
+    "methodName" : "operationEnd",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DbTree",
+    "methodName" : "openNonRepInternalDB",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/DbType;)Lcom/sleepycat/je/dbi/DatabaseImpl;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.cleaner.UtilizationProfile",
+    "methodName" : "openFileSummaryDatabase",
+    "methodSignature" : "()Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.cleaner.UtilizationProfile",
+    "methodName" : "populateCache",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/StartupTracker$Counter;Lcom/sleepycat/je/recovery/RecoveryInfo;Ljava/util/Set;Ljava/util/Set;)Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.recovery.RecoveryManager",
+    "methodName" : "recover",
+    "methodSignature" : "(Z)Lcom/sleepycat/je/recovery/RecoveryInfo;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.EnvironmentImpl",
+    "methodName" : "finishInit",
+    "methodSignature" : "(Lcom/sleepycat/je/EnvironmentConfig;)Z",
+    "selfTime" : 5700.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DbEnvPool",
+    "methodName" : "getEnvironment",
+    "methodSignature" : "(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+    "selfTime" : 17265.0
+  }, {
+    "className" : "com.sleepycat.je.Environment",
+    "methodName" : "makeEnvironmentImpl",
+    "methodSignature" : "(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Environment",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Environment",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "open",
+    "methodSignature" : "()V",
+    "selfTime" : 6479.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

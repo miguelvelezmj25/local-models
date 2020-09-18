@@ -1,0 +1,48 @@
+{
+  "stack" : [ {
+    "className" : "com.sleepycat.je.utilint.PropUtil",
+    "methodName" : "parseDurationNS",
+    "methodSignature" : "(Ljava/lang/String;)J",
+    "selfTime" : 5255.0
+  }, {
+    "className" : "com.sleepycat.je.utilint.PropUtil",
+    "methodName" : "parseDuration",
+    "methodSignature" : "(Ljava/lang/String;)I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.config.DurationConfigParam",
+    "methodName" : "validateValue",
+    "methodSignature" : "(Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.config.ConfigParam",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/lang/String;Ljava/lang/String;ZZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.config.DurationConfigParam",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.config.EnvironmentParams",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 5364.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "envBackgroundReadLimit",
+    "methodSignature" : "(Z)Ljava/lang/String;",
+    "selfTime" : 5257.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

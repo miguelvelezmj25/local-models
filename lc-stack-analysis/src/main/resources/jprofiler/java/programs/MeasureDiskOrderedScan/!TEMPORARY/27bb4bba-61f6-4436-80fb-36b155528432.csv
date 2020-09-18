@@ -1,0 +1,7 @@
+com.sleepycat.je.EnvironmentConfig.setTransactionalVoid(Z)V,0.006
+com.sleepycat.je.EnvironmentConfig.setTransactional(Z)Lcom/sleepycat/je/EnvironmentConfig;,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.open()V,0.006
+com.sleepycat.analysis.MeasureDiskOrderedScan.run()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run([Ljava/lang/String;)V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V,0
+

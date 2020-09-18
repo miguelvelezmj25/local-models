@@ -1,0 +1,138 @@
+{
+  "stack" : [ {
+    "className" : "com.sleepycat.je.latch.LatchImpl",
+    "methodName" : "isOwner",
+    "methodSignature" : "()Z",
+    "selfTime" : 5198.0
+  }, {
+    "className" : "com.sleepycat.je.tree.IN",
+    "methodName" : "isLatchOwner",
+    "methodSignature" : "()Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.INList",
+    "methodName" : "removeInternal",
+    "methodSignature" : "(Lcom/sleepycat/je/tree/IN;)Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.INList",
+    "methodName" : "remove",
+    "methodSignature" : "(Lcom/sleepycat/je/tree/IN;)V",
+    "selfTime" : 6410.0
+  }, {
+    "className" : "com.sleepycat.je.tree.IN",
+    "methodName" : "detachNode",
+    "methodSignature" : "(IZJ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.evictor.Evictor",
+    "methodName" : "evict",
+    "methodSignature" : "(Lcom/sleepycat/je/tree/IN;Lcom/sleepycat/je/tree/IN;IZLcom/sleepycat/je/evictor/Evictor$EvictionDebugStats;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.evictor.Evictor",
+    "methodName" : "processTarget",
+    "methodSignature" : "(Lcom/sleepycat/je/evictor/Evictor$RootEvictor;Lcom/sleepycat/je/tree/IN;Lcom/sleepycat/je/tree/IN;IZLcom/sleepycat/je/evictor/Evictor$EvictionSource;Lcom/sleepycat/je/evictor/Evictor$EvictionDebugStats;)J",
+    "selfTime" : 5208.0
+  }, {
+    "className" : "com.sleepycat.je.evictor.Evictor",
+    "methodName" : "findParentAndRetry",
+    "methodSignature" : "(Lcom/sleepycat/je/tree/IN;ZLcom/sleepycat/je/evictor/Evictor$EvictionSource;Lcom/sleepycat/je/evictor/Evictor$EvictionDebugStats;)J",
+    "selfTime" : 5589.0
+  }, {
+    "className" : "com.sleepycat.je.evictor.Evictor",
+    "methodName" : "processTarget",
+    "methodSignature" : "(Lcom/sleepycat/je/evictor/Evictor$RootEvictor;Lcom/sleepycat/je/tree/IN;Lcom/sleepycat/je/tree/IN;IZLcom/sleepycat/je/evictor/Evictor$EvictionSource;Lcom/sleepycat/je/evictor/Evictor$EvictionDebugStats;)J",
+    "selfTime" : 28040.0
+  }, {
+    "className" : "com.sleepycat.je.evictor.Evictor",
+    "methodName" : "evictBatch",
+    "methodSignature" : "(Lcom/sleepycat/je/evictor/Evictor$EvictionSource;ZJLcom/sleepycat/je/evictor/Evictor$EvictionDebugStats;)J",
+    "selfTime" : 103313.0
+  }, {
+    "className" : "com.sleepycat.je.evictor.Evictor",
+    "methodName" : "doEvict",
+    "methodSignature" : "(Lcom/sleepycat/je/evictor/Evictor$EvictionSource;Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.evictor.Evictor",
+    "methodName" : "doCriticalEviction",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.EnvironmentImpl",
+    "methodName" : "criticalEviction",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.CursorImpl",
+    "methodName" : "criticalEviction",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.CursorImpl",
+    "methodName" : "afterNonStickyOp",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Cursor",
+    "methodName" : "endMoveCursor",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/CursorImpl;Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Cursor",
+    "methodName" : "putNoNotify",
+    "methodSignature" : "(Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/tree/LN;Lcom/sleepycat/je/CacheMode;Lcom/sleepycat/je/dbi/ExpirationInfo;Lcom/sleepycat/je/dbi/PutMode;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/log/ReplicationContext;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Cursor",
+    "methodName" : "putNotify",
+    "methodSignature" : "(Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/tree/LN;Lcom/sleepycat/je/CacheMode;Lcom/sleepycat/je/dbi/ExpirationInfo;Lcom/sleepycat/je/dbi/PutMode;Lcom/sleepycat/je/log/ReplicationContext;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Cursor",
+    "methodName" : "putNoDups",
+    "methodSignature" : "(Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/CacheMode;Lcom/sleepycat/je/dbi/ExpirationInfo;Lcom/sleepycat/je/dbi/PutMode;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Cursor",
+    "methodName" : "putInternal",
+    "methodSignature" : "(Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/CacheMode;Lcom/sleepycat/je/dbi/ExpirationInfo;Lcom/sleepycat/je/dbi/PutMode;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Cursor",
+    "methodName" : "putInternal",
+    "methodSignature" : "(Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/Put;Lcom/sleepycat/je/WriteOptions;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Database",
+    "methodName" : "put",
+    "methodSignature" : "(Lcom/sleepycat/je/Transaction;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/Put;Lcom/sleepycat/je/WriteOptions;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Database",
+    "methodName" : "putNoOverwrite",
+    "methodSignature" : "(Lcom/sleepycat/je/Transaction;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;)Lcom/sleepycat/je/OperationStatus;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "populate",
+    "methodSignature" : "()V",
+    "selfTime" : 206762.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}
