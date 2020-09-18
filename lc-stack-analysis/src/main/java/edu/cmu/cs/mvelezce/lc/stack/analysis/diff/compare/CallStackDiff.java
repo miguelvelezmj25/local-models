@@ -6,13 +6,12 @@ import com.github.difflib.text.DiffRowGenerator;
 import edu.cmu.cs.mvelezce.lc.stack.analysis.diff.region.CallStackSelector;
 import edu.cmu.cs.mvelezce.utils.config.Options;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Collection;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class CallStackDiff {
 
@@ -71,9 +70,44 @@ public class CallStackDiff {
       for (File prettyCallStack2 : prettyCallStacks2) {
         List<String> lines1 = FileUtils.readLines(prettyCallStack1, (String) null);
         List<String> lines2 = FileUtils.readLines(prettyCallStack2, (String) null);
-        List<DiffRow> diff = this.diffCallStacks(lines1, lines2);
-        this.generateHTML(this.optionValue1, this.optionValue2, diff);
+        Map<String, Pair<String, String>> allMethodsToTimes = getAllMethodsToTimes(lines1, lines2);
+        List<DiffRow> diff = diffCallStacks(lines1, lines2);
+        this.generateHTML(this.optionValue1, this.optionValue2, diff, allMethodsToTimes);
       }
+    }
+  }
+
+  private Map<String, Pair<String, String>> getAllMethodsToTimes(
+      List<String> lines1, List<String> lines2) {
+    Map<String, Pair<String, String>> allMethods = new HashMap<>();
+    populateAllMethods(allMethods, lines1);
+    populateAllMethods(allMethods, lines2);
+
+    addPairs(allMethods, lines1, true);
+    addPairs(allMethods, lines2, false);
+
+    return allMethods;
+  }
+
+  private void populateAllMethods(
+      Map<String, Pair<String, String>> allMethods, List<String> entries) {
+    for (String entry : entries) {
+      allMethods.putIfAbsent(entry.split(",")[0], Pair.of("", ""));
+    }
+  }
+
+  private void addPairs(
+      Map<String, Pair<String, String>> allMethods, List<String> entries, boolean leftEntry) {
+    for (String line : entries) {
+      String[] elements = line.split(",");
+      Pair<String, String> entry = allMethods.get(elements[0]);
+      Pair<String, String> pair;
+      if (leftEntry) {
+        pair = Pair.of(elements[1], entry.getRight());
+      } else {
+        pair = Pair.of(entry.getLeft(), elements[1]);
+      }
+      allMethods.put(elements[0], pair);
     }
   }
 
@@ -90,8 +124,8 @@ public class CallStackDiff {
     return FileUtils.listFiles(dir, new String[] {"csv"}, false);
   }
 
-  private List<DiffRow> diffCallStacks(List<String> lines1, List<String> lines2)
-      throws DiffException, IOException {
+  private static List<DiffRow> diffCallStacks(List<String> lines1, List<String> lines2)
+      throws DiffException {
     DiffRowGenerator generator =
         DiffRowGenerator.create()
             .showInlineDiffs(true)
@@ -99,11 +133,25 @@ public class CallStackDiff {
             .oldTag(f -> OLD_TAG)
             .newTag(f -> NEW_TAG)
             .build();
-    return generator.generateDiffRows(lines1, lines2);
+
+    List<String> methods1 = new ArrayList<>();
+    for (String line : lines1) {
+      methods1.add(line.split(",")[0]);
+    }
+    List<String> methods2 = new ArrayList<>();
+    for (String line : lines2) {
+      methods2.add(line.split(",")[0]);
+    }
+
+    return generator.generateDiffRows(methods1, methods2);
   }
 
-  private void generateHTML(String optionValue1, String optionValue2, List<DiffRow> rows)
-      throws IOException {
+  private void generateHTML(
+      String optionValue1,
+      String optionValue2,
+      List<DiffRow> rows,
+      Map<String, Pair<String, String>> allMethodsToTimes)
+      throws IOException, DiffException {
     // Get template & replace placeholders with left & right variables with actual
     // comparison
     String template =
@@ -111,8 +159,9 @@ public class CallStackDiff {
             new File(
                 "./src/main/java/edu/cmu/cs/mvelezce/lc/stack/analysis/diff/compare/difftemplate.html"),
             "utf-8");
-    String output = template.replace("${left}", this.getTable(rows, optionValue1, false));
-    output = output.replace("${right}", this.getTable(rows, optionValue2, true));
+    String output =
+        template.replace("${left}", getTable(rows, optionValue1, false, allMethodsToTimes));
+    output = output.replace("${right}", getTable(rows, optionValue2, true, allMethodsToTimes));
 
     // Write file to disk.
     File outputFile =
@@ -135,7 +184,12 @@ public class CallStackDiff {
     }
   }
 
-  private static String getTable(List<DiffRow> rows, String optionValue, boolean right) {
+  private static String getTable(
+      List<DiffRow> rows,
+      String optionValue,
+      boolean right,
+      Map<String, Pair<String, String>> allMethodsToTimes)
+      throws DiffException {
     StringBuilder table = new StringBuilder();
     table.append("<table>");
     table.append("<tr>");
@@ -151,7 +205,10 @@ public class CallStackDiff {
       if (!line.isEmpty()) {
         String[] entries = line.split(",");
         String method = addBackground(compressMethod(entries[0]));
-        String time = addBackground(entries[1]);
+        Pair<String, String> times = allMethodsToTimes.get(removeTags(entries[0]));
+        DiffRow timesDiff = compareTimes(times);
+        String time =
+            right ? addBackground(timesDiff.getNewLine()) : addBackground(timesDiff.getOldLine());
         table
             .append("<td>")
             .append(method)
@@ -168,10 +225,31 @@ public class CallStackDiff {
     return table.toString();
   }
 
+  private static DiffRow compareTimes(Pair<String, String> times) throws DiffException {
+    DiffRowGenerator generator =
+        DiffRowGenerator.create()
+            .showInlineDiffs(true)
+            .inlineDiffByWord(true)
+            .oldTag(f -> OLD_TAG)
+            .newTag(f -> NEW_TAG)
+            .build();
+    return generator
+        .generateDiffRows(
+            Collections.singletonList(times.getLeft()), Collections.singletonList(times.getRight()))
+        .get(0);
+  }
+
   private static String compressMethod(String fullyQualifiedMethod) {
     String[] entries = fullyQualifiedMethod.split("\\.");
     StringBuilder result = new StringBuilder();
-    for (int i = 0; i < (entries.length - 2); i++) {
+
+    if (entries[0].startsWith(OLD_TAG) || entries[0].startsWith(NEW_TAG)) {
+      result.append(entries[0], 0, 2).append(".");
+    } else {
+      result.append(entries[0].charAt(0)).append(".");
+    }
+
+    for (int i = 1; i < (entries.length - 2); i++) {
       result.append(entries[i].charAt(0)).append(".");
     }
 
@@ -186,15 +264,27 @@ public class CallStackDiff {
     return result.toString();
   }
 
-  private static String addBackground(String entry) {
+  private static String removeTags(String entry) {
     if (entry.contains(OLD_TAG)) {
-      entry = entry.replaceAll(OLD_TAG, "");
-      entry = DELETION.replace("${text}", "" + entry);
+      return entry.replaceAll(OLD_TAG, "");
     }
 
     if (entry.contains(NEW_TAG)) {
-      entry = entry.replaceAll(NEW_TAG, "");
-      entry = INSERTION.replace("${text}", "" + entry);
+      return entry.replaceAll(NEW_TAG, "");
+    }
+
+    return entry;
+  }
+
+  private static String addBackground(String entry) {
+    if (entry.contains(OLD_TAG)) {
+      entry = removeTags(entry);
+      return DELETION.replace("${text}", "" + entry);
+    }
+
+    if (entry.contains(NEW_TAG)) {
+      entry = removeTags(entry);
+      return INSERTION.replace("${text}", "" + entry);
     }
 
     return entry;

@@ -21,4 +21,18 @@ public class ConvertCallStackDiffTest {
             "(F)V");
     differ.diff();
   }
+
+  @Test
+  public void verticalFromWorkToDst() throws IOException, DiffException {
+    String programName = BaseConvertAdapter.PROGRAM_NAME;
+    CallStackDiff differ =
+        new CallStackDiff(
+            programName,
+            "SCALE",
+            "!SCALE",
+            "com.mortennobel.imagescaling.ResampleOp",
+            "verticalFromWorkToDst",
+            "([[B[BII)V");
+    differ.diff();
+  }
 }
