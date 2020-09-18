@@ -1,15 +1,28 @@
 package edu.cmu.cs.mvelezce.lc.stack.analysis.diff.compare;
 
+import com.github.difflib.algorithm.DiffException;
+import com.github.difflib.text.DiffRow;
+import com.github.difflib.text.DiffRowGenerator;
 import edu.cmu.cs.mvelezce.lc.stack.analysis.diff.region.CallStackSelector;
+import edu.cmu.cs.mvelezce.utils.config.Options;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.LineIterator;
-import org.apache.commons.text.diff.StringsComparator;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Collection;
+import java.util.List;
+import java.util.UUID;
 
 public class CallStackDiff {
+
+  public static final String OUTPUT_DIR = Options.DIRECTORY + "/diff/java/programs";
+
+  private static final String DELETION = "<span style=\"background-color: #00dcff\">${text}</span>";
+  private static final String INSERTION =
+      "<span style=\"background-color: #45EA85\">${text}</span>";
+  private static final String OLD_TAG = "~";
+  private static final String NEW_TAG = "!";
 
   private final String programName;
   private final String optionValue1;
@@ -33,10 +46,10 @@ public class CallStackDiff {
     this.methodSignature = methodSignature;
   }
 
-  public void diff() throws IOException {
+  public void diff() throws IOException, DiffException {
     File outputFile =
         new File(
-            FileCommandsVisitor.OUTPUT_DIR
+            OUTPUT_DIR
                 + "/"
                 + this.programName
                 + "/"
@@ -54,9 +67,10 @@ public class CallStackDiff {
 
     for (File prettyCallStack1 : prettyCallStacks1) {
       for (File prettyCallStack2 : prettyCallStacks2) {
-        LineIterator lineIterator1 = FileUtils.lineIterator(prettyCallStack1);
-        LineIterator lineIterator2 = FileUtils.lineIterator(prettyCallStack2);
-        this.diffCallStacks(lineIterator1, lineIterator2);
+        List<String> lines1 = FileUtils.readLines(prettyCallStack1, (String) null);
+        List<String> lines2 = FileUtils.readLines(prettyCallStack2, (String) null);
+        List<DiffRow> diff = this.diffCallStacks(lines1, lines2);
+        this.generateHTML(this.optionValue1, this.optionValue2, diff);
       }
     }
   }
@@ -74,46 +88,89 @@ public class CallStackDiff {
     return FileUtils.listFiles(dir, new String[] {"csv"}, false);
   }
 
-  public void diffCallStacks(LineIterator lineIterator1, LineIterator lineIterator2)
+  private List<DiffRow> diffCallStacks(List<String> lines1, List<String> lines2)
+      throws DiffException, IOException {
+    DiffRowGenerator generator =
+        DiffRowGenerator.create()
+            .showInlineDiffs(true)
+            .inlineDiffByWord(true)
+            .oldTag(f -> OLD_TAG)
+            .newTag(f -> NEW_TAG)
+            .build();
+    return generator.generateDiffRows(lines1, lines2);
+  }
+
+  private void generateHTML(String optionValue1, String optionValue2, List<DiffRow> rows)
       throws IOException {
-    // Initialize visitor.
-    FileCommandsVisitor fileCommandsVisitor =
-        new FileCommandsVisitor(
-            this.programName, this.optionValue1, this.optionValue2, this.methodName);
+    // Get template & replace placeholders with left & right variables with actual
+    // comparison
+    String template =
+        FileUtils.readFileToString(
+            new File(
+                "./src/main/java/edu/cmu/cs/mvelezce/lc/stack/analysis/diff/compare/difftemplate.html"),
+            "utf-8");
+    String output = template.replace("${left}", this.getTable(rows, optionValue1, false));
+    output = output.replace("${right}", this.getTable(rows, optionValue2, true));
 
-    // Read file line by line so that comparison can be done line by line.
-    while (lineIterator1.hasNext() || lineIterator2.hasNext()) {
-      /*
-       * In case both files have different number of lines, fill in with empty
-       * strings. Also append newline char at end so next line comparison moves to
-       * next line.
-       */
-      String left = (lineIterator1.hasNext() ? lineIterator1.nextLine() : "") + "\n";
-      String right = (lineIterator2.hasNext() ? lineIterator2.nextLine() : "") + "\n";
+    // Write file to disk.
+    File outputFile =
+        new File(
+            OUTPUT_DIR
+                + "/"
+                + this.programName
+                + "/"
+                + this.optionValue1
+                + "-"
+                + this.optionValue2);
+    if (!outputFile.exists() && !outputFile.mkdirs()) {
+      throw new RuntimeException("Could not create directories");
+    }
+    outputFile = new File(outputFile, UUID.randomUUID() + ".html");
+    try (PrintWriter out = new PrintWriter(outputFile)) {
+      out.println(output);
+    }
+  }
 
-      // Prepare diff comparator with lines from both files.
-      StringsComparator comparator = new StringsComparator(left, right);
+  private String getTable(List<DiffRow> rows, String optionValue, boolean right) {
+    StringBuilder table = new StringBuilder();
+    table.append("<table>");
+    table.append("<tr>");
+    table.append("<td>");
+    table.append("<span style=\"font-weight:bold\">");
+    table.append(optionValue);
+    table.append("</span>");
+    table.append("</td>");
+    table.append("</tr>");
+    for (DiffRow row : rows) {
+      table.append("<tr>");
+      String line = right ? row.getNewLine() : row.getOldLine();
+      String[] entries = line.split(",");
+      String method = this.addBackground(entries[0]);
+      String time = this.addBackground(entries[1]);
+      table
+          .append("<td>")
+          .append(method)
+          .append("</td><td align =\"right\">")
+          .append(time)
+          .append("</td>")
+          .append("\n");
+      table.append("</tr>");
+    }
+    table.append("</table>");
+    return table.toString();
+  }
 
-      if (comparator.getScript().getLCSLength()
-          > (Integer.max(left.length(), right.length()) * 0.4)) {
-        /*
-         * If both lines have atleast 40% commonality then only compare with each other
-         * so that they are aligned with each other in final diff HTML.
-         */
-        comparator.getScript().visit(fileCommandsVisitor);
-      } else {
-        /*
-         * If both lines do not have 40% commanlity then compare each with empty line so
-         * that they are not aligned to each other in final diff instead they show up on
-         * separate lines.
-         */
-        StringsComparator leftComparator = new StringsComparator(left, "\n");
-        leftComparator.getScript().visit(fileCommandsVisitor);
-        StringsComparator rightComparator = new StringsComparator("\n", right);
-        rightComparator.getScript().visit(fileCommandsVisitor);
-      }
+  private String addBackground(String entry) {
+    if (entry.contains(OLD_TAG)) {
+      entry = entry.replaceAll(OLD_TAG, "");
+      entry = DELETION.replace("${text}", "" + entry);
     }
 
-    fileCommandsVisitor.generateHTML();
+    if (entry.contains(NEW_TAG)) {
+      entry = entry.replaceAll(NEW_TAG, "");
+      entry = INSERTION.replace("${text}", "" + entry);
+    }
+
+    return entry;
   }
 }
