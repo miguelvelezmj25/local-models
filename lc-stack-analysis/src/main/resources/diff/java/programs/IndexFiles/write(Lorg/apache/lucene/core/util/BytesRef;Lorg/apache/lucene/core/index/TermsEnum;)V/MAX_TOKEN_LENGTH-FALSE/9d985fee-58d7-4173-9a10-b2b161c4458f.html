@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial;
+            color: black;
+        }
+
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .left {
+            left: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+
+        .right {
+            right: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+<div class="split left">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">MAX_TOKEN_LENGTH</span></td></tr><tr><td><span style="background-color: #00dcff">o.a.l.c.u.ArrayUtil.grow()</span></td><td align ="right"><span style="background-color: #00dcff">0.005</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o..l.c.u.IntsRefBui.grow()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.a.l.c.u.IntsRefBu.copyInts()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o..l.c.u.IntsRefBui.copyInts()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.a.l.c.u.f.Builder.add()</span></td><td align ="right"><span style="background-color: #00dcff">0.01</span></td>
+</tr><tr><td>o.a.l.c.c.b.BlockTreeT.compileInd()</td><td align ="right"><span style="background-color: #00dcff">0.021</span></td>
+</tr><tr><td>o.a.l.c.c.b.BlockTreeT.writeBlock()</td><td align ="right"><span style="background-color: #00dcff">0.01</span></td>
+</tr><tr><td>o.a.l.c.c.b.BlockTreeT.pushTerm()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.c.b.BlockTreeT.write()</td><td align ="right"><span style="background-color: #00dcff">0.141</span></td>
+</tr><tr><td>o.a.l.c.c.b.BlockTreeT.write()</td><td align ="right"><span style="background-color: #00dcff">0.241</span></td>
+</tr><tr><td>o.a.l.c.c.p.PerFieldPo.write()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.FreqProxTe.flush()</td><td align ="right"><span style="background-color: #00dcff">0.005</span></td>
+</tr><tr><td>o.a.l.c.i.DefaultInd.flush()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.DocumentsW.flush()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.DocumentsW.doFlush()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.DocumentsW.postUpdate()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.DocumentsW.updateDocu()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.IndexWrite.updateDocu()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.IndexWrite.addDocumen()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.d.IndexFiles.indexDoc()</td><td align ="right"><span style="background-color: #00dcff">0.005</span></td>
+</tr><tr><td>o.a.l.d.IndexFiles.visitFile()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.d.IndexFiles.visitFile()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.d.IndexFiles.indexDocs()</td><td align ="right"><span style="background-color: #00dcff">0.006</span></td>
+</tr><tr><td>o.a.l.d.IndexFiles.run()</td><td align ="right"><span style="background-color: #00dcff">0.037</span></td>
+</tr><tr><td>o.a.l.d.IndexFiles.main()</td><td align ="right"><span style="background-color: #00dcff">1.501</span></td>
+</tr></table></p>
+    </div>
+</div>
+
+<div class="split right">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">FALSE</span></td></tr><tr><td><span style="background-color: #45EA85">o.a.l.c.u..BytesStor.finish()</span></td><td align ="right"><span style="background-color: #45EA85">0.021</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.a.l.c.u..FST.finish()</span></td><td align ="right"><span style="background-color: #45EA85">0</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.a.l.c.u.f.Builder.finish()</span></td><td align ="right"><span style="background-color: #45EA85">0.005</span></td>
+</tr><tr><td>&nbsp</td></tr><tr><td>&nbsp</td></tr><tr><td>o.a.l.c.c.b.BlockTreeT.compileInd()</td><td align ="right"><span style="background-color: #45EA85">0.031</span></td>
+</tr><tr><td>o.a.l.c.c.b.BlockTreeT.writeBlock()</td><td align ="right"><span style="background-color: #45EA85">0.016</span></td>
+</tr><tr><td>o.a.l.c.c.b.BlockTreeT.pushTerm()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.c.b.BlockTreeT.write()</td><td align ="right"><span style="background-color: #45EA85">0.173</span></td>
+</tr><tr><td>o.a.l.c.c.b.BlockTreeT.write()</td><td align ="right"><span style="background-color: #45EA85">0.147</span></td>
+</tr><tr><td>o.a.l.c.c.p.PerFieldPo.write()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.FreqProxTe.flush()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.DefaultInd.flush()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.DocumentsW.flush()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.DocumentsW.doFlush()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.DocumentsW.postUpdate()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.DocumentsW.updateDocu()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.IndexWrite.updateDocu()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.c.i.IndexWrite.addDocumen()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.d.IndexFiles.indexDoc()</td><td align ="right"><span style="background-color: #45EA85">0.011</span></td>
+</tr><tr><td>o.a.l.d.IndexFiles.visitFile()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.d.IndexFiles.visitFile()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.d.IndexFiles.indexDocs()</td><td align ="right">0</td>
+</tr><tr><td>o.a.l.d.IndexFiles.run()</td><td align ="right"><span style="background-color: #45EA85">0.042</span></td>
+</tr><tr><td>o.a.l.d.IndexFiles.main()</td><td align ="right"><span style="background-color: #45EA85">1.499</span></td>
+</tr></table></p>
+    </div>
+</div>
+</body>
+</html>

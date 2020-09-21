@@ -9,7 +9,7 @@ import java.io.IOException;
 public class BerkeleyCallStackDiffTest {
 
   @Test
-  public void fireProgressChanged_TEMPORARY_FALSE() throws IOException, DiffException {
+  public void log_TEMPORARY_FALSE() throws IOException, DiffException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
@@ -107,7 +107,7 @@ public class BerkeleyCallStackDiffTest {
   }
 
   @Test
-  public void fireProgressChanged_SEQUENTIAL_FALSE() throws IOException, DiffException {
+  public void log_SEQUENTIAL_FALSE() throws IOException, DiffException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
