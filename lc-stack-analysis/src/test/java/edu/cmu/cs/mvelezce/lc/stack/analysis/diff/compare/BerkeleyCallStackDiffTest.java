@@ -49,4 +49,60 @@ public class BerkeleyCallStackDiffTest {
             "(Ljava/io/RandomAccessFile;Ljava/nio/ByteBuffer;JJ)V");
     differ.diff();
   }
+
+  @Test
+  public void writeToFile_TEMPORARY_FALSE() throws IOException, DiffException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
+    CallStackDiff differ =
+        new CallStackDiff(
+            programName,
+            "TEMPORARY",
+            "FALSE",
+            "com.sleepycat.je.log.FileManager",
+            "writeToFile",
+            "(Ljava/io/RandomAccessFile;Ljava/nio/ByteBuffer;JJZ)I");
+    differ.diff();
+  }
+
+  @Test
+  public void force_TEMPORARY_FALSE() throws IOException, DiffException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
+    CallStackDiff differ =
+        new CallStackDiff(
+            programName,
+            "TEMPORARY",
+            "FALSE",
+            "com.sleepycat.je.log.FileManager$LogEndFileDescriptor",
+            "force",
+            "()V");
+    differ.diff();
+  }
+
+  @Test
+  public void findEntry_TEMPORARY_FALSE() throws IOException, DiffException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
+    CallStackDiff differ =
+        new CallStackDiff(
+            programName,
+            "TEMPORARY",
+            "FALSE",
+            "com.sleepycat.je.tree.IN",
+            "findEntry",
+            "([BZZLjava/util/Comparator;)I");
+    differ.diff();
+  }
+
+  @Test
+  public void serialize_TEMPORARY_FALSE() throws IOException, DiffException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
+    CallStackDiff differ =
+        new CallStackDiff(
+            programName,
+            "TEMPORARY",
+            "FALSE",
+            "com.sleepycat.je.tree.IN",
+            "serialize",
+            "(Ljava/nio/ByteBuffer;ZZ)V");
+    differ.diff();
+  }
 }

@@ -48,4 +48,60 @@ public class BerkeleyCallStackSelectorTest {
             "(Ljava/io/RandomAccessFile;Ljava/nio/ByteBuffer;JJ)V");
     selector.select();
   }
+
+  @Test
+  public void writeToFile_TEMPORARY_FALSE() throws IOException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
+    CallStackSelector selector =
+        new CallStackSelector(
+            programName,
+            "TEMPORARY",
+            "FALSE",
+            "com.sleepycat.je.log.FileManager",
+            "writeToFile",
+            "(Ljava/io/RandomAccessFile;Ljava/nio/ByteBuffer;JJZ)I");
+    selector.select();
+  }
+
+  @Test
+  public void force_TEMPORARY_FALSE() throws IOException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
+    CallStackSelector selector =
+        new CallStackSelector(
+            programName,
+            "TEMPORARY",
+            "FALSE",
+            "com.sleepycat.je.log.FileManager$LogEndFileDescriptor",
+            "force",
+            "()V");
+    selector.select();
+  }
+
+  @Test
+  public void findEntry_TEMPORARY_FALSE() throws IOException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
+    CallStackSelector selector =
+        new CallStackSelector(
+            programName,
+            "TEMPORARY",
+            "FALSE",
+            "com.sleepycat.je.tree.IN",
+            "findEntry",
+            "([BZZLjava/util/Comparator;)I");
+    selector.select();
+  }
+
+  @Test
+  public void serialize_TEMPORARY_FALSE() throws IOException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
+    CallStackSelector selector =
+        new CallStackSelector(
+            programName,
+            "TEMPORARY",
+            "FALSE",
+            "com.sleepycat.je.tree.IN",
+            "serialize",
+            "(Ljava/nio/ByteBuffer;ZZ)V");
+    selector.select();
+  }
 }
