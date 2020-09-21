@@ -30,4 +30,27 @@ public class RunBenchCCallStackDiffTest {
             "(Ljava/nio/channels/FileChannel;Ljava/nio/ByteBuffer;)V");
     differ.diff();
   }
+
+  @Test
+  public void compact_PAGE_SIZE_FALSE() throws IOException, DiffException {
+    String programName = BaseRunBenchCAdapter.PROGRAM_NAME;
+    CallStackDiff differ =
+        new CallStackDiff(
+            programName, "PAGE_SIZE", "FALSE", "org.h2.pagestore.PageStore", "compact", "(I)V");
+    differ.diff();
+  }
+
+  @Test
+  public void writeFully_PAGE_SIZE_FALSE() throws IOException, DiffException {
+    String programName = BaseRunBenchCAdapter.PROGRAM_NAME;
+    CallStackDiff differ =
+        new CallStackDiff(
+            programName,
+            "PAGE_SIZE",
+            "FALSE",
+            "org.h2.store.fs.FileUtils",
+            "writeFully",
+            "(Ljava/nio/channels/FileChannel;Ljava/nio/ByteBuffer;)V");
+    differ.diff();
+  }
 }
