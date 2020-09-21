@@ -19,7 +19,7 @@ import java.util.*;
 public class JProfilerCallTreeBuilder implements Analysis<Void> {
 
   private static final String SNAPSHOTS_ROOT =
-      "../lc-profiler-analysis/src/main/resources/jprofiler/snapshots/java/programs/";
+      "../lc-execute-jprofiler-snapshot/src/main/resources/jprofiler/snapshots/java/programs/";
   private static final String JPROFILER_11_EXPORT_CMD_OSX =
       "/Applications/JProfiler.app/Contents/Resources/app/bin/jpexport";
   private static final String JPROFILER_CALL_TREE_FILE = "calltree.xml";
