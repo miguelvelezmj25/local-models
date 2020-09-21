@@ -1,5 +1,0 @@
-java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;,0.011
-at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;,0
-at.favre.tools.dconvert.WorkerHandler$Worker.run()V,0
-java.util.concurrent.ThreadPoolExecutor$Worker.run()V,0
-

@@ -1,8 +1,0 @@
-java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;,0.011
-com.mortennobel.imagescaling.ResampleFilters.<clinit>()V,0
-at.favre.tools.dconvert.arg.EScalingAlgorithm.<clinit>()V,0
-at.favre.tools.dconvert.arg.Arguments.<clinit>()V,0
-at.favre.tools.dconvert.Convert.upScalingAlgo(Z)Ljava/lang/String;,0
-at.favre.tools.dconvert.Convert.run([Ljava/lang/String;)V,0
-at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V,0
-

@@ -1,6 +1,0 @@
-at.favre.tools.dconvert.arg.EPlatform.<clinit>()V,0.005
-at.favre.tools.dconvert.arg.Arguments.<clinit>()V,0
-at.favre.tools.dconvert.Convert.upScalingAlgo(Z)Ljava/lang/String;,0
-at.favre.tools.dconvert.Convert.run([Ljava/lang/String;)V,0
-at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V,0
-

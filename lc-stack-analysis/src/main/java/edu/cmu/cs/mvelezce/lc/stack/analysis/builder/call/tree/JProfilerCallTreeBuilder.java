@@ -30,11 +30,15 @@ public class JProfilerCallTreeBuilder implements Analysis<Void> {
   private static final String FILTERED_TRUE = "filtered=\"true\"";
 
   public static final String OUTPUT_DIR = Options.DIRECTORY + "/jprofiler/java/programs";
+  public static final String RUNNING_THREAD_STATUS = "running";
+  public static final String ALL_THREAD_STATUS = "all";
 
   private final String programName;
+  private final String threadStatus;
 
-  public JProfilerCallTreeBuilder(String programName) {
+  public JProfilerCallTreeBuilder(String programName, String threadStatus) {
     this.programName = programName;
+    this.threadStatus = threadStatus;
   }
 
   @Override
@@ -111,7 +115,7 @@ public class JProfilerCallTreeBuilder implements Analysis<Void> {
     commandList.add("CallTree");
     commandList.add("-aggregation=method");
     commandList.add("-viewmode=tree");
-    commandList.add("-threadstatus=running");
+    commandList.add("-threadstatus=" + this.threadStatus);
     commandList.add("-format=xml");
     commandList.add(JPROFILER_CALL_TREE_FILE);
     Executor.executeCommand(commandList);

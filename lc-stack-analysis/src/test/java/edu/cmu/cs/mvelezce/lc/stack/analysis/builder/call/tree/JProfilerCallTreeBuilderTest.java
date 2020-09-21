@@ -15,7 +15,8 @@ public class JProfilerCallTreeBuilderTest {
   @Test
   public void BarInfluence() throws IOException, InterruptedException {
     String programName = BaseBarInfluenceAdapter.PROGRAM_NAME;
-    JProfilerCallTreeBuilder builder = new JProfilerCallTreeBuilder(programName);
+    JProfilerCallTreeBuilder builder =
+        new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
     String[] args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
@@ -25,7 +26,8 @@ public class JProfilerCallTreeBuilderTest {
   @Test
   public void DiffStacks() throws IOException, InterruptedException {
     String programName = BaseDiffStacksAdapter.PROGRAM_NAME;
-    JProfilerCallTreeBuilder builder = new JProfilerCallTreeBuilder(programName);
+    JProfilerCallTreeBuilder builder =
+        new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
     String[] args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
@@ -35,7 +37,8 @@ public class JProfilerCallTreeBuilderTest {
   @Test
   public void EarlyReturn() throws IOException, InterruptedException {
     String programName = BaseEarlyReturnAdapter.PROGRAM_NAME;
-    JProfilerCallTreeBuilder builder = new JProfilerCallTreeBuilder(programName);
+    JProfilerCallTreeBuilder builder =
+        new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
     String[] args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
@@ -45,7 +48,8 @@ public class JProfilerCallTreeBuilderTest {
   @Test
   public void MooInfluence() throws IOException, InterruptedException {
     String programName = BaseMooInfluenceAdapter.PROGRAM_NAME;
-    JProfilerCallTreeBuilder builder = new JProfilerCallTreeBuilder(programName);
+    JProfilerCallTreeBuilder builder =
+        new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
     String[] args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
@@ -55,7 +59,8 @@ public class JProfilerCallTreeBuilderTest {
   @Test
   public void Convert() throws IOException, InterruptedException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
-    JProfilerCallTreeBuilder builder = new JProfilerCallTreeBuilder(programName);
+    JProfilerCallTreeBuilder builder =
+        new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.RUNNING_THREAD_STATUS);
     String[] args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
@@ -65,7 +70,8 @@ public class JProfilerCallTreeBuilderTest {
   @Test
   public void MeasureDiskOrderedScan() throws IOException, InterruptedException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
-    JProfilerCallTreeBuilder builder = new JProfilerCallTreeBuilder(programName);
+    JProfilerCallTreeBuilder builder =
+        new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
     String[] args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
