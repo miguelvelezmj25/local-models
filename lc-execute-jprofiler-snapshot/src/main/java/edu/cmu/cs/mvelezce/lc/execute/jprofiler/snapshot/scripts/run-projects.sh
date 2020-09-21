@@ -21,9 +21,7 @@ run() {
   echo ""
   echo "Done with" "$program"
   echo ""
-  sleep 60s
-
-  cd .. || exit
+  sleep 30s
 }
 
 for entry in "$@"; do
