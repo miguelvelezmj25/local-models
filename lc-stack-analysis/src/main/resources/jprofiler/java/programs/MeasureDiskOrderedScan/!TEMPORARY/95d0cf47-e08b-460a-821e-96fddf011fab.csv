@@ -1,3 +1,0 @@
-com.sleepycat.je.log.FileDeletionDetector.processLogFileDeleteEvents()V,0.016
-com.sleepycat.je.log.FileDeletionDetector$FileDeleteDetectTask.run()V,0
-

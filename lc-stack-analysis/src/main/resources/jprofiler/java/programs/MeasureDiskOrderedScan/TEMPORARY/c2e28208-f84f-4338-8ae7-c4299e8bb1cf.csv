@@ -1,0 +1,16 @@
+com.sleepycat.je.tree.IN.fetchINWithNoLatch(I[BLcom/sleepycat/je/CacheMode;)Lcom/sleepycat/je/tree/IN;,0.005
+com.sleepycat.je.tree.Tree.search([BLcom/sleepycat/je/tree/Tree$SearchType;Lcom/sleepycat/je/tree/BINBoundary;Lcom/sleepycat/je/CacheMode;Ljava/util/Comparator;)Lcom/sleepycat/je/tree/BIN;,0
+com.sleepycat.je.tree.Tree.getFirstNode(Lcom/sleepycat/je/CacheMode;)Lcom/sleepycat/je/tree/BIN;,0
+com.sleepycat.je.dbi.CursorImpl.positionFirstOrLast(Z)Z,0
+com.sleepycat.je.dbi.CursorImpl.traverseDbWithCursor(Lcom/sleepycat/je/dbi/DatabaseImpl;Lcom/sleepycat/je/txn/LockType;ZLcom/sleepycat/je/dbi/CursorImpl$WithCursor;)V,0
+com.sleepycat.je.dbi.DbTree.getDbName(Lcom/sleepycat/je/dbi/DatabaseId;)Ljava/lang/String;,0
+com.sleepycat.je.dbi.DatabaseImpl.getName()Ljava/lang/String;,0
+com.sleepycat.je.dbi.DatabaseImpl.handleClosed(ZZ)V,0
+com.sleepycat.je.Database.closeInternalWork(ZZLcom/sleepycat/je/Database$DbState;Lcom/sleepycat/je/OperationFailureException;)V,0
+com.sleepycat.je.Database.closeInternal(ZZLcom/sleepycat/je/Database$DbState;Lcom/sleepycat/je/OperationFailureException;)V,0
+com.sleepycat.je.Database.close()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.close()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run([Ljava/lang/String;)V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V,1.502
+

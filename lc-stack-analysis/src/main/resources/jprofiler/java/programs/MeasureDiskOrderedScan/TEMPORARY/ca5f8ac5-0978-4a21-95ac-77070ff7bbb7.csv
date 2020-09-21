@@ -1,7 +1,0 @@
-com.sleepycat.je.dbi.DbConfigManager.setConfigParam(Ljava/util/Properties;Ljava/lang/String;Ljava/lang/String;ZZZZ)V,0.006
-com.sleepycat.je.EnvironmentConfig.setConfigParam(Ljava/lang/String;Ljava/lang/String;)Lcom/sleepycat/je/EnvironmentConfig;,0
-com.sleepycat.analysis.MeasureDiskOrderedScan.open()V,0.005
-com.sleepycat.analysis.MeasureDiskOrderedScan.run()V,0
-com.sleepycat.analysis.MeasureDiskOrderedScan.run([Ljava/lang/String;)V,0
-com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V,0
-

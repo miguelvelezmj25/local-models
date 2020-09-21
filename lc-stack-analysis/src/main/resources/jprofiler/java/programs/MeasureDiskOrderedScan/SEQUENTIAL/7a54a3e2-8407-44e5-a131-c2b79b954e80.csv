@@ -1,0 +1,14 @@
+com.sleepycat.je.cleaner.ExpirationProfile.putFile(Lcom/sleepycat/je/cleaner/ExpirationTracker;I)V,0.011
+com.sleepycat.je.cleaner.ExpirationProfile.processCompletedTrackers()V,0
+com.sleepycat.je.cleaner.Cleaner.updateFilesAtCheckpointEnd(Lcom/sleepycat/je/cleaner/FileSelector$CheckpointStartCleanerState;)V,0
+com.sleepycat.je.recovery.Checkpointer.doCheckpoint(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;Z)V,0
+com.sleepycat.je.dbi.EnvironmentImpl.invokeCheckpoint(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;)V,0
+com.sleepycat.je.dbi.EnvironmentImpl.doClose(ZZ)V,0
+com.sleepycat.je.dbi.DbEnvPool.closeEnvironment(Lcom/sleepycat/je/dbi/EnvironmentImpl;ZZ)V,0
+com.sleepycat.je.dbi.EnvironmentImpl.close()V,0
+com.sleepycat.je.Environment.close()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.close()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run([Ljava/lang/String;)V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V,1.501
+
