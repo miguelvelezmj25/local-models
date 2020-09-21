@@ -8,11 +8,11 @@ import java.io.IOException;
 public class BarInfluenceCallStackSelectorTest {
 
   @Test
-  public void bar() throws IOException {
+  public void bar_A_FALSE() throws IOException {
     String programName = BaseBarInfluenceAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
-            programName, "A", "!A", "edu.cmu.cs.mvelezce.perf.BarInfluence", "bar", "(I)");
+            programName, "A", "FALSE", "edu.cmu.cs.mvelezce.perf.BarInfluence", "bar", "(I)");
     selector.select();
   }
 }

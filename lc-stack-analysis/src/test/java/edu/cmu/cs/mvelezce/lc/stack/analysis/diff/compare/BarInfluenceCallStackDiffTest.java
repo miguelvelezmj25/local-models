@@ -9,11 +9,11 @@ import java.io.IOException;
 public class BarInfluenceCallStackDiffTest {
 
   @Test
-  public void bar() throws IOException, DiffException {
+  public void bar_A_FALSE() throws IOException, DiffException {
     String programName = BaseBarInfluenceAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
-            programName, "A", "!A", "edu.cmu.cs.mvelezce.perf.BarInfluence", "bar", "(I)");
+            programName, "A", "FALSE", "edu.cmu.cs.mvelezce.perf.BarInfluence", "bar", "(I)");
     differ.diff();
   }
 }

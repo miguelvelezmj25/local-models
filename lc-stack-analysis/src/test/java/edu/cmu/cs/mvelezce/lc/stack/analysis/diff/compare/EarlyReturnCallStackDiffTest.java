@@ -9,20 +9,20 @@ import java.io.IOException;
 public class EarlyReturnCallStackDiffTest {
 
   @Test
-  public void moo() throws IOException, DiffException {
+  public void moo_A_FALSE() throws IOException, DiffException {
     String programName = BaseEarlyReturnAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
-            programName, "A", "!A", "edu.cmu.cs.mvelezce.perf.EarlyReturn", "moo", "(Z)");
+            programName, "A", "FALSE", "edu.cmu.cs.mvelezce.perf.EarlyReturn", "moo", "(Z)");
     differ.diff();
   }
 
   @Test
-  public void foo() throws IOException, DiffException {
+  public void foo_A_FALSE() throws IOException, DiffException {
     String programName = BaseEarlyReturnAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
-            programName, "A", "!A", "edu.cmu.cs.mvelezce.perf.EarlyReturn", "foo", "(Z)");
+            programName, "A", "FALSE", "edu.cmu.cs.mvelezce.perf.EarlyReturn", "foo", "(Z)");
     differ.diff();
   }
 }

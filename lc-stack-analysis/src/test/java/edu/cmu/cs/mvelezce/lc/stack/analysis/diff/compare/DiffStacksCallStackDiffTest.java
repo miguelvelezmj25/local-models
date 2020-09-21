@@ -9,11 +9,11 @@ import java.io.IOException;
 public class DiffStacksCallStackDiffTest {
 
   @Test
-  public void foo() throws IOException, DiffException {
+  public void foo_A_FALSE() throws IOException, DiffException {
     String programName = BaseDiffStacksAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
-            programName, "A", "!A", "edu.cmu.cs.mvelezce.perf.DiffStacks", "foo", "(Z)");
+            programName, "A", "FALSE", "edu.cmu.cs.mvelezce.perf.DiffStacks", "foo", "(Z)");
     differ.diff();
   }
 }

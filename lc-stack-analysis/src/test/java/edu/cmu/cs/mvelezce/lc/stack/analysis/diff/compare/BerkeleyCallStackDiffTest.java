@@ -9,13 +9,13 @@ import java.io.IOException;
 public class BerkeleyCallStackDiffTest {
 
   @Test
-  public void fireProgressChanged() throws IOException, DiffException {
+  public void fireProgressChanged_TEMPORARY_FALSE() throws IOException, DiffException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
             programName,
             "TEMPORARY",
-            "!TEMPORARY",
+            "FALSE",
             "com.sleepycat.je.log.LogManager",
             "log",
             "(Lcom/sleepycat/je/log/LogParams;)Lcom/sleepycat/je/log/LogItem;");
@@ -23,13 +23,13 @@ public class BerkeleyCallStackDiffTest {
   }
 
   @Test
-  public void addPostMarshallingInfo() throws IOException, DiffException {
+  public void addPostMarshallingInfo_TEMPORARY_FALSE() throws IOException, DiffException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
             programName,
             "TEMPORARY",
-            "!TEMPORARY",
+            "FALSE",
             "com.sleepycat.je.log.LogEntryHeader",
             "addPostMarshallingInfo",
             "(Ljava/nio/ByteBuffer;JLcom/sleepycat/je/utilint/VLSN;)Ljava/nio/ByteBuffer;");
@@ -37,13 +37,13 @@ public class BerkeleyCallStackDiffTest {
   }
 
   @Test
-  public void readFromFileInternal() throws IOException, DiffException {
+  public void readFromFileInternal_TEMPORARY_FALSE() throws IOException, DiffException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
             programName,
             "TEMPORARY",
-            "!TEMPORARY",
+            "FALSE",
             "com.sleepycat.je.log.FileManager",
             "readFromFileInternal",
             "(Ljava/io/RandomAccessFile;Ljava/nio/ByteBuffer;JJ)V");

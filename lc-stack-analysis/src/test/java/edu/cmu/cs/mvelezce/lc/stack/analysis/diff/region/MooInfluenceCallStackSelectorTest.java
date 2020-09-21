@@ -8,11 +8,11 @@ import java.io.IOException;
 public class MooInfluenceCallStackSelectorTest {
 
   @Test
-  public void moo() throws IOException {
+  public void moo_A_FALSE() throws IOException {
     String programName = BaseMooInfluenceAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
-            programName, "A", "!A", "edu.cmu.cs.mvelezce.perf.MooInfluence", "moo", "(I)");
+            programName, "A", "FALSE", "edu.cmu.cs.mvelezce.perf.MooInfluence", "moo", "(I)");
     selector.select();
   }
 }

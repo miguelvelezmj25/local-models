@@ -8,13 +8,13 @@ import java.io.IOException;
 public class BerkeleyCallStackSelectorTest {
 
   @Test
-  public void log() throws IOException {
+  public void log_TEMPORARY_FALSE() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "TEMPORARY",
-            "!TEMPORARY",
+            "FALSE",
             "com.sleepycat.je.log.LogManager",
             "log",
             "(Lcom/sleepycat/je/log/LogParams;)Lcom/sleepycat/je/log/LogItem;");
@@ -22,13 +22,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void addPostMarshallingInfo() throws IOException {
+  public void addPostMarshallingInfo_TEMPORARY_FALSE() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "TEMPORARY",
-            "!TEMPORARY",
+            "FALSE",
             "com.sleepycat.je.log.LogEntryHeader",
             "addPostMarshallingInfo",
             "(Ljava/nio/ByteBuffer;JLcom/sleepycat/je/utilint/VLSN;)Ljava/nio/ByteBuffer;");
@@ -36,13 +36,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void readFromFileInternal() throws IOException {
+  public void readFromFileInternal_TEMPORARY_FALSE() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "TEMPORARY",
-            "!TEMPORARY",
+            "FALSE",
             "com.sleepycat.je.log.FileManager",
             "readFromFileInternal",
             "(Ljava/io/RandomAccessFile;Ljava/nio/ByteBuffer;JJ)V");

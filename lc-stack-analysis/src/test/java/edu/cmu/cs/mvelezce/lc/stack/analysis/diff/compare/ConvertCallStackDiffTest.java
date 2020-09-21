@@ -9,13 +9,13 @@ import java.io.IOException;
 public class ConvertCallStackDiffTest {
 
   @Test
-  public void fireProgressChanged() throws IOException, DiffException {
+  public void fireProgressChanged_SCALE_FALSE() throws IOException, DiffException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
             programName,
             "SCALE",
-            "!SCALE",
+            "FALSE",
             "com.mortennobel.imagescaling.AdvancedResizeOp",
             "fireProgressChanged",
             "(F)V");
@@ -23,13 +23,13 @@ public class ConvertCallStackDiffTest {
   }
 
   @Test
-  public void verticalFromWorkToDst() throws IOException, DiffException {
+  public void verticalFromWorkToDst_SCALE_FALSE() throws IOException, DiffException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
             programName,
             "SCALE",
-            "!SCALE",
+            "FALSE",
             "com.mortennobel.imagescaling.ResampleOp",
             "verticalFromWorkToDst",
             "([[B[BII)V");
@@ -37,13 +37,13 @@ public class ConvertCallStackDiffTest {
   }
 
   @Test
-  public void horizontallyFromSrcToWork() throws IOException, DiffException {
+  public void horizontallyFromSrcToWork_SCALE_FALSE() throws IOException, DiffException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
             programName,
             "SCALE",
-            "!SCALE",
+            "FALSE",
             "com.mortennobel.imagescaling.ResampleOp",
             "horizontallyFromSrcToWork",
             "(Ljava/awt/image/BufferedImage;[[BII)V");
@@ -51,13 +51,13 @@ public class ConvertCallStackDiffTest {
   }
 
   @Test
-  public void compressJpeg() throws IOException, DiffException {
+  public void compressJpeg_SCALE_FALSE() throws IOException, DiffException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
             programName,
             "SCALE",
-            "!SCALE",
+            "FALSE",
             "at.favre.tools.dconvert.converters.scaling.ImageHandler",
             "compressJpeg",
             "(Ljava/awt/image/BufferedImage;Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;FLjava/io/File;)V");
@@ -65,13 +65,13 @@ public class ConvertCallStackDiffTest {
   }
 
   @Test
-  public void scale() throws IOException, DiffException {
+  public void scale_SCALE_FALSE() throws IOException, DiffException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackDiff differ =
         new CallStackDiff(
             programName,
             "SCALE",
-            "!SCALE",
+            "FALSE",
             "at.favre.tools.dconvert.converters.scaling.ImageHandler",
             "scale",
             "(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;");
