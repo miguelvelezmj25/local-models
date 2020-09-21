@@ -1,0 +1,93 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.value.Value",
+    "methodName" : "cache",
+    "methodSignature" : "(Lorg/h2/value/Value;)Lorg/h2/value/Value;",
+    "selfTime" : 16258.0
+  }, {
+    "className" : "org.h2.value.ValueString",
+    "methodName" : "get",
+    "methodSignature" : "(Ljava/lang/String;Lorg/h2/engine/CastDataProvider;)Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.value.ValueString",
+    "methodName" : "get",
+    "methodSignature" : "(Ljava/lang/String;)Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.store.Data",
+    "methodName" : "readValue",
+    "methodSignature" : "()Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.pagestore.db.PageDataLeaf",
+    "methodName" : "readRow",
+    "methodSignature" : "(Lorg/h2/store/Data;II)Lorg/h2/result/Row;",
+    "selfTime" : 10559.0
+  }, {
+    "className" : "org.h2.pagestore.db.PageDataLeaf",
+    "methodName" : "getRowAt",
+    "methodSignature" : "(I)Lorg/h2/result/Row;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.pagestore.db.PageDataLeaf",
+    "methodName" : "readAllRows",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.pagestore.db.PageDataLeaf",
+    "methodName" : "moveTo",
+    "methodSignature" : "(Lorg/h2/engine/Session;I)V",
+    "selfTime" : 5283.0
+  }, {
+    "className" : "org.h2.pagestore.PageStore",
+    "methodName" : "swap",
+    "methodSignature" : "(III)V",
+    "selfTime" : 10506.0
+  }, {
+    "className" : "org.h2.pagestore.PageStore",
+    "methodName" : "compact",
+    "methodSignature" : "(I)V",
+    "selfTime" : 21043.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "closeOpenFilesAndUnlock",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 5374.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "closeImpl",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "close",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "removeSession",
+    "methodSignature" : "(Lorg/h2/engine/Session;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 15944.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

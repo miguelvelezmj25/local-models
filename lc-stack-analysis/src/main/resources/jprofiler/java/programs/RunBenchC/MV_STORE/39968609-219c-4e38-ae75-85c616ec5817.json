@@ -1,0 +1,103 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.result.LocalResultFactory$DefaultLocalResultFactory",
+    "methodName" : "create",
+    "methodSignature" : "(Lorg/h2/engine/Session;[Lorg/h2/expression/Expression;II)Lorg/h2/result/LocalResult;",
+    "selfTime" : 5297.0
+  }, {
+    "className" : "org.h2.command.dml.Select",
+    "methodName" : "createLocalResult",
+    "methodSignature" : "(Lorg/h2/result/LocalResult;)Lorg/h2/result/LocalResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Select",
+    "methodName" : "queryWithoutCache",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "queryWithoutCacheLazyCheck",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "query",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "query",
+    "methodSignature" : "(I)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.ddl.Analyze",
+    "methodName" : "analyzeTable",
+    "methodSignature" : "(Lorg/h2/engine/Session;Lorg/h2/table/Table;IZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "analyzeTables",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "commit",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.TransactionCommand",
+    "methodName" : "update",
+    "methodSignature" : "()I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.CommandContainer",
+    "methodName" : "update",
+    "methodSignature" : "(Ljava/lang/Object;)Lorg/h2/result/ResultWithGeneratedKeys;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.Command",
+    "methodName" : "executeUpdate",
+    "methodSignature" : "(Ljava/lang/Object;)Lorg/h2/result/ResultWithGeneratedKeys;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "commit",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "commit",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "loadStock",
+    "methodSignature" : "(I)V",
+    "selfTime" : 15672.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "loadWarehouse",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "load",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "init",
+    "methodSignature" : "(Ledu/cmu/cs/mvelezce/bench/Database;I)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 10981.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

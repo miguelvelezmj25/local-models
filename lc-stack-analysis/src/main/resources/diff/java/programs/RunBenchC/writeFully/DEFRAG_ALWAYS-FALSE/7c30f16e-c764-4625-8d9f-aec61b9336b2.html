@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial;
+            color: black;
+        }
+
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .left {
+            left: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+
+        .right {
+            right: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+<div class="split left">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">DEFRAG_ALWAYS</span></td></tr><tr><td>o.h.s.f.FileDisk.write()</td><td align ="right"><span style="background-color: #00dcff">0.005</span></td>
+</tr><tr><td>o.h.s.f.FileUtils.writeFully()</td><td align ="right">0</td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.s.FileStore.setLength()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.p.PageStore.increaseF()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.p.PageStore.increaseF()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.p.PageStore.openNew()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.p.PageStore.open()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h..Database.getPageSt()</span></td><td align ="right"><span style="background-color: #00dcff">0.005</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.e.Database.open()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.e.Database.openDatab()</span></td><td align ="right"><span style="background-color: #00dcff">0.005</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.e.Database.<init>()</span></td><td align ="right"><span style="background-color: #00dcff">0.011</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.e.Engine.openSessi()</span></td><td align ="right"><span style="background-color: #00dcff">0.005</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.e.Engine.openSessio()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.e.Engine.createSes()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.e.Engine.createSess()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.e.Engine.createSess()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.e.SessionRem.connectEmb()</span></td><td align ="right"><span style="background-color: #00dcff">0.005</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.j.JdbcConnec.<init>()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td><span style="background-color: #00dcff">o.h.j.JdbcConnec.<init>()</span></td><td align ="right"><span style="background-color: #00dcff">0</span></td>
+</tr><tr><td>e.c.c.m.b.RunBenchC.run()</td><td align ="right"><span style="background-color: #00dcff">0.016</span></td>
+</tr><tr><td>e.c.c.m.b.RunBenchC.main()</td><td align ="right">0</td>
+</tr></table></p>
+    </div>
+</div>
+
+<div class="split right">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">FALSE</span></td></tr><tr><td>o.h.s.f.FileDisk.write()</td><td align ="right"><span style="background-color: #45EA85">0.01</span></td>
+</tr><tr><td>o.h.s.f.FileUtils.writeFully()</td><td align ="right">0</td>
+</tr><tr><td><span style="background-color: #45EA85">o.h.s.FileStore.write()</span></td><td align ="right"><span style="background-color: #45EA85">0</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.h.p.PageStore.writePage()</span></td><td align ="right"><span style="background-color: #45EA85">0</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.h.p..PageBtree.write()</span></td><td align ="right"><span style="background-color: #45EA85">0</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.h.p.PageStore.writeBack()</span></td><td align ="right"><span style="background-color: #45EA85">0.005</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.h.p.PageStore.writeBack()</span></td><td align ="right"><span style="background-color: #45EA85">0</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.h..PageStore.checkpoin()</span></td><td align ="right"><span style="background-color: #45EA85">0</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.h.e.Database.closeOpen()</span></td><td align ="right"><span style="background-color: #45EA85">0</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.h.e.Database.closeImpl()</span></td><td align ="right"><span style="background-color: #45EA85">0</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.h.e.Database.close()</span></td><td align ="right"><span style="background-color: #45EA85">0</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.h.e.Database.removeSes()</span></td><td align ="right"><span style="background-color: #45EA85">0</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.h.e.Session.close()</span></td><td align ="right"><span style="background-color: #45EA85">0</span></td>
+</tr><tr><td><span style="background-color: #45EA85">o.h.j.JdbcConnec.close()</span></td><td align ="right"><span style="background-color: #45EA85">0</span></td>
+</tr><tr><td>&nbsp</td></tr><tr><td>&nbsp</td></tr><tr><td>&nbsp</td></tr><tr><td>&nbsp</td></tr><tr><td>&nbsp</td></tr><tr><td>e.c.c.m.b.RunBenchC.run()</td><td align ="right"><span style="background-color: #45EA85">0.021</span></td>
+</tr><tr><td>e.c.c.m.b.RunBenchC.main()</td><td align ="right">0</td>
+</tr></table></p>
+    </div>
+</div>
+</body>
+</html>

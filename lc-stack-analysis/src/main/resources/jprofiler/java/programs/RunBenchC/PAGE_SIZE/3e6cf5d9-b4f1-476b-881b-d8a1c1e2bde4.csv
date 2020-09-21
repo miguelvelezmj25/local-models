@@ -1,0 +1,10 @@
+org.h2.util.StringUtils.cache(Ljava/lang/String;)Ljava/lang/String;,0.005
+org.h2.value.ValueString.get(Ljava/lang/String;Lorg/h2/engine/CastDataProvider;)Lorg/h2/value/Value;,0
+org.h2.value.ValueString.get(Ljava/lang/String;)Lorg/h2/value/Value;,0
+org.h2.jdbc.JdbcPreparedStatement.setString(ILjava/lang/String;)V,0
+edu.cmu.cs.mvelezce.bench.c.BenchC.loadItem()V,0.016
+edu.cmu.cs.mvelezce.bench.c.BenchC.load()V,0
+edu.cmu.cs.mvelezce.bench.c.BenchC.init(Ledu/cmu/cs/mvelezce/bench/Database;I)V,0
+edu.cmu.cs.mvelezce.bench.RunBenchC.run([Ljava/lang/String;)V,0.016
+edu.cmu.cs.mvelezce.bench.RunBenchC.main([Ljava/lang/String;)V,0
+

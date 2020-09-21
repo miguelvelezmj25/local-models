@@ -1,0 +1,118 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.value.ValueDecimal",
+    "methodName" : "compareTypeSafe",
+    "methodSignature" : "(Lorg/h2/value/Value;Lorg/h2/value/CompareMode;Lorg/h2/engine/CastDataProvider;)I",
+    "selfTime" : 5261.0
+  }, {
+    "className" : "org.h2.value.Value",
+    "methodName" : "compareWithNull",
+    "methodSignature" : "(Lorg/h2/value/Value;ZLorg/h2/engine/CastDataProvider;Lorg/h2/value/CompareMode;)I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "compareWithNull",
+    "methodSignature" : "(Lorg/h2/value/Value;Lorg/h2/value/Value;Z)I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.expression.condition.Comparison",
+    "methodName" : "compare",
+    "methodSignature" : "(Lorg/h2/engine/Database;Lorg/h2/value/Value;Lorg/h2/value/Value;I)Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.expression.condition.Comparison",
+    "methodName" : "getValue",
+    "methodSignature" : "(Lorg/h2/engine/Session;)Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.expression.condition.ConditionAndOr",
+    "methodName" : "getValue",
+    "methodSignature" : "(Lorg/h2/engine/Session;)Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.expression.Expression",
+    "methodName" : "getBooleanValue",
+    "methodSignature" : "(Lorg/h2/engine/Session;)Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Select",
+    "methodName" : "isConditionMet",
+    "methodSignature" : "()Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Select",
+    "methodName" : "gatherGroup",
+    "methodSignature" : "(II)V",
+    "selfTime" : 10503.0
+  }, {
+    "className" : "org.h2.command.dml.Select",
+    "methodName" : "queryGroup",
+    "methodSignature" : "(ILorg/h2/result/LocalResult;JZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Select",
+    "methodName" : "queryWithoutCache",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "queryWithoutCacheLazyCheck",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "query",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "query",
+    "methodSignature" : "(I)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.CommandContainer",
+    "methodName" : "query",
+    "methodSignature" : "(I)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.Command",
+    "methodName" : "executeQuery",
+    "methodSignature" : "(IZ)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcPreparedStatement",
+    "methodName" : "executeQuery",
+    "methodSignature" : "()Ljava/sql/ResultSet;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "query",
+    "methodSignature" : "(Ljava/sql/PreparedStatement;)Ljava/sql/ResultSet;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "processStockLevel",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "process",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "runTest",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 16029.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

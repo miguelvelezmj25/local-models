@@ -1,0 +1,8 @@
+org.h2.mvstore.Chunk.getMetaKey(I)Ljava/lang/String;,0.005
+org.h2.mvstore.MVStore.storeNow(JJ)V,0
+org.h2.mvstore.MVStore.store(JJ)V,0
+org.h2.mvstore.MVStore.store()V,0
+org.h2.mvstore.MVStore.tryCommit()J,0
+org.h2.mvstore.MVStore.writeInBackground()V,0
+org.h2.mvstore.MVStore$BackgroundWriterThread.run()V,0
+

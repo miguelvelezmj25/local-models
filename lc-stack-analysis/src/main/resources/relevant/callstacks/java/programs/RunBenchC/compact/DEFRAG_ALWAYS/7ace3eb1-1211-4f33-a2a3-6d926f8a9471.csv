@@ -1,0 +1,15 @@
+org.h2.store.fs.FileDisk.force(Z)V,0.005
+org.h2.store.FileStore.sync()V,0
+org.h2.pagestore.PageStore.writeVariableHeader()V,0
+org.h2.pagestore.PageStore.setLogFirstPage(III)V,0
+org.h2.pagestore.PageLog.removeUntil(I)V,0
+org.h2.pagestore.PageStore.checkpoint()V,0
+org.h2.pagestore.PageStore.compact(I)V,0.021
+org.h2.engine.Database.closeOpenFilesAndUnlock(Z)V,0.005
+org.h2.engine.Database.closeImpl(Z)V,0
+org.h2.engine.Database.close(Z)V,0
+org.h2.engine.Database.removeSession(Lorg/h2/engine/Session;)V,0
+org.h2.engine.Session.close()V,0
+org.h2.jdbc.JdbcConnection.close()V,0
+edu.cmu.cs.mvelezce.bench.RunBenchC.run([Ljava/lang/String;)V,0.016
+edu.cmu.cs.mvelezce.bench.RunBenchC.main([Ljava/lang/String;)V,0

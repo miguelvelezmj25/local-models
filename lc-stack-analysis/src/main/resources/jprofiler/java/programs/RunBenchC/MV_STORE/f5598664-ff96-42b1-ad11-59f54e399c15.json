@@ -1,0 +1,103 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.mvstore.type.ObjectDataType",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 5254.0
+  }, {
+    "className" : "org.h2.mvstore.MVMap$BasicBuilder",
+    "methodName" : "create",
+    "methodSignature" : "(Lorg/h2/mvstore/MVStore;Ljava/util/Map;)Lorg/h2/mvstore/MVMap;",
+    "selfTime" : 10663.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "openMap",
+    "methodSignature" : "(Ljava/lang/String;Lorg/h2/mvstore/MVMap$MapBuilder;)Lorg/h2/mvstore/MVMap;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.tx.TransactionStore",
+    "methodName" : "<init>",
+    "methodSignature" : "(Lorg/h2/mvstore/MVStore;Lorg/h2/mvstore/type/DataType;I)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.db.MVTableEngine$Store",
+    "methodName" : "open",
+    "methodSignature" : "(Lorg/h2/engine/Database;Lorg/h2/mvstore/MVStore$Builder;Z)V",
+    "selfTime" : 10557.0
+  }, {
+    "className" : "org.h2.mvstore.db.MVTableEngine",
+    "methodName" : "init",
+    "methodSignature" : "(Lorg/h2/engine/Database;)Lorg/h2/mvstore/db/MVTableEngine$Store;",
+    "selfTime" : 10499.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "getPageStore",
+    "methodSignature" : "()Lorg/h2/pagestore/PageStore;",
+    "selfTime" : 5256.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "open",
+    "methodSignature" : "(IILorg/h2/engine/ConnectionInfo;)V",
+    "selfTime" : 5272.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "openDatabase",
+    "methodSignature" : "(IIZLorg/h2/engine/ConnectionInfo;)V",
+    "selfTime" : 5453.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "<init>",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;Ljava/lang/String;)V",
+    "selfTime" : 5198.0
+  }, {
+    "className" : "org.h2.engine.Engine",
+    "methodName" : "openSession",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;ZZLjava/lang/String;)Lorg/h2/engine/Session;",
+    "selfTime" : 5239.0
+  }, {
+    "className" : "org.h2.engine.Engine",
+    "methodName" : "openSession",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;)Lorg/h2/engine/Session;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Engine",
+    "methodName" : "createSessionAndValidate",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;)Lorg/h2/engine/Session;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Engine",
+    "methodName" : "createSession",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;)Lorg/h2/engine/Session;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Engine",
+    "methodName" : "createSession",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;)Lorg/h2/engine/SessionInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.SessionRemote",
+    "methodName" : "connectEmbeddedOrServer",
+    "methodSignature" : "(Z)Lorg/h2/engine/SessionInterface;",
+    "selfTime" : 5212.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "<init>",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;Z)V",
+    "selfTime" : 5273.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/lang/String;Ljava/util/Properties;Lorg/h2/store/FileLockMethod;Ljava/lang/String;Ljava/lang/String;IZZZI)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 10981.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

@@ -1,0 +1,18 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "getMetaData",
+    "methodSignature" : "()Ljava/sql/DatabaseMetaData;",
+    "selfTime" : 5358.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 10981.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

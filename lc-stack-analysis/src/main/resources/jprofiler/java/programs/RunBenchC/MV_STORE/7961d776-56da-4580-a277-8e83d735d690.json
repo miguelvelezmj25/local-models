@@ -1,0 +1,103 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "acceptChunkOccupancyChanges",
+    "methodSignature" : "(JJ)V",
+    "selfTime" : 10493.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "storeNow",
+    "methodSignature" : "(JJ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "store",
+    "methodSignature" : "(JJ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "store",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "commit",
+    "methodSignature" : "()J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "compactRewrite",
+    "methodSignature" : "(Ljava/util/Set;)I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "rewriteChunks",
+    "methodSignature" : "(I)Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "compact",
+    "methodSignature" : "(II)Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "compactFile",
+    "methodSignature" : "(J)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "closeStore",
+    "methodSignature" : "(ZJ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "close",
+    "methodSignature" : "(J)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.db.MVTableEngine$Store",
+    "methodName" : "close",
+    "methodSignature" : "(J)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "closeOpenFilesAndUnlock",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "closeImpl",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "close",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "removeSession",
+    "methodSignature" : "(Lorg/h2/engine/Session;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 10981.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

@@ -1,0 +1,17 @@
+org.h2.command.Parser.initialize(Ljava/lang/String;)V,0.005
+org.h2.command.Parser.parse(Ljava/lang/String;Z)Lorg/h2/command/Prepared;,0
+org.h2.command.Parser.parse(Ljava/lang/String;)Lorg/h2/command/Prepared;,0
+org.h2.command.Parser.prepareCommand(Ljava/lang/String;)Lorg/h2/command/Command;,0
+org.h2.engine.Session.prepareLocal(Ljava/lang/String;)Lorg/h2/command/Command;,0
+org.h2.engine.Session.prepareCommand(Ljava/lang/String;I)Lorg/h2/command/CommandInterface;,0
+org.h2.jdbc.JdbcConnection.prepareCommand(Ljava/lang/String;I)Lorg/h2/command/CommandInterface;,0
+org.h2.jdbc.JdbcPreparedStatement.<init>(Lorg/h2/jdbc/JdbcConnection;Ljava/lang/String;IIIZLjava/lang/Object;)V,0
+org.h2.jdbc.JdbcConnection.prepareStatement(Ljava/lang/String;)Ljava/sql/PreparedStatement;,0
+edu.cmu.cs.mvelezce.bench.Database.prepare(Ljava/lang/String;)Ljava/sql/PreparedStatement;,0
+edu.cmu.cs.mvelezce.bench.c.BenchC.loadOrderSub(II)V,0
+edu.cmu.cs.mvelezce.bench.c.BenchC.loadOrder()V,0
+edu.cmu.cs.mvelezce.bench.c.BenchC.load()V,0
+edu.cmu.cs.mvelezce.bench.c.BenchC.init(Ledu/cmu/cs/mvelezce/bench/Database;I)V,0
+edu.cmu.cs.mvelezce.bench.RunBenchC.run([Ljava/lang/String;)V,0.021
+edu.cmu.cs.mvelezce.bench.RunBenchC.main([Ljava/lang/String;)V,0
+
