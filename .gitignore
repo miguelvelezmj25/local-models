@@ -231,10 +231,10 @@ vignettes/*.pdf
 #*/*.jps
 #/cc-execute/snapshot.xml
 #/cc-execute-e2e/index/
-#/cc-execute/index/
 #/cc-execute-e2e/output/
+/lc-execute-jprofiler-snapshot/index/
 /lc-execute-jprofiler-snapshot/output/
-#/cc-execute/data/
+/lc-execute-jprofiler-snapshot/data/
 #/cc-execute-e2e/data/
 #/cc-execute/callTree.xml
 /lc-stack-analysis/calltree.xml
