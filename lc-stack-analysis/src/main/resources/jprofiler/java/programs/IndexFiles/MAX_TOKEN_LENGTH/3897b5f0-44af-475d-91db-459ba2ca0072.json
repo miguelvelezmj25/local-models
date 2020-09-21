@@ -1,0 +1,53 @@
+{
+  "stack" : [ {
+    "className" : "org.apache.lucene.core.util.NamedSPILoader",
+    "methodName" : "reload",
+    "methodSignature" : "(Ljava/lang/ClassLoader;)V",
+    "selfTime" : 5311.0
+  }, {
+    "className" : "org.apache.lucene.core.util.NamedSPILoader",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/lang/Class;Ljava/lang/ClassLoader;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.util.NamedSPILoader",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/lang/Class;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.DocValuesFormat$Holder",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.DocValuesFormat",
+    "methodName" : "forName",
+    "methodSignature" : "(Ljava/lang/String;)Lorg/apache/lucene/core/codecs/DocValuesFormat;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.lucene70.Lucene70Codec",
+    "methodName" : "<init>",
+    "methodSignature" : "(Lorg/apache/lucene/core/codecs/lucene50/Lucene50StoredFieldsFormat$Mode;)V",
+    "selfTime" : 10776.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.lucene70.Lucene70Codec",
+    "methodName" : "<init>",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "codec",
+    "methodSignature" : "(Z)Lorg/apache/lucene/core/codecs/Codec;",
+    "selfTime" : 15139.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 37332.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1500509.0
+  } ]
+}

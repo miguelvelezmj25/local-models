@@ -1,0 +1,7 @@
+org.apache.lucene.core.store.NativeFSLockFactory.obtainFSLock(Lorg/apache/lucene/core/store/FSDirectory;Ljava/lang/String;)Lorg/apache/lucene/core/store/Lock;,0.012
+org.apache.lucene.core.store.FSLockFactory.obtainLock(Lorg/apache/lucene/core/store/Directory;Ljava/lang/String;)Lorg/apache/lucene/core/store/Lock;,0
+org.apache.lucene.core.store.BaseDirectory.obtainLock(Ljava/lang/String;)Lorg/apache/lucene/core/store/Lock;,0
+org.apache.lucene.core.index.IndexWriter.<init>(Lorg/apache/lucene/core/store/Directory;Lorg/apache/lucene/core/index/IndexWriterConfig;)V,0.01
+org.apache.lucene.demo.IndexFiles.run([Ljava/lang/String;)V,0.042
+org.apache.lucene.demo.IndexFiles.main([Ljava/lang/String;)V,1.499
+

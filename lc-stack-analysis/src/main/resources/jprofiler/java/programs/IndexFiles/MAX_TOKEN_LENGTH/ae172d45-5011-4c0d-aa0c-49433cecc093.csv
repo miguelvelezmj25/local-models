@@ -1,0 +1,5 @@
+org.apache.lucene.core.store.FSLockFactory.getDefault()Lorg/apache/lucene/core/store/FSLockFactory;,0.005
+org.apache.lucene.core.store.FSDirectory.open(Ljava/nio/file/Path;)Lorg/apache/lucene/core/store/FSDirectory;,0
+org.apache.lucene.demo.IndexFiles.run([Ljava/lang/String;)V,0.037
+org.apache.lucene.demo.IndexFiles.main([Ljava/lang/String;)V,1.501
+

@@ -138,6 +138,7 @@ public class CallStackDiff {
                 + this.programName
                 + "/"
                 + this.methodName
+                + this.methodSignature
                 + "/"
                 + optionValue);
     return FileUtils.listFiles(dir, new String[] {"csv"}, false);
@@ -190,6 +191,7 @@ public class CallStackDiff {
                 + this.programName
                 + "/"
                 + this.methodName
+                + this.methodSignature
                 + "/"
                 + this.optionValue1
                 + "-"

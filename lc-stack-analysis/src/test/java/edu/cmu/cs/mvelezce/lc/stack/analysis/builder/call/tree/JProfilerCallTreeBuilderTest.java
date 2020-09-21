@@ -1,6 +1,7 @@
 package edu.cmu.cs.mvelezce.lc.stack.analysis.builder.call.tree;
 
 import edu.cmu.cs.mvelezce.adapters.convert.BaseConvertAdapter;
+import edu.cmu.cs.mvelezce.adapters.indexFiles.BaseIndexFilesAdapter;
 import edu.cmu.cs.mvelezce.adapters.measureDiskOrderedScan.BaseMeasureDiskOrderedScanAdapter;
 import edu.cmu.cs.mvelezce.adapters.runBenchC.BaseRunBenchCAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.barInfluence.BaseBarInfluenceAdapter;
@@ -84,6 +85,17 @@ public class JProfilerCallTreeBuilderTest {
     String programName = BaseRunBenchCAdapter.PROGRAM_NAME;
     JProfilerCallTreeBuilder builder =
         new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.RUNNING_THREAD_STATUS);
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+    builder.analyze(args);
+  }
+
+  @Test
+  public void IndesFiles() throws IOException, InterruptedException {
+    String programName = BaseIndexFilesAdapter.PROGRAM_NAME;
+    JProfilerCallTreeBuilder builder =
+        new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
     String[] args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";

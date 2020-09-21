@@ -1,0 +1,68 @@
+{
+  "stack" : [ {
+    "className" : "org.apache.lucene.core.store.FSDirectory",
+    "methodName" : "privateDeleteFile",
+    "methodSignature" : "(Ljava/lang/String;Z)V",
+    "selfTime" : 21235.0
+  }, {
+    "className" : "org.apache.lucene.core.store.FSDirectory",
+    "methodName" : "deleteFile",
+    "methodSignature" : "(Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.store.LockValidatingDirectoryWrapper",
+    "methodName" : "deleteFile",
+    "methodSignature" : "(Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexFileDeleter",
+    "methodName" : "deleteFile",
+    "methodSignature" : "(Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexFileDeleter",
+    "methodName" : "deleteFiles",
+    "methodSignature" : "(Ljava/util/Collection;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexFileDeleter",
+    "methodName" : "decRef",
+    "methodSignature" : "(Ljava/util/Collection;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexFileDeleter",
+    "methodName" : "checkpoint",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/SegmentInfos;Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexWriter",
+    "methodName" : "rollbackInternalNoCommit",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexWriter",
+    "methodName" : "rollbackInternal",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexWriter",
+    "methodName" : "rollback",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexWriter",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 42217.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1498872.0
+  } ]
+}

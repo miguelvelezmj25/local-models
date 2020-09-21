@@ -1,0 +1,128 @@
+{
+  "stack" : [ {
+    "className" : "org.apache.lucene.core.util.packed.AbstractPagedMutable",
+    "methodName" : "<init>",
+    "methodSignature" : "(IJI)V",
+    "selfTime" : 5224.0
+  }, {
+    "className" : "org.apache.lucene.core.util.packed.PagedGrowableWriter",
+    "methodName" : "<init>",
+    "methodSignature" : "(JIIFZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.util.packed.PagedGrowableWriter",
+    "methodName" : "<init>",
+    "methodSignature" : "(JIIF)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.util.fst.NodeHash",
+    "methodName" : "<init>",
+    "methodSignature" : "(Lorg/apache/lucene/core/util/fst/FST;Lorg/apache/lucene/core/util/fst/FST$BytesReader;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.util.fst.Builder",
+    "methodName" : "<init>",
+    "methodSignature" : "(Lorg/apache/lucene/core/util/fst/FST$INPUT_TYPE;IIZZILorg/apache/lucene/core/util/fst/Outputs;ZI)V",
+    "selfTime" : 36816.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.blocktree.BlockTreeTermsWriter$PendingBlock",
+    "methodName" : "compileIndex",
+    "methodSignature" : "(Ljava/util/List;Lorg/apache/lucene/core/store/RAMOutputStream;Lorg/apache/lucene/core/util/IntsRefBuilder;)V",
+    "selfTime" : 31402.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.blocktree.BlockTreeTermsWriter$TermsWriter",
+    "methodName" : "writeBlocks",
+    "methodSignature" : "(II)V",
+    "selfTime" : 15761.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.blocktree.BlockTreeTermsWriter$TermsWriter",
+    "methodName" : "pushTerm",
+    "methodSignature" : "(Lorg/apache/lucene/core/util/BytesRef;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.blocktree.BlockTreeTermsWriter$TermsWriter",
+    "methodName" : "write",
+    "methodSignature" : "(Lorg/apache/lucene/core/util/BytesRef;Lorg/apache/lucene/core/index/TermsEnum;)V",
+    "selfTime" : 172830.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.blocktree.BlockTreeTermsWriter",
+    "methodName" : "write",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/Fields;)V",
+    "selfTime" : 147153.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.perfield.PerFieldPostingsFormat$FieldsWriter",
+    "methodName" : "write",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/Fields;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.FreqProxTermsWriter",
+    "methodName" : "flush",
+    "methodSignature" : "(Ljava/util/Map;Lorg/apache/lucene/core/index/SegmentWriteState;Lorg/apache/lucene/core/index/Sorter$DocMap;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.DefaultIndexingChain",
+    "methodName" : "flush",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/SegmentWriteState;)Lorg/apache/lucene/core/index/Sorter$DocMap;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.DocumentsWriterPerThread",
+    "methodName" : "flush",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/DocumentsWriter$FlushNotifications;)Lorg/apache/lucene/core/index/DocumentsWriterPerThread$FlushedSegment;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.DocumentsWriter",
+    "methodName" : "doFlush",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/DocumentsWriterPerThread;)Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.DocumentsWriter",
+    "methodName" : "postUpdate",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/DocumentsWriterPerThread;Z)Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.DocumentsWriter",
+    "methodName" : "updateDocument",
+    "methodSignature" : "(Ljava/lang/Iterable;Lorg/apache/lucene/core/analysis/Analyzer;Lorg/apache/lucene/core/index/DocumentsWriterDeleteQueue$Node;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexWriter",
+    "methodName" : "updateDocument",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/DocumentsWriterDeleteQueue$Node;Ljava/lang/Iterable;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexWriter",
+    "methodName" : "addDocument",
+    "methodSignature" : "(Ljava/lang/Iterable;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "indexDoc",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/IndexWriter;Ljava/nio/file/Path;J)V",
+    "selfTime" : 10774.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles$1",
+    "methodName" : "visitFile",
+    "methodSignature" : "(Ljava/nio/file/Path;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles$1",
+    "methodName" : "visitFile",
+    "methodSignature" : "(Ljava/lang/Object;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "indexDocs",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/IndexWriter;Ljava/nio/file/Path;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 42217.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1498872.0
+  } ]
+}

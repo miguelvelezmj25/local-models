@@ -48,7 +48,15 @@ public class CallStackSelector {
   private void savePrettyCallStacks(String optionValue, Collection<File> prettyCallStacks)
       throws IOException {
     File dir =
-        new File(OUTPUT_DIR + "/" + this.programName + "/" + this.methodName + "/" + optionValue);
+        new File(
+            OUTPUT_DIR
+                + "/"
+                + this.programName
+                + "/"
+                + this.methodName
+                + this.methodSignature
+                + "/"
+                + optionValue);
     if (dir.exists()) {
       FileUtils.cleanDirectory(dir);
     } else if (!dir.mkdirs()) {

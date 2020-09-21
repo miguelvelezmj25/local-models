@@ -1,0 +1,4 @@
+org.apache.lucene.demo.IndexFiles.mergePolicy(Z)Lorg/apache/lucene/core/index/MergePolicy;,0.005
+org.apache.lucene.demo.IndexFiles.run([Ljava/lang/String;)V,0.037
+org.apache.lucene.demo.IndexFiles.main([Ljava/lang/String;)V,1.501
+
