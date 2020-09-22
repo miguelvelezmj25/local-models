@@ -53,6 +53,7 @@ public class CallStackDiff {
                 + this.programName
                 + "/"
                 + this.methodName
+                + this.methodSignature
                 + "/"
                 + this.optionValue1
                 + "-"
@@ -70,15 +71,20 @@ public class CallStackDiff {
       List<String> lines1 = FileUtils.readLines(prettyCallStack1, (String) null);
       for (File prettyCallStack2 : prettyCallStacks2) {
         List<String> lines2 = FileUtils.readLines(prettyCallStack2, (String) null);
+        if (!sameCallStackRoot(lines1, lines2)) {
+          continue;
+        }
         Map<String, Pair<String, String>> allMethodsToTimes = getAllMethodsToTimes(lines1, lines2);
-        //        if (getMaxSelfTime(allMethodsToTimes.values()) < 3.55) {
-        //          continue;
-        //        }
-
         List<DiffRow> diff = diffCallStacks(lines1, lines2);
         this.generateHTML(this.optionValue1, this.optionValue2, diff, allMethodsToTimes);
       }
     }
+  }
+
+  private boolean sameCallStackRoot(List<String> lines1, List<String> lines2) {
+    String root1 = lines1.get(lines1.size() - 1).split(",")[0];
+    String root2 = lines2.get(lines2.size() - 1).split(",")[0];
+    return root1.equals(root2);
   }
 
   private double getMaxSelfTime(Collection<Pair<String, String>> times) {
