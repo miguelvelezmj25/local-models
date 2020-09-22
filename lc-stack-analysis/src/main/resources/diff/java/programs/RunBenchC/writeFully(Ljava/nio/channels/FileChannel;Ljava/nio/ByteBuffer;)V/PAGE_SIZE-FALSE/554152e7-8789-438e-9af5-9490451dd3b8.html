@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial;
+            color: black;
+        }
+
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .left {
+            left: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+
+        .right {
+            right: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+
+        tr.border_bottom td {
+            border-bottom: 2px solid black;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<div class="split left">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">PAGE_SIZE</span></td></tr>
+<tr class="border_bottom">
+<td>o.h.s.f.FileDisk.write()</td><td align ="right">0.01</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.s.f.FileUtils.writeFully()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.s.FileStore.write()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.p.PageStore.writePage()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.p.PageStrea.write()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.p.PageOutpu.storePage()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h..PageOutpu.write()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h..PageLog.write()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h..PageLog.addUndo()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h..PageStore.allocateP()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.p.d.PageDataLe.split()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h...PageDataN.addRowTry()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.p.d.PageDataNo.addRowTry()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h...PageDataI.addTry()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h...PageDataI.add()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h...PageStore.addRow()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h...Insert.insertRows()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o..c.d.Insert.update()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.c.CommandCon.update()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h..Command.executeUp()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.j.JdbcPrepa.executeUp()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.j.JdbcPrepa.executeUp()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">e.c.c.m.b.Database.update()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">e.c.c.m.b.c.BenchC.loadStock()</span></td><td align ="right">0.079</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">e.c.c.m.b.c.BenchC.loadWareho()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">e.c.c.m.b.c.BenchC.load()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">e.c.c.m.b.c.BenchC.init()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>e.c.c.m.b.RunBenchC.run()</td><td align ="right">0.016</td>
+</tr>
+<tr class="border_bottom">
+<td>e.c.c.m.b.RunBenchC.main()</td><td align ="right">0</td>
+</tr>
+</table>
+</p>
+    </div>
+</div>
+
+<div class="split right">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">FALSE</span></td></tr>
+<tr class="border_bottom">
+<td>o.h.s.f.FileDisk.write()</td><td align ="right">0.006</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.s.f.FileUtils.writeFully()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h.s.FileStore.setLength()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h.p.PageStore.increaseF()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h.p.PageStore.openNew()</span></td><td align ="right">0.011</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h.p.PageStore.open()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..Database.getPageSt()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..Database.open()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..Database.openDatab()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..Database.<init>()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..Engine.openSessi()</span></td><td align ="right">0.011</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..Engine.openSessi()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..Engine.createSes()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..Engine.createSes()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..Engine.createSes()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..SessionRe.connectEm()</span></td><td align ="right">0.011</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h.j.JdbcConne.<init>()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h.j.JdbcConne.<init>()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>e.c.c.m.b.RunBenchC.run()</td><td align ="right">0.021</td>
+</tr>
+<tr class="border_bottom">
+<td>e.c.c.m.b.RunBenchC.main()</td><td align ="right">0</td>
+</tr>
+</table>
+</p>
+    </div>
+</div>
+</body>
+</html>

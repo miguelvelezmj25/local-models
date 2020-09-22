@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial;
+            color: black;
+        }
+
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .left {
+            left: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+
+        .right {
+            right: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+
+        tr.border_bottom td {
+            border-bottom: 2px solid black;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<div class="split left">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">TEMPORARY</span></td></tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j..LatchImpl.acquireExc()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j..LogBuffer.latchForW()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c...l.LogBufferS.put()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>c.s.j.l.LogManager.logItem()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>c.s.j.l.LogManager.log()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>c.s.j.t.IN.logInterna()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j.t.IN.log()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j..Checkpoin.doWork()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j.t.Tree.withRootL()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j..Checkpoin.flushIN()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j..Checkpoin.flushIN()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j..Checkpoin.flushDirt()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j..Checkpoin.doCheckpoi()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j..Environme.invokeChec()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j..RecoveryM.recover()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c....Environmen.finishInit()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j..DbEnvPool.getEnviron()</span></td><td align ="right">0.016</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j.Environme.makeEnvir()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j.Environme.<init>()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.j.Environme.<init>()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">c.s.a.MeasureDis.open()</span></td><td align ="right">0.016</td>
+</tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>c.s.a.MeasureDis.run()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>c.s.a.MeasureDis.run()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>c.s.a.MeasureDis.main()</td><td align ="right">1.502</td>
+</tr>
+</table>
+</p>
+    </div>
+</div>
+
+<div class="split right">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">FALSE</span></td></tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j.l.LogEntryH.addPostMa()</span></td><td align ="right">0.021</td>
+</tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>c.s.j.l.LogManager.logItem()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>c.s.j.l.LogManager.log()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>c.s.j.t.IN.logInterna()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j.t.IN.optionalL()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j..Tree.forceSpli()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j.t.Tree.searchSpl()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j..Tree.searchSpl()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j.t.Tree.searchSpli()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j..Tree.findBinFo()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j..CursorImpl.insertReco()</span></td><td align ="right">0.016</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j..CursorImp.insertOrU()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j.Cursor.putNoNoti()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j.Cursor.putNotify()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j.Cursor.putNoDups()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j.Cursor.putIntern()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j.Cursor.putIntern()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j.Database.put()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.j.Database.put()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">c.s.a.MeasureDis.populate()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td>c.s.a.MeasureDis.run()</td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td>c.s.a.MeasureDis.run()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>c.s.a.MeasureDis.main()</td><td align ="right">1.502</td>
+</tr>
+</table>
+</p>
+    </div>
+</div>
+</body>
+</html>

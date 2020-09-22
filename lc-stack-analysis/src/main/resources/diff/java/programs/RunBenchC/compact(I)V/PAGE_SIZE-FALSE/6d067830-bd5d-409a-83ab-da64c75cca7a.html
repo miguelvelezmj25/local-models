@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial;
+            color: black;
+        }
+
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .left {
+            left: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+
+        .right {
+            right: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+
+        tr.border_bottom td {
+            border-bottom: 2px solid black;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<div class="split left">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">PAGE_SIZE</span></td></tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h...FileDisk.write()</span></td><td align ="right">0.09</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h...FileUtils.writeFully()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h..FileStore.write()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h..PageStore.writePage()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.p.d.PageDataLe.write()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o...PageStore.writeBack()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.p.PageStore.writeBack()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.p.PageStore.checkpoin()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.p.PageStore.compact()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.e.Database.closeOpenF()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.e.Database.closeImpl()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.e.Database.close()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.e.Database.removeSess()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.e.Session.close()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.j.JdbcConnec.close()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>e.c.c.m.b.RunBenchC.run()</td><td align ="right">0.016</td>
+</tr>
+<tr class="border_bottom">
+<td>e.c.c.m.b.RunBenchC.main()</td><td align ="right">0</td>
+</tr>
+</table>
+</p>
+    </div>
+</div>
+
+<div class="split right">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">FALSE</span></td></tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..CompressL.compress()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..PageLog.addUndo()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h.p.PageStore.logUndo()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h.p.d.PageDataLe.create()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h.p..PageDataL.moveTo()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h.p.PageStore.compact()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>o.h.p.PageStore.compact()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.e.Database.closeOpenF()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.e.Database.closeImpl()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.e.Database.close()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.e.Database.removeSess()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.e.Session.close()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.j.JdbcConnec.close()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>e.c.c.m.b.RunBenchC.run()</td><td align ="right">0.021</td>
+</tr>
+<tr class="border_bottom">
+<td>e.c.c.m.b.RunBenchC.main()</td><td align ="right">0</td>
+</tr>
+</table>
+</p>
+    </div>
+</div>
+</body>
+</html>

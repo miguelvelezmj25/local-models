@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial;
+            color: black;
+        }
+
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .left {
+            left: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+
+        .right {
+            right: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+
+        tr.border_bottom td {
+            border-bottom: 2px solid black;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<div class="split left">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">DEFRAG_ALWAYS</span></td></tr>
+<tr class="border_bottom">
+<td>o.h.s.f.FileDisk.write()</td><td align ="right">0.054</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.s.f.FileUtils.writeFully()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.s.FileStore.write()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.p.PageStore.writePage()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.p.PageStream.write()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.p.PageOutput.storePage()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.p.PageOutput.write()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.p.PageLog.write()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.p.PageLog.addUndo()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.p.PageStore.logUndo()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h...PageDataL.remove()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h.p.d.PageDataIn.remove()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h..PageStore.removeMet()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h..PageStore.removeMet()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h...PageDataI.setRootPag()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h...PageDataN.moveTo()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.h..PageStore.swap()</span></td><td align ="right">0.011</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o...PageStore.compact()</span></td><td align ="right">0.021</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o..e.Database.closeOpen()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o...Database.closeImpl()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o...Database.close()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o...Database.removeSes()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o...Session.close()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o...JdbcConne.close()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>e.c.c.m.b.RunBenchC.run()</td><td align ="right">0.016</td>
+</tr>
+<tr class="border_bottom">
+<td>e.c.c.m.b.RunBenchC.main()</td><td align ="right">0</td>
+</tr>
+</table>
+</p>
+    </div>
+</div>
+
+<div class="split right">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">FALSE</span></td></tr>
+<tr class="border_bottom">
+<td>o.h.s.f.FileDisk.write()</td><td align ="right">0.011</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.s.f.FileUtils.writeFully()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.s.FileStore.write()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.p.PageStore.writePage()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.p.PageStream.write()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.p.PageOutput.storePage()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.p.PageOutput.write()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.h.p.PageLog.write()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h.p.PageLog.commit()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h.p.PageStore.commit()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..Database.commit()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..Session.commit()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h...Transacti.update()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..CommandCo.update()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..Command.executeUp()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.h..JdbcConne.commit()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">e.....Database.commit()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">e......BenchCThr.processNe()</span></td><td align ="right"><span style="background-color: #ffc061">0.102</span></td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">e......BenchCThr.process()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">e.....c.BenchC.runTest()</span></td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>e.c.c.m.b.RunBenchC.run()</td><td align ="right">0.021</td>
+</tr>
+<tr class="border_bottom">
+<td>e.c.c.m.b.RunBenchC.main()</td><td align ="right">0</td>
+</tr>
+</table>
+</p>
+    </div>
+</div>
+</body>
+</html>

@@ -16,10 +16,13 @@ import java.util.*;
 public class CallStackDiff {
 
   public static final String OUTPUT_DIR = Options.DIRECTORY + "/diff/java/programs";
+  public static final double TIME_DIFF_THRESHOLD = 0.1;
 
   private static final String DELETION = "<span style=\"background-color: #00dcff\">${text}</span>";
   private static final String INSERTION =
       "<span style=\"background-color: #45EA85\">${text}</span>";
+  private static final String TIME_DIFF =
+      "<span style=\"background-color: #ffc061\">${text}</span>";
   private static final String OLD_TAG = "~";
   private static final String NEW_TAG = "!";
 
@@ -226,8 +229,10 @@ public class CallStackDiff {
     table.append("</span>");
     table.append("</td>");
     table.append("</tr>");
+    table.append("\n");
     for (DiffRow row : rows) {
-      table.append("<tr>");
+      table.append("<tr class=\"border_bottom\">");
+      table.append("\n");
       String line = right ? row.getNewLine() : row.getOldLine();
       if (!line.isEmpty()) {
         String[] entries = line.split(",");
@@ -237,7 +242,9 @@ public class CallStackDiff {
         Pair<String, String> times = allMethodsToTimes.get(removeTags(entries[0]));
         DiffRow timesDiff = compareTimes(times);
         String time =
-            right ? addBackground(timesDiff.getNewLine()) : addBackground(timesDiff.getOldLine());
+            right
+                ? addTimeBackground(timesDiff.getNewLine(), timesDiff.getTag())
+                : addTimeBackground(timesDiff.getOldLine(), timesDiff.getTag());
         table
             .append("<td>")
             .append(method)
@@ -247,25 +254,28 @@ public class CallStackDiff {
             .append("\n");
       } else {
         table.append("<td>&nbsp</td>");
+        table.append("<td>&nbsp</td>");
       }
       table.append("</tr>");
+      table.append("\n");
     }
     table.append("</table>");
+    table.append("\n");
     return table.toString();
   }
 
   private static DiffRow compareTimes(Pair<String, String> times) throws DiffException {
-    DiffRowGenerator generator =
-        DiffRowGenerator.create()
-            .showInlineDiffs(true)
-            .inlineDiffByWord(true)
-            .oldTag(f -> OLD_TAG)
-            .newTag(f -> NEW_TAG)
-            .build();
-    return generator
-        .generateDiffRows(
-            Collections.singletonList(times.getLeft()), Collections.singletonList(times.getRight()))
-        .get(0);
+    String timeLeft = times.getLeft();
+    double time1 = timeLeft.isEmpty() ? 0.0 : Double.parseDouble(timeLeft);
+    String timeRight = times.getRight();
+    double time2 = timeRight.isEmpty() ? 0.0 : Double.parseDouble(timeRight);
+
+    DiffRow.Tag tag = DiffRow.Tag.EQUAL;
+    if (Math.abs(time1 - time2) >= TIME_DIFF_THRESHOLD) {
+      tag = DiffRow.Tag.CHANGE;
+    }
+
+    return new DiffRow(tag, timeLeft, timeRight);
   }
 
   private static String compressMethod(String fullyQualifiedMethod) {
@@ -317,5 +327,13 @@ public class CallStackDiff {
     }
 
     return entry;
+  }
+
+  private static String addTimeBackground(String time, DiffRow.Tag tag) {
+    if (tag.equals(DiffRow.Tag.CHANGE)) {
+      return TIME_DIFF.replace("${text}", "" + time);
+    }
+
+    return time;
   }
 }

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial;
+            color: black;
+        }
+
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .left {
+            left: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+
+        .right {
+            right: 0;
+            background-color: #ffffff;
+            border-style: solid;
+        }
+
+        tr.border_bottom td {
+            border-bottom: 2px solid black;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<div class="split left">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">MAX_TOKEN_LENGTH</span></td></tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.a.l.c..ParallelP.copyTo()</span></td><td align ="right">0.043</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.a.l.c..FreqProxT.copyTo()</span></td><td align ="right">0.055</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.a.l.c.i.ParallelP.grow()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #00dcff">o.a.l.c.i.TermsHash.grow()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>&nbsp</td><td>&nbsp</td></tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.TermsHashP.add()</td><td align ="right"><span style="background-color: #ffc061">5.793</span></td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.DefaultInd.invert()</td><td align ="right">1.152</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.DefaultInd.processFie()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.DefaultInd.processDoc()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.DocumentsW.updateDocu()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.DocumentsW.updateDocu()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.IndexWrite.updateDocu()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.IndexWrite.addDocumen()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.d.IndexFiles.indexDoc()</td><td align ="right">0.005</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.d.IndexFiles.visitFile()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.d.IndexFiles.visitFile()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.d.IndexFiles.indexDocs()</td><td align ="right">0.006</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.d.IndexFiles.run()</td><td align ="right">0.037</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.d.IndexFiles.main()</td><td align ="right">1.501</td>
+</tr>
+</table>
+</p>
+    </div>
+</div>
+
+<div class="split right">
+    <div class="centered">
+        <p><table><tr><td><span style="font-weight:bold">FALSE</span></td></tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.a.l.c..ByteBlock.getByteBl()</span></td><td align ="right">0.047</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o....u.ByteBlockP.nextBuffer()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.a.l.c..ByteBlock.allocSlic()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.....TermsHashP.writeByte()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.a.l.c.i.TermsHash.writeVInt()</span></td><td align ="right"><span style="background-color: #ffc061">2.806</span></td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.....FreqProxTe.writeProx()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td><span style="background-color: #45EA85">o.a.l.c.i.FreqProxT.addTerm()</span></td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.TermsHashP.add()</td><td align ="right"><span style="background-color: #ffc061">6.575</span></td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.DefaultInd.invert()</td><td align ="right">1.149</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.DefaultInd.processFie()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.DefaultInd.processDoc()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.DocumentsW.updateDocu()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.DocumentsW.updateDocu()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.IndexWrite.updateDocu()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.c.i.IndexWrite.addDocumen()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.d.IndexFiles.indexDoc()</td><td align ="right">0.011</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.d.IndexFiles.visitFile()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.d.IndexFiles.visitFile()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.d.IndexFiles.indexDocs()</td><td align ="right">0</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.d.IndexFiles.run()</td><td align ="right">0.042</td>
+</tr>
+<tr class="border_bottom">
+<td>o.a.l.d.IndexFiles.main()</td><td align ="right">1.499</td>
+</tr>
+</table>
+</p>
+    </div>
+</div>
+</body>
+</html>
