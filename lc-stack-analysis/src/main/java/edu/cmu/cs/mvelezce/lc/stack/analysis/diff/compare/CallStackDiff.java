@@ -333,11 +333,13 @@ public class CallStackDiff {
     }
 
     String className = entries[entries.length - 2];
-    className = className.substring(0, Math.min(className.length(), 10));
+    className = className.substring(0, Math.min(className.length(), 30));
     result.append(className).append(".");
 
     String methodName = entries[entries.length - 1];
-    methodName = methodName.substring(0, Math.min(methodName.indexOf("("), 10));
+    methodName = methodName.substring(0, Math.min(methodName.indexOf("("), 30));
+    methodName = methodName.replaceAll("<", "[");
+    methodName = methodName.replaceAll(">", "]");
     result.append(methodName).append("()");
 
     return result.toString();
