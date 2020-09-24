@@ -27,25 +27,39 @@ public class CallStackDiff {
   private static final String NEW_TAG = "!";
 
   private final String programName;
+  private final int diffId;
   private final String optionValue1;
+  private final Set<String> stacks1;
   private final String optionValue2;
+  private final Set<String> stacks2;
   private final String className;
   private final String methodName;
   private final String methodSignature;
 
   public CallStackDiff(
       String programName,
+      int diffId,
       String optionValue1,
+      Set<String> stacks1,
       String optionValue2,
+      Set<String> stacks2,
       String className,
       String methodName,
       String methodSignature) {
     this.programName = programName;
+    this.diffId = diffId;
     this.optionValue1 = optionValue1;
+    this.stacks1 = stacks1;
     this.optionValue2 = optionValue2;
+    this.stacks2 = stacks2;
     this.className = className;
     this.methodName = methodName;
     this.methodSignature = methodSignature;
+  }
+
+  public CallStackDiff(
+      String programName, String a, String aFalse, String s, String moo, String s1) {
+    throw new UnsupportedOperationException("implement");
   }
 
   public void diff() throws IOException, DiffException {
@@ -60,7 +74,9 @@ public class CallStackDiff {
                 + "/"
                 + this.optionValue1
                 + "-"
-                + this.optionValue2);
+                + this.optionValue2
+                + "/"
+                + this.diffId);
     if (outputFile.exists()) {
       FileUtils.cleanDirectory(outputFile);
     }
@@ -71,15 +87,27 @@ public class CallStackDiff {
     Collection<File> prettyCallStacks2 = this.getPrettyCallStacks(this.optionValue2);
 
     for (File prettyCallStack1 : prettyCallStacks1) {
+      if (!this.stacks1.contains(prettyCallStack1.getName())) {
+        continue;
+      }
       List<String> lines1 = FileUtils.readLines(prettyCallStack1, (String) null);
       for (File prettyCallStack2 : prettyCallStacks2) {
+        if (!this.stacks2.contains(prettyCallStack2.getName())) {
+          continue;
+        }
         List<String> lines2 = FileUtils.readLines(prettyCallStack2, (String) null);
         if (!sameCallStackRoot(lines1, lines2)) {
           continue;
         }
         Map<String, Pair<String, String>> allMethodsToTimes = getAllMethodsToTimes(lines1, lines2);
         List<DiffRow> diff = diffCallStacks(lines1, lines2);
-        this.generateHTML(this.optionValue1, this.optionValue2, diff, allMethodsToTimes);
+        this.generateHTML(
+            this.optionValue1,
+            prettyCallStack1.getName(),
+            this.optionValue2,
+            prettyCallStack2.getName(),
+            diff,
+            allMethodsToTimes);
       }
     }
   }
@@ -177,7 +205,9 @@ public class CallStackDiff {
 
   private void generateHTML(
       String optionValue1,
+      String fileName1,
       String optionValue2,
+      String fileName2,
       List<DiffRow> rows,
       Map<String, Pair<String, String>> allMethodsToTimes)
       throws IOException, DiffException {
@@ -189,8 +219,11 @@ public class CallStackDiff {
                 "./src/main/java/edu/cmu/cs/mvelezce/lc/stack/analysis/diff/compare/difftemplate.html"),
             "utf-8");
     String output =
-        template.replace("${left}", getTable(rows, optionValue1, false, allMethodsToTimes));
-    output = output.replace("${right}", getTable(rows, optionValue2, true, allMethodsToTimes));
+        template.replace(
+            "${left}", getTable(rows, optionValue1, fileName1, false, allMethodsToTimes));
+    output =
+        output.replace(
+            "${right}", getTable(rows, optionValue2, fileName2, true, allMethodsToTimes));
 
     // Write file to disk.
     File outputFile =
@@ -204,7 +237,9 @@ public class CallStackDiff {
                 + "/"
                 + this.optionValue1
                 + "-"
-                + this.optionValue2);
+                + this.optionValue2
+                + "/"
+                + this.diffId);
     if (!outputFile.exists() && !outputFile.mkdirs()) {
       throw new RuntimeException("Could not create directories");
     }
@@ -217,10 +252,15 @@ public class CallStackDiff {
   private static String getTable(
       List<DiffRow> rows,
       String optionValue,
+      String fileName,
       boolean right,
       Map<String, Pair<String, String>> allMethodsToTimes)
       throws DiffException {
     StringBuilder table = new StringBuilder();
+    table.append("<span style=\"font-weight:bold\">");
+    table.append(fileName);
+    table.append("</span>");
+    table.append("\n");
     table.append("<table>");
     table.append("<tr>");
     table.append("<td>");
