@@ -48,7 +48,8 @@ public class CallStackDiffSelector {
                 + "/"
                 + this.optionValue1
                 + "-"
-                + this.optionValue2);
+                + this.optionValue2
+                + "/1");
     Collection<File> diffs = FileUtils.listFiles(rootDir, new String[] {"html"}, false);
     LinkedHashMap<String, Integer> filesToDiffs = this.getFilesToDiffs(diffs);
     for (Map.Entry<String, Integer> entry : filesToDiffs.entrySet()) {

@@ -337,10 +337,11 @@ public class CallStackDiff {
     result.append(className).append(".");
 
     String methodName = entries[entries.length - 1];
+    int methodSignatureEncoded = methodName.hashCode();
     methodName = methodName.substring(0, Math.min(methodName.indexOf("("), 30));
     methodName = methodName.replaceAll("<", "[");
     methodName = methodName.replaceAll(">", "]");
-    result.append(methodName).append("()");
+    result.append(methodName).append("(" + methodSignatureEncoded + ")");
 
     return result.toString();
   }
