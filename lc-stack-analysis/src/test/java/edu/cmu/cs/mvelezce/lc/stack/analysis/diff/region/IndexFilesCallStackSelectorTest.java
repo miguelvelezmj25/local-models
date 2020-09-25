@@ -8,7 +8,7 @@ import java.io.IOException;
 public class IndexFilesCallStackSelectorTest {
 
   @Test
-  public void fireProgressChanged_MAX_BUFFERED_DOCS_FALSE() throws IOException {
+  public void zzRefill_MAX_BUFFERED_DOCS_FALSE() throws IOException {
     String programName = BaseIndexFilesAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
@@ -233,7 +233,7 @@ public class IndexFilesCallStackSelectorTest {
   }
 
   @Test
-  public void fireProgressChanged_MAX_TOKEN_LENGTH_FALSE() throws IOException {
+  public void zzRefill_MAX_TOKEN_LENGTH_FALSE() throws IOException {
     String programName = BaseIndexFilesAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(

@@ -5,17 +5,31 @@ import edu.cmu.cs.mvelezce.adapters.indexFiles.BaseIndexFilesAdapter;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
 public class IndexFilesCallStackDiffTest {
 
   @Test
-  public void fireProgressChanged_MAX_BUFFERED_DOCS_FALSE() throws IOException, DiffException {
+  public void zzRefill_MAX_BUFFERED_DOCS_FALSE() throws IOException, DiffException {
     String programName = BaseIndexFilesAdapter.PROGRAM_NAME;
+
+    String option1 = "MAX_BUFFERED_DOCS";
+    Set<String> stacks1 = new HashSet<>();
+    stacks1.add("9a48f0f9-23a3-4728-8b5a-b5821261cd19.csv");
+
+    String option2 = "FALSE";
+    Set<String> stacks2 = new HashSet<>();
+    stacks2.add("6a0c6412-4860-49ec-9433-8712d97f389d.csv");
+
     CallStackDiff differ =
         new CallStackDiff(
             programName,
-            "MAX_BUFFERED_DOCS",
-            "FALSE",
+            1,
+            option1,
+            stacks1,
+            option2,
+            stacks2,
             "org.apache.lucene.core.analysis.standard.StandardTokenizerImpl",
             "zzRefill",
             "()Z");
@@ -166,11 +180,23 @@ public class IndexFilesCallStackDiffTest {
   @Test
   public void init_MAX_BUFFERED_DOCS_FALSE() throws IOException, DiffException {
     String programName = BaseIndexFilesAdapter.PROGRAM_NAME;
+
+    String option1 = "MAX_BUFFERED_DOCS";
+    Set<String> stacks1 = new HashSet<>();
+    stacks1.add("04261395-95d9-41db-ad75-772a72bb5670.csv");
+
+    String option2 = "FALSE";
+    Set<String> stacks2 = new HashSet<>();
+    stacks2.add("b0da2aa4-65d1-4a74-98f6-78b0fd18243b.csv");
+
     CallStackDiff differ =
         new CallStackDiff(
             programName,
-            "MAX_BUFFERED_DOCS",
-            "FALSE",
+            1,
+            option1,
+            stacks1,
+            option2,
+            stacks2,
             "org.apache.lucene.core.util.packed.PackedInts$MutableImpl",
             "<init>",
             "(II)V");
@@ -237,13 +263,25 @@ public class IndexFilesCallStackDiffTest {
   }
 
   @Test
-  public void fireProgressChanged_MAX_TOKEN_LENGTH_FALSE() throws IOException, DiffException {
+  public void zzRefill_MAX_TOKEN_LENGTH_FALSE_1() throws IOException, DiffException {
     String programName = BaseIndexFilesAdapter.PROGRAM_NAME;
+
+    String option1 = "MAX_TOKEN_LENGTH";
+    Set<String> stacks1 = new HashSet<>();
+    stacks1.add("a31dde8b-3589-4153-a6d1-46aca226ccc7.csv");
+
+    String option2 = "FALSE";
+    Set<String> stacks2 = new HashSet<>();
+    stacks2.add("6a0c6412-4860-49ec-9433-8712d97f389d.csv");
+
     CallStackDiff differ =
         new CallStackDiff(
             programName,
-            "MAX_TOKEN_LENGTH",
-            "FALSE",
+            1,
+            option1,
+            stacks1,
+            option2,
+            stacks2,
             "org.apache.lucene.core.analysis.standard.StandardTokenizerImpl",
             "zzRefill",
             "()Z");
@@ -394,11 +432,23 @@ public class IndexFilesCallStackDiffTest {
   @Test
   public void init_MAX_TOKEN_LENGTH_FALSE() throws IOException, DiffException {
     String programName = BaseIndexFilesAdapter.PROGRAM_NAME;
+
+    String option1 = "MAX_TOKEN_LENGTH";
+    Set<String> stacks1 = new HashSet<>();
+    stacks1.add("074c97b5-485a-4a0e-be8c-e5d3942714c3.csv");
+
+    String option2 = "FALSE";
+    Set<String> stacks2 = new HashSet<>();
+    stacks2.add("b0da2aa4-65d1-4a74-98f6-78b0fd18243b.csv");
+
     CallStackDiff differ =
         new CallStackDiff(
             programName,
-            "MAX_TOKEN_LENGTH",
-            "FALSE",
+            1,
+            option1,
+            stacks1,
+            option2,
+            stacks2,
             "org.apache.lucene.core.util.packed.PackedInts$MutableImpl",
             "<init>",
             "(II)V");
