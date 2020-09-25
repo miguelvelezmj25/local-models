@@ -322,14 +322,12 @@ public class CallStackDiff {
     String[] entries = fullyQualifiedMethod.split("\\.");
     StringBuilder result = new StringBuilder();
 
-    if (entries[0].startsWith(OLD_TAG) || entries[0].startsWith(NEW_TAG)) {
-      result.append(entries[0], 0, 2).append(".");
-    } else {
-      result.append(entries[0].charAt(0)).append(".");
-    }
-
-    for (int i = 1; i < (entries.length - 2); i++) {
-      result.append(entries[i].charAt(0)).append(".");
+    for (int i = 0; i < (entries.length - 2); i++) {
+      if (entries[i].startsWith(OLD_TAG) || entries[i].startsWith(NEW_TAG)) {
+        result.append(entries[i], 0, 2).append(".");
+      } else {
+        result.append(entries[i].charAt(0)).append(".");
+      }
     }
 
     String className = entries[entries.length - 2];
