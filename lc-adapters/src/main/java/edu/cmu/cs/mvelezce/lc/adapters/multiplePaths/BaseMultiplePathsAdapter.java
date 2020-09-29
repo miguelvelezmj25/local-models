@@ -1,18 +1,18 @@
-package edu.cmu.cs.mvelezce.lc.adapters.earlyReturn;
+package edu.cmu.cs.mvelezce.lc.adapters.multiplePaths;
 
 import edu.cmu.cs.mvelezce.adapters.BaseAdapter;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class BaseEarlyReturnAdapter extends BaseAdapter {
-  public static final String PROGRAM_NAME = "EarlyReturn";
+public class BaseMultiplePathsAdapter extends BaseAdapter {
+  public static final String PROGRAM_NAME = "MultiplePaths";
   public static final String ROOT_PACKAGE = "edu.cmu.cs.mvelezce.perf";
   public static final String MAIN_CLASS = ROOT_PACKAGE + "." + PROGRAM_NAME;
 
   private static final String[] OPTIONS = new String[] {"A"};
 
-  public BaseEarlyReturnAdapter() {
+  public BaseMultiplePathsAdapter() {
     super(PROGRAM_NAME, MAIN_CLASS, getListOfOptions());
   }
 
