@@ -1,0 +1,28 @@
+{
+  "stack" : [ {
+    "className" : "edu.cmu.cs.mvelezce.perf.ExpensiveCalls",
+    "methodName" : "getFactors",
+    "methodSignature" : "()V",
+    "selfTime" : 4.6718877E7
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.BarInfluence2",
+    "methodName" : "moo",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.BarInfluence2",
+    "methodName" : "bar",
+    "methodSignature" : "(I)V",
+    "selfTime" : 4787095.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.BarInfluence2",
+    "methodName" : "foo",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.BarInfluence2",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

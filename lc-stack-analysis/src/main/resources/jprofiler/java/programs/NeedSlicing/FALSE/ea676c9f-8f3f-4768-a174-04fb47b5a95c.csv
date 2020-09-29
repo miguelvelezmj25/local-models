@@ -1,0 +1,6 @@
+edu.cmu.cs.mvelezce.perf.ExpensiveCalls.getFactors()V,46.096
+edu.cmu.cs.mvelezce.perf.NeedSlicing.moo()V,0.006
+edu.cmu.cs.mvelezce.perf.NeedSlicing.bar(I)V,4.927
+edu.cmu.cs.mvelezce.perf.NeedSlicing.foo(Z)V,0
+edu.cmu.cs.mvelezce.perf.NeedSlicing.main([Ljava/lang/String;)V,0
+

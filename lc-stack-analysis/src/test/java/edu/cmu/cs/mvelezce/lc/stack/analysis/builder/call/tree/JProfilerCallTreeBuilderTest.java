@@ -5,9 +5,13 @@ import edu.cmu.cs.mvelezce.adapters.indexFiles.BaseIndexFilesAdapter;
 import edu.cmu.cs.mvelezce.adapters.measureDiskOrderedScan.BaseMeasureDiskOrderedScanAdapter;
 import edu.cmu.cs.mvelezce.adapters.runBenchC.BaseRunBenchCAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.barInfluence.BaseBarInfluenceAdapter;
+import edu.cmu.cs.mvelezce.lc.adapters.barInfluence2.BaseBarInfluence2Adapter;
 import edu.cmu.cs.mvelezce.lc.adapters.diffStacks.BaseDiffStacksAdapter;
+import edu.cmu.cs.mvelezce.lc.adapters.dummyRegion.BaseDummyRegionAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.earlyReturn.BaseEarlyReturnAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.mooInfluence.BaseMooInfluenceAdapter;
+import edu.cmu.cs.mvelezce.lc.adapters.multiplePaths.BaseMultiplePathsAdapter;
+import edu.cmu.cs.mvelezce.lc.adapters.needSlicing.BaseNeedSlicingAdapter;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -26,8 +30,30 @@ public class JProfilerCallTreeBuilderTest {
   }
 
   @Test
+  public void BarInfluence2() throws IOException, InterruptedException {
+    String programName = BaseBarInfluence2Adapter.PROGRAM_NAME;
+    JProfilerCallTreeBuilder builder =
+        new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+    builder.analyze(args);
+  }
+
+  @Test
   public void DiffStacks() throws IOException, InterruptedException {
     String programName = BaseDiffStacksAdapter.PROGRAM_NAME;
+    JProfilerCallTreeBuilder builder =
+        new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+    builder.analyze(args);
+  }
+
+  @Test
+  public void DummyRegion() throws IOException, InterruptedException {
+    String programName = BaseDummyRegionAdapter.PROGRAM_NAME;
     JProfilerCallTreeBuilder builder =
         new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
     String[] args = new String[2];
@@ -50,6 +76,28 @@ public class JProfilerCallTreeBuilderTest {
   @Test
   public void MooInfluence() throws IOException, InterruptedException {
     String programName = BaseMooInfluenceAdapter.PROGRAM_NAME;
+    JProfilerCallTreeBuilder builder =
+        new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+    builder.analyze(args);
+  }
+
+  @Test
+  public void MultiplePaths() throws IOException, InterruptedException {
+    String programName = BaseMultiplePathsAdapter.PROGRAM_NAME;
+    JProfilerCallTreeBuilder builder =
+        new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+    builder.analyze(args);
+  }
+
+  @Test
+  public void NeedSlicing() throws IOException, InterruptedException {
+    String programName = BaseNeedSlicingAdapter.PROGRAM_NAME;
     JProfilerCallTreeBuilder builder =
         new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
     String[] args = new String[2];

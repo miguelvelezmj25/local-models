@@ -1,0 +1,28 @@
+{
+  "stack" : [ {
+    "className" : "edu.cmu.cs.mvelezce.perf.ExpensiveCalls",
+    "methodName" : "getFactors",
+    "methodSignature" : "()V",
+    "selfTime" : 4431609.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.DummyRegion",
+    "methodName" : "moo",
+    "methodSignature" : "(I)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.DummyRegion",
+    "methodName" : "bar",
+    "methodSignature" : "(I)V",
+    "selfTime" : 496690.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.DummyRegion",
+    "methodName" : "foo",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.DummyRegion",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}
