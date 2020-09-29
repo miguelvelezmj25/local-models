@@ -1,0 +1,62 @@
+[
+  {
+    "packageName": "edu.cmu.cs.mvelezce.perf",
+    "className": "BarInfluence",
+    "methodSignature": "foo(Z)V",
+    "decisionIndex": 1,
+    "info": [
+      "!A",
+      "A"
+    ],
+    "id": "d9276277-3b8d-4f1c-8788-ef5abc85cf9d",
+    "startBlock": "1983706553",
+    "endBlocks": [
+      "exit"
+    ]
+  },
+  {
+    "packageName": "edu.cmu.cs.mvelezce.perf",
+    "className": "ExpensiveCalls",
+    "methodSignature": "getFactors()V",
+    "decisionIndex": -1,
+    "info": [
+      "!A",
+      "A"
+    ],
+    "id": "ca070b3b-49c5-456c-98b4-3705913d6b91",
+    "startBlock": "2096842550",
+    "endBlocks": [
+      "exit"
+    ]
+  },
+  {
+    "packageName": "edu.cmu.cs.mvelezce.perf",
+    "className": "BarInfluence",
+    "methodSignature": "checkProgress()V",
+    "decisionIndex": -1,
+    "info": [
+      "!A",
+      "A"
+    ],
+    "id": "1e4c8ccf-20cd-4304-ae7a-383cdd537c2d",
+    "startBlock": "1404612586",
+    "endBlocks": [
+      "exit"
+    ]
+  },
+  {
+    "packageName": "edu.cmu.cs.mvelezce.perf",
+    "className": "BarInfluence",
+    "methodSignature": "bar(I)V",
+    "decisionIndex": -1,
+    "info": [
+      "!A",
+      "A"
+    ],
+    "id": "01468261-928b-4a02-b8e9-dc8ace3de1c9",
+    "startBlock": "985655365",
+    "endBlocks": [
+      "exit"
+    ]
+  }
+]
