@@ -11,9 +11,12 @@ import org.apache.commons.lang3.tuple.Pair;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
 import java.util.*;
 
 public class CallStackDiff {
+
+  private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.000");
 
   public static final String OUTPUT_DIR = Options.DIRECTORY + "/diff/java/programs";
   public static final double TIME_DIFF_THRESHOLD = 0.1;
@@ -21,8 +24,10 @@ public class CallStackDiff {
   private static final String DELETION = "<span style=\"background-color: #00dcff\">${text}</span>";
   private static final String INSERTION =
       "<span style=\"background-color: #45EA85\">${text}</span>";
-  private static final String TIME_DIFF =
-      "<span style=\"background-color: #ffc061\">${text}</span>";
+  private static final String DELTA_TIME_INCREASE =
+      "<span style=\"background-color: #2de7ff\">${text}</span>";
+  private static final String DELTA_TIME_DECREASE =
+      "<span style=\"background-color: #ff9800\">${text}</span>";
   private static final String OLD_TAG = "~";
   private static final String NEW_TAG = "!";
 
@@ -69,18 +74,22 @@ public class CallStackDiff {
     Collection<File> prettyCallStacks1 = this.getPrettyCallStacks(this.optionValue1);
     Collection<File> prettyCallStacks2 = this.getPrettyCallStacks(this.optionValue2);
     Map<File, File> treesToDiff = this.getTreesToDiff(prettyCallStacks1, prettyCallStacks2);
+
+    int i = 0;
     for (Map.Entry<File, File> entry : treesToDiff.entrySet()) {
       List<String> lines1 = FileUtils.readLines(entry.getKey(), (String) null);
       List<String> lines2 = FileUtils.readLines(entry.getValue(), (String) null);
       Map<String, Pair<String, String>> allMethodsToTimes = getAllMethodsToTimes(lines1, lines2);
       List<DiffRow> diff = diffCallStacks(lines1, lines2);
       this.generateHTML(
+          i,
           this.optionValue1,
           entry.getKey().getName(),
           this.optionValue2,
           entry.getValue().getName(),
           diff,
           allMethodsToTimes);
+      i++;
     }
   }
 
@@ -217,6 +226,7 @@ public class CallStackDiff {
   }
 
   private void generateHTML(
+      int comparison,
       String optionValue1,
       String fileName1,
       String optionValue2,
@@ -224,8 +234,6 @@ public class CallStackDiff {
       List<DiffRow> rows,
       Map<String, Pair<String, String>> allMethodsToTimes)
       throws IOException {
-    // Get template & replace placeholders with left & right variables with actual
-    // comparison
     String template =
         FileUtils.readFileToString(
             new File(
@@ -233,11 +241,8 @@ public class CallStackDiff {
             "utf-8");
     String output =
         template.replace(
-            "${left}", getTable(rows, optionValue1, fileName1, false, allMethodsToTimes));
-    output =
-        output.replace(
-            "${right}", getTable(rows, optionValue2, fileName2, true, allMethodsToTimes));
-
+            "${data}",
+            getTable(rows, optionValue1, fileName1, optionValue2, fileName2, allMethodsToTimes));
     // Write file to disk.
     File outputFile =
         new File(
@@ -251,7 +256,8 @@ public class CallStackDiff {
                 + this.optionValue1
                 + "-"
                 + this.optionValue2
-                + "/");
+                + "/"
+                + comparison);
     if (!outputFile.exists() && !outputFile.mkdirs()) {
       throw new RuntimeException("Could not create directories");
     }
@@ -263,50 +269,47 @@ public class CallStackDiff {
 
   private static String getTable(
       List<DiffRow> rows,
-      String optionValue,
-      String fileName,
-      boolean right,
+      String optionValue1,
+      String fileName1,
+      String optionValue2,
+      String fileName2,
       Map<String, Pair<String, String>> allMethodsToTimes) {
     StringBuilder table = new StringBuilder();
-    table.append("<span style=\"font-weight:bold\">");
-    table.append(fileName);
-    table.append("</span>");
+    table.append("<p style=\"font-weight:bold\">");
+    table.append(fileName1);
+    table.append(" vs ");
+    table.append(fileName2);
+    table.append("</p>");
+    table.append("\n");
+    table.append("<p style=\"font-weight:bold\">");
+    table.append(optionValue1);
+    table.append(" vs ");
+    table.append(optionValue2);
+    table.append("</p>");
     table.append("\n");
     table.append("<table>");
-    table.append("<tr>");
-    table.append("<td>");
-    table.append("<span style=\"font-weight:bold\">");
-    table.append(optionValue);
-    table.append("</span>");
-    table.append("</td>");
-    table.append("</tr>");
-    table.append("\n");
     for (DiffRow row : rows) {
       table.append("<tr class=\"border_bottom\">");
       table.append("\n");
-      String line = right ? row.getNewLine() : row.getOldLine();
-      if (!line.isEmpty()) {
-        String[] entries = line.split(",");
-        entries[0] = entries[0].replaceAll("&lt;", "<");
-        entries[0] = entries[0].replaceAll("&gt;", ">");
-        String method = addBackground(compressMethod(entries[0]));
-        Pair<String, String> times = allMethodsToTimes.get(removeTags(entries[0]));
-        DiffRow timesDiff = compareTimes(times);
-        String time =
-            right
-                ? addTimeBackground(timesDiff.getNewLine(), timesDiff.getTag())
-                : addTimeBackground(timesDiff.getOldLine(), timesDiff.getTag());
-        table
-            .append("<td>")
-            .append(method)
-            .append("</td><td align =\"right\">")
-            .append(time)
-            .append("</td>")
-            .append("\n");
-      } else {
-        table.append("<td>&nbsp</td>");
-        table.append("<td>&nbsp</td>");
-      }
+      String line = row.getOldLine();
+      //      if (!line.isEmpty()) {
+      //        String[] entries = line.split(",");
+      //        entries[0] = entries[0].replaceAll("&lt;", "<");
+      //        entries[0] = entries[0].replaceAll("&gt;", ">");
+      String method = addBackground(compressMethod(line));
+      Pair<String, String> times = allMethodsToTimes.get(removeTags(line));
+      DiffRow timesDiff = compareTimes(times);
+      String time = addTimeBackground(timesDiff);
+      table.append("<td>");
+      table.append(method);
+      table.append("</td><td align =\"right\">");
+      table.append(time);
+      table.append("</td>");
+      table.append("\n");
+      //      } else {
+      //        table.append("<td>&nbsp</td>");
+      //        table.append("<td>&nbsp</td>");
+      //      }
       table.append("</tr>");
       table.append("\n");
     }
@@ -381,11 +384,23 @@ public class CallStackDiff {
     return entry;
   }
 
-  private static String addTimeBackground(String time, DiffRow.Tag tag) {
-    if (tag.equals(DiffRow.Tag.CHANGE)) {
-      return TIME_DIFF.replace("${text}", "" + time);
+  private static String addTimeBackground(DiffRow diffRow) {
+    if (!diffRow.getTag().equals(DiffRow.Tag.CHANGE)) {
+      return diffRow.getOldLine();
     }
 
-    return time;
+    String baseTime = diffRow.getOldLine();
+    String newTime = diffRow.getNewLine();
+
+    String symbol = "+";
+    String stringToReplace = DELTA_TIME_INCREASE;
+    if (Double.parseDouble(baseTime) > Double.parseDouble(newTime)) {
+      symbol = "-";
+      stringToReplace = DELTA_TIME_DECREASE;
+    }
+
+    String delta =
+        DECIMAL_FORMAT.format(Math.abs(Double.parseDouble(baseTime) - Double.parseDouble(newTime)));
+    return stringToReplace.replace("${text}", diffRow.getOldLine() + " Δ" + symbol + delta);
   }
 }

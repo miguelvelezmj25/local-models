@@ -11,8 +11,8 @@ public class BarInfluenceCallStackDiffTest {
   @Test
   public void bar_A_FALSE() throws IOException, DiffException {
     String programName = BaseBarInfluenceAdapter.PROGRAM_NAME;
-    String option1 = "A";
-    String option2 = "FALSE";
+    String option1 = "FALSE";
+    String option2 = "A";
 
     CallStackDiff differ =
         new CallStackDiff(
