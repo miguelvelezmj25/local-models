@@ -1,15 +1,15 @@
 package edu.cmu.cs.mvelezce.lc.stack.analysis.diff.region;
 
-import edu.cmu.cs.mvelezce.lc.adapters.barInfluence.BaseBarInfluenceAdapter;
+import edu.cmu.cs.mvelezce.lc.adapters.barInfluence2.BaseBarInfluence2Adapter;
 import org.junit.Test;
 
 import java.io.IOException;
 
-public class BarInfluenceCallStackSelectorTest {
+public class BarInfluence2CallStackSelectorTest {
 
   @Test
   public void getFactors_A_FALSE() throws IOException {
-    String programName = BaseBarInfluenceAdapter.PROGRAM_NAME;
+    String programName = BaseBarInfluence2Adapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
@@ -23,10 +23,10 @@ public class BarInfluenceCallStackSelectorTest {
 
   @Test
   public void bar_A_FALSE() throws IOException {
-    String programName = BaseBarInfluenceAdapter.PROGRAM_NAME;
+    String programName = BaseBarInfluence2Adapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
-            programName, "A", "FALSE", "edu.cmu.cs.mvelezce.perf.BarInfluence", "bar", "(I)");
+            programName, "A", "FALSE", "edu.cmu.cs.mvelezce.perf.BarInfluence2", "bar", "(I)");
     selector.select();
   }
 }

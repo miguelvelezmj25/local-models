@@ -1,0 +1,5 @@
+edu.cmu.cs.mvelezce.perf.ExpensiveCalls.getFactors()V,4.432
+edu.cmu.cs.mvelezce.perf.DummyRegion.moo(I)V,0
+edu.cmu.cs.mvelezce.perf.DummyRegion.bar(I)V,0.497
+edu.cmu.cs.mvelezce.perf.DummyRegion.foo(Z)V,0
+edu.cmu.cs.mvelezce.perf.DummyRegion.main([Ljava/lang/String;)V,0

@@ -1,0 +1,5 @@
+edu.cmu.cs.mvelezce.perf.ExpensiveCalls.getFactors()V,4.492
+edu.cmu.cs.mvelezce.perf.BarInfluence2.moo()V,0
+edu.cmu.cs.mvelezce.perf.BarInfluence2.bar(I)V,0.484
+edu.cmu.cs.mvelezce.perf.BarInfluence2.foo(Z)V,0
+edu.cmu.cs.mvelezce.perf.BarInfluence2.main([Ljava/lang/String;)V,0

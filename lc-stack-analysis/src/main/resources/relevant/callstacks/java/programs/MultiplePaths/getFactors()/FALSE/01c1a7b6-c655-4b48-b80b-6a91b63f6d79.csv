@@ -1,0 +1,4 @@
+edu.cmu.cs.mvelezce.perf.ExpensiveCalls.getFactors()V,4.502
+edu.cmu.cs.mvelezce.perf.MultiplePaths.bar()V,0.548
+edu.cmu.cs.mvelezce.perf.MultiplePaths.foo(Z)V,0
+edu.cmu.cs.mvelezce.perf.MultiplePaths.main([Ljava/lang/String;)V,0

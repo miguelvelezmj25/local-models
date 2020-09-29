@@ -8,6 +8,20 @@ import java.io.IOException;
 public class EarlyReturnCallStackSelectorTest {
 
   @Test
+  public void getFactors_A_FALSE() throws IOException {
+    String programName = BaseEarlyReturnAdapter.PROGRAM_NAME;
+    CallStackSelector selector =
+        new CallStackSelector(
+            programName,
+            "A",
+            "FALSE",
+            "edu.cmu.cs.mvelezce.perf.ExpensiveCalls",
+            "getFactors",
+            "()");
+    selector.select();
+  }
+
+  @Test
   public void moo_A_FALSE() throws IOException {
     String programName = BaseEarlyReturnAdapter.PROGRAM_NAME;
     CallStackSelector selector =

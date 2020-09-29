@@ -4,6 +4,7 @@ import com.github.difflib.algorithm.DiffException;
 import com.github.difflib.text.DiffRow;
 import com.github.difflib.text.DiffRowGenerator;
 import edu.cmu.cs.mvelezce.lc.stack.analysis.diff.region.CallStackSelector;
+import edu.cmu.cs.mvelezce.region.java.JavaRegion;
 import edu.cmu.cs.mvelezce.utils.config.Options;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.tuple.Pair;
@@ -28,12 +29,15 @@ public class CallStackDiff {
       "<span style=\"background-color: #2de7ff\">${text}</span>";
   private static final String DELTA_TIME_DECREASE =
       "<span style=\"background-color: #ff9800\">${text}</span>";
+  private static final String REGION = "<span style=\"background-color: #00ff89\">${text}</span>";
+
   private static final String OLD_TAG = "~";
   private static final String NEW_TAG = "!";
 
   private final String programName;
   private final String optionValue1;
   private final String optionValue2;
+  private final Set<JavaRegion> regions;
   private final String className;
   private final String methodName;
   private final String methodSignature;
@@ -42,12 +46,14 @@ public class CallStackDiff {
       String programName,
       String optionValue1,
       String optionValue2,
+      Set<JavaRegion> regions,
       String className,
       String methodName,
       String methodSignature) {
     this.programName = programName;
     this.optionValue1 = optionValue1;
     this.optionValue2 = optionValue2;
+    this.regions = regions;
     this.className = className;
     this.methodName = methodName;
     this.methodSignature = methodSignature;
@@ -63,6 +69,16 @@ public class CallStackDiff {
       String className,
       String methodName,
       String methodSignature) {
+    throw new UnsupportedOperationException("delete this constructor");
+  }
+
+  public CallStackDiff(
+      String programName,
+      String defrag_always,
+      String aFalse,
+      String s,
+      String compact,
+      String s1) {
     throw new UnsupportedOperationException("delete this constructor");
   }
 
@@ -267,7 +283,7 @@ public class CallStackDiff {
     }
   }
 
-  private static String getTable(
+  private String getTable(
       List<DiffRow> rows,
       String optionValue1,
       String fileName1,
@@ -297,12 +313,14 @@ public class CallStackDiff {
       //        entries[0] = entries[0].replaceAll("&lt;", "<");
       //        entries[0] = entries[0].replaceAll("&gt;", ">");
       String method = addBackground(compressMethod(line));
+      table.append("<td>");
+      method = this.addRegionBackground(line, method);
+      table.append(method);
+      table.append("</td>");
+      table.append("<td align =\"right\">");
       Pair<String, String> times = allMethodsToTimes.get(removeTags(line));
       DiffRow timesDiff = compareTimes(times);
       String time = addTimeBackground(timesDiff);
-      table.append("<td>");
-      table.append(method);
-      table.append("</td><td align =\"right\">");
       table.append(time);
       table.append("</td>");
       table.append("\n");
@@ -316,6 +334,26 @@ public class CallStackDiff {
     table.append("</table>");
     table.append("\n");
     return table.toString();
+  }
+
+  private boolean isRegion(String method) {
+    for (JavaRegion region : this.regions) {
+      if (!method.startsWith(region.getRegionPackage())) {
+        continue;
+      }
+
+      String className = method.replace(region.getRegionPackage() + ".", "");
+      if (!className.startsWith(region.getRegionClass())) {
+        continue;
+      }
+
+      String methodSignature = className.replace(region.getRegionClass() + ".", "");
+      if (methodSignature.equals(region.getRegionMethodSignature())) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   private static DiffRow compareTimes(Pair<String, String> times) {
@@ -368,6 +406,14 @@ public class CallStackDiff {
     }
 
     return entry;
+  }
+
+  private String addRegionBackground(String line, String method) {
+    if (this.isRegion(line)) {
+      return REGION.replace("${text}", method);
+    }
+
+    return method;
   }
 
   private static String addBackground(String entry) {
