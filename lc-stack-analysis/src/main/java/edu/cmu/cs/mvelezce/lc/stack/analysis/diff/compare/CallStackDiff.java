@@ -259,7 +259,6 @@ public class CallStackDiff {
         template.replace(
             "${data}",
             getTable(rows, optionValue1, fileName1, optionValue2, fileName2, allMethodsToTimes));
-    // Write file to disk.
     File outputFile =
         new File(
             OUTPUT_DIR
@@ -303,8 +302,10 @@ public class CallStackDiff {
     table.append(optionValue2);
     table.append("</p>");
     table.append("\n");
-    table.append("<table>");
-    for (DiffRow row : rows) {
+    table.append("<table style=\"width: 100%\">");
+    table.append("\n");
+    for (int i = 0; i < rows.size(); i++) {
+      DiffRow row = rows.get(i);
       table.append("<tr class=\"border_bottom\">");
       table.append("\n");
       String line = row.getOldLine();
@@ -314,9 +315,10 @@ public class CallStackDiff {
       //        entries[0] = entries[0].replaceAll("&gt;", ">");
       String method = addBackground(compressMethod(line));
       table.append("<td>");
-      method = this.addRegionBackground(line, method);
+      method = this.addRegionBackground(i, line, method);
       table.append(method);
       table.append("</td>");
+      table.append("\n");
       table.append("<td align =\"right\">");
       Pair<String, String> times = allMethodsToTimes.get(removeTags(line));
       DiffRow timesDiff = compareTimes(times);
@@ -408,7 +410,11 @@ public class CallStackDiff {
     return entry;
   }
 
-  private String addRegionBackground(String line, String method) {
+  private String addRegionBackground(int iter, String line, String method) {
+    for (int i = 0; i < iter; i++) {
+      method = " | " + method;
+    }
+
     if (this.isRegion(line)) {
       return REGION.replace("${text}", method);
     }
