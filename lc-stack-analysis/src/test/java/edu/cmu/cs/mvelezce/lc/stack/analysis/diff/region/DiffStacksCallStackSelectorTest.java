@@ -15,4 +15,18 @@ public class DiffStacksCallStackSelectorTest {
             programName, "A", "FALSE", "edu.cmu.cs.mvelezce.perf.DiffStacks", "foo", "(Z)");
     selector.select();
   }
+
+  @Test
+  public void getFactors_A_FALSE() throws IOException {
+    String programName = BaseDiffStacksAdapter.PROGRAM_NAME;
+    CallStackSelector selector =
+        new CallStackSelector(
+            programName,
+            "A",
+            "FALSE",
+            "edu.cmu.cs.mvelezce.perf.ExpensiveCalls",
+            "getFactors",
+            "()");
+    selector.select();
+  }
 }
