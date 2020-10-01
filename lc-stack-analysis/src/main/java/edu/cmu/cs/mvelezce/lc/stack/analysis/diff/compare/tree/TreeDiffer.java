@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.UUID;
 
 public class TreeDiffer {
 
@@ -54,6 +55,7 @@ public class TreeDiffer {
 
     Graphviz.useEngine(new GraphvizCmdLineEngine());
     String dotString = this.toDotString();
+    System.out.println(dotString);
     Graphviz graphviz = Graphviz.fromString(dotString);
     File rootDir =
         new File(
@@ -116,9 +118,9 @@ public class TreeDiffer {
       dotString.append(node.getShortMethodName());
       dotString.append("\"");
       dotString.append(" [");
-      dotString.append(" shape=record ");
+      dotString.append(" shape=box ");
       if (node.isRegion()) {
-        dotString.append("style=filled, fillcolor=\"");
+        dotString.append("style=filled fillcolor=\"");
         dotString.append(CallTreeBuilder.REGION_NODE_COLOR);
         dotString.append("\"");
       }
@@ -144,28 +146,73 @@ public class TreeDiffer {
     String edgeColor = CallTreeBuilder.getRandomColor(callTree.hashCode());
     for (Node node : callTree.getNodes()) {
       for (Node calleer : node.getCallers()) {
-        dotString.append("\"");
-        dotString.append(node.getShortMethodName());
-        dotString.append("\"");
-        dotString.append(" -> ");
-        dotString.append("\"");
-        dotString.append(calleer.getShortMethodName());
-        dotString.append("\"");
-        dotString.append(" [");
-        dotString.append(" dir=back ");
-        dotString.append(" color=\"");
-        dotString.append(edgeColor);
-        dotString.append("\" ");
-
+        UUID timeInfoNode = null;
         if (!calleer.getTime().isEmpty()) {
-          dotString.append(" label=\"  ");
+          timeInfoNode = UUID.randomUUID();
+          dotString.append("\"");
+          dotString.append(timeInfoNode);
+          dotString.append("\"");
+          dotString.append(" [");
+          dotString.append(" label=\"");
           dotString.append(calleer.getTime());
           dotString.append("s ");
           dotString.append(optionValue);
-          dotString.append("\" ");
+          dotString.append("\"");
+          dotString.append(" shape=box style=\"dashed\" ");
+          dotString.append(" ];\n");
         }
 
-        dotString.append("];");
+        if (timeInfoNode == null) {
+          dotString.append("\"");
+          dotString.append(node.getShortMethodName());
+          dotString.append("\"");
+          dotString.append(" -> ");
+          dotString.append("\"");
+          dotString.append(calleer.getShortMethodName());
+          dotString.append("\"");
+          dotString.append(" [");
+          dotString.append(" dir=back ");
+          dotString.append(" color=\"");
+          dotString.append(edgeColor);
+          dotString.append("\" ");
+          dotString.append("];");
+        } else {
+          dotString.append("\"");
+          dotString.append(node.getShortMethodName());
+          dotString.append("\"");
+          dotString.append(" -> ");
+          dotString.append("\"");
+          dotString.append(timeInfoNode);
+          dotString.append("\"");
+          dotString.append(" [");
+          dotString.append(" dir=back ");
+          dotString.append(" color=\"");
+          dotString.append(edgeColor);
+          dotString.append("\" ");
+          dotString.append("];\n");
+
+          dotString.append("\"");
+          dotString.append(timeInfoNode);
+          dotString.append("\"");
+          dotString.append(" -> ");
+          dotString.append("\"");
+          dotString.append(calleer.getShortMethodName());
+          dotString.append("\"");
+          dotString.append(" [");
+          dotString.append(" dir=back ");
+          dotString.append(" color=\"");
+          dotString.append(edgeColor);
+          dotString.append("\" ");
+          dotString.append("];");
+        }
+
+        //        if (!calleer.getTime().isEmpty()) {
+        //          dotString.append(" label=\"  ");
+        //          dotString.append(calleer.getTime());
+        //          dotString.append("s ");
+        //          dotString.append(optionValue);
+        //          dotString.append("\" ");
+        //        }
         dotString.append("\n");
       }
     }

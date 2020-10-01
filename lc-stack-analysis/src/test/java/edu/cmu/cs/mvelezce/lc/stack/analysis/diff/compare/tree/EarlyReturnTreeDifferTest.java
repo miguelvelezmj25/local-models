@@ -1,6 +1,5 @@
 package edu.cmu.cs.mvelezce.lc.stack.analysis.diff.compare.tree;
 
-import com.github.difflib.algorithm.DiffException;
 import edu.cmu.cs.mvelezce.explorer.idta.partition.Partitioning;
 import edu.cmu.cs.mvelezce.instrument.idta.IDTATimerInstrumenter;
 import edu.cmu.cs.mvelezce.instrument.region.instrumenter.BaseRegionInstrumenter;
@@ -14,7 +13,7 @@ import java.util.Set;
 public class EarlyReturnTreeDifferTest {
 
   @Test
-  public void getFactors_A_FALSE() throws IOException, DiffException {
+  public void getFactors_A_FALSE() throws IOException {
     String programName = BaseEarlyReturnAdapter.PROGRAM_NAME;
     String option1 = "FALSE";
     String option2 = "A";

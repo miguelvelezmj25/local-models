@@ -1,6 +1,5 @@
 package edu.cmu.cs.mvelezce.lc.stack.analysis.diff.compare.tree;
 
-import com.github.difflib.algorithm.DiffException;
 import edu.cmu.cs.mvelezce.explorer.idta.partition.Partitioning;
 import edu.cmu.cs.mvelezce.instrument.idta.IDTATimerInstrumenter;
 import edu.cmu.cs.mvelezce.instrument.region.instrumenter.BaseRegionInstrumenter;
