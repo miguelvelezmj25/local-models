@@ -27,7 +27,7 @@ public class EarlyReturnCallTreeBuilderTest {
             "getFactors",
             "()");
     builder.buildCallTree();
-    System.out.println(builder.toDotString());
+    builder.saveGraph();
   }
 
   @Test
@@ -45,6 +45,6 @@ public class EarlyReturnCallTreeBuilderTest {
             "getFactors",
             "()");
     builder.buildCallTree();
-    System.out.println(builder.toDotString());
+    builder.saveGraph();
   }
 }

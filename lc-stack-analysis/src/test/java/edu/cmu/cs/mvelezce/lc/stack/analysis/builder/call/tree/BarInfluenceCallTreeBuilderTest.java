@@ -22,7 +22,7 @@ public class BarInfluenceCallTreeBuilderTest {
         new CallTreeBuilder(
             programName, "FALSE", regions, "edu.cmu.cs.mvelezce.perf.BarInfluence", "bar", "(I)");
     builder.buildCallTree();
-    System.out.println(builder.toDotString());
+    builder.saveGraph();
   }
 
   @Test
@@ -35,6 +35,6 @@ public class BarInfluenceCallTreeBuilderTest {
         new CallTreeBuilder(
             programName, "A", regions, "edu.cmu.cs.mvelezce.perf.BarInfluence", "bar", "(I)");
     builder.buildCallTree();
-    System.out.println(builder.toDotString());
+    builder.saveGraph();
   }
 }

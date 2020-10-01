@@ -102,6 +102,11 @@
             <artifactId>org.sat4j.core</artifactId>
             <version>2.3.1</version>
         </dependency>
+        <dependency>
+            <groupId>guru.nidi</groupId>
+            <artifactId>graphviz-java</artifactId>
+            <version>0.17.0</version>
+        </dependency>
     </dependencies>
 
     <build>

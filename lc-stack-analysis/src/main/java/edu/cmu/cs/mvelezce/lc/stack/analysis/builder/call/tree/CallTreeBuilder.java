@@ -5,6 +5,9 @@ import edu.cmu.cs.mvelezce.lc.stack.analysis.diff.tree.CallTree;
 import edu.cmu.cs.mvelezce.lc.stack.analysis.diff.tree.Node;
 import edu.cmu.cs.mvelezce.region.java.JavaRegion;
 import edu.cmu.cs.mvelezce.utils.config.Options;
+import guru.nidi.graphviz.engine.Graphviz;
+import guru.nidi.graphviz.engine.GraphvizCmdLineEngine;
+import guru.nidi.graphviz.engine.Rasterizer;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -16,7 +19,6 @@ public class CallTreeBuilder {
   public static final String OUTPUT_DIR = Options.DIRECTORY + "/tree/java/programs";
 
   private static final String REGION_NODE_COLOR = "#00dcff";
-  private static final Random RANDOM_EDGE_COLOR = new Random(25);
 
   private final CallTree callTree = new CallTree();
   private final Set<CallTree> allCallTrees = new HashSet<>();
@@ -106,7 +108,7 @@ public class CallTreeBuilder {
     }
 
     for (CallTree callTree : this.allCallTrees) {
-      String edgeColor = getRandomColor();
+      String edgeColor = getRandomColor(callTree.hashCode());
       for (Node node : callTree.getNodes()) {
         for (Node calleer : node.getCallers()) {
           dotString.append("\"");
@@ -141,13 +143,48 @@ public class CallTreeBuilder {
     return dotString.toString();
   }
 
-  private String getRandomColor() {
-    int nextInt = RANDOM_EDGE_COLOR.nextInt(0xffffff + 1);
-    return String.format("#%06x", nextInt);
+  public void saveGraph() throws IOException {
+    this.clearRootDir();
+
+    Graphviz.useEngine(new GraphvizCmdLineEngine());
+    String dotString = this.toDotString();
+    Graphviz graphviz = Graphviz.fromString(dotString);
+    File rootDir =
+        new File(
+            OUTPUT_DIR
+                + "/"
+                + this.programName
+                + "/"
+                + this.methodName
+                + this.methodSignature
+                + "/"
+                + this.optionValue);
+    graphviz
+        .basedir(rootDir)
+        .rasterize(Rasterizer.builtIn("pdf"))
+        .toFile(new File(rootDir, this.optionValue));
   }
 
-  public String saveGraph() {
-    throw new UnsupportedOperationException("Implement");
+  private void clearRootDir() throws IOException {
+    File rootDit =
+        new File(
+            OUTPUT_DIR
+                + "/"
+                + this.programName
+                + "/"
+                + this.methodName
+                + this.methodSignature
+                + "/"
+                + this.optionValue);
+    if (rootDit.exists()) {
+      FileUtils.cleanDirectory(rootDit);
+    }
+  }
+
+  private String getRandomColor(long seed) {
+    Random random = new Random(seed);
+    int nextInt = random.nextInt(0xffffff + 1);
+    return String.format("#%06x", nextInt);
   }
 
   private Collection<File> getPrettyCallStacks(String optionValue) {
