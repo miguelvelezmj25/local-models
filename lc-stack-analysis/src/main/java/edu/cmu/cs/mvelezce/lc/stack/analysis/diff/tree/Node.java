@@ -11,6 +11,7 @@ public class Node {
   private final String method;
   private final String time;
   private final boolean isRegion;
+  private final boolean isSpecial;
   private final Set<Node> callers = new HashSet<>();
   private final Set<Node> callees = new HashSet<>();
 
@@ -19,6 +20,7 @@ public class Node {
     this.method = builder.method;
     this.time = builder.time;
     this.isRegion = builder.isRegion;
+    this.isSpecial = builder.isSpecial;
   }
 
   public static Node from(String callStackEntry, Set<JavaRegion> regions) {
@@ -56,17 +58,60 @@ public class Node {
     this.callees.add(callee);
   }
 
+  public String getShortMethodName() {
+    if (this.isSpecial) {
+      return id;
+    }
+
+    String[] entries = this.method.split("\\.");
+    StringBuilder result = new StringBuilder();
+    for (int i = 0; i < (entries.length - 2); i++) {
+      result.append(entries[i].charAt(0)).append(".");
+    }
+
+    String className = entries[entries.length - 2];
+    className = className.substring(0, Math.min(className.length(), 30));
+    result.append(className).append(".");
+
+    String methodName = entries[entries.length - 1];
+    int methodSignatureEncoded = methodName.hashCode();
+    methodName = methodName.substring(0, Math.min(methodName.indexOf("("), 30));
+    methodName = methodName.replaceAll("<", "[");
+    methodName = methodName.replaceAll(">", "]");
+    result.append(methodName).append("(").append(methodSignatureEncoded).append(")");
+
+    return result.toString();
+  }
+
+  public String getTime() {
+    return time;
+  }
+
+  public Set<Node> getCallers() {
+    return callers;
+  }
+
+  public boolean isSpecial() {
+    return isSpecial;
+  }
+
+  public boolean isRegion() {
+    return isRegion;
+  }
+
   public static class Builder {
     private final String id;
     private final String method;
     private final String time;
     private final boolean isRegion;
+    private final boolean isSpecial;
 
     public Builder(String id) {
       this.id = id;
       this.method = "";
       this.time = "";
       this.isRegion = false;
+      this.isSpecial = true;
     }
 
     public Builder(String method, String time, boolean isRegion) {
@@ -74,6 +119,7 @@ public class Node {
       this.time = time;
       this.id = String.valueOf(this.method.hashCode());
       this.isRegion = isRegion;
+      this.isSpecial = false;
     }
 
     public Node build() {
