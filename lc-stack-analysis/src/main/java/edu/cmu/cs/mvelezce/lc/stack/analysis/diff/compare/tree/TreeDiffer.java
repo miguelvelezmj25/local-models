@@ -26,6 +26,8 @@ public class TreeDiffer {
   private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.00");
 
   public static final String OUTPUT_DIR = Options.DIRECTORY + "/tree/diff/java/programs";
+  public static final String UNIQUE_TRACE_COLOR = "#FF9E9B";
+  public static final String DIFF_TIME_COLOR = "#FFDC7D";
 
   private final CallTreeBuilder callTreeBuilder1;
   private final CallTreeBuilder callTreeBuilder2;
@@ -119,7 +121,6 @@ public class TreeDiffer {
 
     Graphviz.useEngine(new GraphvizCmdLineEngine());
     String dotString = this.toDotString(equalStacks);
-    System.out.println(dotString);
     Graphviz graphviz = Graphviz.fromString(dotString);
     File rootDir =
         new File(
@@ -240,23 +241,49 @@ public class TreeDiffer {
         UUID timeInfoNode = null;
         if (!calleer.getTime().isEmpty()) {
           timeInfoNode = UUID.randomUUID();
+
+          int maxLength = DECIMAL_FORMAT.format(calleer.getTimeDouble()).length();
+          if (equalCallTree != null) {
+            maxLength =
+                Math.max(
+                    maxLength,
+                    DECIMAL_FORMAT.format(equalNodes.get(calleer).getTimeDouble()).length());
+          }
+
           dotString.append("\"");
           dotString.append(timeInfoNode);
           dotString.append("\"");
           dotString.append(" [");
           dotString.append(" label=\"");
-          dotString.append(DECIMAL_FORMAT.format(calleer.getTimeDouble()));
+          dotString.append(
+              String.format("%" + maxLength + "s", DECIMAL_FORMAT.format(calleer.getTimeDouble())));
           dotString.append("s ");
           dotString.append(optionValue1);
           dotString.append("\\l");
           if (equalCallTree != null) {
-            dotString.append(DECIMAL_FORMAT.format(equalNodes.get(calleer).getTimeDouble()));
+            dotString.append(
+                String.format(
+                    "%" + maxLength + "s",
+                    DECIMAL_FORMAT.format(equalNodes.get(calleer).getTimeDouble())));
             dotString.append("s ");
             dotString.append(optionValue2);
             dotString.append("\\l");
           }
           dotString.append("\"");
-          dotString.append(" shape=box style=\"dashed\" ");
+          dotString.append(" shape=box style=\"dashed, filled\" fillcolor=\"");
+          if (equalCallTree == null) {
+            dotString.append(UNIQUE_TRACE_COLOR);
+          } else {
+            double nodeTime = calleer.getTimeDouble();
+            double equalNodeTime = equalNodes.get(calleer).getTimeDouble();
+            if (Math.abs(nodeTime - equalNodeTime) > 0.1) {
+              dotString.append(DIFF_TIME_COLOR);
+            } else {
+              dotString.append("white");
+            }
+          }
+
+          dotString.append("\" ");
           dotString.append(" ];\n");
         }
 

@@ -18,7 +18,7 @@ public class CallTreeBuilder {
 
   public static final String OUTPUT_DIR = Options.DIRECTORY + "/tree/java/programs";
 
-  public static final String REGION_NODE_COLOR = "#00dcff";
+  public static final String REGION_NODE_COLOR = "#00DCFF";
 
   private final CallTree callTree = new CallTree();
   private final Set<CallTree> allCallTrees = new HashSet<>();
