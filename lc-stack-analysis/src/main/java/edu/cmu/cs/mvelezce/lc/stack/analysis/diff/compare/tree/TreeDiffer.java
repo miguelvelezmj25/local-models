@@ -1,5 +1,8 @@
 package edu.cmu.cs.mvelezce.lc.stack.analysis.diff.compare.tree;
 
+import com.github.difflib.algorithm.DiffException;
+import com.github.difflib.text.DiffRow;
+import com.github.difflib.text.DiffRowGenerator;
 import edu.cmu.cs.mvelezce.lc.stack.analysis.builder.call.tree.CallTreeBuilder;
 import edu.cmu.cs.mvelezce.lc.stack.analysis.diff.tree.CallTree;
 import edu.cmu.cs.mvelezce.lc.stack.analysis.diff.tree.DiffTree;
@@ -10,15 +13,17 @@ import guru.nidi.graphviz.engine.Graphviz;
 import guru.nidi.graphviz.engine.GraphvizCmdLineEngine;
 import guru.nidi.graphviz.engine.Rasterizer;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.tuple.Pair;
 
+import javax.annotation.Nullable;
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
+import java.text.DecimalFormat;
+import java.util.*;
 
 public class TreeDiffer {
+
+  private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.00");
 
   public static final String OUTPUT_DIR = Options.DIRECTORY + "/tree/diff/java/programs";
 
@@ -42,19 +47,78 @@ public class TreeDiffer {
             programName, optionValue2, regions, className, methodName, methodSignature);
   }
 
-  public void diff() throws IOException {
+  public void diff() throws IOException, DiffException {
     CallTree callTree1 = this.callTreeBuilder1.buildCallTree();
     CallTree callTree2 = this.callTreeBuilder2.buildCallTree();
     this.buildDiffTree(callTree1);
     this.buildDiffTree(callTree2);
-    this.saveGraph();
+    Set<Pair<CallTree, CallTree>> equalStacks = this.getEqualStacks();
+    this.saveGraph(equalStacks);
   }
 
-  public void saveGraph() throws IOException {
+  private Set<Pair<CallTree, CallTree>> getEqualStacks() throws DiffException {
+    Set<Pair<CallTree, CallTree>> equalStacks = new HashSet<>();
+    Set<CallTree> equalCallTrees = new HashSet<>();
+    for (CallTree callTree1 : this.callTreeBuilder1.getAllCallTrees()) {
+      if (equalCallTrees.contains(callTree1)) {
+        continue;
+      }
+
+      List<String> callStack1 = callTree1.getCallStack();
+      for (CallTree callTree2 : this.callTreeBuilder2.getAllCallTrees()) {
+        if (equalCallTrees.contains(callTree2)) {
+          continue;
+        }
+
+        List<String> callStack2 = callTree2.getCallStack();
+        if (!this.sameCallStackRoot(callStack1, callStack2)) {
+          continue;
+        }
+
+        List<DiffRow> diffs = this.diffCallStacks(callStack1, callStack2);
+        boolean equalTraces = true;
+        for (DiffRow diff : diffs) {
+          if (!diff.getTag().equals(DiffRow.Tag.EQUAL)) {
+            equalTraces = false;
+            break;
+          }
+        }
+
+        if (equalTraces) {
+          equalStacks.add(Pair.of(callTree1, callTree2));
+          equalCallTrees.add(callTree1);
+          equalCallTrees.add(callTree2);
+        }
+      }
+    }
+
+    return equalStacks;
+  }
+
+  private boolean sameCallStackRoot(List<String> lines1, List<String> lines2) {
+    String root1 = lines1.get(lines1.size() - 1).split(",")[0];
+    String root2 = lines2.get(lines2.size() - 1).split(",")[0];
+    return root1.equals(root2);
+  }
+
+  private List<DiffRow> diffCallStacks(List<String> callStack1, List<String> callStack2)
+      throws DiffException {
+    DiffRowGenerator generator =
+        DiffRowGenerator.create()
+            .showInlineDiffs(true)
+            .inlineDiffByWord(true)
+            //            .oldTag(f -> OLD_TAG)
+            //            .newTag(f -> NEW_TAG)
+            .build();
+
+    return generator.generateDiffRows(callStack1, callStack2);
+  }
+
+  public void saveGraph(Set<Pair<CallTree, CallTree>> equalStacks) throws IOException {
     this.clearRootDir();
 
     Graphviz.useEngine(new GraphvizCmdLineEngine());
-    String dotString = this.toDotString();
+    String dotString = this.toDotString(equalStacks);
     System.out.println(dotString);
     Graphviz graphviz = Graphviz.fromString(dotString);
     File rootDir =
@@ -109,7 +173,7 @@ public class TreeDiffer {
     }
   }
 
-  public String toDotString() {
+  public String toDotString(Set<Pair<CallTree, CallTree>> equalStacks) {
     StringBuilder dotString =
         new StringBuilder("digraph " + this.callTreeBuilder1.getMethodName() + " {\n");
     Set<Node> nodes = this.diffTree.getNodes();
@@ -129,11 +193,31 @@ public class TreeDiffer {
       dotString.append("\n");
     }
 
+    Set<CallTree> processedCallTrees = new HashSet<>();
     for (CallTree callTree : this.callTreeBuilder1.getAllCallTrees()) {
-      dotString.append(this.processEdges(callTree, this.callTreeBuilder1.getOptionValue()));
+      if (processedCallTrees.contains(callTree)) {
+        continue;
+      }
+      dotString.append(
+          this.processEdges(
+              callTree,
+              equalStacks,
+              this.callTreeBuilder1.getOptionValue(),
+              this.callTreeBuilder2.getOptionValue(),
+              processedCallTrees));
     }
+
     for (CallTree callTree : this.callTreeBuilder2.getAllCallTrees()) {
-      dotString.append(this.processEdges(callTree, this.callTreeBuilder2.getOptionValue()));
+      if (processedCallTrees.contains(callTree)) {
+        continue;
+      }
+      dotString.append(
+          this.processEdges(
+              callTree,
+              equalStacks,
+              this.callTreeBuilder2.getOptionValue(),
+              this.callTreeBuilder1.getOptionValue(),
+              processedCallTrees));
     }
 
     dotString.append("}");
@@ -141,8 +225,15 @@ public class TreeDiffer {
     return dotString.toString();
   }
 
-  private String processEdges(CallTree callTree, String optionValue) {
+  private String processEdges(
+      CallTree callTree,
+      Set<Pair<CallTree, CallTree>> equalStacks,
+      String optionValue1,
+      String optionValue2,
+      Set<CallTree> processedCallTrees) {
     StringBuilder dotString = new StringBuilder();
+    CallTree equalCallTree = this.getEqualCallTree(callTree, equalStacks);
+    Map<Node, Node> equalNodes = this.getEqualNodes(callTree, equalCallTree);
     String edgeColor = CallTreeBuilder.getRandomColor(callTree.hashCode());
     for (Node node : callTree.getNodes()) {
       for (Node calleer : node.getCallers()) {
@@ -154,9 +245,16 @@ public class TreeDiffer {
           dotString.append("\"");
           dotString.append(" [");
           dotString.append(" label=\"");
-          dotString.append(calleer.getTime());
+          dotString.append(DECIMAL_FORMAT.format(calleer.getTimeDouble()));
           dotString.append("s ");
-          dotString.append(optionValue);
+          dotString.append(optionValue1);
+          dotString.append("\\l");
+          if (equalCallTree != null) {
+            dotString.append(DECIMAL_FORMAT.format(equalNodes.get(calleer).getTimeDouble()));
+            dotString.append("s ");
+            dotString.append(optionValue2);
+            dotString.append("\\l");
+          }
           dotString.append("\"");
           dotString.append(" shape=box style=\"dashed\" ");
           dotString.append(" ];\n");
@@ -199,24 +297,69 @@ public class TreeDiffer {
           dotString.append(calleer.getShortMethodName());
           dotString.append("\"");
           dotString.append(" [");
-          dotString.append(" dir=back ");
+          dotString.append(" style=dashed dir=back ");
           dotString.append(" color=\"");
           dotString.append(edgeColor);
           dotString.append("\" ");
           dotString.append("];");
         }
 
-        //        if (!calleer.getTime().isEmpty()) {
-        //          dotString.append(" label=\"  ");
-        //          dotString.append(calleer.getTime());
-        //          dotString.append("s ");
-        //          dotString.append(optionValue);
-        //          dotString.append("\" ");
-        //        }
         dotString.append("\n");
       }
     }
+
+    processedCallTrees.add(callTree);
+    if (equalCallTree != null) {
+      processedCallTrees.add(equalCallTree);
+    }
+
     return dotString.toString();
+  }
+
+  private Map<Node, Node> getEqualNodes(CallTree callTree, @Nullable CallTree equalCallTree) {
+    if (equalCallTree == null) {
+      return new HashMap<>();
+    }
+    Map<Node, Node> equalNodes = new HashMap<>();
+    for (Node node : callTree.getNodes()) {
+      if (node.equals(callTree.getStartNode())) {
+        equalNodes.put(node, equalCallTree.getStartNode());
+      } else if (node.equals(callTree.getEndNode())) {
+        equalNodes.put(node, equalCallTree.getEndNode());
+      } else {
+        for (Node equalNode : equalCallTree.getNodes()) {
+          if (equalNodes.containsValue(equalNode)) {
+            continue;
+          }
+
+          if (node.getId().equals(equalNode.getId())) {
+            equalNodes.put(node, equalNode);
+          }
+        }
+      }
+    }
+
+    if (equalNodes.size() != callTree.getNodes().size()
+        || equalNodes.size() != equalCallTree.getNodes().size()) {
+      throw new RuntimeException("There are some nodes that we could not find their equal nodes");
+    }
+
+    return equalNodes;
+  }
+
+  @Nullable
+  private CallTree getEqualCallTree(CallTree callTree, Set<Pair<CallTree, CallTree>> equalStacks) {
+    for (Pair<CallTree, CallTree> pair : equalStacks) {
+      if (pair.getLeft().equals(callTree)) {
+        return pair.getRight();
+      }
+
+      if (pair.getRight().equals(callTree)) {
+        return pair.getLeft();
+      }
+    }
+
+    return null;
   }
 
   private Map<Node, Node> getEquivNodes(DiffTree diffTree, CallTree callTree) {

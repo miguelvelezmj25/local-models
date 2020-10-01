@@ -91,6 +91,10 @@ public class Node {
     return time;
   }
 
+  public double getTimeDouble() {
+    return Double.parseDouble(time);
+  }
+
   public Set<Node> getCallers() {
     return callers;
   }
@@ -101,6 +105,14 @@ public class Node {
 
   public boolean isRegion() {
     return isRegion;
+  }
+
+  public String getMethod() {
+    return method;
+  }
+
+  public String getId() {
+    return id;
   }
 
   public static class Builder {

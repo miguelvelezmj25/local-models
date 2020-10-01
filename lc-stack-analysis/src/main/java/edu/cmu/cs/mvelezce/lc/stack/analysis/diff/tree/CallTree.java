@@ -1,6 +1,8 @@
 package edu.cmu.cs.mvelezce.lc.stack.analysis.diff.tree;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class CallTree {
@@ -32,6 +34,24 @@ public class CallTree {
 
     fromNode.addCalleer(toNode);
     toNode.addCallee(fromNode);
+  }
+
+  public List<String> getCallStack() {
+    List<String> callStack = new ArrayList<>();
+    Node currentNode = this.end;
+    while (!currentNode.equals(this.start)) {
+      Set<Node> callers = currentNode.getCallers();
+      if (callers.size() != 1) {
+        throw new RuntimeException("There are multiple callers in this call tree");
+      }
+
+      Node caller = callers.iterator().next();
+      if (!caller.equals(this.start)) {
+        callStack.add(caller.getMethod());
+      }
+      currentNode = caller;
+    }
+    return callStack;
   }
 
   public Set<Node> getNodes() {
