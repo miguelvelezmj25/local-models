@@ -30,6 +30,10 @@ public class Node {
     return new Builder(method, time, isRegion(method, regions)).build();
   }
 
+  public static Node from(Node callNode) {
+    return new Builder(callNode.method, callNode.time, callNode.isRegion).build();
+  }
+
   public static boolean isRegion(String method, Set<JavaRegion> regions) {
     for (JavaRegion region : regions) {
       if (!method.startsWith(region.getRegionPackage())) {

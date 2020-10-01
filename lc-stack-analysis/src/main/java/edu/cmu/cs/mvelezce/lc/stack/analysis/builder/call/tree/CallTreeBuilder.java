@@ -18,7 +18,7 @@ public class CallTreeBuilder {
 
   public static final String OUTPUT_DIR = Options.DIRECTORY + "/tree/java/programs";
 
-  private static final String REGION_NODE_COLOR = "#00dcff";
+  public static final String REGION_NODE_COLOR = "#00dcff";
 
   private final CallTree callTree = new CallTree();
   private final Set<CallTree> allCallTrees = new HashSet<>();
@@ -88,21 +88,20 @@ public class CallTreeBuilder {
 
   public String toDotString() {
     StringBuilder dotString = new StringBuilder("digraph " + this.methodName + " {\n");
-    dotString.append("node [shape=record];\n");
-
     Set<Node> nodes = this.callTree.getNodes();
     for (Node node : nodes) {
       dotString.append("\"");
       dotString.append(node.getShortMethodName());
       dotString.append("\"");
+      dotString.append(" [");
+      dotString.append(" shape=box ");
 
       if (node.isRegion()) {
-        dotString.append("[");
-        dotString.append("style=filled, fillcolor=\"");
+        dotString.append("style=filled fillcolor=\"");
         dotString.append(REGION_NODE_COLOR);
         dotString.append("\"");
-        dotString.append("]");
       }
+      dotString.append("]");
 
       dotString.append("\n");
     }
@@ -181,7 +180,7 @@ public class CallTreeBuilder {
     }
   }
 
-  private String getRandomColor(long seed) {
+  public static String getRandomColor(long seed) {
     Random random = new Random(seed);
     int nextInt = random.nextInt(0xffffff + 1);
     return String.format("#%06x", nextInt);
@@ -199,5 +198,25 @@ public class CallTreeBuilder {
                 + "/"
                 + optionValue);
     return FileUtils.listFiles(dir, new String[] {"csv"}, false);
+  }
+
+  public Set<CallTree> getAllCallTrees() {
+    return allCallTrees;
+  }
+
+  public String getOptionValue() {
+    return optionValue;
+  }
+
+  public String getMethodName() {
+    return methodName;
+  }
+
+  public String getProgramName() {
+    return programName;
+  }
+
+  public String getMethodSignature() {
+    return methodSignature;
   }
 }
