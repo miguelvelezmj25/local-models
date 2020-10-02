@@ -1,8 +1,0 @@
-org.apache.lucene.core.codecs.compressing.CompressionMode.<clinit>()V,0.005
-org.apache.lucene.core.codecs.lucene50.Lucene50TermVectorsFormat.<init>()V,0
-org.apache.lucene.core.codecs.lucene70.Lucene70Codec.<init>(Lorg/apache/lucene/core/codecs/lucene50/Lucene50StoredFieldsFormat$Mode;)V,0.011
-org.apache.lucene.core.codecs.lucene70.Lucene70Codec.<init>()V,0
-org.apache.lucene.demo.IndexFiles.codec(Z)Lorg/apache/lucene/core/codecs/Codec;,0.015
-org.apache.lucene.demo.IndexFiles.run([Ljava/lang/String;)V,0.037
-org.apache.lucene.demo.IndexFiles.main([Ljava/lang/String;)V,1.501
-

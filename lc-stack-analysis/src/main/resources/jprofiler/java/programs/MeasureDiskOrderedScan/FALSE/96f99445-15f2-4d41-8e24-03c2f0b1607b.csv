@@ -1,6 +1,0 @@
-com.sleepycat.analysis.MeasureDiskOrderedScan.makeRandomKey(Lcom/sleepycat/je/DatabaseEntry;)V,0.005
-com.sleepycat.analysis.MeasureDiskOrderedScan.populate()V,0.005
-com.sleepycat.analysis.MeasureDiskOrderedScan.run()V,0.005
-com.sleepycat.analysis.MeasureDiskOrderedScan.run([Ljava/lang/String;)V,0
-com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V,1.502
-

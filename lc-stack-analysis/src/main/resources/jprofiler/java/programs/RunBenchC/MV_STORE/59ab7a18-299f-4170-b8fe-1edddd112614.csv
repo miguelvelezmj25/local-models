@@ -1,8 +1,0 @@
-edu.cmu.cs.mvelezce.bench.Database.trace(Ljava/lang/String;II)V,0.005
-edu.cmu.cs.mvelezce.bench.c.BenchC.trace(II)V,0
-edu.cmu.cs.mvelezce.bench.c.BenchC.loadItem()V,0
-edu.cmu.cs.mvelezce.bench.c.BenchC.load()V,0
-edu.cmu.cs.mvelezce.bench.c.BenchC.init(Ledu/cmu/cs/mvelezce/bench/Database;I)V,0
-edu.cmu.cs.mvelezce.bench.RunBenchC.run([Ljava/lang/String;)V,0.011
-edu.cmu.cs.mvelezce.bench.RunBenchC.main([Ljava/lang/String;)V,0
-

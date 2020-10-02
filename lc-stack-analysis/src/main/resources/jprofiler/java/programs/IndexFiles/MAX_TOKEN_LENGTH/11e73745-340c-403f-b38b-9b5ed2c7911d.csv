@@ -1,7 +1,0 @@
-org.apache.lucene.core.index.IndexFileNames.<clinit>()V,0.005
-org.apache.lucene.core.index.SegmentInfos.getSegmentsFileName()Ljava/lang/String;,0
-org.apache.lucene.core.index.IndexFileDeleter.<init>([Ljava/lang/String;Lorg/apache/lucene/core/store/Directory;Lorg/apache/lucene/core/store/Directory;Lorg/apache/lucene/core/index/IndexDeletionPolicy;Lorg/apache/lucene/core/index/SegmentInfos;Lorg/apache/lucene/core/util/InfoStream;Lorg/apache/lucene/core/index/IndexWriter;ZZ)V,0
-org.apache.lucene.core.index.IndexWriter.<init>(Lorg/apache/lucene/core/store/Directory;Lorg/apache/lucene/core/index/IndexWriterConfig;)V,0.011
-org.apache.lucene.demo.IndexFiles.run([Ljava/lang/String;)V,0.037
-org.apache.lucene.demo.IndexFiles.main([Ljava/lang/String;)V,1.501
-

@@ -8,25 +8,20 @@ import java.io.IOException;
 public class BarInfluenceCallStackSelectorTest {
 
   @Test
-  public void getFactors_A_FALSE() throws IOException {
+  public void getFactors_A_notA() throws IOException {
     String programName = BaseBarInfluenceAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
-            programName,
-            "A",
-            "FALSE",
-            "edu.cmu.cs.mvelezce.perf.ExpensiveCalls",
-            "getFactors",
-            "()");
+            programName, "A", "¬A", "edu.cmu.cs.mvelezce.perf.ExpensiveCalls", "getFactors", "()");
     selector.select();
   }
 
   @Test
-  public void bar_A_FALSE() throws IOException {
+  public void bar_A_notA() throws IOException {
     String programName = BaseBarInfluenceAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
-            programName, "A", "FALSE", "edu.cmu.cs.mvelezce.perf.BarInfluence", "bar", "(I)");
+            programName, "A", "¬A", "edu.cmu.cs.mvelezce.perf.BarInfluence", "bar", "(I)");
     selector.select();
   }
 }

@@ -1,5 +1,0 @@
-at.favre.tools.dconvert.converters.IOSConverter.getIosDescriptors()Ljava/util/List;,0.005
-at.favre.tools.dconvert.converters.IOSConverter.usedOutputDensities(Lat/favre/tools/dconvert/arg/Arguments;)Ljava/util/List;,0
-at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;,0.021
-at.favre.tools.dconvert.WorkerHandler$Worker.run()V,0
-

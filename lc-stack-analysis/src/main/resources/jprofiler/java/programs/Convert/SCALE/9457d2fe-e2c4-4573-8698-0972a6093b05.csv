@@ -1,8 +1,0 @@
-com.twelvemonkeys.imageio.metadata.jpeg.JPEGSegmentUtil.readSegment(Ljavax/imageio/stream/ImageInputStream;Ljava/util/Map;)Lcom/twelvemonkeys/imageio/metadata/jpeg/JPEGSegment;,0.005
-com.twelvemonkeys.imageio.metadata.jpeg.JPEGSegmentUtil.readSegments(Ljavax/imageio/stream/ImageInputStream;Ljava/util/Map;)Ljava/util/List;,0
-com.twelvemonkeys.imageio.metadata.jpeg.JPEGSegmentUtil.readSegments(Ljavax/imageio/stream/ImageInputStream;ILjava/lang/String;)Ljava/util/List;,0
-at.favre.tools.dconvert.util.ImageUtil.readExif(Ljava/io/File;)Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;,0
-at.favre.tools.dconvert.util.ImageUtil.loadImage(Ljava/io/File;)Lat/favre/tools/dconvert/util/LoadedImage;,0.006
-at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;,0.016
-at.favre.tools.dconvert.WorkerHandler$Worker.run()V,0
-

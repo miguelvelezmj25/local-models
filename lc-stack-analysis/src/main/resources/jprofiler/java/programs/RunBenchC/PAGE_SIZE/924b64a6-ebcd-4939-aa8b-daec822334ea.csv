@@ -1,5 +1,0 @@
-org.h2.message.DbException.<clinit>()V,0.005
-org.h2.message.TraceObject.<clinit>()V,0.006
-edu.cmu.cs.mvelezce.bench.RunBenchC.run([Ljava/lang/String;)V,0.016
-edu.cmu.cs.mvelezce.bench.RunBenchC.main([Ljava/lang/String;)V,0
-

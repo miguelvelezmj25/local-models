@@ -1,7 +1,0 @@
-at.favre.tools.dconvert.DConvert.informFinished(ILjava/util/List;Z)V,0.008
-at.favre.tools.dconvert.DConvert$1$1.onFinished(ILjava/util/List;Ljava/lang/StringBuilder;Ljava/util/List;Z)V,0
-at.favre.tools.dconvert.WorkerHandler.start(Ljava/util/List;)V,0
-at.favre.tools.dconvert.DConvert$1.onFinished(ILjava/util/List;Ljava/lang/StringBuilder;Ljava/util/List;Z)V,0
-at.favre.tools.dconvert.WorkerHandler$InternalCallback.onJobFinished(Lat/favre/tools/dconvert/converters/Result;)V,0
-at.favre.tools.dconvert.WorkerHandler$Worker.run()V,0
-

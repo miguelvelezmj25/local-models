@@ -1,4 +1,0 @@
-com.mortennobel.imagescaling.ImageUtils.getPixelsBGR(Ljava/awt/image/BufferedImage;II[B[I)[B,0.466
-com.mortennobel.imagescaling.ResampleOp.horizontallyFromSrcToWork(Ljava/awt/image/BufferedImage;[[BII)V,3.139
-com.mortennobel.imagescaling.ResampleOp$1.run()V,0
-

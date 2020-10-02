@@ -8,16 +8,11 @@ import java.io.IOException;
 public class DummyRegionCallStackSelectorTest {
 
   @Test
-  public void getFactors_A_FALSE() throws IOException {
+  public void getFactors_A_notA() throws IOException {
     String programName = BaseDummyRegionAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
-            programName,
-            "A",
-            "FALSE",
-            "edu.cmu.cs.mvelezce.perf.ExpensiveCalls",
-            "getFactors",
-            "()");
+            programName, "A", "¬A", "edu.cmu.cs.mvelezce.perf.ExpensiveCalls", "getFactors", "()");
     selector.select();
   }
 }

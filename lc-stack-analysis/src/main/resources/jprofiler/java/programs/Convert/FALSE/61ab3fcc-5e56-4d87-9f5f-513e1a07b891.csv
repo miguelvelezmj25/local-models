@@ -1,5 +1,0 @@
-at.favre.tools.dconvert.DConvert.getRegisteredImageReadersAndWriters()Ljava/lang/String;,0.253
-at.favre.tools.dconvert.DConvert.execute(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V,0
-at.favre.tools.dconvert.Convert.run([Ljava/lang/String;)V,0.005
-at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V,0
-

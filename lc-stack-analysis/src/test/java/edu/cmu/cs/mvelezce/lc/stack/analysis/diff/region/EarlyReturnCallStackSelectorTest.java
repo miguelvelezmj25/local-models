@@ -8,34 +8,29 @@ import java.io.IOException;
 public class EarlyReturnCallStackSelectorTest {
 
   @Test
-  public void getFactors_A_FALSE() throws IOException {
+  public void getFactors_A_notA() throws IOException {
     String programName = BaseEarlyReturnAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
-            programName,
-            "A",
-            "FALSE",
-            "edu.cmu.cs.mvelezce.perf.ExpensiveCalls",
-            "getFactors",
-            "()");
+            programName, "A", "¬A", "edu.cmu.cs.mvelezce.perf.ExpensiveCalls", "getFactors", "()");
     selector.select();
   }
 
   @Test
-  public void moo_A_FALSE() throws IOException {
+  public void moo_A_notA() throws IOException {
     String programName = BaseEarlyReturnAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
-            programName, "A", "FALSE", "edu.cmu.cs.mvelezce.perf.EarlyReturn", "moo", "(Z)");
+            programName, "A", "¬A", "edu.cmu.cs.mvelezce.perf.EarlyReturn", "moo", "(Z)");
     selector.select();
   }
 
   @Test
-  public void foo_A_FALSE() throws IOException {
+  public void foo_A_notA() throws IOException {
     String programName = BaseEarlyReturnAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
-            programName, "A", "FALSE", "edu.cmu.cs.mvelezce.perf.EarlyReturn", "foo", "(Z)");
+            programName, "A", "¬A", "edu.cmu.cs.mvelezce.perf.EarlyReturn", "foo", "(Z)");
     selector.select();
   }
 }

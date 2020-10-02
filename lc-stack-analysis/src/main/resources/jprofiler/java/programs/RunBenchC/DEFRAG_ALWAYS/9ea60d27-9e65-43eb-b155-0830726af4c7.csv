@@ -1,7 +1,0 @@
-org.h2.jdbc.JdbcConnection.setAutoCommit(Z)V,0.005
-edu.cmu.cs.mvelezce.bench.Database.setAutoCommit(Z)V,0
-edu.cmu.cs.mvelezce.bench.c.BenchCThread.<init>(Ledu/cmu/cs/mvelezce/bench/Database;Ledu/cmu/cs/mvelezce/bench/c/BenchC;Ledu/cmu/cs/mvelezce/bench/c/BenchCRandom;I)V,0
-edu.cmu.cs.mvelezce.bench.c.BenchC.runTest()V,0.006
-edu.cmu.cs.mvelezce.bench.RunBenchC.run([Ljava/lang/String;)V,0.016
-edu.cmu.cs.mvelezce.bench.RunBenchC.main([Ljava/lang/String;)V,0
-

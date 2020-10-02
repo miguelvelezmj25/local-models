@@ -14,9 +14,9 @@ import java.util.Set;
 public class DummyRegionTreeDifferTest {
 
   @Test
-  public void bar_A_FALSE() throws IOException, DiffException {
+  public void bar_A_notA() throws IOException, DiffException {
     String programName = BaseDummyRegionAdapter.PROGRAM_NAME;
-    String option1 = "FALSE";
+    String option1 = "¬A";
     String option2 = "A";
     BaseRegionInstrumenter<Partitioning> instrumenter = new IDTATimerInstrumenter(programName);
     Set<JavaRegion> regions = instrumenter.getProcessedRegionsToData().keySet();

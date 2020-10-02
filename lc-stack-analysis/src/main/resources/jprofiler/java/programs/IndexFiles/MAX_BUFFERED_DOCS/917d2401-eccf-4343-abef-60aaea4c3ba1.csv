@@ -1,5 +1,0 @@
-org.apache.lucene.core.index.DocumentsWriter.<init>(Lorg/apache/lucene/core/index/DocumentsWriter$FlushNotifications;ILjava/util/concurrent/atomic/AtomicLong;ZLjava/util/function/Supplier;Lorg/apache/lucene/core/index/LiveIndexWriterConfig;Lorg/apache/lucene/core/store/Directory;Lorg/apache/lucene/core/store/Directory;Lorg/apache/lucene/core/index/FieldInfos$FieldNumbers;)V,0.005
-org.apache.lucene.core.index.IndexWriter.<init>(Lorg/apache/lucene/core/store/Directory;Lorg/apache/lucene/core/index/IndexWriterConfig;)V,0.016
-org.apache.lucene.demo.IndexFiles.run([Ljava/lang/String;)V,0.027
-org.apache.lucene.demo.IndexFiles.main([Ljava/lang/String;)V,1.501
-

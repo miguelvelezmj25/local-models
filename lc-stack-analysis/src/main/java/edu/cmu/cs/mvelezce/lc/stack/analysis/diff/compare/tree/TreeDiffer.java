@@ -57,7 +57,6 @@ public class TreeDiffer {
     this.buildDiffTree(callTree1);
     this.buildDiffTree(callTree2);
     Set<Pair<CallTree, CallTree>> equalStacks = this.getEqualStacks();
-    System.out.println(this.toDotString(equalStacks));
     this.saveGraph(equalStacks);
   }
 
@@ -251,6 +250,8 @@ public class TreeDiffer {
         if (!calleer.getTime().isEmpty()) {
           timeInfoNode = UUID.randomUUID();
 
+          int maxOptionLength = Math.max(optionValue1.length(), optionValue2.length());
+
           int maxLength = DECIMAL_FORMAT.format(calleer.getTimeDouble()).length();
           if (equalCallTree != null) {
             maxLength =
@@ -285,7 +286,7 @@ public class TreeDiffer {
           dotString.append(
               String.format("%" + maxLength + "s", DECIMAL_FORMAT.format(calleer.getTimeDouble())));
           dotString.append("s ");
-          dotString.append(optionValue1);
+          dotString.append(String.format("%" + maxOptionLength + "s", optionValue1));
           dotString.append("</FONT></TD></TR>\n");
           if (equalCallTree != null) {
             dotString.append("  <TR><TD ALIGN=\"LEFT\" BGCOLOR=\"");
@@ -298,7 +299,7 @@ public class TreeDiffer {
                     "%" + maxLength + "s",
                     DECIMAL_FORMAT.format(equalNodes.get(calleer).getTimeDouble())));
             dotString.append("s ");
-            dotString.append(optionValue2);
+            dotString.append(String.format("%" + maxOptionLength + "s", optionValue2));
             dotString.append("</FONT></TD></TR>\n");
           }
 

@@ -1,0 +1,23 @@
+{
+  "stack" : [ {
+    "className" : "edu.cmu.cs.mvelezce.perf.ExpensiveCalls",
+    "methodName" : "getFactors",
+    "methodSignature" : "()V",
+    "selfTime" : 4517986.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.MultiplePaths",
+    "methodName" : "moo",
+    "methodSignature" : "()V",
+    "selfTime" : 487070.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.MultiplePaths",
+    "methodName" : "foo",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.perf.MultiplePaths",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

@@ -1,6 +1,0 @@
-org.h2.command.dml.SetTypes.<clinit>()V,0.005
-org.h2.engine.ConnectionInfo.<clinit>()V,0
-org.h2.jdbc.JdbcConnection.<init>(Ljava/lang/String;Ljava/util/Properties;Lorg/h2/store/FileLockMethod;Ljava/lang/String;Ljava/lang/String;IZZZI)V,0
-edu.cmu.cs.mvelezce.bench.RunBenchC.run([Ljava/lang/String;)V,0.016
-edu.cmu.cs.mvelezce.bench.RunBenchC.main([Ljava/lang/String;)V,0
-

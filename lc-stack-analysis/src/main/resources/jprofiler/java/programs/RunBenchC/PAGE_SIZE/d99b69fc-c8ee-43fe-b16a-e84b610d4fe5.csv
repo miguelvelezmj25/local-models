@@ -1,9 +1,0 @@
-org.h2.command.CommandContainer.getParameters()Ljava/util/ArrayList;,0.005
-org.h2.jdbc.JdbcPreparedStatement.setParameter(ILorg/h2/value/Value;)V,0
-org.h2.jdbc.JdbcPreparedStatement.setInt(II)V,0
-edu.cmu.cs.mvelezce.bench.c.BenchCThread.processNewOrder()V,0.079
-edu.cmu.cs.mvelezce.bench.c.BenchCThread.process()V,0
-edu.cmu.cs.mvelezce.bench.c.BenchC.runTest()V,0
-edu.cmu.cs.mvelezce.bench.RunBenchC.run([Ljava/lang/String;)V,0.016
-edu.cmu.cs.mvelezce.bench.RunBenchC.main([Ljava/lang/String;)V,0
-

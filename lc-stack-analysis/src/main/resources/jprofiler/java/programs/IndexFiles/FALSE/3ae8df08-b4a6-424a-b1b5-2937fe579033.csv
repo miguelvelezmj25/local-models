@@ -1,6 +1,0 @@
-org.apache.lucene.core.search.similarities.BM25Similarity.<clinit>()V,0.005
-org.apache.lucene.core.search.IndexSearcher.<clinit>()V,0.005
-org.apache.lucene.demo.IndexFiles.similarity(Z)Lorg/apache/lucene/core/search/similarities/Similarity;,0
-org.apache.lucene.demo.IndexFiles.run([Ljava/lang/String;)V,0.042
-org.apache.lucene.demo.IndexFiles.main([Ljava/lang/String;)V,1.499
-

@@ -1,8 +1,0 @@
-org.apache.lucene.core.analysis.Analyzer.<init>(Lorg/apache/lucene/core/analysis/Analyzer$ReuseStrategy;)V,0.005
-org.apache.lucene.core.analysis.Analyzer.<init>()V,0
-org.apache.lucene.core.analysis.StopwordAnalyzerBase.<init>(Lorg/apache/lucene/core/analysis/CharArraySet;)V,0
-org.apache.lucene.core.analysis.standard.StandardAnalyzer.<init>(Lorg/apache/lucene/core/analysis/CharArraySet;)V,0
-org.apache.lucene.core.analysis.standard.StandardAnalyzer.<init>()V,0
-org.apache.lucene.demo.IndexFiles.run([Ljava/lang/String;)V,0.027
-org.apache.lucene.demo.IndexFiles.main([Ljava/lang/String;)V,1.501
-
