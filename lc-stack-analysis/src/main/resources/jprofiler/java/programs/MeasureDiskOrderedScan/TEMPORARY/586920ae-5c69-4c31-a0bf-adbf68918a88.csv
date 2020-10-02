@@ -1,0 +1,14 @@
+com.sleepycat.je.txn.TxnManager.getFirstActiveLsn()J,0.005
+com.sleepycat.je.recovery.Checkpointer.doCheckpoint(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;Z)V,0
+com.sleepycat.je.dbi.EnvironmentImpl.invokeCheckpoint(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;)V,0
+com.sleepycat.je.recovery.RecoveryManager.recover(Z)Lcom/sleepycat/je/recovery/RecoveryInfo;,0
+com.sleepycat.je.dbi.EnvironmentImpl.finishInit(Lcom/sleepycat/je/EnvironmentConfig;)Z,0
+com.sleepycat.je.dbi.DbEnvPool.getEnvironment(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;,0.016
+com.sleepycat.je.Environment.makeEnvironmentImpl(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;,0
+com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V,0
+com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.open()V,0.016
+com.sleepycat.analysis.MeasureDiskOrderedScan.run()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run([Ljava/lang/String;)V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V,1.502
+

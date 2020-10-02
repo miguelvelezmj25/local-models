@@ -1,0 +1,48 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.value.Value",
+    "methodName" : "cache",
+    "methodSignature" : "(Lorg/h2/value/Value;)Lorg/h2/value/Value;",
+    "selfTime" : 5254.0
+  }, {
+    "className" : "org.h2.value.ValueString",
+    "methodName" : "get",
+    "methodSignature" : "(Ljava/lang/String;Lorg/h2/engine/CastDataProvider;)Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.value.ValueString",
+    "methodName" : "get",
+    "methodSignature" : "(Ljava/lang/String;)Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcPreparedStatement",
+    "methodName" : "setString",
+    "methodSignature" : "(ILjava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "processNewOrder",
+    "methodSignature" : "()V",
+    "selfTime" : 102482.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "process",
+    "methodSignature" : "()V",
+    "selfTime" : 5320.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "runTest",
+    "methodSignature" : "()V",
+    "selfTime" : 5412.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 21070.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

@@ -1,0 +1,108 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.value.Value",
+    "methodName" : "cache",
+    "methodSignature" : "(Lorg/h2/value/Value;)Lorg/h2/value/Value;",
+    "selfTime" : 5294.0
+  }, {
+    "className" : "org.h2.value.ValueDecimal",
+    "methodName" : "get",
+    "methodSignature" : "(Ljava/math/BigDecimal;)Lorg/h2/value/ValueDecimal;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.value.Value",
+    "methodName" : "convertToDecimal",
+    "methodSignature" : "()Lorg/h2/value/ValueDecimal;",
+    "selfTime" : 5229.0
+  }, {
+    "className" : "org.h2.value.Value",
+    "methodName" : "convertTo",
+    "methodSignature" : "(ILorg/h2/value/ExtTypeInfo;Lorg/h2/engine/CastDataProvider;ZLjava/lang/Object;)Lorg/h2/value/Value;",
+    "selfTime" : 15894.0
+  }, {
+    "className" : "org.h2.value.Value",
+    "methodName" : "convertTo",
+    "methodSignature" : "(Lorg/h2/value/TypeInfo;Lorg/h2/engine/CastDataProvider;ZLjava/lang/Object;)Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.value.TypeInfo",
+    "methodName" : "cast",
+    "methodSignature" : "(Lorg/h2/value/Value;Lorg/h2/engine/CastDataProvider;ZZLjava/lang/Object;)Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.table.Column",
+    "methodName" : "validateConvertUpdateSequence",
+    "methodSignature" : "(Lorg/h2/engine/Session;Lorg/h2/value/Value;)Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.table.Table",
+    "methodName" : "validateConvertUpdateSequence",
+    "methodSignature" : "(Lorg/h2/engine/Session;Lorg/h2/result/Row;)V",
+    "selfTime" : 5215.0
+  }, {
+    "className" : "org.h2.command.dml.Insert",
+    "methodName" : "insertRows",
+    "methodSignature" : "()I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Insert",
+    "methodName" : "update",
+    "methodSignature" : "()I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.CommandContainer",
+    "methodName" : "update",
+    "methodSignature" : "(Ljava/lang/Object;)Lorg/h2/result/ResultWithGeneratedKeys;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.Command",
+    "methodName" : "executeUpdate",
+    "methodSignature" : "(Ljava/lang/Object;)Lorg/h2/result/ResultWithGeneratedKeys;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcPreparedStatement",
+    "methodName" : "executeUpdateInternal",
+    "methodSignature" : "()I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcPreparedStatement",
+    "methodName" : "executeUpdate",
+    "methodSignature" : "()I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "update",
+    "methodSignature" : "(Ljava/sql/PreparedStatement;Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "loadStock",
+    "methodSignature" : "(I)V",
+    "selfTime" : 79067.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "loadWarehouse",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "load",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "init",
+    "methodSignature" : "(Ledu/cmu/cs/mvelezce/bench/Database;I)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 16029.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

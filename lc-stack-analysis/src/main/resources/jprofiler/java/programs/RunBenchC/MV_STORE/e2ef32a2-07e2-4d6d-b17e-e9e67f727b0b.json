@@ -1,0 +1,18 @@
+{
+  "stack" : [ {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "fileLock",
+    "methodSignature" : "(Z)Lorg/h2/store/FileLockMethod;",
+    "selfTime" : 6178.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 10981.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

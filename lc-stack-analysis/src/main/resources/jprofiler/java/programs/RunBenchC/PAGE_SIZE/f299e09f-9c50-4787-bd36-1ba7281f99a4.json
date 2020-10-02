@@ -1,0 +1,93 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.schema.SchemaObjectBase",
+    "methodName" : "getSQL",
+    "methodSignature" : "(Ljava/lang/StringBuilder;Z)Ljava/lang/StringBuilder;",
+    "selfTime" : 5491.0
+  }, {
+    "className" : "org.h2.table.TableBase",
+    "methodName" : "getCreateSQL",
+    "methodSignature" : "()Ljava/lang/String;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.MetaRecord",
+    "methodName" : "populateRowFromDBObject",
+    "methodSignature" : "(Lorg/h2/engine/DbObject;Lorg/h2/result/SearchRow;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "addMeta",
+    "methodSignature" : "(Lorg/h2/engine/Session;Lorg/h2/engine/DbObject;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "updateMeta",
+    "methodSignature" : "(Lorg/h2/engine/Session;Lorg/h2/engine/DbObject;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.ddl.Analyze",
+    "methodName" : "analyzeTable",
+    "methodSignature" : "(Lorg/h2/engine/Session;Lorg/h2/table/Table;IZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "analyzeTables",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "commit",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.TransactionCommand",
+    "methodName" : "update",
+    "methodSignature" : "()I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.CommandContainer",
+    "methodName" : "update",
+    "methodSignature" : "(Ljava/lang/Object;)Lorg/h2/result/ResultWithGeneratedKeys;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.Command",
+    "methodName" : "executeUpdate",
+    "methodSignature" : "(Ljava/lang/Object;)Lorg/h2/result/ResultWithGeneratedKeys;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "commit",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "commit",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "processNewOrder",
+    "methodSignature" : "()V",
+    "selfTime" : 79111.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "process",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "runTest",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 16029.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

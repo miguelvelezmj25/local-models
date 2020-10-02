@@ -1,0 +1,5 @@
+at.favre.tools.dconvert.util.DensityBucketUtil.getDensityBucketsWithFactorScale(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;F)Ljava/util/Map;,0.016
+at.favre.tools.dconvert.util.DensityBucketUtil.getDensityBuckets(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;FZ)Ljava/util/Map;,0
+at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;,0.016
+at.favre.tools.dconvert.WorkerHandler$Worker.run()V,0
+

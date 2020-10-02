@@ -1,0 +1,23 @@
+{
+  "stack" : [ {
+    "className" : "org.apache.lucene.core.analysis.CharArraySet",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 5218.0
+  }, {
+    "className" : "org.apache.lucene.core.analysis.standard.StandardAnalyzer",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 42217.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1498872.0
+  } ]
+}

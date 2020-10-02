@@ -1,0 +1,5 @@
+org.apache.lucene.core.index.LiveIndexWriterConfig.<init>(Lorg/apache/lucene/core/analysis/Analyzer;)V,0.005
+org.apache.lucene.core.index.IndexWriterConfig.<init>(Lorg/apache/lucene/core/analysis/Analyzer;)V,0
+org.apache.lucene.demo.IndexFiles.run([Ljava/lang/String;)V,0.042
+org.apache.lucene.demo.IndexFiles.main([Ljava/lang/String;)V,1.499
+

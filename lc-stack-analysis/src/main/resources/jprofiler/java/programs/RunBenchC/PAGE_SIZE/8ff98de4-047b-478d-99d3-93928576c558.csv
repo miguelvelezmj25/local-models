@@ -1,0 +1,13 @@
+org.h2.engine.Session.isClosed()Z,0.005
+org.h2.jdbc.JdbcConnection.checkClosed(Z)V,0
+org.h2.jdbc.JdbcStatement.checkClosed(Z)Z,0
+org.h2.jdbc.JdbcPreparedStatement.checkClosed(Z)Z,0
+org.h2.jdbc.JdbcStatement.checkClosed()Z,0
+org.h2.jdbc.JdbcPreparedStatement.setParameter(ILorg/h2/value/Value;)V,0
+org.h2.jdbc.JdbcPreparedStatement.setInt(II)V,0
+edu.cmu.cs.mvelezce.bench.c.BenchC.loadItem()V,0.016
+edu.cmu.cs.mvelezce.bench.c.BenchC.load()V,0
+edu.cmu.cs.mvelezce.bench.c.BenchC.init(Ledu/cmu/cs/mvelezce/bench/Database;I)V,0
+edu.cmu.cs.mvelezce.bench.RunBenchC.run([Ljava/lang/String;)V,0.016
+edu.cmu.cs.mvelezce.bench.RunBenchC.main([Ljava/lang/String;)V,0
+

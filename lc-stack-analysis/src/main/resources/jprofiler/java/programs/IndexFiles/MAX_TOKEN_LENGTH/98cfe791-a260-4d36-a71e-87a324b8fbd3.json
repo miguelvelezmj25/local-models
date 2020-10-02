@@ -1,0 +1,33 @@
+{
+  "stack" : [ {
+    "className" : "org.apache.lucene.core.store.NativeFSLockFactory",
+    "methodName" : "obtainFSLock",
+    "methodSignature" : "(Lorg/apache/lucene/core/store/FSDirectory;Ljava/lang/String;)Lorg/apache/lucene/core/store/Lock;",
+    "selfTime" : 11530.0
+  }, {
+    "className" : "org.apache.lucene.core.store.FSLockFactory",
+    "methodName" : "obtainLock",
+    "methodSignature" : "(Lorg/apache/lucene/core/store/Directory;Ljava/lang/String;)Lorg/apache/lucene/core/store/Lock;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.store.BaseDirectory",
+    "methodName" : "obtainLock",
+    "methodSignature" : "(Ljava/lang/String;)Lorg/apache/lucene/core/store/Lock;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexWriter",
+    "methodName" : "<init>",
+    "methodSignature" : "(Lorg/apache/lucene/core/store/Directory;Lorg/apache/lucene/core/index/IndexWriterConfig;)V",
+    "selfTime" : 10553.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 37332.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1500509.0
+  } ]
+}

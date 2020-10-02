@@ -1,0 +1,33 @@
+{
+  "stack" : [ {
+    "className" : "org.apache.lucene.core.store.MMapDirectory",
+    "methodName" : "unmapHackImpl",
+    "methodSignature" : "()Ljava/lang/Object;",
+    "selfTime" : 5249.0
+  }, {
+    "className" : "org.apache.lucene.core.store.MMapDirectory",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 59821.0
+  }, {
+    "className" : "org.apache.lucene.core.store.FSDirectory",
+    "methodName" : "open",
+    "methodSignature" : "(Ljava/nio/file/Path;Lorg/apache/lucene/core/store/LockFactory;)Lorg/apache/lucene/core/store/FSDirectory;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.store.FSDirectory",
+    "methodName" : "open",
+    "methodSignature" : "(Ljava/nio/file/Path;)Lorg/apache/lucene/core/store/FSDirectory;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 42217.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1498872.0
+  } ]
+}

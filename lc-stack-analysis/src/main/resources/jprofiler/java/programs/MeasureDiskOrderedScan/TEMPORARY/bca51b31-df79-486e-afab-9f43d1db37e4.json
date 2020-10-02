@@ -1,0 +1,83 @@
+{
+  "stack" : [ {
+    "className" : "com.sleepycat.je.log.FileManager$LogEndFileDescriptor",
+    "methodName" : "force",
+    "methodSignature" : "()V",
+    "selfTime" : 2093495.0
+  }, {
+    "className" : "com.sleepycat.je.log.FileManager",
+    "methodName" : "syncLogEnd",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "flushSync",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DatabaseImpl",
+    "methodName" : "finishDeleteProcessing",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DatabaseImpl",
+    "methodName" : "startAndFinishDelete",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.txn.BasicLocker",
+    "methodName" : "markDeleteAtTxnEnd",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/DatabaseImpl;Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DbTree",
+    "methodName" : "doRemoveDb",
+    "methodSignature" : "(Lcom/sleepycat/je/txn/Locker;Ljava/lang/String;Lcom/sleepycat/je/dbi/DatabaseId;Lcom/sleepycat/je/log/DbOpReplicationContext;)Lcom/sleepycat/je/dbi/DatabaseImpl;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DbTree",
+    "methodName" : "dbRemove",
+    "methodSignature" : "(Lcom/sleepycat/je/txn/Locker;Ljava/lang/String;Lcom/sleepycat/je/dbi/DatabaseId;)Lcom/sleepycat/je/dbi/DatabaseImpl;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DatabaseImpl",
+    "methodName" : "handleClosed",
+    "methodSignature" : "(ZZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Database",
+    "methodName" : "closeInternalWork",
+    "methodSignature" : "(ZZLcom/sleepycat/je/Database$DbState;Lcom/sleepycat/je/OperationFailureException;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Database",
+    "methodName" : "closeInternal",
+    "methodSignature" : "(ZZLcom/sleepycat/je/Database$DbState;Lcom/sleepycat/je/OperationFailureException;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Database",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1501787.0
+  } ]
+}

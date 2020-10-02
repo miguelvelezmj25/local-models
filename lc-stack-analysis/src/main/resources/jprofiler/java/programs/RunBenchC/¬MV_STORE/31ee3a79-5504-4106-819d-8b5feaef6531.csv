@@ -1,0 +1,7 @@
+org.h2.util.Utils.loadResource(Ljava/lang/String;)[B,0.005
+org.h2.util.Utils.getResource(Ljava/lang/String;)[B,0
+org.h2.message.DbException.<clinit>()V,0
+org.h2.message.TraceObject.<clinit>()V,0.013
+edu.cmu.cs.mvelezce.bench.RunBenchC.run([Ljava/lang/String;)V,0.021
+edu.cmu.cs.mvelezce.bench.RunBenchC.main([Ljava/lang/String;)V,0
+

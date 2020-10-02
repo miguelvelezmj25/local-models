@@ -1,0 +1,13 @@
+com.sleepycat.je.txn.LockManager.lockStat(Lcom/sleepycat/je/StatsConfig;)Lcom/sleepycat/je/LockStats;,0.005
+com.sleepycat.je.txn.TxnManager.lockStat(Lcom/sleepycat/je/StatsConfig;)Lcom/sleepycat/je/LockStats;,0
+com.sleepycat.je.dbi.EnvironmentImpl.lockStat(Lcom/sleepycat/je/StatsConfig;)Lcom/sleepycat/je/LockStats;,0
+com.sleepycat.je.dbi.EnvironmentImpl.checkLeaks()V,0
+com.sleepycat.je.dbi.EnvironmentImpl.doClose(ZZ)V,0
+com.sleepycat.je.dbi.DbEnvPool.closeEnvironment(Lcom/sleepycat/je/dbi/EnvironmentImpl;ZZ)V,0
+com.sleepycat.je.dbi.EnvironmentImpl.close()V,0
+com.sleepycat.je.Environment.close()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.close()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run([Ljava/lang/String;)V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V,1.502
+

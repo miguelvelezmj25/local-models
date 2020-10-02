@@ -1,0 +1,53 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "getTransaction",
+    "methodSignature" : "()Lorg/h2/mvstore/tx/Transaction;",
+    "selfTime" : 15793.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "startStatementWithinTransaction",
+    "methodSignature" : "(Lorg/h2/command/Command;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.Command",
+    "methodName" : "executeQuery",
+    "methodSignature" : "(IZ)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcPreparedStatement",
+    "methodName" : "executeQuery",
+    "methodSignature" : "()Ljava/sql/ResultSet;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "query",
+    "methodSignature" : "(Ljava/sql/PreparedStatement;)Ljava/sql/ResultSet;",
+    "selfTime" : 10702.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "processNewOrder",
+    "methodSignature" : "()V",
+    "selfTime" : 102482.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "process",
+    "methodSignature" : "()V",
+    "selfTime" : 5320.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "runTest",
+    "methodSignature" : "()V",
+    "selfTime" : 5412.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 21070.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

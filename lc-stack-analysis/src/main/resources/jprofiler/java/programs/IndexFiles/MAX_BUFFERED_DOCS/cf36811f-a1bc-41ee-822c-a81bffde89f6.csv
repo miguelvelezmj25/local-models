@@ -1,0 +1,17 @@
+org.apache.lucene.core.store.FSDirectory.fileLength(Ljava/lang/String;)J,0.005
+org.apache.lucene.core.index.SegmentCommitInfo.sizeInBytes()J,0
+org.apache.lucene.core.index.MergePolicy.size(Lorg/apache/lucene/core/index/SegmentCommitInfo;Lorg/apache/lucene/core/index/MergePolicy$MergeContext;)J,0
+org.apache.lucene.core.index.TieredMergePolicy.getSegmentSizes(Lorg/apache/lucene/core/index/MergePolicy$MergeContext;Ljava/util/Collection;)Ljava/util/Map;,0
+org.apache.lucene.core.index.TieredMergePolicy.findMerges(Lorg/apache/lucene/core/index/MergeTrigger;Lorg/apache/lucene/core/index/SegmentInfos;Lorg/apache/lucene/core/index/MergePolicy$MergeContext;)Lorg/apache/lucene/core/index/MergePolicy$MergeSpecification;,0
+org.apache.lucene.core.index.IndexWriter.updatePendingMerges(Lorg/apache/lucene/core/index/MergePolicy;Lorg/apache/lucene/core/index/MergeTrigger;I)Z,0
+org.apache.lucene.core.index.IndexWriter.maybeMerge(Lorg/apache/lucene/core/index/MergePolicy;Lorg/apache/lucene/core/index/MergeTrigger;I)V,0
+org.apache.lucene.core.index.IndexWriter.processEvents(Z)V,0
+org.apache.lucene.core.index.IndexWriter.updateDocument(Lorg/apache/lucene/core/index/DocumentsWriterDeleteQueue$Node;Ljava/lang/Iterable;)J,0
+org.apache.lucene.core.index.IndexWriter.addDocument(Ljava/lang/Iterable;)J,0
+org.apache.lucene.demo.IndexFiles.indexDoc(Lorg/apache/lucene/core/index/IndexWriter;Ljava/nio/file/Path;J)V,0.005
+org.apache.lucene.demo.IndexFiles$1.visitFile(Ljava/nio/file/Path;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;,0
+org.apache.lucene.demo.IndexFiles$1.visitFile(Ljava/lang/Object;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;,0
+org.apache.lucene.demo.IndexFiles.indexDocs(Lorg/apache/lucene/core/index/IndexWriter;Ljava/nio/file/Path;)V,0
+org.apache.lucene.demo.IndexFiles.run([Ljava/lang/String;)V,0.027
+org.apache.lucene.demo.IndexFiles.main([Ljava/lang/String;)V,1.501
+

@@ -1,0 +1,23 @@
+{
+  "stack" : [ {
+    "className" : "org.apache.lucene.core.store.FSLockFactory",
+    "methodName" : "getDefault",
+    "methodSignature" : "()Lorg/apache/lucene/core/store/FSLockFactory;",
+    "selfTime" : 5271.0
+  }, {
+    "className" : "org.apache.lucene.core.store.FSDirectory",
+    "methodName" : "open",
+    "methodSignature" : "(Ljava/nio/file/Path;)Lorg/apache/lucene/core/store/FSDirectory;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 37332.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1500509.0
+  } ]
+}

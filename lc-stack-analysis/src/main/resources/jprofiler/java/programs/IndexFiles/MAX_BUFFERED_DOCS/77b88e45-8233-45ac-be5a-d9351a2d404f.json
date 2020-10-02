@@ -1,0 +1,63 @@
+{
+  "stack" : [ {
+    "className" : "org.apache.lucene.core.index.DocumentsWriterPerThreadPool",
+    "methodName" : "newThreadState",
+    "methodSignature" : "()Lorg/apache/lucene/core/index/DocumentsWriterPerThreadPool$ThreadState;",
+    "selfTime" : 5253.0
+  }, {
+    "className" : "org.apache.lucene.core.index.DocumentsWriterPerThreadPool",
+    "methodName" : "getAndLock",
+    "methodSignature" : "(Ljava/lang/Thread;Lorg/apache/lucene/core/index/DocumentsWriter;)Lorg/apache/lucene/core/index/DocumentsWriterPerThreadPool$ThreadState;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.DocumentsWriterFlushControl",
+    "methodName" : "obtainAndLock",
+    "methodSignature" : "()Lorg/apache/lucene/core/index/DocumentsWriterPerThreadPool$ThreadState;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.DocumentsWriter",
+    "methodName" : "updateDocument",
+    "methodSignature" : "(Ljava/lang/Iterable;Lorg/apache/lucene/core/analysis/Analyzer;Lorg/apache/lucene/core/index/DocumentsWriterDeleteQueue$Node;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexWriter",
+    "methodName" : "updateDocument",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/DocumentsWriterDeleteQueue$Node;Ljava/lang/Iterable;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.index.IndexWriter",
+    "methodName" : "addDocument",
+    "methodSignature" : "(Ljava/lang/Iterable;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "indexDoc",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/IndexWriter;Ljava/nio/file/Path;J)V",
+    "selfTime" : 5404.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles$1",
+    "methodName" : "visitFile",
+    "methodSignature" : "(Ljava/nio/file/Path;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles$1",
+    "methodName" : "visitFile",
+    "methodSignature" : "(Ljava/lang/Object;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "indexDocs",
+    "methodSignature" : "(Lorg/apache/lucene/core/index/IndexWriter;Ljava/nio/file/Path;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 26953.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1500538.0
+  } ]
+}

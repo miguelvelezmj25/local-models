@@ -1,0 +1,163 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.mvstore.DataUtils",
+    "methodName" : "writeVarLong",
+    "methodSignature" : "(Ljava/nio/ByteBuffer;J)V",
+    "selfTime" : 10515.0
+  }, {
+    "className" : "org.h2.mvstore.WriteBuffer",
+    "methodName" : "putVarLong",
+    "methodSignature" : "(J)Lorg/h2/mvstore/WriteBuffer;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.db.ValueDataType",
+    "methodName" : "writeValue",
+    "methodSignature" : "(Lorg/h2/mvstore/WriteBuffer;Lorg/h2/value/Value;)V",
+    "selfTime" : 10477.0
+  }, {
+    "className" : "org.h2.mvstore.db.ValueDataType",
+    "methodName" : "writeValue",
+    "methodSignature" : "(Lorg/h2/mvstore/WriteBuffer;Lorg/h2/value/Value;)V",
+    "selfTime" : 5338.0
+  }, {
+    "className" : "org.h2.mvstore.db.ValueDataType",
+    "methodName" : "write",
+    "methodSignature" : "(Lorg/h2/mvstore/WriteBuffer;Ljava/lang/Object;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.tx.VersionedValueType",
+    "methodName" : "write",
+    "methodSignature" : "(Lorg/h2/mvstore/WriteBuffer;[Ljava/lang/Object;IZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.Page$Leaf",
+    "methodName" : "writeValues",
+    "methodSignature" : "(Lorg/h2/mvstore/WriteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.Page",
+    "methodName" : "write",
+    "methodSignature" : "(Lorg/h2/mvstore/Chunk;Lorg/h2/mvstore/WriteBuffer;)I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.Page$Leaf",
+    "methodName" : "writeUnsavedRecursive",
+    "methodSignature" : "(Lorg/h2/mvstore/Chunk;Lorg/h2/mvstore/WriteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.Page$NonLeaf",
+    "methodName" : "writeChildrenRecursive",
+    "methodSignature" : "(Lorg/h2/mvstore/Chunk;Lorg/h2/mvstore/WriteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.Page$NonLeaf",
+    "methodName" : "writeUnsavedRecursive",
+    "methodSignature" : "(Lorg/h2/mvstore/Chunk;Lorg/h2/mvstore/WriteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.Page$NonLeaf",
+    "methodName" : "writeChildrenRecursive",
+    "methodSignature" : "(Lorg/h2/mvstore/Chunk;Lorg/h2/mvstore/WriteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.Page$NonLeaf",
+    "methodName" : "writeUnsavedRecursive",
+    "methodSignature" : "(Lorg/h2/mvstore/Chunk;Lorg/h2/mvstore/WriteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "storeNow",
+    "methodSignature" : "(JJ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "store",
+    "methodSignature" : "(JJ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "store",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "commit",
+    "methodSignature" : "()J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "compactRewrite",
+    "methodSignature" : "(Ljava/util/Set;)I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "rewriteChunks",
+    "methodSignature" : "(I)Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "compact",
+    "methodSignature" : "(II)Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "compactFile",
+    "methodSignature" : "(J)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "closeStore",
+    "methodSignature" : "(ZJ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "close",
+    "methodSignature" : "(J)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.db.MVTableEngine$Store",
+    "methodName" : "close",
+    "methodSignature" : "(J)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "closeOpenFilesAndUnlock",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "closeImpl",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "close",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "removeSession",
+    "methodSignature" : "(Lorg/h2/engine/Session;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 10981.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

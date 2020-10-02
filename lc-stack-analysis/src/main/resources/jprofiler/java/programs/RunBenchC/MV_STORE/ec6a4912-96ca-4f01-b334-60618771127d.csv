@@ -1,0 +1,6 @@
+org.h2.Driver.load()Lorg/h2/Driver;,0.005
+org.h2.Driver.<clinit>()V,0
+edu.cmu.cs.mvelezce.bench.Database.parse(Ljava/lang/String;IZ)Ledu/cmu/cs/mvelezce/bench/Database;,0
+edu.cmu.cs.mvelezce.bench.RunBenchC.run([Ljava/lang/String;)V,0.011
+edu.cmu.cs.mvelezce.bench.RunBenchC.main([Ljava/lang/String;)V,0
+

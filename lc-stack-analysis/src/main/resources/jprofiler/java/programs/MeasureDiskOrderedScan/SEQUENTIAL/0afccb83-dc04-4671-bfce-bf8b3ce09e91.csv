@@ -1,0 +1,11 @@
+com.sleepycat.je.txn.TxnManager.getTxnForThread()Lcom/sleepycat/je/Transaction;,0.005
+com.sleepycat.je.Environment.getThreadTransaction()Lcom/sleepycat/je/Transaction;,0
+com.sleepycat.je.txn.LockerFactory.getWritableLocker(Lcom/sleepycat/je/Environment;Lcom/sleepycat/je/Transaction;ZZZLcom/sleepycat/je/TransactionConfig;)Lcom/sleepycat/je/txn/Locker;,0
+com.sleepycat.je.txn.LockerFactory.getWritableLocker(Lcom/sleepycat/je/Environment;Lcom/sleepycat/je/Transaction;ZZZ)Lcom/sleepycat/je/txn/Locker;,0
+com.sleepycat.je.Database.put(Lcom/sleepycat/je/Transaction;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/Put;Lcom/sleepycat/je/WriteOptions;)Lcom/sleepycat/je/OperationResult;,0.005
+com.sleepycat.je.Database.put(Lcom/sleepycat/je/Transaction;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;)Lcom/sleepycat/je/OperationStatus;,0.005
+com.sleepycat.analysis.MeasureDiskOrderedScan.populate()V,0.027
+com.sleepycat.analysis.MeasureDiskOrderedScan.run()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run([Ljava/lang/String;)V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V,1.501
+

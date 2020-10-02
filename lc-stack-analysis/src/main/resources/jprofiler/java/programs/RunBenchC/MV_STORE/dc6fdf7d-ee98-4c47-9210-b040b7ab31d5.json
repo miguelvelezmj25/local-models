@@ -1,0 +1,88 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.value.Value",
+    "methodName" : "copyToResult",
+    "methodSignature" : "()Lorg/h2/value/Value;",
+    "selfTime" : 5274.0
+  }, {
+    "className" : "org.h2.result.LocalResultImpl",
+    "methodName" : "cloneLobs",
+    "methodSignature" : "([Lorg/h2/value/Value;)V",
+    "selfTime" : 10528.0
+  }, {
+    "className" : "org.h2.result.LocalResultImpl",
+    "methodName" : "addRow",
+    "methodSignature" : "([Lorg/h2/value/Value;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Select",
+    "methodName" : "queryFlat",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;JJZZ)Lorg/h2/result/LazyResult;",
+    "selfTime" : 5362.0
+  }, {
+    "className" : "org.h2.command.dml.Select",
+    "methodName" : "queryWithoutCache",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 10545.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "queryWithoutCacheLazyCheck",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "query",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 5286.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "query",
+    "methodSignature" : "(I)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.CommandContainer",
+    "methodName" : "query",
+    "methodSignature" : "(I)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.Command",
+    "methodName" : "executeQuery",
+    "methodSignature" : "(IZ)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcPreparedStatement",
+    "methodName" : "executeQuery",
+    "methodSignature" : "()Ljava/sql/ResultSet;",
+    "selfTime" : 5404.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "query",
+    "methodSignature" : "(Ljava/sql/PreparedStatement;)Ljava/sql/ResultSet;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "processNewOrder",
+    "methodSignature" : "()V",
+    "selfTime" : 31835.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "process",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "runTest",
+    "methodSignature" : "()V",
+    "selfTime" : 5274.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 10981.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

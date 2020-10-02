@@ -8,13 +8,13 @@ import java.io.IOException;
 public class ConvertCallStackSelectorTest {
 
   @Test
-  public void fireProgressChanged_SCALE_FALSE() throws IOException {
+  public void fireProgressChanged_SCALE_notSCALE() throws IOException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "SCALE",
-            "FALSE",
+            "¬SCALE",
             "com.mortennobel.imagescaling.AdvancedResizeOp",
             "fireProgressChanged",
             "(F)V");
@@ -22,13 +22,13 @@ public class ConvertCallStackSelectorTest {
   }
 
   @Test
-  public void verticalFromWorkToDst_SCALE_FALSE() throws IOException {
+  public void verticalFromWorkToDst_SCALE_notSCALE() throws IOException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "SCALE",
-            "FALSE",
+            "¬SCALE",
             "com.mortennobel.imagescaling.ResampleOp",
             "verticalFromWorkToDst",
             "([[B[BII)V");
@@ -36,13 +36,13 @@ public class ConvertCallStackSelectorTest {
   }
 
   @Test
-  public void horizontallyFromSrcToWork_SCALE_FALSE() throws IOException {
+  public void horizontallyFromSrcToWork_SCALE_notSCALE() throws IOException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "SCALE",
-            "FALSE",
+            "¬SCALE",
             "com.mortennobel.imagescaling.ResampleOp",
             "horizontallyFromSrcToWork",
             "(Ljava/awt/image/BufferedImage;[[BII)V");
@@ -50,13 +50,13 @@ public class ConvertCallStackSelectorTest {
   }
 
   @Test
-  public void compressJpeg_SCALE_FALSE() throws IOException {
+  public void compressJpeg_SCALE_notSCALE() throws IOException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "SCALE",
-            "FALSE",
+            "¬SCALE",
             "at.favre.tools.dconvert.converters.scaling.ImageHandler",
             "compressJpeg",
             "(Ljava/awt/image/BufferedImage;Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;FLjava/io/File;)V");
@@ -64,13 +64,13 @@ public class ConvertCallStackSelectorTest {
   }
 
   @Test
-  public void scale_SCALE_FALSE() throws IOException {
+  public void scale_SCALE_notSCALE() throws IOException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "SCALE",
-            "FALSE",
+            "¬SCALE",
             "at.favre.tools.dconvert.converters.scaling.ImageHandler",
             "scale",
             "(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;");
@@ -78,13 +78,13 @@ public class ConvertCallStackSelectorTest {
   }
 
   @Test
-  public void fireProgressChanged_PLATFORM_FALSE() throws IOException {
+  public void fireProgressChanged_PLATFORM_notPLATFORM() throws IOException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "PLATFORM",
-            "FALSE",
+            "¬PLATFORM",
             "com.mortennobel.imagescaling.AdvancedResizeOp",
             "fireProgressChanged",
             "(F)V");
@@ -92,13 +92,13 @@ public class ConvertCallStackSelectorTest {
   }
 
   @Test
-  public void verticalFromWorkToDst_PLATFORM_FALSE() throws IOException {
+  public void verticalFromWorkToDst_PLATFORM_notPLATFORM() throws IOException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "PLATFORM",
-            "FALSE",
+            "¬PLATFORM",
             "com.mortennobel.imagescaling.ResampleOp",
             "verticalFromWorkToDst",
             "([[B[BII)V");
@@ -106,13 +106,13 @@ public class ConvertCallStackSelectorTest {
   }
 
   @Test
-  public void horizontallyFromSrcToWork_PLATFORM_FALSE() throws IOException {
+  public void horizontallyFromSrcToWork_PLATFORM_notPLATFORM() throws IOException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "PLATFORM",
-            "FALSE",
+            "¬PLATFORM",
             "com.mortennobel.imagescaling.ResampleOp",
             "horizontallyFromSrcToWork",
             "(Ljava/awt/image/BufferedImage;[[BII)V");
@@ -120,13 +120,13 @@ public class ConvertCallStackSelectorTest {
   }
 
   @Test
-  public void compressJpeg_PLATFORM_FALSE() throws IOException {
+  public void compressJpeg_PLATFORM_notPLATFORM() throws IOException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "PLATFORM",
-            "FALSE",
+            "¬PLATFORM",
             "at.favre.tools.dconvert.converters.scaling.ImageHandler",
             "compressJpeg",
             "(Ljava/awt/image/BufferedImage;Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;FLjava/io/File;)V");
@@ -134,13 +134,13 @@ public class ConvertCallStackSelectorTest {
   }
 
   @Test
-  public void scale_PLATFORM_FALSE() throws IOException {
+  public void scale_PLATFORM_notPLATFORM() throws IOException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "PLATFORM",
-            "FALSE",
+            "¬PLATFORM",
             "at.favre.tools.dconvert.converters.scaling.ImageHandler",
             "scale",
             "(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;");

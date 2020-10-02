@@ -1,0 +1,113 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.util.JSR310Utils$WithTimeZone8",
+    "methodName" : "getTimeZoneOffsetUTC",
+    "methodSignature" : "(J)I",
+    "selfTime" : 10719.0
+  }, {
+    "className" : "org.h2.util.DateTimeUtils",
+    "methodName" : "getTimeZoneOffset",
+    "methodSignature" : "(J)I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.util.DateTimeUtils",
+    "methodName" : "getTimeZoneOffsetMillis",
+    "methodSignature" : "(J)I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.util.DateTimeUtils",
+    "methodName" : "timestampTimeZoneFromMillis",
+    "methodSignature" : "(J)Lorg/h2/value/ValueTimestampTimeZone;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.util.CurrentTimestamp",
+    "methodName" : "get",
+    "methodSignature" : "()Lorg/h2/value/ValueTimestampTimeZone;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "throttle",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "checkCanceled",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.Prepared",
+    "methodName" : "checkCanceled",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.Prepared",
+    "methodName" : "setCurrentRowNumber",
+    "methodSignature" : "(J)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Insert",
+    "methodName" : "insertRows",
+    "methodSignature" : "()I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Insert",
+    "methodName" : "update",
+    "methodSignature" : "()I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.CommandContainer",
+    "methodName" : "update",
+    "methodSignature" : "(Ljava/lang/Object;)Lorg/h2/result/ResultWithGeneratedKeys;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.Command",
+    "methodName" : "executeUpdate",
+    "methodSignature" : "(Ljava/lang/Object;)Lorg/h2/result/ResultWithGeneratedKeys;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcPreparedStatement",
+    "methodName" : "executeUpdateInternal",
+    "methodSignature" : "()I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcPreparedStatement",
+    "methodName" : "executeUpdate",
+    "methodSignature" : "()I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "update",
+    "methodSignature" : "(Ljava/sql/PreparedStatement;Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "loadStock",
+    "methodSignature" : "(I)V",
+    "selfTime" : 47508.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "loadWarehouse",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "load",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "init",
+    "methodSignature" : "(Ledu/cmu/cs/mvelezce/bench/Database;I)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 21070.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

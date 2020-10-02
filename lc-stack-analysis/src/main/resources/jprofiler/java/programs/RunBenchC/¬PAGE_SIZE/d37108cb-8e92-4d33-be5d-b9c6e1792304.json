@@ -1,0 +1,38 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.upgrade.DbUpgrade",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 6167.0
+  }, {
+    "className" : "org.h2.Driver",
+    "methodName" : "connect",
+    "methodSignature" : "(Ljava/lang/String;Ljava/util/Properties;)Ljava/sql/Connection;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "openNewConnection",
+    "methodSignature" : "()Ljava/sql/Connection;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "openConnection",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "init",
+    "methodSignature" : "(Ledu/cmu/cs/mvelezce/bench/Database;I)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 21070.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

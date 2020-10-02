@@ -1,0 +1,28 @@
+{
+  "stack" : [ {
+    "className" : "org.apache.lucene.core.search.similarities.BM25Similarity",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 5198.0
+  }, {
+    "className" : "org.apache.lucene.core.search.IndexSearcher",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 5498.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "similarity",
+    "methodSignature" : "(Z)Lorg/apache/lucene/core/search/similarities/Similarity;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 42217.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1498872.0
+  } ]
+}

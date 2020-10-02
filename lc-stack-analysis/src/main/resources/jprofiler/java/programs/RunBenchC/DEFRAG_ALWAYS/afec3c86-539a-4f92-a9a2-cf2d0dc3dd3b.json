@@ -1,0 +1,33 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.jdbc.JdbcResultSet",
+    "methodName" : "getBigDecimal",
+    "methodSignature" : "(I)Ljava/math/BigDecimal;",
+    "selfTime" : 5302.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "processNewOrder",
+    "methodSignature" : "()V",
+    "selfTime" : 90242.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "process",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "runTest",
+    "methodSignature" : "()V",
+    "selfTime" : 5512.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 15944.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

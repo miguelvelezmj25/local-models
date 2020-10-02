@@ -1,0 +1,23 @@
+{
+  "stack" : [ {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "printArgs",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 5263.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "<init>",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1501787.0
+  } ]
+}

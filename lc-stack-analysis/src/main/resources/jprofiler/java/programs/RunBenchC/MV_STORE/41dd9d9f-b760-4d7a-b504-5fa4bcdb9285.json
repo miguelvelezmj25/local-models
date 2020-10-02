@@ -1,0 +1,93 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.mvstore.WriteBuffer",
+    "methodName" : "put",
+    "methodSignature" : "(B)Lorg/h2/mvstore/WriteBuffer;",
+    "selfTime" : 5406.0
+  }, {
+    "className" : "org.h2.mvstore.db.ValueDataType",
+    "methodName" : "writeValue",
+    "methodSignature" : "(Lorg/h2/mvstore/WriteBuffer;Lorg/h2/value/Value;)V",
+    "selfTime" : 16134.0
+  }, {
+    "className" : "org.h2.mvstore.db.ValueDataType",
+    "methodName" : "writeValue",
+    "methodSignature" : "(Lorg/h2/mvstore/WriteBuffer;Lorg/h2/value/Value;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.db.ValueDataType",
+    "methodName" : "write",
+    "methodSignature" : "(Lorg/h2/mvstore/WriteBuffer;Ljava/lang/Object;)V",
+    "selfTime" : 5482.0
+  }, {
+    "className" : "org.h2.mvstore.tx.VersionedValueType",
+    "methodName" : "write",
+    "methodSignature" : "(Lorg/h2/mvstore/WriteBuffer;[Ljava/lang/Object;IZ)V",
+    "selfTime" : 5280.0
+  }, {
+    "className" : "org.h2.mvstore.Page$Leaf",
+    "methodName" : "writeValues",
+    "methodSignature" : "(Lorg/h2/mvstore/WriteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.Page",
+    "methodName" : "write",
+    "methodSignature" : "(Lorg/h2/mvstore/Chunk;Lorg/h2/mvstore/WriteBuffer;)I",
+    "selfTime" : 5332.0
+  }, {
+    "className" : "org.h2.mvstore.Page$Leaf",
+    "methodName" : "writeUnsavedRecursive",
+    "methodSignature" : "(Lorg/h2/mvstore/Chunk;Lorg/h2/mvstore/WriteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.Page$NonLeaf",
+    "methodName" : "writeChildrenRecursive",
+    "methodSignature" : "(Lorg/h2/mvstore/Chunk;Lorg/h2/mvstore/WriteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.Page$NonLeaf",
+    "methodName" : "writeUnsavedRecursive",
+    "methodSignature" : "(Lorg/h2/mvstore/Chunk;Lorg/h2/mvstore/WriteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.Page$NonLeaf",
+    "methodName" : "writeChildrenRecursive",
+    "methodSignature" : "(Lorg/h2/mvstore/Chunk;Lorg/h2/mvstore/WriteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.Page$NonLeaf",
+    "methodName" : "writeUnsavedRecursive",
+    "methodSignature" : "(Lorg/h2/mvstore/Chunk;Lorg/h2/mvstore/WriteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "storeNow",
+    "methodSignature" : "(JJ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "store",
+    "methodSignature" : "(JJ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "store",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "tryCommit",
+    "methodSignature" : "()J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "writeInBackground",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore$BackgroundWriterThread",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  } ]
+}

@@ -1,0 +1,43 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.pagestore.db.PageStoreTable",
+    "methodName" : "close",
+    "methodSignature" : "(Lorg/h2/engine/Session;)V",
+    "selfTime" : 5368.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "closeImpl",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "close",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "removeSession",
+    "methodSignature" : "(Lorg/h2/engine/Session;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 15944.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

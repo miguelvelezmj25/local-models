@@ -1,0 +1,15 @@
+com.sleepycat.je.dbi.DbTree.getDb(Lcom/sleepycat/je/dbi/DatabaseId;JLjava/lang/String;)Lcom/sleepycat/je/dbi/DatabaseImpl;,0.005
+com.sleepycat.je.dbi.DbTree.getDb(Lcom/sleepycat/je/dbi/DatabaseId;J)Lcom/sleepycat/je/dbi/DatabaseImpl;,0
+com.sleepycat.je.dbi.DbTree.getDb(Lcom/sleepycat/je/dbi/DatabaseId;)Lcom/sleepycat/je/dbi/DatabaseImpl;,0
+com.sleepycat.je.recovery.DirtyINMap.flushRoot(J)V,0
+com.sleepycat.je.recovery.Checkpointer.doCheckpoint(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;Z)V,0
+com.sleepycat.je.dbi.EnvironmentImpl.invokeCheckpoint(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;)V,0
+com.sleepycat.je.dbi.EnvironmentImpl.doClose(ZZ)V,0
+com.sleepycat.je.dbi.DbEnvPool.closeEnvironment(Lcom/sleepycat/je/dbi/EnvironmentImpl;ZZ)V,0
+com.sleepycat.je.dbi.EnvironmentImpl.close()V,0
+com.sleepycat.je.Environment.close()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.close()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run([Ljava/lang/String;)V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V,1.501
+

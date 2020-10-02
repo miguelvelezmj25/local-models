@@ -1,0 +1,5 @@
+org.apache.lucene.core.analysis.CharArraySet.<clinit>()V,0.005
+org.apache.lucene.core.analysis.standard.StandardAnalyzer.<clinit>()V,0
+org.apache.lucene.demo.IndexFiles.run([Ljava/lang/String;)V,0.042
+org.apache.lucene.demo.IndexFiles.main([Ljava/lang/String;)V,1.499
+

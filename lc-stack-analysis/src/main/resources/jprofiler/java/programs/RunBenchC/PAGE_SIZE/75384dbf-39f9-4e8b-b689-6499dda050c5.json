@@ -1,0 +1,48 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.util.StringUtils",
+    "methodName" : "cache",
+    "methodSignature" : "(Ljava/lang/String;)Ljava/lang/String;",
+    "selfTime" : 5228.0
+  }, {
+    "className" : "org.h2.value.ValueString",
+    "methodName" : "get",
+    "methodSignature" : "(Ljava/lang/String;Lorg/h2/engine/CastDataProvider;)Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.value.ValueString",
+    "methodName" : "get",
+    "methodSignature" : "(Ljava/lang/String;)Lorg/h2/value/Value;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcPreparedStatement",
+    "methodName" : "setString",
+    "methodSignature" : "(ILjava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "loadItem",
+    "methodSignature" : "()V",
+    "selfTime" : 15999.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "load",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "init",
+    "methodSignature" : "(Ledu/cmu/cs/mvelezce/bench/Database;I)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 16029.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

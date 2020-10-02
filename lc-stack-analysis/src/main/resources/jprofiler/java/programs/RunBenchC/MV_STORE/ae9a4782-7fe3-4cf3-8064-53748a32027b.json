@@ -1,0 +1,38 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.mvstore.Chunk",
+    "methodName" : "getMetaKey",
+    "methodSignature" : "(I)Ljava/lang/String;",
+    "selfTime" : 5305.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "storeNow",
+    "methodSignature" : "(JJ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "store",
+    "methodSignature" : "(JJ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "store",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "tryCommit",
+    "methodSignature" : "()J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore",
+    "methodName" : "writeInBackground",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVStore$BackgroundWriterThread",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  } ]
+}

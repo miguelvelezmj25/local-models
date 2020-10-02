@@ -1,0 +1,5 @@
+org.apache.lucene.core.index.NoMergeScheduler.<clinit>()V,0.005
+org.apache.lucene.demo.IndexFiles.mergeScheduler(Z)Lorg/apache/lucene/core/index/MergeScheduler;,0
+org.apache.lucene.demo.IndexFiles.run([Ljava/lang/String;)V,0.027
+org.apache.lucene.demo.IndexFiles.main([Ljava/lang/String;)V,1.501
+

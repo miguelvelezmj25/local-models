@@ -1,0 +1,23 @@
+{
+  "stack" : [ {
+    "className" : "at.favre.tools.dconvert.DConvert",
+    "methodName" : "getRegisteredImageReadersAndWriters",
+    "methodSignature" : "()Ljava/lang/String;",
+    "selfTime" : 252872.0
+  }, {
+    "className" : "at.favre.tools.dconvert.DConvert",
+    "methodName" : "execute",
+    "methodSignature" : "(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 5233.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

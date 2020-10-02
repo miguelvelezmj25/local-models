@@ -1,0 +1,113 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.util.CurrentTimestamp",
+    "methodName" : "get",
+    "methodSignature" : "()Lorg/h2/value/ValueTimestampTimeZone;",
+    "selfTime" : 5302.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "throttle",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "checkCanceled",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.Prepared",
+    "methodName" : "checkCanceled",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.Prepared",
+    "methodName" : "setCurrentRowNumber",
+    "methodSignature" : "(J)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Select$LazyResultQueryFlat",
+    "methodName" : "fetchNextRow",
+    "methodSignature" : "()[Lorg/h2/value/Value;",
+    "selfTime" : 20995.0
+  }, {
+    "className" : "org.h2.result.LazyResult",
+    "methodName" : "hasNext",
+    "methodSignature" : "()Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.result.LazyResult",
+    "methodName" : "next",
+    "methodSignature" : "()Z",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Select",
+    "methodName" : "queryFlat",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;JJZZ)Lorg/h2/result/LazyResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Select",
+    "methodName" : "queryWithoutCache",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 5181.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "queryWithoutCacheLazyCheck",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "query",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "query",
+    "methodSignature" : "(I)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 5255.0
+  }, {
+    "className" : "org.h2.command.CommandContainer",
+    "methodName" : "query",
+    "methodSignature" : "(I)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 10589.0
+  }, {
+    "className" : "org.h2.command.Command",
+    "methodName" : "executeQuery",
+    "methodSignature" : "(IZ)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcPreparedStatement",
+    "methodName" : "executeQuery",
+    "methodSignature" : "()Ljava/sql/ResultSet;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "query",
+    "methodSignature" : "(Ljava/sql/PreparedStatement;)Ljava/sql/ResultSet;",
+    "selfTime" : 10702.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "processNewOrder",
+    "methodSignature" : "()V",
+    "selfTime" : 102482.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "process",
+    "methodSignature" : "()V",
+    "selfTime" : 5320.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "runTest",
+    "methodSignature" : "()V",
+    "selfTime" : 5412.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 21070.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

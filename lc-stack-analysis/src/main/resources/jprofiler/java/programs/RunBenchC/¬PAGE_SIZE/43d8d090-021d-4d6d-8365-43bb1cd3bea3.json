@@ -1,0 +1,53 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.util.JSR310Utils$WithTimeZone8",
+    "methodName" : "getTimeZoneOffsetUTC",
+    "methodSignature" : "(J)I",
+    "selfTime" : 5287.0
+  }, {
+    "className" : "org.h2.util.DateTimeUtils",
+    "methodName" : "getTimeZoneOffset",
+    "methodSignature" : "(J)I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.util.DateTimeUtils",
+    "methodName" : "getTimeZoneOffsetMillis",
+    "methodSignature" : "(J)I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.value.ValueTimestamp",
+    "methodName" : "get",
+    "methodSignature" : "(Ljava/util/TimeZone;Ljava/sql/Timestamp;)Lorg/h2/value/ValueTimestamp;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcPreparedStatement",
+    "methodName" : "setTimestamp",
+    "methodSignature" : "(ILjava/sql/Timestamp;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "processPayment",
+    "methodSignature" : "()V",
+    "selfTime" : 10541.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "process",
+    "methodSignature" : "()V",
+    "selfTime" : 5320.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "runTest",
+    "methodSignature" : "()V",
+    "selfTime" : 5412.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 21070.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

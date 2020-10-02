@@ -1,0 +1,63 @@
+{
+  "stack" : [ {
+    "className" : "org.apache.lucene.core.codecs.lucene50.Lucene50PostingsFormat",
+    "methodName" : "<init>",
+    "methodSignature" : "(II)V",
+    "selfTime" : 5404.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.lucene50.Lucene50PostingsFormat",
+    "methodName" : "<init>",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.util.NamedSPILoader",
+    "methodName" : "reload",
+    "methodSignature" : "(Ljava/lang/ClassLoader;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.util.NamedSPILoader",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/lang/Class;Ljava/lang/ClassLoader;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.util.NamedSPILoader",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/lang/Class;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.PostingsFormat$Holder",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.PostingsFormat",
+    "methodName" : "forName",
+    "methodSignature" : "(Ljava/lang/String;)Lorg/apache/lucene/core/codecs/PostingsFormat;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.lucene70.Lucene70Codec",
+    "methodName" : "<init>",
+    "methodSignature" : "(Lorg/apache/lucene/core/codecs/lucene50/Lucene50StoredFieldsFormat$Mode;)V",
+    "selfTime" : 21900.0
+  }, {
+    "className" : "org.apache.lucene.core.codecs.lucene70.Lucene70Codec",
+    "methodName" : "<init>",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "codec",
+    "methodSignature" : "(Z)Lorg/apache/lucene/core/codecs/Codec;",
+    "selfTime" : 11703.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 26953.0
+  }, {
+    "className" : "org.apache.lucene.demo.IndexFiles",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1500538.0
+  } ]
+}

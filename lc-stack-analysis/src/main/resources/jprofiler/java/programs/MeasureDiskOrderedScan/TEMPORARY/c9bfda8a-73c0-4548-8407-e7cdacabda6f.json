@@ -1,0 +1,98 @@
+{
+  "stack" : [ {
+    "className" : "com.sleepycat.je.log.BasicVersionedWriteLoggable",
+    "methodName" : "writeToLog",
+    "methodSignature" : "(Ljava/nio/ByteBuffer;)V",
+    "selfTime" : 5286.0
+  }, {
+    "className" : "com.sleepycat.je.log.entry.SingleItemEntry",
+    "methodName" : "writeEntry",
+    "methodSignature" : "(Ljava/nio/ByteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "marshallIntoBuffer",
+    "methodSignature" : "(Lcom/sleepycat/je/log/LogEntryHeader;Lcom/sleepycat/je/log/entry/LogEntry;)Ljava/nio/ByteBuffer;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "serialLogWork",
+    "methodSignature" : "(Lcom/sleepycat/je/log/LogItem;Lcom/sleepycat/je/log/LogParams;Lcom/sleepycat/je/cleaner/UtilizationTracker;)Lcom/sleepycat/je/log/LogManager$LogWriteInfo;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "serialLog",
+    "methodSignature" : "(Lcom/sleepycat/je/log/LogItem;Lcom/sleepycat/je/log/LogParams;Lcom/sleepycat/je/cleaner/UtilizationTracker;)Lcom/sleepycat/je/log/LogManager$LogWriteInfo;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "logItem",
+    "methodSignature" : "(Lcom/sleepycat/je/log/LogItem;Lcom/sleepycat/je/log/LogParams;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "log",
+    "methodSignature" : "(Lcom/sleepycat/je/log/LogParams;)Lcom/sleepycat/je/log/LogItem;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "log",
+    "methodSignature" : "(Lcom/sleepycat/je/log/entry/LogEntry;Lcom/sleepycat/je/log/Provisional;ZZZLcom/sleepycat/je/log/ReplicationContext;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "log",
+    "methodSignature" : "(Lcom/sleepycat/je/log/entry/LogEntry;Lcom/sleepycat/je/log/ReplicationContext;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.recovery.Checkpointer",
+    "methodName" : "doCheckpoint",
+    "methodSignature" : "(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.EnvironmentImpl",
+    "methodName" : "invokeCheckpoint",
+    "methodSignature" : "(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.EnvironmentImpl",
+    "methodName" : "doClose",
+    "methodSignature" : "(ZZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DbEnvPool",
+    "methodName" : "closeEnvironment",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/EnvironmentImpl;ZZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.EnvironmentImpl",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Environment",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1501787.0
+  } ]
+}

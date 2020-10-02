@@ -1,0 +1,83 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.store.fs.FileDisk",
+    "methodName" : "write",
+    "methodSignature" : "(Ljava/nio/ByteBuffer;)I",
+    "selfTime" : 142751.0
+  }, {
+    "className" : "org.h2.store.fs.FileUtils",
+    "methodName" : "writeFully",
+    "methodSignature" : "(Ljava/nio/channels/FileChannel;Ljava/nio/ByteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.store.FileStore",
+    "methodName" : "write",
+    "methodSignature" : "([BII)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.pagestore.PageStore",
+    "methodName" : "writePage",
+    "methodSignature" : "(ILorg/h2/store/Data;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.pagestore.db.PageBtreeNode",
+    "methodName" : "write",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.pagestore.PageStore",
+    "methodName" : "writeBack",
+    "methodSignature" : "(Lorg/h2/util/CacheObject;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.pagestore.PageStore",
+    "methodName" : "writeBack",
+    "methodSignature" : "()V",
+    "selfTime" : 5246.0
+  }, {
+    "className" : "org.h2.pagestore.PageStore",
+    "methodName" : "compact",
+    "methodSignature" : "(I)V",
+    "selfTime" : 21043.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "closeOpenFilesAndUnlock",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 5374.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "closeImpl",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "close",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "removeSession",
+    "methodSignature" : "(Lorg/h2/engine/Session;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 15944.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

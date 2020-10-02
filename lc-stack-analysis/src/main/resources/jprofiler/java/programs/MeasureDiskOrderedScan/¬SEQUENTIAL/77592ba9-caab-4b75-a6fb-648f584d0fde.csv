@@ -1,0 +1,13 @@
+com.sleepycat.je.recovery.DirtyINMap.getHighestFlushLevel(Lcom/sleepycat/je/dbi/DatabaseImpl;)I,0.005
+com.sleepycat.je.recovery.Checkpointer.flushDirtyNodes(Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/recovery/DirtyINMap;JZLcom/sleepycat/je/recovery/Checkpointer$FlushStats;)V,0
+com.sleepycat.je.recovery.Checkpointer.doCheckpoint(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;Z)V,0
+com.sleepycat.je.dbi.EnvironmentImpl.invokeCheckpoint(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;)V,0
+com.sleepycat.je.dbi.EnvironmentImpl.doClose(ZZ)V,0
+com.sleepycat.je.dbi.DbEnvPool.closeEnvironment(Lcom/sleepycat/je/dbi/EnvironmentImpl;ZZ)V,0
+com.sleepycat.je.dbi.EnvironmentImpl.close()V,0
+com.sleepycat.je.Environment.close()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.close()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run()V,0.005
+com.sleepycat.analysis.MeasureDiskOrderedScan.run([Ljava/lang/String;)V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V,1.502
+

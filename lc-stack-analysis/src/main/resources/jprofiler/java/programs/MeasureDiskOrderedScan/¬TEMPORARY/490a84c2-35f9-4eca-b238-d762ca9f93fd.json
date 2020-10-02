@@ -1,0 +1,118 @@
+{
+  "stack" : [ {
+    "className" : "com.sleepycat.je.log.LogUtils",
+    "methodName" : "writePackedLong",
+    "methodSignature" : "(Ljava/nio/ByteBuffer;J)V",
+    "selfTime" : 83785.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.DatabaseId",
+    "methodName" : "writeToLog",
+    "methodSignature" : "(Ljava/nio/ByteBuffer;IZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.entry.LNLogEntry",
+    "methodName" : "writeBaseLNEntry",
+    "methodSignature" : "(Ljava/nio/ByteBuffer;IZZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.entry.LNLogEntry",
+    "methodName" : "writeEntry",
+    "methodSignature" : "(Ljava/nio/ByteBuffer;IZ)V",
+    "selfTime" : 26211.0
+  }, {
+    "className" : "com.sleepycat.je.log.entry.BaseReplicableEntry",
+    "methodName" : "writeEntry",
+    "methodSignature" : "(Ljava/nio/ByteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.entry.LNLogEntry",
+    "methodName" : "writeEntry",
+    "methodSignature" : "(Ljava/nio/ByteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "marshallIntoBuffer",
+    "methodSignature" : "(Lcom/sleepycat/je/log/LogEntryHeader;Lcom/sleepycat/je/log/entry/LogEntry;)Ljava/nio/ByteBuffer;",
+    "selfTime" : 10473.0
+  }, {
+    "className" : "com.sleepycat.je.log.LogManager",
+    "methodName" : "log",
+    "methodSignature" : "(Lcom/sleepycat/je/log/LogParams;)Lcom/sleepycat/je/log/LogItem;",
+    "selfTime" : 5236.0
+  }, {
+    "className" : "com.sleepycat.je.tree.LN",
+    "methodName" : "logInternal",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/dbi/DatabaseImpl;Lcom/sleepycat/je/txn/Locker;Lcom/sleepycat/je/txn/WriteLockInfo;Z[BIZZJIZZLcom/sleepycat/je/log/ReplicationContext;)Lcom/sleepycat/je/log/LogItem;",
+    "selfTime" : 5286.0
+  }, {
+    "className" : "com.sleepycat.je.tree.LN",
+    "methodName" : "optionalLog",
+    "methodSignature" : "(Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/dbi/DatabaseImpl;Lcom/sleepycat/je/txn/Locker;Lcom/sleepycat/je/txn/WriteLockInfo;Z[BIZZJIZLcom/sleepycat/je/log/ReplicationContext;)Lcom/sleepycat/je/log/LogItem;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.CursorImpl",
+    "methodName" : "insertRecordInternal",
+    "methodSignature" : "([BLcom/sleepycat/je/tree/LN;Lcom/sleepycat/je/dbi/ExpirationInfo;ZLcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/log/ReplicationContext;)Lcom/sleepycat/je/utilint/Pair;",
+    "selfTime" : 26454.0
+  }, {
+    "className" : "com.sleepycat.je.dbi.CursorImpl",
+    "methodName" : "insertOrUpdateRecord",
+    "methodSignature" : "(Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/tree/LN;Lcom/sleepycat/je/dbi/ExpirationInfo;Lcom/sleepycat/je/dbi/PutMode;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/log/ReplicationContext;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 5261.0
+  }, {
+    "className" : "com.sleepycat.je.Cursor",
+    "methodName" : "putNoNotify",
+    "methodSignature" : "(Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/tree/LN;Lcom/sleepycat/je/CacheMode;Lcom/sleepycat/je/dbi/ExpirationInfo;Lcom/sleepycat/je/dbi/PutMode;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/log/ReplicationContext;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Cursor",
+    "methodName" : "putNotify",
+    "methodSignature" : "(Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/tree/LN;Lcom/sleepycat/je/CacheMode;Lcom/sleepycat/je/dbi/ExpirationInfo;Lcom/sleepycat/je/dbi/PutMode;Lcom/sleepycat/je/log/ReplicationContext;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Cursor",
+    "methodName" : "putNoDups",
+    "methodSignature" : "(Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/CacheMode;Lcom/sleepycat/je/dbi/ExpirationInfo;Lcom/sleepycat/je/dbi/PutMode;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Cursor",
+    "methodName" : "putInternal",
+    "methodSignature" : "(Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/CacheMode;Lcom/sleepycat/je/dbi/ExpirationInfo;Lcom/sleepycat/je/dbi/PutMode;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Cursor",
+    "methodName" : "putInternal",
+    "methodSignature" : "(Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/Put;Lcom/sleepycat/je/WriteOptions;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Database",
+    "methodName" : "put",
+    "methodSignature" : "(Lcom/sleepycat/je/Transaction;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/Put;Lcom/sleepycat/je/WriteOptions;)Lcom/sleepycat/je/OperationResult;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.je.Database",
+    "methodName" : "putNoOverwrite",
+    "methodSignature" : "(Lcom/sleepycat/je/Transaction;Lcom/sleepycat/je/DatabaseEntry;Lcom/sleepycat/je/DatabaseEntry;)Lcom/sleepycat/je/OperationStatus;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "populate",
+    "methodSignature" : "()V",
+    "selfTime" : 5245.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 5440.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "com.sleepycat.analysis.MeasureDiskOrderedScan",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 1502155.0
+  } ]
+}

@@ -1,0 +1,78 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.pagestore.db.PageStoreTable",
+    "methodName" : "lock",
+    "methodSignature" : "(Lorg/h2/engine/Session;ZZ)Z",
+    "selfTime" : 5267.0
+  }, {
+    "className" : "org.h2.table.TableFilter",
+    "methodName" : "lock",
+    "methodSignature" : "(Lorg/h2/engine/Session;ZZ)V",
+    "selfTime" : 5283.0
+  }, {
+    "className" : "org.h2.command.dml.Select",
+    "methodName" : "queryWithoutCache",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 5181.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "queryWithoutCacheLazyCheck",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "query",
+    "methodSignature" : "(ILorg/h2/result/ResultTarget;)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.Query",
+    "methodName" : "query",
+    "methodSignature" : "(I)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 5255.0
+  }, {
+    "className" : "org.h2.command.CommandContainer",
+    "methodName" : "query",
+    "methodSignature" : "(I)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 10589.0
+  }, {
+    "className" : "org.h2.command.Command",
+    "methodName" : "executeQuery",
+    "methodSignature" : "(IZ)Lorg/h2/result/ResultInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcPreparedStatement",
+    "methodName" : "executeQuery",
+    "methodSignature" : "()Ljava/sql/ResultSet;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "query",
+    "methodSignature" : "(Ljava/sql/PreparedStatement;)Ljava/sql/ResultSet;",
+    "selfTime" : 10702.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "processNewOrder",
+    "methodSignature" : "()V",
+    "selfTime" : 102482.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "process",
+    "methodSignature" : "()V",
+    "selfTime" : 5320.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "runTest",
+    "methodSignature" : "()V",
+    "selfTime" : 5412.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 21070.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

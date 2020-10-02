@@ -1,0 +1,18 @@
+{
+  "stack" : [ {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "parse",
+    "methodSignature" : "(Ljava/lang/String;IZ)Ledu/cmu/cs/mvelezce/bench/Database;",
+    "selfTime" : 5487.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 16029.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

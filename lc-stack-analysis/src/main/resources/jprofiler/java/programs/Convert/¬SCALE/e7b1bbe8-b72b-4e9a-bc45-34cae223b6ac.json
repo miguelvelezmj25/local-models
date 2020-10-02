@@ -1,0 +1,23 @@
+{
+  "stack" : [ {
+    "className" : "at.favre.tools.dconvert.util.ImageUtil",
+    "methodName" : "read",
+    "methodSignature" : "(Ljavax/imageio/stream/ImageInputStream;Lat/favre/tools/dconvert/arg/ImageType;)Lat/favre/tools/dconvert/util/LoadedImage;",
+    "selfTime" : 458588.0
+  }, {
+    "className" : "at.favre.tools.dconvert.util.ImageUtil",
+    "methodName" : "loadImage",
+    "methodSignature" : "(Ljava/io/File;)Lat/favre/tools/dconvert/util/LoadedImage;",
+    "selfTime" : 5297.0
+  }, {
+    "className" : "at.favre.tools.dconvert.converters.APlatformConverter",
+    "methodName" : "convert",
+    "methodSignature" : "(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+    "selfTime" : 15947.0
+  }, {
+    "className" : "at.favre.tools.dconvert.WorkerHandler$Worker",
+    "methodName" : "run",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  } ]
+}

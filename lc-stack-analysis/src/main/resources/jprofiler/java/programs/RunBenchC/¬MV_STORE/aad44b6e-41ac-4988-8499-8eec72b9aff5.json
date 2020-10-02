@@ -1,0 +1,78 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.store.fs.FileDisk",
+    "methodName" : "write",
+    "methodSignature" : "(Ljava/nio/ByteBuffer;)I",
+    "selfTime" : 5250.0
+  }, {
+    "className" : "org.h2.store.fs.FileUtils",
+    "methodName" : "writeFully",
+    "methodSignature" : "(Ljava/nio/channels/FileChannel;Ljava/nio/ByteBuffer;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.store.FileStore",
+    "methodName" : "write",
+    "methodSignature" : "([BII)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.pagestore.PageStore",
+    "methodName" : "writeVariableHeader",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.pagestore.PageStore",
+    "methodName" : "setLogFirstPage",
+    "methodSignature" : "(III)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.pagestore.PageLog",
+    "methodName" : "openForWriting",
+    "methodSignature" : "(IZ)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.pagestore.PageStore",
+    "methodName" : "compact",
+    "methodSignature" : "(I)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "closeOpenFilesAndUnlock",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "closeImpl",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "close",
+    "methodSignature" : "(Z)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "removeSession",
+    "methodSignature" : "(Lorg/h2/engine/Session;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "close",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 21070.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

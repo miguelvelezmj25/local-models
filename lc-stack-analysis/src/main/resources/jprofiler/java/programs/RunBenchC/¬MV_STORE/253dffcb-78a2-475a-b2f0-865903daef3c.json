@@ -1,0 +1,33 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.engine.ConnectionInfo",
+    "methodName" : "readProperties",
+    "methodSignature" : "(Ljava/util/Properties;)V",
+    "selfTime" : 5333.0
+  }, {
+    "className" : "org.h2.engine.ConnectionInfo",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/lang/String;Ljava/util/Properties;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.ConnectionInfo",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/lang/String;Ljava/util/Properties;Lorg/h2/store/FileLockMethod;Ljava/lang/String;Ljava/lang/String;IZZZI)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/lang/String;Ljava/util/Properties;Lorg/h2/store/FileLockMethod;Ljava/lang/String;Ljava/lang/String;IZZZI)V",
+    "selfTime" : 5396.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 21070.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

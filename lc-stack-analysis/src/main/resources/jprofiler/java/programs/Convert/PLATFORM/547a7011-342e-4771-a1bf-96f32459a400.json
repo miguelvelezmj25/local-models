@@ -1,0 +1,33 @@
+{
+  "stack" : [ {
+    "className" : "com.mortennobel.imagescaling.ResampleFilters",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 5347.0
+  }, {
+    "className" : "at.favre.tools.dconvert.arg.EScalingAlgorithm",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 10896.0
+  }, {
+    "className" : "at.favre.tools.dconvert.arg.Arguments",
+    "methodName" : "<clinit>",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "upScalingAlgo",
+    "methodSignature" : "(Z)Ljava/lang/String;",
+    "selfTime" : 5258.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 5154.0
+  }, {
+    "className" : "at.favre.tools.dconvert.Convert",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

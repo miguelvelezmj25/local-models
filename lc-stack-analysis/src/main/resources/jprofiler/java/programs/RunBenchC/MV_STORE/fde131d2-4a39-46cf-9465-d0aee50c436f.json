@@ -1,0 +1,143 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.mvstore.MVMap",
+    "methodName" : "tryLock",
+    "methodSignature" : "(Lorg/h2/mvstore/RootReference;I)Lorg/h2/mvstore/RootReference;",
+    "selfTime" : 5329.0
+  }, {
+    "className" : "org.h2.mvstore.MVMap",
+    "methodName" : "lockRoot",
+    "methodSignature" : "(Lorg/h2/mvstore/RootReference;I)Lorg/h2/mvstore/RootReference;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVMap",
+    "methodName" : "append",
+    "methodSignature" : "(Ljava/lang/Object;Ljava/lang/Object;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.tx.TransactionStore",
+    "methodName" : "addUndoLogRecord",
+    "methodSignature" : "(IJ[Ljava/lang/Object;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.tx.Transaction",
+    "methodName" : "log",
+    "methodSignature" : "(ILjava/lang/Object;Lorg/h2/value/VersionedValue;)J",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.tx.TxDecisionMaker",
+    "methodName" : "logAndDecideToPut",
+    "methodSignature" : "(Lorg/h2/value/VersionedValue;Ljava/lang/Object;)Lorg/h2/mvstore/MVMap$Decision;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.tx.TxDecisionMaker$PutIfAbsentDecisionMaker",
+    "methodName" : "decide",
+    "methodSignature" : "(Lorg/h2/value/VersionedValue;Lorg/h2/value/VersionedValue;)Lorg/h2/mvstore/MVMap$Decision;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.tx.TxDecisionMaker$PutIfAbsentDecisionMaker",
+    "methodName" : "decide",
+    "methodSignature" : "(Ljava/lang/Object;Ljava/lang/Object;)Lorg/h2/mvstore/MVMap$Decision;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.MVMap",
+    "methodName" : "operate",
+    "methodSignature" : "(Ljava/lang/Object;Ljava/lang/Object;Lorg/h2/mvstore/MVMap$DecisionMaker;)Ljava/lang/Object;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.tx.TransactionMap",
+    "methodName" : "set",
+    "methodSignature" : "(Ljava/lang/Object;Lorg/h2/mvstore/tx/TxDecisionMaker;)Ljava/lang/Object;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.tx.TransactionMap",
+    "methodName" : "putIfAbsent",
+    "methodSignature" : "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.db.MVPrimaryIndex",
+    "methodName" : "add",
+    "methodSignature" : "(Lorg/h2/engine/Session;Lorg/h2/result/Row;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.mvstore.db.MVTable",
+    "methodName" : "addRow",
+    "methodSignature" : "(Lorg/h2/engine/Session;Lorg/h2/result/Row;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "addMeta",
+    "methodSignature" : "(Lorg/h2/engine/Session;Lorg/h2/engine/DbObject;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "addDatabaseObject",
+    "methodSignature" : "(Lorg/h2/engine/Session;Lorg/h2/engine/DbObject;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "open",
+    "methodSignature" : "(IILorg/h2/engine/ConnectionInfo;)V",
+    "selfTime" : 5272.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "openDatabase",
+    "methodSignature" : "(IIZLorg/h2/engine/ConnectionInfo;)V",
+    "selfTime" : 5453.0
+  }, {
+    "className" : "org.h2.engine.Database",
+    "methodName" : "<init>",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;Ljava/lang/String;)V",
+    "selfTime" : 5198.0
+  }, {
+    "className" : "org.h2.engine.Engine",
+    "methodName" : "openSession",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;ZZLjava/lang/String;)Lorg/h2/engine/Session;",
+    "selfTime" : 5239.0
+  }, {
+    "className" : "org.h2.engine.Engine",
+    "methodName" : "openSession",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;)Lorg/h2/engine/Session;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Engine",
+    "methodName" : "createSessionAndValidate",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;)Lorg/h2/engine/Session;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Engine",
+    "methodName" : "createSession",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;)Lorg/h2/engine/Session;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Engine",
+    "methodName" : "createSession",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;)Lorg/h2/engine/SessionInterface;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.SessionRemote",
+    "methodName" : "connectEmbeddedOrServer",
+    "methodSignature" : "(Z)Lorg/h2/engine/SessionInterface;",
+    "selfTime" : 5212.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "<init>",
+    "methodSignature" : "(Lorg/h2/engine/ConnectionInfo;Z)V",
+    "selfTime" : 5273.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "<init>",
+    "methodSignature" : "(Ljava/lang/String;Ljava/util/Properties;Lorg/h2/store/FileLockMethod;Ljava/lang/String;Ljava/lang/String;IZZZI)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 10981.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}

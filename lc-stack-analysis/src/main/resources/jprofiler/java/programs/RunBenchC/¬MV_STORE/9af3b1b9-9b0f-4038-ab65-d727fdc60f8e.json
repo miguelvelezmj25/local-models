@@ -1,0 +1,83 @@
+{
+  "stack" : [ {
+    "className" : "org.h2.pagestore.db.PageStoreTable",
+    "methodName" : "checkRowCount",
+    "methodSignature" : "(Lorg/h2/engine/Session;Lorg/h2/index/Index;I)V",
+    "selfTime" : 5186.0
+  }, {
+    "className" : "org.h2.pagestore.db.PageStoreTable",
+    "methodName" : "addRow",
+    "methodSignature" : "(Lorg/h2/engine/Session;Lorg/h2/result/Row;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.UndoLogRecord",
+    "methodName" : "undo",
+    "methodSignature" : "(Lorg/h2/engine/Session;)V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "rollbackTo",
+    "methodSignature" : "(Lorg/h2/engine/Session$Savepoint;)V",
+    "selfTime" : 5280.0
+  }, {
+    "className" : "org.h2.engine.Session",
+    "methodName" : "rollback",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.dml.TransactionCommand",
+    "methodName" : "update",
+    "methodSignature" : "()I",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.CommandContainer",
+    "methodName" : "update",
+    "methodSignature" : "(Ljava/lang/Object;)Lorg/h2/result/ResultWithGeneratedKeys;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.command.Command",
+    "methodName" : "executeUpdate",
+    "methodSignature" : "(Ljava/lang/Object;)Lorg/h2/result/ResultWithGeneratedKeys;",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "rollbackInternal",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "org.h2.jdbc.JdbcConnection",
+    "methodName" : "rollback",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.Database",
+    "methodName" : "rollback",
+    "methodSignature" : "()V",
+    "selfTime" : 0.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "processPayment",
+    "methodSignature" : "()V",
+    "selfTime" : 10541.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchCThread",
+    "methodName" : "process",
+    "methodSignature" : "()V",
+    "selfTime" : 5320.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.c.BenchC",
+    "methodName" : "runTest",
+    "methodSignature" : "()V",
+    "selfTime" : 5412.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "run",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 21070.0
+  }, {
+    "className" : "edu.cmu.cs.mvelezce.bench.RunBenchC",
+    "methodName" : "main",
+    "methodSignature" : "([Ljava/lang/String;)V",
+    "selfTime" : 0.0
+  } ]
+}
