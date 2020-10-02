@@ -28,6 +28,8 @@ public class TreeDiffer {
   public static final String OUTPUT_DIR = Options.DIRECTORY + "/tree/diff/java/programs";
   public static final String UNIQUE_TRACE_COLOR = "#FF9E9B";
   public static final String DIFF_TIME_COLOR = "#FFDC7D";
+  public static final String OPTION_VALUE_1_COLOR = "blue";
+  public static final String OPTION_VALUE_2_COLOR = "red";
 
   private final CallTreeBuilder callTreeBuilder1;
   private final CallTreeBuilder callTreeBuilder2;
@@ -55,6 +57,7 @@ public class TreeDiffer {
     this.buildDiffTree(callTree1);
     this.buildDiffTree(callTree2);
     Set<Pair<CallTree, CallTree>> equalStacks = this.getEqualStacks();
+    System.out.println(this.toDotString(equalStacks));
     this.saveGraph(equalStacks);
   }
 
@@ -205,6 +208,8 @@ public class TreeDiffer {
               equalStacks,
               this.callTreeBuilder1.getOptionValue(),
               this.callTreeBuilder2.getOptionValue(),
+              OPTION_VALUE_1_COLOR,
+              OPTION_VALUE_2_COLOR,
               processedCallTrees));
     }
 
@@ -218,6 +223,8 @@ public class TreeDiffer {
               equalStacks,
               this.callTreeBuilder2.getOptionValue(),
               this.callTreeBuilder1.getOptionValue(),
+              OPTION_VALUE_2_COLOR,
+              OPTION_VALUE_1_COLOR,
               processedCallTrees));
     }
 
@@ -231,6 +238,8 @@ public class TreeDiffer {
       Set<Pair<CallTree, CallTree>> equalStacks,
       String optionValue1,
       String optionValue2,
+      String optionValueColor1,
+      String optionValueColor2,
       Set<CallTree> processedCallTrees) {
     StringBuilder dotString = new StringBuilder();
     CallTree equalCallTree = this.getEqualCallTree(callTree, equalStacks);
@@ -250,41 +259,50 @@ public class TreeDiffer {
                     DECIMAL_FORMAT.format(equalNodes.get(calleer).getTimeDouble()).length());
           }
 
+          String bgColor = "white";
+          if (equalCallTree == null) {
+            bgColor = UNIQUE_TRACE_COLOR;
+          } else {
+            double nodeTime = calleer.getTimeDouble();
+            double equalNodeTime = equalNodes.get(calleer).getTimeDouble();
+            if (Math.abs(nodeTime - equalNodeTime) > 0.1) {
+              bgColor = DIFF_TIME_COLOR;
+            }
+          }
+
           dotString.append("\"");
           dotString.append(timeInfoNode);
           dotString.append("\"");
           dotString.append(" [");
-          dotString.append(" label=\"");
+          dotString.append(
+              " shape=plain label=<\n"
+                  + "<TABLE BORDER=\"0\" CELLBORDER=\"1\" CELLSPACING=\"0\">\n"
+                  + "  <TR><TD ALIGN=\"LEFT\" BGCOLOR=\"");
+          dotString.append(bgColor);
+          dotString.append("\" STYLE=\"dashed\"><FONT color=\"");
+          dotString.append(optionValueColor1);
+          dotString.append("\">");
           dotString.append(
               String.format("%" + maxLength + "s", DECIMAL_FORMAT.format(calleer.getTimeDouble())));
           dotString.append("s ");
           dotString.append(optionValue1);
-          dotString.append("\\l");
+          dotString.append("</FONT></TD></TR>\n");
           if (equalCallTree != null) {
+            dotString.append("  <TR><TD ALIGN=\"LEFT\" BGCOLOR=\"");
+            dotString.append(bgColor);
+            dotString.append("\" STYLE=\"dashed\"><FONT color=\"");
+            dotString.append(optionValueColor2);
+            dotString.append("\">");
             dotString.append(
                 String.format(
                     "%" + maxLength + "s",
                     DECIMAL_FORMAT.format(equalNodes.get(calleer).getTimeDouble())));
             dotString.append("s ");
             dotString.append(optionValue2);
-            dotString.append("\\l");
-          }
-          dotString.append("\"");
-          dotString.append(" shape=box style=\"dashed, filled\" fillcolor=\"");
-          if (equalCallTree == null) {
-            dotString.append(UNIQUE_TRACE_COLOR);
-          } else {
-            double nodeTime = calleer.getTimeDouble();
-            double equalNodeTime = equalNodes.get(calleer).getTimeDouble();
-            if (Math.abs(nodeTime - equalNodeTime) > 0.1) {
-              dotString.append(DIFF_TIME_COLOR);
-            } else {
-              dotString.append("white");
-            }
+            dotString.append("</FONT></TD></TR>\n");
           }
 
-          dotString.append("\" ");
-          dotString.append(" ];\n");
+          dotString.append("</TABLE>> ];\n");
         }
 
         if (timeInfoNode == null) {
