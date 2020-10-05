@@ -21,7 +21,7 @@ public class CallTreeBuilder {
   public static final String REGION_NODE_COLOR = "#00DCFF";
 
   private final CallTree callTree = new CallTree();
-  private final Set<CallTree> allCallTrees = new HashSet<>();
+  private final Map<CallTree, Double> allCallTrees2Times = new HashMap<>();
 
   private final String programName;
   private final String optionValue;
@@ -52,8 +52,22 @@ public class CallTreeBuilder {
 
     Collection<File> prettyCallStacks = this.getPrettyCallStacks(this.optionValue);
     this.buildAllCallTrees(prettyCallStacks);
+    this.calculateCallTreesTimes();
     this.buildCallTree(prettyCallStacks);
     return this.callTree;
+  }
+
+  private void calculateCallTreesTimes() {
+    for (CallTree callTree : this.allCallTrees2Times.keySet()) {
+      double time = 0;
+      for (Node node : callTree.getNodes()) {
+        if (node.isSpecial()) {
+          continue;
+        }
+        time += node.getTimeDouble();
+      }
+      this.allCallTrees2Times.put(callTree, time);
+    }
   }
 
   private void buildCallTree(Collection<File> prettyCallStacks) throws IOException {
@@ -82,7 +96,7 @@ public class CallTreeBuilder {
         currentNode = node;
       }
       callTree.addEdge(currentNode, callTree.getStartNode());
-      this.allCallTrees.add(callTree);
+      this.allCallTrees2Times.put(callTree, 0.0);
     }
   }
 
@@ -106,7 +120,7 @@ public class CallTreeBuilder {
       dotString.append("\n");
     }
 
-    for (CallTree callTree : this.allCallTrees) {
+    for (CallTree callTree : this.allCallTrees2Times.keySet()) {
       String edgeColor = getRandomColor(callTree.hashCode());
       for (Node node : callTree.getNodes()) {
         for (Node calleer : node.getCallers()) {
@@ -200,8 +214,8 @@ public class CallTreeBuilder {
     return FileUtils.listFiles(dir, new String[] {"csv"}, false);
   }
 
-  public Set<CallTree> getAllCallTrees() {
-    return allCallTrees;
+  public Map<CallTree, Double> getAllCallTrees2Times() {
+    return allCallTrees2Times;
   }
 
   public String getOptionValue() {

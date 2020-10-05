@@ -63,13 +63,13 @@ public class TreeDiffer {
   private Set<Pair<CallTree, CallTree>> getEqualStacks() throws DiffException {
     Set<Pair<CallTree, CallTree>> equalStacks = new HashSet<>();
     Set<CallTree> equalCallTrees = new HashSet<>();
-    for (CallTree callTree1 : this.callTreeBuilder1.getAllCallTrees()) {
+    for (CallTree callTree1 : this.callTreeBuilder1.getAllCallTrees2Times().keySet()) {
       if (equalCallTrees.contains(callTree1)) {
         continue;
       }
 
       List<String> callStack1 = callTree1.getCallStack();
-      for (CallTree callTree2 : this.callTreeBuilder2.getAllCallTrees()) {
+      for (CallTree callTree2 : this.callTreeBuilder2.getAllCallTrees2Times().keySet()) {
         if (equalCallTrees.contains(callTree2)) {
           continue;
         }
@@ -190,14 +190,57 @@ public class TreeDiffer {
         dotString.append("style=filled fillcolor=\"");
         dotString.append(CallTreeBuilder.REGION_NODE_COLOR);
         dotString.append("\"");
+      } else if (node.isSpecial() && node.equals(this.diffTree.getEndNode())) {
+        String totalTime1 =
+            this.getCallStackTime(this.callTreeBuilder1.getAllCallTrees2Times().values());
+        String totalTime2 =
+            this.getCallStackTime(this.callTreeBuilder2.getAllCallTrees2Times().values());
+
+        dotString.append("shape=plain label=<");
+        dotString.append("<TABLE BORDER=\"0\" CELLBORDER=\"1\" CELLSPACING=\"0\">");
+        dotString.append(
+            "<TR><TD ALIGN=\"CENTER\" BGCOLOR=\"white\" COLSPAN=\"2\"><FONT color=\"black\">");
+        dotString.append(node.getId());
+        dotString.append("</FONT></TD></TR>");
+        dotString.append("<TR><TD ALIGN=\"LEFT\" BGCOLOR=\"white\"><FONT color=\"");
+        dotString.append(OPTION_VALUE_1_COLOR);
+        dotString.append("\">");
+        dotString.append(DECIMAL_FORMAT.format(Double.parseDouble(totalTime1)));
+        dotString.append("s " + this.callTreeBuilder1.getOptionValue() + "</FONT></TD>");
+        dotString.append("<TD ALIGN=\"LEFT\" BGCOLOR=\"white\"><FONT color=\"");
+        dotString.append(OPTION_VALUE_2_COLOR);
+        dotString.append("\">");
+        dotString.append(DECIMAL_FORMAT.format(Double.parseDouble(totalTime2)));
+        dotString.append("s " + this.callTreeBuilder2.getOptionValue() + "</FONT></TD></TR>");
+        dotString.append("</TABLE>>");
+      } else if (node.isSpecial() && node.equals(this.diffTree.getStartNode())) {
+        dotString.append("shape=plain label=<");
+        dotString.append("<TABLE BORDER=\"0\" CELLBORDER=\"1\" CELLSPACING=\"0\">");
+        dotString.append(
+            "<TR><TD ALIGN=\"CENTER\" BGCOLOR=\"white\" COLSPAN=\"2\"><FONT color=\"black\">");
+        dotString.append(node.getId());
+        dotString.append("</FONT></TD></TR>");
+        dotString.append("<TR><TD ALIGN=\"LEFT\" BGCOLOR=\"white\"><FONT color=\"");
+        dotString.append(OPTION_VALUE_1_COLOR);
+        dotString.append("\">");
+        dotString.append(this.callTreeBuilder1.getAllCallTrees2Times().size());
+        dotString.append(" callstacks " + this.callTreeBuilder1.getOptionValue() + "</FONT></TD>");
+        dotString.append("<TD ALIGN=\"LEFT\" BGCOLOR=\"white\"><FONT color=\"");
+        dotString.append(OPTION_VALUE_2_COLOR);
+        dotString.append("\">");
+        dotString.append(this.callTreeBuilder2.getAllCallTrees2Times().size());
+        dotString.append(
+            " callstacks " + this.callTreeBuilder2.getOptionValue() + "</FONT></TD></TR>");
+        dotString.append("</TABLE>>");
       }
+
       dotString.append("]");
 
       dotString.append("\n");
     }
 
     Set<CallTree> processedCallTrees = new HashSet<>();
-    for (CallTree callTree : this.callTreeBuilder1.getAllCallTrees()) {
+    for (CallTree callTree : this.callTreeBuilder1.getAllCallTrees2Times().keySet()) {
       if (processedCallTrees.contains(callTree)) {
         continue;
       }
@@ -212,7 +255,7 @@ public class TreeDiffer {
               processedCallTrees));
     }
 
-    for (CallTree callTree : this.callTreeBuilder2.getAllCallTrees()) {
+    for (CallTree callTree : this.callTreeBuilder2.getAllCallTrees2Times().keySet()) {
       if (processedCallTrees.contains(callTree)) {
         continue;
       }
@@ -230,6 +273,15 @@ public class TreeDiffer {
     dotString.append("}");
 
     return dotString.toString();
+  }
+
+  private String getCallStackTime(Collection<Double> times) {
+    double totalTime = 0;
+    for (Double time : times) {
+      totalTime += time;
+    }
+
+    return DECIMAL_FORMAT.format(totalTime);
   }
 
   private String processEdges(
