@@ -1,0 +1,5 @@
+edu.cmu.cs.mvelezce.perf.ExpensiveCalls.getFactors()V,4.595
+edu.cmu.cs.mvelezce.perf.IfAMoo.bar()V,0.44
+edu.cmu.cs.mvelezce.perf.IfAMoo.foo(Z)V,0
+edu.cmu.cs.mvelezce.perf.IfAMoo.main([Ljava/lang/String;)V,0
+

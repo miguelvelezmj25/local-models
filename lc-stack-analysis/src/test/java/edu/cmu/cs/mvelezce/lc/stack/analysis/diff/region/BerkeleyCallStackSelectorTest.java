@@ -8,13 +8,13 @@ import java.io.IOException;
 public class BerkeleyCallStackSelectorTest {
 
   @Test
-  public void log_TEMPORARY_FALSE() throws IOException {
+  public void log_TEMPORARY_notTEMPORARY() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
+            "¬TEMPORARY",
             "TEMPORARY",
-            "FALSE",
             "com.sleepycat.je.log.LogManager",
             "log",
             "(Lcom/sleepycat/je/log/LogParams;)Lcom/sleepycat/je/log/LogItem;");
@@ -22,13 +22,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void addPostMarshallingInfo_TEMPORARY_FALSE() throws IOException {
+  public void addPostMarshallingInfo_TEMPORARY_notTEMPORARY() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
+            "¬TEMPORARY",
             "TEMPORARY",
-            "FALSE",
             "com.sleepycat.je.log.LogEntryHeader",
             "addPostMarshallingInfo",
             "(Ljava/nio/ByteBuffer;JLcom/sleepycat/je/utilint/VLSN;)Ljava/nio/ByteBuffer;");
@@ -36,13 +36,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void readFromFileInternal_TEMPORARY_FALSE() throws IOException {
+  public void readFromFileInternal_TEMPORARY_notTEMPORARY() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
+            "¬TEMPORARY",
             "TEMPORARY",
-            "FALSE",
             "com.sleepycat.je.log.FileManager",
             "readFromFileInternal",
             "(Ljava/io/RandomAccessFile;Ljava/nio/ByteBuffer;JJ)V");
@@ -50,13 +50,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void writeToFile_TEMPORARY_FALSE() throws IOException {
+  public void writeToFile_TEMPORARY_notTEMPORARY() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
+            "¬TEMPORARY",
             "TEMPORARY",
-            "FALSE",
             "com.sleepycat.je.log.FileManager",
             "writeToFile",
             "(Ljava/io/RandomAccessFile;Ljava/nio/ByteBuffer;JJZ)I");
@@ -64,13 +64,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void force_TEMPORARY_FALSE() throws IOException {
+  public void force_TEMPORARY_notTEMPORARY() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
+            "¬TEMPORARY",
             "TEMPORARY",
-            "FALSE",
             "com.sleepycat.je.log.FileManager$LogEndFileDescriptor",
             "force",
             "()V");
@@ -78,13 +78,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void findEntry_TEMPORARY_FALSE() throws IOException {
+  public void findEntry_TEMPORARY_notTEMPORARY() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
+            "¬TEMPORARY",
             "TEMPORARY",
-            "FALSE",
             "com.sleepycat.je.tree.IN",
             "findEntry",
             "([BZZLjava/util/Comparator;)I");
@@ -92,13 +92,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void serialize_TEMPORARY_FALSE() throws IOException {
+  public void serialize_TEMPORARY_notTEMPORARY() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
+            "¬TEMPORARY",
             "TEMPORARY",
-            "FALSE",
             "com.sleepycat.je.tree.IN",
             "serialize",
             "(Ljava/nio/ByteBuffer;ZZ)V");
@@ -106,13 +106,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void log_SEQUENTIAL_FALSE() throws IOException {
+  public void log_SEQUENTIAL_notSEQUENTIAL() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "SEQUENTIAL",
-            "FALSE",
+            "¬SEQUENTIAL",
             "com.sleepycat.je.log.LogManager",
             "log",
             "(Lcom/sleepycat/je/log/LogParams;)Lcom/sleepycat/je/log/LogItem;");
@@ -120,13 +120,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void addPostMarshallingInfo_SEQUENTIAL_FALSE() throws IOException {
+  public void addPostMarshallingInfo_SEQUENTIAL_notSEQUENTIAL() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "SEQUENTIAL",
-            "FALSE",
+            "¬SEQUENTIAL",
             "com.sleepycat.je.log.LogEntryHeader",
             "addPostMarshallingInfo",
             "(Ljava/nio/ByteBuffer;JLcom/sleepycat/je/utilint/VLSN;)Ljava/nio/ByteBuffer;");
@@ -134,13 +134,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void readFromFileInternal_SEQUENTIAL_FALSE() throws IOException {
+  public void readFromFileInternal_SEQUENTIAL_notSEQUENTIAL() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "SEQUENTIAL",
-            "FALSE",
+            "¬SEQUENTIAL",
             "com.sleepycat.je.log.FileManager",
             "readFromFileInternal",
             "(Ljava/io/RandomAccessFile;Ljava/nio/ByteBuffer;JJ)V");
@@ -148,13 +148,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void writeToFile_SEQUENTIAL_FALSE() throws IOException {
+  public void writeToFile_SEQUENTIAL_notSEQUENTIAL() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "SEQUENTIAL",
-            "FALSE",
+            "¬SEQUENTIAL",
             "com.sleepycat.je.log.FileManager",
             "writeToFile",
             "(Ljava/io/RandomAccessFile;Ljava/nio/ByteBuffer;JJZ)I");
@@ -162,13 +162,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void force_SEQUENTIAL_FALSE() throws IOException {
+  public void force_SEQUENTIAL_notSEQUENTIAL() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "SEQUENTIAL",
-            "FALSE",
+            "¬SEQUENTIAL",
             "com.sleepycat.je.log.FileManager$LogEndFileDescriptor",
             "force",
             "()V");
@@ -176,13 +176,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void findEntry_SEQUENTIAL_FALSE() throws IOException {
+  public void findEntry_SEQUENTIAL_notSEQUENTIAL() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "SEQUENTIAL",
-            "FALSE",
+            "¬SEQUENTIAL",
             "com.sleepycat.je.tree.IN",
             "findEntry",
             "([BZZLjava/util/Comparator;)I");
@@ -190,13 +190,13 @@ public class BerkeleyCallStackSelectorTest {
   }
 
   @Test
-  public void serialize_SEQUENTIAL_FALSE() throws IOException {
+  public void serialize_SEQUENTIAL_notSEQUENTIAL() throws IOException {
     String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
     CallStackSelector selector =
         new CallStackSelector(
             programName,
             "SEQUENTIAL",
-            "FALSE",
+            "¬SEQUENTIAL",
             "com.sleepycat.je.tree.IN",
             "serialize",
             "(Ljava/nio/ByteBuffer;ZZ)V");

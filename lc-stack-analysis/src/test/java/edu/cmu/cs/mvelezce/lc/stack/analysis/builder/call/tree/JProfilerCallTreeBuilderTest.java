@@ -9,6 +9,7 @@ import edu.cmu.cs.mvelezce.lc.adapters.barInfluence2.BaseBarInfluence2Adapter;
 import edu.cmu.cs.mvelezce.lc.adapters.diffStacks.BaseDiffStacksAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.dummyRegion.BaseDummyRegionAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.earlyReturn.BaseEarlyReturnAdapter;
+import edu.cmu.cs.mvelezce.lc.adapters.ifAMoo.BaseIfAMooAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.mooInfluence.BaseMooInfluenceAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.multiplePaths.BaseMultiplePathsAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.needSlicing.BaseNeedSlicingAdapter;
@@ -65,6 +66,17 @@ public class JProfilerCallTreeBuilderTest {
   @Test
   public void EarlyReturn() throws IOException, InterruptedException {
     String programName = BaseEarlyReturnAdapter.PROGRAM_NAME;
+    JProfilerCallTreeBuilder builder =
+        new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+    builder.analyze(args);
+  }
+
+  @Test
+  public void IfAMoo() throws IOException, InterruptedException {
+    String programName = BaseIfAMooAdapter.PROGRAM_NAME;
     JProfilerCallTreeBuilder builder =
         new JProfilerCallTreeBuilder(programName, JProfilerCallTreeBuilder.ALL_THREAD_STATUS);
     String[] args = new String[2];

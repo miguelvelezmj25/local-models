@@ -1,0 +1,16 @@
+com.sleepycat.je.log.FileManager$LogEndFileDescriptor.force()V,2.093
+com.sleepycat.je.log.FileManager.syncLogEnd()V,0
+com.sleepycat.je.log.LogManager.flushSync()V,0
+com.sleepycat.je.dbi.DatabaseImpl.finishDeleteProcessing()V,0
+com.sleepycat.je.dbi.DatabaseImpl.startAndFinishDelete()V,0
+com.sleepycat.je.txn.BasicLocker.markDeleteAtTxnEnd(Lcom/sleepycat/je/dbi/DatabaseImpl;Z)V,0
+com.sleepycat.je.dbi.DbTree.doRemoveDb(Lcom/sleepycat/je/txn/Locker;Ljava/lang/String;Lcom/sleepycat/je/dbi/DatabaseId;Lcom/sleepycat/je/log/DbOpReplicationContext;)Lcom/sleepycat/je/dbi/DatabaseImpl;,0
+com.sleepycat.je.dbi.DbTree.dbRemove(Lcom/sleepycat/je/txn/Locker;Ljava/lang/String;Lcom/sleepycat/je/dbi/DatabaseId;)Lcom/sleepycat/je/dbi/DatabaseImpl;,0
+com.sleepycat.je.dbi.DatabaseImpl.handleClosed(ZZ)V,0
+com.sleepycat.je.Database.closeInternalWork(ZZLcom/sleepycat/je/Database$DbState;Lcom/sleepycat/je/OperationFailureException;)V,0
+com.sleepycat.je.Database.closeInternal(ZZLcom/sleepycat/je/Database$DbState;Lcom/sleepycat/je/OperationFailureException;)V,0
+com.sleepycat.je.Database.close()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.close()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run()V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.run([Ljava/lang/String;)V,0
+com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V,1.502

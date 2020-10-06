@@ -10,6 +10,7 @@ import edu.cmu.cs.mvelezce.lc.adapters.barInfluence2.BaseBarInfluence2Adapter;
 import edu.cmu.cs.mvelezce.lc.adapters.diffStacks.BaseDiffStacksAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.dummyRegion.BaseDummyRegionAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.earlyReturn.BaseEarlyReturnAdapter;
+import edu.cmu.cs.mvelezce.lc.adapters.ifAMoo.BaseIfAMooAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.mooInfluence.BaseMooInfluenceAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.multiplePaths.BaseMultiplePathsAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.needSlicing.BaseNeedSlicingAdapter;
@@ -162,6 +163,37 @@ public class IDTATimerInstrumenterTest {
     String srcDir = "../" + BaseEarlyReturnAdapter.PHOSPHOR_ROOT_DIR;
     String classDir = "../" + BaseEarlyReturnAdapter.PHOSPHOR_CLASS_PATH;
     Set<String> options = new HashSet<>(BaseEarlyReturnAdapter.getListOfOptions());
+    Instrumenter instrumenter =
+        new IDTATimerInstrumenter(
+            programName,
+            mainClass,
+            srcDir,
+            classDir,
+            options,
+            regionsToPartitions,
+            new IDTAExecutionTimeMethodInstrumenter());
+
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+
+    instrumenter.instrument(args);
+  }
+
+  @Test
+  public void IfAMoo()
+      throws IOException, InterruptedException, NoSuchMethodException, IllegalAccessException,
+          InvocationTargetException {
+    String programName = BaseIfAMooAdapter.PROGRAM_NAME;
+    String workloadSize = "small";
+
+    Analysis<Map<JavaRegion, Partitioning>> analysis = new IDTAAnalysis(programName, workloadSize);
+    Map<JavaRegion, Partitioning> regionsToPartitions = analysis.analyze();
+
+    String mainClass = BaseIfAMooAdapter.MAIN_CLASS;
+    String srcDir = "../" + BaseIfAMooAdapter.PHOSPHOR_ROOT_DIR;
+    String classDir = "../" + BaseIfAMooAdapter.PHOSPHOR_CLASS_PATH;
+    Set<String> options = new HashSet<>(BaseIfAMooAdapter.getListOfOptions());
     Instrumenter instrumenter =
         new IDTATimerInstrumenter(
             programName,
