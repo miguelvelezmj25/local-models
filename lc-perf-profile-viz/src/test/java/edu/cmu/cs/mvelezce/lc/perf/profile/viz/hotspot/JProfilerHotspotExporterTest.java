@@ -23,7 +23,7 @@ public class JProfilerHotspotExporterTest {
   public void Convert() throws IOException, InterruptedException {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     JProfilerHotspotExporter builder =
-        new JProfilerHotspotExporter(programName, JProfilerHotspotExporter.ALL_THREAD_STATUS);
+        new JProfilerHotspotExporter(programName, JProfilerHotspotExporter.RUNNING_THREAD_STATUS);
     String[] args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";

@@ -1,6 +1,8 @@
 package edu.cmu.cs.mvelezce.lc.perf.profile.viz.parser;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import edu.cmu.cs.mvelezce.analysis.Analysis;
 import edu.cmu.cs.mvelezce.java.results.sampling.raw.profiler.jprofiler.snapshot.Hotspot;
@@ -9,6 +11,7 @@ import edu.cmu.cs.mvelezce.java.results.sampling.raw.profiler.jprofiler.snapshot
 import edu.cmu.cs.mvelezce.lc.perf.profile.viz.hotspot.JProfilerHotspotExporter;
 import edu.cmu.cs.mvelezce.utils.config.Options;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -43,12 +46,36 @@ public class TabulatorHotspotParser implements Analysis<Void> {
   @Override
   public Void analyze() throws IOException {
     File snapshotsDir = new File(JProfilerHotspotExporter.OUTPUT_DIR + "/" + this.programName);
-    Collection<File> hotspots = FileUtils.listFiles(snapshotsDir, new String[] {"xml"}, false);
-    for (File hotspotFile : hotspots) {
-      this.parseHotspots(hotspotFile);
+    Collection<File> hotspotFiles = FileUtils.listFiles(snapshotsDir, new String[] {"xml"}, false);
+    for (File hotspotFile : hotspotFiles) {
+      List<Hotspot> hotspots = this.parseHotspots(hotspotFile);
+      List<TabulatorEntry> entries = this.parseTabulatorEntries(hotspots);
+      this.saveEntries(hotspotFile, entries);
     }
 
     return null;
+  }
+
+  private void saveEntries(File hotspotFile, List<TabulatorEntry> entries) throws IOException {
+    String outputFile =
+        this.outputDir() + "/" + FilenameUtils.removeExtension(hotspotFile.getName()) + ".json";
+    File file = new File(outputFile);
+    if (!file.getParentFile().exists() && !file.getParentFile().mkdirs()) {
+      throw new RuntimeException("Could not create parent dirs");
+    }
+    ObjectMapper mapper = new ObjectMapper();
+    mapper.enable(SerializationFeature.INDENT_OUTPUT);
+    mapper.writeValue(file, entries);
+  }
+
+  private List<TabulatorEntry> parseTabulatorEntries(List<Hotspot> hotspots) {
+    List<TabulatorEntry> entries = new ArrayList<>(hotspots.size());
+    for (Hotspot hotspot : hotspots) {
+      TabulatorEntry entry = TabulatorEntry.from(hotspot);
+      entries.add(entry);
+    }
+
+    return entries;
   }
 
   private List<Hotspot> parseHotspots(File hotspotFile) throws IOException {
