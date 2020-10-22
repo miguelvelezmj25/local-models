@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree type="Hot Spots" threadSelection="All thread groups" threadStatus="All states" aggregationLevel="Methods" hotSpotCalculation="Self times" unprofiledClasses="Show separately">
+  <hotspot leaf="false" class="edu.cmu.cs.mvelezce.perf.ExpensiveCalls" methodName="getFactors" methodSignature="()V" time="4431902" count="0" lineNumber="-1" percent="90.2">
+    <node leaf="false" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="moo" methodSignature="(I)V" time="4431902" count="0" lineNumber="-1" percent="90.2">
+      <node leaf="false" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="bar" methodSignature="(I)V" time="4431902" count="0" lineNumber="-1" percent="90.2">
+        <node leaf="false" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="foo" methodSignature="(Z)V" time="4431902" count="0" lineNumber="-1" percent="90.2">
+          <node leaf="true" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="main" methodSignature="([Ljava/lang/String;)V" time="4431902" count="0" lineNumber="-1" percent="90.2"/>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="moo" methodSignature="(I)V" time="474618" count="0" lineNumber="-1" percent="9.7">
+    <node leaf="false" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="bar" methodSignature="(I)V" time="474618" count="0" lineNumber="-1" percent="9.7">
+      <node leaf="false" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="foo" methodSignature="(Z)V" time="474618" count="0" lineNumber="-1" percent="9.7">
+        <node leaf="true" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="main" methodSignature="([Ljava/lang/String;)V" time="474618" count="0" lineNumber="-1" percent="9.7"/>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="checkProgress" methodSignature="()V" time="6658" count="0" lineNumber="-1" percent="0.1">
+    <node leaf="false" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="moo" methodSignature="(I)V" time="6658" count="0" lineNumber="-1" percent="0.1">
+      <node leaf="false" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="bar" methodSignature="(I)V" time="6658" count="0" lineNumber="-1" percent="0.1">
+        <node leaf="false" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="foo" methodSignature="(Z)V" time="6658" count="0" lineNumber="-1" percent="0.1">
+          <node leaf="true" class="edu.cmu.cs.mvelezce.perf.MooInfluence" methodName="main" methodSignature="([Ljava/lang/String;)V" time="6658" count="0" lineNumber="-1" percent="0.1"/>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+</tree>
