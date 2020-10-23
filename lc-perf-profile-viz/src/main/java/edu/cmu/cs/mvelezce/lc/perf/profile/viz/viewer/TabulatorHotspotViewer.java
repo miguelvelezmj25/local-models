@@ -78,7 +78,8 @@ public class TabulatorHotspotViewer implements Analysis<Void> {
     return "<!DOCTYPE html>\n"
         + "<html lang=\"en\">\n"
         + "    <head>\n"
-        + "        <link href=\"tabulator/dist/css/tabulator.min.css\" rel=\"stylesheet\">\n"
+//        + "        <link href=\"tabulator/dist/css/tabulator.min.css\" rel=\"stylesheet\">\n"
+        + "        <link href=\"tabulator/dist/css/tabulator_site.min.css\" rel=\"stylesheet\">\n"
         + "    </head>\n"
         + "    <body>\n"
         + "        <div id=\"example-table\"></div>\n"
@@ -94,7 +95,7 @@ public class TabulatorHotspotViewer implements Analysis<Void> {
         + "            dataTree:true,\n"
         + "            dataTreeStartExpanded:false,\n"
         + "            columns:[\n"
-        + "                {title:\"Hot Spot\", field:\"hotspot\"},\n"
+        + "                {title:\"Hot Spot\", field:\"hotspot\", width:\"50px\"},\n"
         + "                {title:\"Self Time Visual\", field:\"selfTimeVisual\", sorter:\"number\", formatter:\"progress\", width:\"10px\", formatterParams:{max:"
         + this.getMaxTime(entries)
         + "}}, \n"

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link href="tabulator/dist/css/tabulator.min.css" rel="stylesheet">
+        <link href="tabulator/dist/css/tabulator_site.min.css" rel="stylesheet">
     </head>
     <body>
         <div id="example-table"></div>
@@ -385,7 +385,7 @@
             dataTree:true,
             dataTreeStartExpanded:false,
             columns:[
-                {title:"Hot Spot", field:"hotspot"},
+                {title:"Hot Spot", field:"hotspot", width:"50px"},
                 {title:"Self Time Visual", field:"selfTimeVisual", sorter:"number", formatter:"progress", width:"10px", formatterParams:{max:108.117818}}, 
                 {title:"Self Time (secs.)", field:"selfTime", hozAlign:"right", sorter:"numeric"},
 			],
