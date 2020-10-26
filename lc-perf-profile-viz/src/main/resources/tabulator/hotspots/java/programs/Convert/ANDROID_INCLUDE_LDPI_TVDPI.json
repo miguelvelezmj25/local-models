@@ -1,45 +1,45 @@
 [ {
   "method" : "com.mortennobel.imagescaling.ResampleOp.verticalFromWorkToDst([[B[BII)V",
-  "time" : 45.893449,
+  "time" : 89.839278,
   "tabulatorEntries" : [ {
     "method" : "com.mortennobel.imagescaling.ResampleOp$2.run()V",
-    "time" : 40.153117,
+    "time" : 78.45087,
     "tabulatorEntries" : [ ]
   }, {
     "method" : "com.mortennobel.imagescaling.ResampleOp.doFilter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-    "time" : 5.740332,
+    "time" : 11.388408,
     "tabulatorEntries" : [ {
       "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.filter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;",
-      "time" : 5.740332,
+      "time" : 11.388408,
       "tabulatorEntries" : [ {
         "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-        "time" : 5.740332,
+        "time" : 11.388408,
         "tabulatorEntries" : [ {
           "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
-          "time" : 5.740332,
+          "time" : 11.388408,
           "tabulatorEntries" : [ {
             "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
-            "time" : 5.740332,
+            "time" : 11.388408,
             "tabulatorEntries" : [ {
               "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-              "time" : 5.740332,
+              "time" : 11.388408,
               "tabulatorEntries" : [ {
                 "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                "time" : 3.899424,
+                "time" : 9.53601,
                 "tabulatorEntries" : [ {
                   "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                  "time" : 3.899424,
+                  "time" : 9.53601,
                   "tabulatorEntries" : [ ]
                 } ]
               }, {
                 "method" : "at.favre.tools.dconvert.converters.APlatformConverter.converttvdpi(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V",
-                "time" : 1.840908,
+                "time" : 1.852398,
                 "tabulatorEntries" : [ {
                   "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                  "time" : 1.840908,
+                  "time" : 1.852398,
                   "tabulatorEntries" : [ {
                     "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                    "time" : 1.840908,
+                    "time" : 1.852398,
                     "tabulatorEntries" : [ ]
                   } ]
                 } ]
@@ -52,30 +52,30 @@
   } ]
 }, {
   "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.compressJpeg(Ljava/awt/image/BufferedImage;Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;FLjava/io/File;)V",
-  "time" : 17.58046,
+  "time" : 43.573301,
   "tabulatorEntries" : [ {
     "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
-    "time" : 17.58046,
+    "time" : 43.573301,
     "tabulatorEntries" : [ {
       "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-      "time" : 17.58046,
+      "time" : 43.573301,
       "tabulatorEntries" : [ {
         "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-        "time" : 12.198557,
+        "time" : 35.34058,
         "tabulatorEntries" : [ {
           "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-          "time" : 12.198557,
+          "time" : 35.34058,
           "tabulatorEntries" : [ ]
         } ]
       }, {
         "method" : "at.favre.tools.dconvert.converters.APlatformConverter.converttvdpi(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V",
-        "time" : 5.381903,
+        "time" : 8.232721,
         "tabulatorEntries" : [ {
           "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-          "time" : 5.381903,
+          "time" : 8.232721,
           "tabulatorEntries" : [ {
             "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-            "time" : 5.381903,
+            "time" : 8.232721,
             "tabulatorEntries" : [ ]
           } ]
         } ]
@@ -84,36 +84,48 @@
   } ]
 }, {
   "method" : "com.mortennobel.imagescaling.ResampleOp.horizontallyFromSrcToWork(Ljava/awt/image/BufferedImage;[[BII)V",
-  "time" : 9.567409,
+  "time" : 19.789534,
   "tabulatorEntries" : [ {
     "method" : "com.mortennobel.imagescaling.ResampleOp$1.run()V",
-    "time" : 9.171038,
+    "time" : 17.469342,
     "tabulatorEntries" : [ ]
   }, {
     "method" : "com.mortennobel.imagescaling.ResampleOp.doFilter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-    "time" : 0.396371,
+    "time" : 2.320192,
     "tabulatorEntries" : [ {
       "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.filter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;",
-      "time" : 0.396371,
+      "time" : 2.320192,
       "tabulatorEntries" : [ {
         "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-        "time" : 0.396371,
+        "time" : 2.320192,
         "tabulatorEntries" : [ {
           "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
-          "time" : 0.396371,
+          "time" : 2.320192,
           "tabulatorEntries" : [ {
             "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
-            "time" : 0.396371,
+            "time" : 2.320192,
             "tabulatorEntries" : [ {
               "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-              "time" : 0.396371,
+              "time" : 2.320192,
               "tabulatorEntries" : [ {
                 "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                "time" : 0.396371,
+                "time" : 1.911006,
                 "tabulatorEntries" : [ {
                   "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                  "time" : 0.396371,
+                  "time" : 1.911006,
                   "tabulatorEntries" : [ ]
+                } ]
+              }, {
+                "method" : "at.favre.tools.dconvert.converters.APlatformConverter.converttvdpi(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V",
+                "time" : 0.409186,
+                "tabulatorEntries" : [ {
+                  "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+                  "time" : 0.409186,
+                  "tabulatorEntries" : [ {
+                    "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+                    "time" : 0.409186,
+                    "tabulatorEntries" : [ ]
+                  } ]
                 } ]
               } ]
             } ]
@@ -124,182 +136,74 @@
   } ]
 }, {
   "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
-  "time" : 3.157308,
+  "time" : 3.889318,
   "tabulatorEntries" : [ {
     "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
-    "time" : 3.157308,
+    "time" : 3.889318,
     "tabulatorEntries" : [ {
       "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-      "time" : 3.157308,
+      "time" : 3.889318,
       "tabulatorEntries" : [ {
+        "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+        "time" : 3.277293,
+        "tabulatorEntries" : [ {
+          "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+          "time" : 3.277293,
+          "tabulatorEntries" : [ ]
+        } ]
+      }, {
         "method" : "at.favre.tools.dconvert.converters.APlatformConverter.converttvdpi(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V",
-        "time" : 1.78902,
+        "time" : 0.612025,
         "tabulatorEntries" : [ {
           "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-          "time" : 1.78902,
+          "time" : 0.612025,
           "tabulatorEntries" : [ {
             "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-            "time" : 1.78902,
+            "time" : 0.612025,
             "tabulatorEntries" : [ ]
           } ]
         } ]
-      }, {
-        "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-        "time" : 1.368288,
-        "tabulatorEntries" : [ {
-          "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-          "time" : 1.368288,
-          "tabulatorEntries" : [ ]
-        } ]
-      } ]
-    } ]
-  } ]
-}, {
-  "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.fireProgressChanged(F)V",
-  "time" : 0.940934,
-  "tabulatorEntries" : [ {
-    "method" : "com.mortennobel.imagescaling.ResampleOp.setProgress()V",
-    "time" : 0.940934,
-    "tabulatorEntries" : [ {
-      "method" : "com.mortennobel.imagescaling.ResampleOp.horizontallyFromSrcToWork(Ljava/awt/image/BufferedImage;[[BII)V",
-      "time" : 0.934442,
-      "tabulatorEntries" : [ {
-        "method" : "com.mortennobel.imagescaling.ResampleOp.doFilter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-        "time" : 0.934442,
-        "tabulatorEntries" : [ {
-          "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.filter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;",
-          "time" : 0.934442,
-          "tabulatorEntries" : [ {
-            "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-            "time" : 0.934442,
-            "tabulatorEntries" : [ {
-              "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
-              "time" : 0.934442,
-              "tabulatorEntries" : [ {
-                "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
-                "time" : 0.934442,
-                "tabulatorEntries" : [ {
-                  "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-                  "time" : 0.934442,
-                  "tabulatorEntries" : [ {
-                    "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                    "time" : 0.501811,
-                    "tabulatorEntries" : [ {
-                      "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                      "time" : 0.501811,
-                      "tabulatorEntries" : [ ]
-                    } ]
-                  }, {
-                    "method" : "at.favre.tools.dconvert.converters.APlatformConverter.converttvdpi(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V",
-                    "time" : 0.432631,
-                    "tabulatorEntries" : [ {
-                      "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                      "time" : 0.432631,
-                      "tabulatorEntries" : [ {
-                        "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                        "time" : 0.432631,
-                        "tabulatorEntries" : [ ]
-                      } ]
-                    } ]
-                  } ]
-                } ]
-              } ]
-            } ]
-          } ]
-        } ]
-      } ]
-    }, {
-      "method" : "com.mortennobel.imagescaling.ResampleOp.verticalFromWorkToDst([[B[BII)V",
-      "time" : 0.006492,
-      "tabulatorEntries" : [ {
-        "method" : "com.mortennobel.imagescaling.ResampleOp.doFilter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-        "time" : 0.006492,
-        "tabulatorEntries" : [ {
-          "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.filter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;",
-          "time" : 0.006492,
-          "tabulatorEntries" : [ {
-            "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-            "time" : 0.006492,
-            "tabulatorEntries" : [ {
-              "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
-              "time" : 0.006492,
-              "tabulatorEntries" : [ {
-                "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
-                "time" : 0.006492,
-                "tabulatorEntries" : [ {
-                  "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-                  "time" : 0.006492,
-                  "tabulatorEntries" : [ {
-                    "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                    "time" : 0.006492,
-                    "tabulatorEntries" : [ {
-                      "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                      "time" : 0.006492,
-                      "tabulatorEntries" : [ ]
-                    } ]
-                  } ]
-                } ]
-              } ]
-            } ]
-          } ]
-        } ]
-      } ]
-    } ]
-  } ]
-}, {
-  "method" : "at.favre.tools.dconvert.util.ImageUtil.read(Ljavax/imageio/stream/ImageInputStream;Lat/favre/tools/dconvert/arg/ImageType;)Lat/favre/tools/dconvert/util/LoadedImage;",
-  "time" : 0.455412,
-  "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.util.ImageUtil.loadImage(Ljava/io/File;)Lat/favre/tools/dconvert/util/LoadedImage;",
-    "time" : 0.455412,
-    "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-      "time" : 0.455412,
-      "tabulatorEntries" : [ {
-        "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-        "time" : 0.455412,
-        "tabulatorEntries" : [ ]
       } ]
     } ]
   } ]
 }, {
   "method" : "com.mortennobel.imagescaling.ImageUtils.setBGRPixels([BLjava/awt/image/BufferedImage;IIII)V",
-  "time" : 0.398543,
+  "time" : 2.513503,
   "tabulatorEntries" : [ {
     "method" : "com.mortennobel.imagescaling.ResampleOp.doFilter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-    "time" : 0.398543,
+    "time" : 2.513503,
     "tabulatorEntries" : [ {
       "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.filter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;",
-      "time" : 0.398543,
+      "time" : 2.513503,
       "tabulatorEntries" : [ {
         "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-        "time" : 0.398543,
+        "time" : 2.513503,
         "tabulatorEntries" : [ {
           "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
-          "time" : 0.398543,
+          "time" : 2.513503,
           "tabulatorEntries" : [ {
             "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
-            "time" : 0.398543,
+            "time" : 2.513503,
             "tabulatorEntries" : [ {
               "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-              "time" : 0.398543,
+              "time" : 2.513503,
               "tabulatorEntries" : [ {
                 "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                "time" : 0.267708,
+                "time" : 2.463134,
                 "tabulatorEntries" : [ {
                   "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                  "time" : 0.267708,
+                  "time" : 2.463134,
                   "tabulatorEntries" : [ ]
                 } ]
               }, {
                 "method" : "at.favre.tools.dconvert.converters.APlatformConverter.converttvdpi(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V",
-                "time" : 0.130835,
+                "time" : 0.050369,
                 "tabulatorEntries" : [ {
                   "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                  "time" : 0.130835,
+                  "time" : 0.050369,
                   "tabulatorEntries" : [ {
                     "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                    "time" : 0.130835,
+                    "time" : 0.050369,
                     "tabulatorEntries" : [ ]
                   } ]
                 } ]
@@ -312,49 +216,49 @@
   } ]
 }, {
   "method" : "com.mortennobel.imagescaling.ImageUtils.getPixelsBGR(Ljava/awt/image/BufferedImage;II[B[I)[B",
-  "time" : 0.351706,
+  "time" : 1.067596,
   "tabulatorEntries" : [ {
     "method" : "com.mortennobel.imagescaling.ResampleOp.horizontallyFromSrcToWork(Ljava/awt/image/BufferedImage;[[BII)V",
-    "time" : 0.351706,
+    "time" : 1.067596,
     "tabulatorEntries" : [ {
       "method" : "com.mortennobel.imagescaling.ResampleOp$1.run()V",
-      "time" : 0.326055,
+      "time" : 0.966493,
       "tabulatorEntries" : [ ]
     }, {
       "method" : "com.mortennobel.imagescaling.ResampleOp.doFilter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-      "time" : 0.025651,
+      "time" : 0.101103,
       "tabulatorEntries" : [ {
         "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.filter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;",
-        "time" : 0.025651,
+        "time" : 0.101103,
         "tabulatorEntries" : [ {
           "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-          "time" : 0.025651,
+          "time" : 0.101103,
           "tabulatorEntries" : [ {
             "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
-            "time" : 0.025651,
+            "time" : 0.101103,
             "tabulatorEntries" : [ {
               "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
-              "time" : 0.025651,
+              "time" : 0.101103,
               "tabulatorEntries" : [ {
                 "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-                "time" : 0.025651,
+                "time" : 0.101103,
                 "tabulatorEntries" : [ {
                   "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                  "time" : 0.018863,
+                  "time" : 0.095033,
                   "tabulatorEntries" : [ {
                     "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                    "time" : 0.018863,
+                    "time" : 0.095033,
                     "tabulatorEntries" : [ ]
                   } ]
                 }, {
                   "method" : "at.favre.tools.dconvert.converters.APlatformConverter.converttvdpi(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V",
-                  "time" : 0.006788,
+                  "time" : 0.00607,
                   "tabulatorEntries" : [ {
                     "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                    "time" : 0.006788,
+                    "time" : 0.00607,
                     "tabulatorEntries" : [ {
                       "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                      "time" : 0.006788,
+                      "time" : 0.00607,
                       "tabulatorEntries" : [ ]
                     } ]
                   } ]
@@ -367,52 +271,40 @@
     } ]
   } ]
 }, {
-  "method" : "at.favre.tools.dconvert.DConvert.getRegisteredImageReadersAndWriters()Ljava/lang/String;",
-  "time" : 0.299987,
-  "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.DConvert.execute(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V",
-    "time" : 0.299987,
-    "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
-      "time" : 0.299987,
-      "tabulatorEntries" : [ ]
-    } ]
-  } ]
-}, {
   "method" : "com.mortennobel.imagescaling.ResampleOp.doFilter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-  "time" : 0.187381,
+  "time" : 0.517917,
   "tabulatorEntries" : [ {
     "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.filter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;",
-    "time" : 0.187381,
+    "time" : 0.517917,
     "tabulatorEntries" : [ {
       "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-      "time" : 0.187381,
+      "time" : 0.517917,
       "tabulatorEntries" : [ {
         "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
-        "time" : 0.187381,
+        "time" : 0.517917,
         "tabulatorEntries" : [ {
           "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
-          "time" : 0.187381,
+          "time" : 0.517917,
           "tabulatorEntries" : [ {
             "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-            "time" : 0.187381,
+            "time" : 0.517917,
             "tabulatorEntries" : [ {
               "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-              "time" : 0.162573,
+              "time" : 0.468049,
               "tabulatorEntries" : [ {
                 "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                "time" : 0.162573,
+                "time" : 0.468049,
                 "tabulatorEntries" : [ ]
               } ]
             }, {
               "method" : "at.favre.tools.dconvert.converters.APlatformConverter.converttvdpi(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V",
-              "time" : 0.024808,
+              "time" : 0.049868,
               "tabulatorEntries" : [ {
                 "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                "time" : 0.024808,
+                "time" : 0.049868,
                 "tabulatorEntries" : [ {
                   "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                  "time" : 0.024808,
+                  "time" : 0.049868,
                   "tabulatorEntries" : [ ]
                 } ]
               } ]
@@ -423,44 +315,104 @@
     } ]
   } ]
 }, {
-  "method" : "com.mortennobel.imagescaling.ResampleOp.createSubSampling(Lcom/mortennobel/imagescaling/ResampleFilter;II)Lcom/mortennobel/imagescaling/ResampleOp$SubSamplingData;",
-  "time" : 0.145872,
+  "method" : "at.favre.tools.dconvert.util.ImageUtil.read(Ljavax/imageio/stream/ImageInputStream;Lat/favre/tools/dconvert/arg/ImageType;)Lat/favre/tools/dconvert/util/LoadedImage;",
+  "time" : 0.445102,
   "tabulatorEntries" : [ {
-    "method" : "com.mortennobel.imagescaling.ResampleOp.doFilter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-    "time" : 0.145872,
+    "method" : "at.favre.tools.dconvert.util.ImageUtil.loadImage(Ljava/io/File;)Lat/favre/tools/dconvert/util/LoadedImage;",
+    "time" : 0.445102,
     "tabulatorEntries" : [ {
-      "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.filter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;",
-      "time" : 0.145872,
+      "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+      "time" : 0.445102,
       "tabulatorEntries" : [ {
-        "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-        "time" : 0.145872,
+        "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+        "time" : 0.445102,
+        "tabulatorEntries" : [ ]
+      } ]
+    } ]
+  } ]
+}, {
+  "method" : "at.favre.tools.dconvert.DConvert.getRegisteredImageReadersAndWriters()Ljava/lang/String;",
+  "time" : 0.296442,
+  "tabulatorEntries" : [ {
+    "method" : "at.favre.tools.dconvert.DConvert.execute(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V",
+    "time" : 0.296442,
+    "tabulatorEntries" : [ {
+      "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
+      "time" : 0.296442,
+      "tabulatorEntries" : [ ]
+    } ]
+  } ]
+}, {
+  "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.fireProgressChanged(F)V",
+  "time" : 0.211497,
+  "tabulatorEntries" : [ {
+    "method" : "com.mortennobel.imagescaling.ResampleOp.setProgress()V",
+    "time" : 0.211497,
+    "tabulatorEntries" : [ {
+      "method" : "com.mortennobel.imagescaling.ResampleOp.horizontallyFromSrcToWork(Ljava/awt/image/BufferedImage;[[BII)V",
+      "time" : 0.204984,
+      "tabulatorEntries" : [ {
+        "method" : "com.mortennobel.imagescaling.ResampleOp.doFilter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
+        "time" : 0.204984,
         "tabulatorEntries" : [ {
-          "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
-          "time" : 0.145872,
+          "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.filter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;",
+          "time" : 0.204984,
           "tabulatorEntries" : [ {
-            "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
-            "time" : 0.145872,
+            "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
+            "time" : 0.204984,
             "tabulatorEntries" : [ {
-              "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-              "time" : 0.145872,
+              "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
+              "time" : 0.204984,
               "tabulatorEntries" : [ {
-                "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                "time" : 0.114537,
+                "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
+                "time" : 0.204984,
                 "tabulatorEntries" : [ {
-                  "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                  "time" : 0.114537,
-                  "tabulatorEntries" : [ ]
-                } ]
-              }, {
-                "method" : "at.favre.tools.dconvert.converters.APlatformConverter.converttvdpi(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V",
-                "time" : 0.031335,
-                "tabulatorEntries" : [ {
-                  "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-                  "time" : 0.031335,
+                  "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
+                  "time" : 0.204984,
                   "tabulatorEntries" : [ {
-                    "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-                    "time" : 0.031335,
-                    "tabulatorEntries" : [ ]
+                    "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+                    "time" : 0.204984,
+                    "tabulatorEntries" : [ {
+                      "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+                      "time" : 0.204984,
+                      "tabulatorEntries" : [ ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "method" : "com.mortennobel.imagescaling.ResampleOp.verticalFromWorkToDst([[B[BII)V",
+      "time" : 0.006513,
+      "tabulatorEntries" : [ {
+        "method" : "com.mortennobel.imagescaling.ResampleOp.doFilter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
+        "time" : 0.006513,
+        "tabulatorEntries" : [ {
+          "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.filter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;",
+          "time" : 0.006513,
+          "tabulatorEntries" : [ {
+            "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
+            "time" : 0.006513,
+            "tabulatorEntries" : [ {
+              "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
+              "time" : 0.006513,
+              "tabulatorEntries" : [ {
+                "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
+                "time" : 0.006513,
+                "tabulatorEntries" : [ {
+                  "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
+                  "time" : 0.006513,
+                  "tabulatorEntries" : [ {
+                    "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+                    "time" : 0.006513,
+                    "tabulatorEntries" : [ {
+                      "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+                      "time" : 0.006513,
+                      "tabulatorEntries" : [ ]
+                    } ]
                   } ]
                 } ]
               } ]
@@ -471,123 +423,35 @@
     } ]
   } ]
 }, {
-  "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-  "time" : 0.018426,
+  "method" : "com.mortennobel.imagescaling.ResampleOp.createSubSampling(Lcom/mortennobel/imagescaling/ResampleFilter;II)Lcom/mortennobel/imagescaling/ResampleOp$SubSamplingData;",
+  "time" : 0.169273,
   "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-    "time" : 0.018426,
+    "method" : "com.mortennobel.imagescaling.ResampleOp.doFilter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
+    "time" : 0.169273,
     "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-      "time" : 0.018426,
-      "tabulatorEntries" : [ ]
-    } ]
-  } ]
-}, {
-  "method" : "at.favre.tools.dconvert.util.PostProcessorUtil.canRunCmd([Ljava/lang/String;)Z",
-  "time" : 0.018076,
-  "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.converters.postprocessing.MozJpegProcessor.isSupported()Z",
-    "time" : 0.018076,
-    "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.DConvert.execute(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V",
-      "time" : 0.018076,
+      "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.filter(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;",
+      "time" : 0.169273,
       "tabulatorEntries" : [ {
-        "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
-        "time" : 0.018076,
-        "tabulatorEntries" : [ ]
-      } ]
-    } ]
-  } ]
-}, {
-  "method" : "at.favre.tools.dconvert.arg.EPlatform.<clinit>()V",
-  "time" : 0.011767,
-  "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.Convert.getPlatform(Ljava/lang/String;)Ljava/util/Set;",
-    "time" : 0.011767,
-    "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
-      "time" : 0.011767,
-      "tabulatorEntries" : [ ]
-    } ]
-  } ]
-}, {
-  "method" : "at.favre.tools.dconvert.DConvert.execute(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V",
-  "time" : 0.011674,
-  "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
-    "time" : 0.011674,
-    "tabulatorEntries" : [ ]
-  } ]
-}, {
-  "method" : "at.favre.tools.dconvert.util.ImageUtil.loadImage(Ljava/io/File;)Lat/favre/tools/dconvert/util/LoadedImage;",
-  "time" : 0.006389,
-  "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-    "time" : 0.006389,
-    "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-      "time" : 0.006389,
-      "tabulatorEntries" : [ ]
-    } ]
-  } ]
-}, {
-  "method" : "at.favre.tools.dconvert.DConvert.informFinished(ILjava/util/List;Z)V",
-  "time" : 0.006377,
-  "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.DConvert$1$1.onFinished(ILjava/util/List;Ljava/lang/StringBuilder;Ljava/util/List;Z)V",
-    "time" : 0.006377,
-    "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.WorkerHandler.start(Ljava/util/List;)V",
-      "time" : 0.006377,
-      "tabulatorEntries" : [ {
-        "method" : "at.favre.tools.dconvert.DConvert$1.onFinished(ILjava/util/List;Ljava/lang/StringBuilder;Ljava/util/List;Z)V",
-        "time" : 0.006377,
+        "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
+        "time" : 0.169273,
         "tabulatorEntries" : [ {
-          "method" : "at.favre.tools.dconvert.WorkerHandler$InternalCallback.onJobFinished(Lat/favre/tools/dconvert/converters/Result;)V",
-          "time" : 0.006377,
+          "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
+          "time" : 0.169273,
           "tabulatorEntries" : [ {
-            "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-            "time" : 0.006377,
-            "tabulatorEntries" : [ ]
-          } ]
-        } ]
-      } ]
-    } ]
-  } ]
-}, {
-  "method" : "at.favre.tools.dconvert.util.DensityBucketUtil.getDensityBuckets(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;FZ)Ljava/util/Map;",
-  "time" : 0.00597,
-  "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-    "time" : 0.00597,
-    "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-      "time" : 0.00597,
-      "tabulatorEntries" : [ ]
-    } ]
-  } ]
-}, {
-  "method" : "com.mortennobel.imagescaling.ResampleOp.<init>(II)V",
-  "time" : 0.005673,
-  "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
-    "time" : 0.005673,
-    "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
-      "time" : 0.005673,
-      "tabulatorEntries" : [ {
-        "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
-        "time" : 0.005673,
-        "tabulatorEntries" : [ {
-          "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-          "time" : 0.005673,
-          "tabulatorEntries" : [ {
-            "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-            "time" : 0.005673,
+            "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
+            "time" : 0.169273,
             "tabulatorEntries" : [ {
-              "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-              "time" : 0.005673,
-              "tabulatorEntries" : [ ]
+              "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
+              "time" : 0.169273,
+              "tabulatorEntries" : [ {
+                "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+                "time" : 0.169273,
+                "tabulatorEntries" : [ {
+                  "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+                  "time" : 0.169273,
+                  "tabulatorEntries" : [ ]
+                } ]
+              } ]
             } ]
           } ]
         } ]
@@ -595,87 +459,299 @@
     } ]
   } ]
 }, {
-  "method" : "com.mortennobel.imagescaling.ResampleFilters.<clinit>()V",
-  "time" : 0.005532,
+  "method" : "at.favre.tools.dconvert.util.PostProcessorUtil.canRunCmd([Ljava/lang/String;)Z",
+  "time" : 0.01728,
   "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.arg.EScalingAlgorithm.<clinit>()V",
-    "time" : 0.005532,
+    "method" : "at.favre.tools.dconvert.converters.postprocessing.MozJpegProcessor.isSupported()Z",
+    "time" : 0.01728,
     "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.Convert.upScalingAlgo(Z)Ljava/lang/String;",
-      "time" : 0.005532,
+      "method" : "at.favre.tools.dconvert.DConvert.execute(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V",
+      "time" : 0.01728,
       "tabulatorEntries" : [ {
         "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
-        "time" : 0.005532,
+        "time" : 0.01728,
         "tabulatorEntries" : [ ]
       } ]
     } ]
   } ]
 }, {
-  "method" : "com.twelvemonkeys.imageio.metadata.jpeg.JPEGSegmentUtil.<clinit>()V",
-  "time" : 0.005491,
+  "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+  "time" : 0.012032,
   "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.util.ImageUtil.readExif(Ljava/io/File;)Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;",
-    "time" : 0.005491,
+    "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+    "time" : 0.012032,
+    "tabulatorEntries" : [ ]
+  } ]
+}, {
+  "method" : "at.favre.tools.dconvert.arg.EPlatform.<clinit>()V",
+  "time" : 0.011883,
+  "tabulatorEntries" : [ {
+    "method" : "at.favre.tools.dconvert.Convert.getPlatform(Ljava/lang/String;)Ljava/util/Set;",
+    "time" : 0.011883,
     "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.util.ImageUtil.loadImage(Ljava/io/File;)Lat/favre/tools/dconvert/util/LoadedImage;",
-      "time" : 0.005491,
+      "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
+      "time" : 0.011883,
+      "tabulatorEntries" : [ ]
+    } ]
+  } ]
+}, {
+  "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
+  "time" : 0.010624,
+  "tabulatorEntries" : [ {
+    "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+    "time" : 0.010624,
+    "tabulatorEntries" : [ {
+      "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+      "time" : 0.010624,
+      "tabulatorEntries" : [ ]
+    } ]
+  } ]
+}, {
+  "method" : "at.favre.tools.dconvert.arg.EScalingAlgorithm.<clinit>()V",
+  "time" : 0.010469,
+  "tabulatorEntries" : [ {
+    "method" : "at.favre.tools.dconvert.Convert.upScalingAlgo(Z)Ljava/lang/String;",
+    "time" : 0.010469,
+    "tabulatorEntries" : [ {
+      "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
+      "time" : 0.010469,
+      "tabulatorEntries" : [ ]
+    } ]
+  } ]
+}, {
+  "method" : "at.favre.tools.dconvert.arg.Arguments.getSupportedFileTypes()Ljava/util/Set;",
+  "time" : 0.007282,
+  "tabulatorEntries" : [ {
+    "method" : "at.favre.tools.dconvert.arg.Arguments.<init>(Ljava/io/File;Ljava/io/File;FLjava/util/Set;Lat/favre/tools/dconvert/arg/EOutputCompressionMode;Lat/favre/tools/dconvert/arg/EScaleMode;Lat/favre/tools/dconvert/arg/EScalingAlgorithm;Lat/favre/tools/dconvert/arg/EScalingAlgorithm;FIZZZZZZZZZZZZZLat/favre/tools/dconvert/arg/RoundingHandler$Strategy;ZZ)V",
+    "time" : 0.007282,
+    "tabulatorEntries" : [ {
+      "method" : "at.favre.tools.dconvert.arg.Arguments.<clinit>()V",
+      "time" : 0.007282,
+      "tabulatorEntries" : [ {
+        "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
+        "time" : 0.007282,
+        "tabulatorEntries" : [ ]
+      } ]
+    } ]
+  } ]
+}, {
+  "method" : "at.favre.tools.dconvert.DConvert.informFinished(ILjava/util/List;Z)V",
+  "time" : 0.006493,
+  "tabulatorEntries" : [ {
+    "method" : "at.favre.tools.dconvert.DConvert$1$1.onFinished(ILjava/util/List;Ljava/lang/StringBuilder;Ljava/util/List;Z)V",
+    "time" : 0.006493,
+    "tabulatorEntries" : [ {
+      "method" : "at.favre.tools.dconvert.WorkerHandler.start(Ljava/util/List;)V",
+      "time" : 0.006493,
+      "tabulatorEntries" : [ {
+        "method" : "at.favre.tools.dconvert.DConvert$1.onFinished(ILjava/util/List;Ljava/lang/StringBuilder;Ljava/util/List;Z)V",
+        "time" : 0.006493,
+        "tabulatorEntries" : [ {
+          "method" : "at.favre.tools.dconvert.WorkerHandler$InternalCallback.onJobFinished(Lat/favre/tools/dconvert/converters/Result;)V",
+          "time" : 0.006493,
+          "tabulatorEntries" : [ {
+            "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+            "time" : 0.006493,
+            "tabulatorEntries" : [ ]
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}, {
+  "method" : "at.favre.tools.dconvert.util.DensityBucketUtil.getDensityBucketsWithFactorScale(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;F)Ljava/util/Map;",
+  "time" : 0.006248,
+  "tabulatorEntries" : [ {
+    "method" : "at.favre.tools.dconvert.util.DensityBucketUtil.getDensityBuckets(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;FZ)Ljava/util/Map;",
+    "time" : 0.006248,
+    "tabulatorEntries" : [ {
+      "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+      "time" : 0.006248,
+      "tabulatorEntries" : [ {
+        "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+        "time" : 0.006248,
+        "tabulatorEntries" : [ ]
+      } ]
+    } ]
+  } ]
+}, {
+  "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
+  "time" : 0.005756,
+  "tabulatorEntries" : [ {
+    "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
+    "time" : 0.005756,
+    "tabulatorEntries" : [ {
+      "method" : "at.favre.tools.dconvert.converters.APlatformConverter.converttvdpi(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V",
+      "time" : 0.005756,
       "tabulatorEntries" : [ {
         "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-        "time" : 0.005491,
+        "time" : 0.005756,
         "tabulatorEntries" : [ {
           "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-          "time" : 0.005491,
+          "time" : 0.005756,
           "tabulatorEntries" : [ ]
         } ]
       } ]
     } ]
   } ]
 }, {
-  "method" : "at.favre.tools.dconvert.arg.EScalingAlgorithm.<clinit>()V",
-  "time" : 0.005438,
+  "method" : "at.favre.tools.dconvert.WorkerHandler.start(Ljava/util/List;)V",
+  "time" : 0.005638,
   "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.Convert.upScalingAlgo(Z)Ljava/lang/String;",
-    "time" : 0.005438,
+    "method" : "at.favre.tools.dconvert.DConvert.execute(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V",
+    "time" : 0.005638,
     "tabulatorEntries" : [ {
       "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
-      "time" : 0.005438,
+      "time" : 0.005638,
       "tabulatorEntries" : [ ]
     } ]
   } ]
 }, {
-  "method" : "at.favre.tools.dconvert.util.DensityBucketUtil.getDensityBucketsWithFactorScale(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;F)Ljava/util/Map;",
-  "time" : 0.005407,
+  "method" : "at.favre.tools.dconvert.Convert.upScalingAlgo(Z)Ljava/lang/String;",
+  "time" : 0.0056,
   "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.util.DensityBucketUtil.getDensityBuckets(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;FZ)Ljava/util/Map;",
-    "time" : 0.005407,
+    "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
+    "time" : 0.0056,
+    "tabulatorEntries" : [ ]
+  } ]
+}, {
+  "method" : "at.favre.tools.dconvert.converters.postprocessing.MozJpegProcessor.isSupported()Z",
+  "time" : 0.005539,
+  "tabulatorEntries" : [ {
+    "method" : "at.favre.tools.dconvert.DConvert.execute(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V",
+    "time" : 0.005539,
     "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-      "time" : 0.005407,
+      "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
+      "time" : 0.005539,
+      "tabulatorEntries" : [ ]
+    } ]
+  } ]
+}, {
+  "method" : "com.twelvemonkeys.imageio.metadata.jpeg.JPEGSegmentUtil.<clinit>()V",
+  "time" : 0.005513,
+  "tabulatorEntries" : [ {
+    "method" : "at.favre.tools.dconvert.util.ImageUtil.readExif(Ljava/io/File;)Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;",
+    "time" : 0.005513,
+    "tabulatorEntries" : [ {
+      "method" : "at.favre.tools.dconvert.util.ImageUtil.loadImage(Ljava/io/File;)Lat/favre/tools/dconvert/util/LoadedImage;",
+      "time" : 0.005513,
       "tabulatorEntries" : [ {
-        "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-        "time" : 0.005407,
+        "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+        "time" : 0.005513,
+        "tabulatorEntries" : [ {
+          "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+          "time" : 0.005513,
+          "tabulatorEntries" : [ ]
+        } ]
+      } ]
+    } ]
+  } ]
+}, {
+  "method" : "com.mortennobel.imagescaling.ResampleFilters.<clinit>()V",
+  "time" : 0.005465,
+  "tabulatorEntries" : [ {
+    "method" : "at.favre.tools.dconvert.arg.EScalingAlgorithm.<clinit>()V",
+    "time" : 0.005465,
+    "tabulatorEntries" : [ {
+      "method" : "at.favre.tools.dconvert.Convert.upScalingAlgo(Z)Ljava/lang/String;",
+      "time" : 0.005465,
+      "tabulatorEntries" : [ {
+        "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
+        "time" : 0.005465,
         "tabulatorEntries" : [ ]
       } ]
     } ]
   } ]
 }, {
-  "method" : "at.favre.tools.dconvert.arg.Arguments.<init>(Ljava/io/File;Ljava/io/File;FLjava/util/Set;Lat/favre/tools/dconvert/arg/EOutputCompressionMode;Lat/favre/tools/dconvert/arg/EScaleMode;Lat/favre/tools/dconvert/arg/EScalingAlgorithm;Lat/favre/tools/dconvert/arg/EScalingAlgorithm;FIZZZZZZZZZZZZZLat/favre/tools/dconvert/arg/RoundingHandler$Strategy;ZZ)V",
-  "time" : 0.005157,
+  "method" : "at.favre.tools.dconvert.util.MiscUtil.createAndCheckFolder(Ljava/lang/String;Z)Ljava/io/File;",
+  "time" : 0.005422,
   "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.arg.Arguments.<clinit>()V",
-    "time" : 0.005157,
+    "method" : "at.favre.tools.dconvert.converters.AndroidConverter.createFolderForOutputFile(Ljava/io/File;Lat/favre/tools/dconvert/converters/descriptors/AndroidDensityDescriptor;Ljava/awt/Dimension;Ljava/lang/String;Lat/favre/tools/dconvert/arg/Arguments;)Ljava/io/File;",
+    "time" : 0.005422,
     "tabulatorEntries" : [ {
-      "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
-      "time" : 0.005157,
+      "method" : "at.favre.tools.dconvert.converters.AndroidConverter.createFolderForOutputFile(Ljava/io/File;Lat/favre/tools/dconvert/converters/descriptors/DensityDescriptor;Ljava/awt/Dimension;Ljava/lang/String;Lat/favre/tools/dconvert/arg/Arguments;)Ljava/io/File;",
+      "time" : 0.005422,
+      "tabulatorEntries" : [ {
+        "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+        "time" : 0.005422,
+        "tabulatorEntries" : [ {
+          "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+          "time" : 0.005422,
+          "tabulatorEntries" : [ ]
+        } ]
+      } ]
+    } ]
+  } ]
+}, {
+  "method" : "at.favre.tools.dconvert.DConvert$1.onFinished(ILjava/util/List;Ljava/lang/StringBuilder;Ljava/util/List;Z)V",
+  "time" : 0.005406,
+  "tabulatorEntries" : [ {
+    "method" : "at.favre.tools.dconvert.WorkerHandler$InternalCallback.onJobFinished(Lat/favre/tools/dconvert/converters/Result;)V",
+    "time" : 0.005406,
+    "tabulatorEntries" : [ {
+      "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+      "time" : 0.005406,
       "tabulatorEntries" : [ ]
     } ]
   } ]
 }, {
-  "method" : "at.favre.tools.dconvert.Convert.getRoundingHandler(Ljava/lang/String;)Lat/favre/tools/dconvert/arg/RoundingHandler$Strategy;",
-  "time" : 0.005114,
+  "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
+  "time" : 0.005312,
   "tabulatorEntries" : [ {
-    "method" : "at.favre.tools.dconvert.Convert.main([Ljava/lang/String;)V",
-    "time" : 0.005114,
-    "tabulatorEntries" : [ ]
+    "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
+    "time" : 0.005312,
+    "tabulatorEntries" : [ {
+      "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
+      "time" : 0.005312,
+      "tabulatorEntries" : [ {
+        "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
+        "time" : 0.005312,
+        "tabulatorEntries" : [ {
+          "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+          "time" : 0.005312,
+          "tabulatorEntries" : [ {
+            "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+            "time" : 0.005312,
+            "tabulatorEntries" : [ ]
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}, {
+  "method" : "com.mortennobel.imagescaling.AdvancedResizeOp.<init>(Lcom/mortennobel/imagescaling/DimensionConstrain;)V",
+  "time" : 0.005212,
+  "tabulatorEntries" : [ {
+    "method" : "com.mortennobel.imagescaling.ResampleOp.<init>(Lcom/mortennobel/imagescaling/DimensionConstrain;)V",
+    "time" : 0.005212,
+    "tabulatorEntries" : [ {
+      "method" : "com.mortennobel.imagescaling.ResampleOp.<init>(II)V",
+      "time" : 0.005212,
+      "tabulatorEntries" : [ {
+        "method" : "at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm.scale(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;",
+        "time" : 0.005212,
+        "tabulatorEntries" : [ {
+          "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.scale(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;",
+          "time" : 0.005212,
+          "tabulatorEntries" : [ {
+            "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
+            "time" : 0.005212,
+            "tabulatorEntries" : [ {
+              "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
+              "time" : 0.005212,
+              "tabulatorEntries" : [ {
+                "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+                "time" : 0.005212,
+                "tabulatorEntries" : [ {
+                  "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
+                  "time" : 0.005212,
+                  "tabulatorEntries" : [ ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
   } ]
 } ]

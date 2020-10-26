@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree type="Hot Spots" threadSelection="All thread groups" threadStatus="Runnable" aggregationLevel="Methods" hotSpotCalculation="Self times" unprofiledClasses="Show separately">
+  <hotspot leaf="false" class="at.favre.tools.dconvert.util.ImageUtil" methodName="read" methodSignature="(Ljavax/imageio/stream/ImageInputStream;Lat/favre/tools/dconvert/arg/ImageType;)Lat/favre/tools/dconvert/util/LoadedImage;" time="445130" count="0" lineNumber="-1" percent="54.6">
+    <node leaf="false" class="at.favre.tools.dconvert.util.ImageUtil" methodName="loadImage" methodSignature="(Ljava/io/File;)Lat/favre/tools/dconvert/util/LoadedImage;" time="445130" count="0" lineNumber="-1" percent="54.6">
+      <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="445130" count="0" lineNumber="-1" percent="54.6">
+        <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="445130" count="0" lineNumber="-1" percent="54.6"/>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="getRegisteredImageReadersAndWriters" methodSignature="()Ljava/lang/String;" time="278859" count="0" lineNumber="-1" percent="34.2">
+    <node leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="execute" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V" time="278859" count="0" lineNumber="-1" percent="34.2">
+      <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="278859" count="0" lineNumber="-1" percent="34.2"/>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.util.PostProcessorUtil" methodName="canRunCmd" methodSignature="([Ljava/lang/String;)Z" time="17918" count="0" lineNumber="-1" percent="2.2">
+    <node leaf="false" class="at.favre.tools.dconvert.converters.postprocessing.MozJpegProcessor" methodName="isSupported" methodSignature="()Z" time="17918" count="0" lineNumber="-1" percent="2.2">
+      <node leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="execute" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V" time="17918" count="0" lineNumber="-1" percent="2.2">
+        <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="17918" count="0" lineNumber="-1" percent="2.2"/>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.util.DensityBucketUtil" methodName="getDensityBucketsWithFactorScale" methodSignature="(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;F)Ljava/util/Map;" time="11620" count="0" lineNumber="-1" percent="1.4">
+    <node leaf="false" class="at.favre.tools.dconvert.util.DensityBucketUtil" methodName="getDensityBuckets" methodSignature="(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;FZ)Ljava/util/Map;" time="11620" count="0" lineNumber="-1" percent="1.4">
+      <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="11620" count="0" lineNumber="-1" percent="1.4">
+        <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="11620" count="0" lineNumber="-1" percent="1.4"/>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="com.mortennobel.imagescaling.ResampleFilters" methodName="&lt;clinit&gt;" methodSignature="()V" time="10767" count="0" lineNumber="-1" percent="1.3">
+    <node leaf="false" class="at.favre.tools.dconvert.arg.EScalingAlgorithm" methodName="&lt;clinit&gt;" methodSignature="()V" time="10767" count="0" lineNumber="-1" percent="1.3">
+      <node leaf="false" class="at.favre.tools.dconvert.Convert" methodName="upScalingAlgo" methodSignature="(Z)Ljava/lang/String;" time="10767" count="0" lineNumber="-1" percent="1.3">
+        <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="10767" count="0" lineNumber="-1" percent="1.3"/>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.arg.Arguments" methodName="getSupportedFileTypes" methodSignature="()Ljava/util/Set;" time="6552" count="0" lineNumber="-1" percent="0.8">
+    <node leaf="false" class="at.favre.tools.dconvert.arg.Arguments" methodName="&lt;init&gt;" methodSignature="(Ljava/io/File;Ljava/io/File;FLjava/util/Set;Lat/favre/tools/dconvert/arg/EOutputCompressionMode;Lat/favre/tools/dconvert/arg/EScaleMode;Lat/favre/tools/dconvert/arg/EScalingAlgorithm;Lat/favre/tools/dconvert/arg/EScalingAlgorithm;FIZZZZZZZZZZZZZLat/favre/tools/dconvert/arg/RoundingHandler$Strategy;ZZ)V" time="6552" count="0" lineNumber="-1" percent="0.8">
+      <node leaf="false" class="at.favre.tools.dconvert.arg.Arguments" methodName="&lt;clinit&gt;" methodSignature="()V" time="6552" count="0" lineNumber="-1" percent="0.8">
+        <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="6552" count="0" lineNumber="-1" percent="0.8"/>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.arg.EPlatform" methodName="&lt;clinit&gt;" methodSignature="()V" time="6410" count="0" lineNumber="-1" percent="0.8">
+    <node leaf="false" class="at.favre.tools.dconvert.Convert" methodName="getPlatform" methodSignature="(Ljava/lang/String;)Ljava/util/Set;" time="6410" count="0" lineNumber="-1" percent="0.8">
+      <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="6410" count="0" lineNumber="-1" percent="0.8"/>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.converters.postprocessing.MozJpegProcessor" methodName="isSupported" methodSignature="()Z" time="5784" count="0" lineNumber="-1" percent="0.7">
+    <node leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="execute" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V" time="5784" count="0" lineNumber="-1" percent="0.7">
+      <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="5784" count="0" lineNumber="-1" percent="0.7"/>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="informFinished" methodSignature="(ILjava/util/List;Z)V" time="5546" count="0" lineNumber="-1" percent="0.7">
+    <node leaf="false" class="at.favre.tools.dconvert.DConvert$1$1" methodName="onFinished" methodSignature="(ILjava/util/List;Ljava/lang/StringBuilder;Ljava/util/List;Z)V" time="5546" count="0" lineNumber="-1" percent="0.7">
+      <node leaf="false" class="at.favre.tools.dconvert.WorkerHandler" methodName="start" methodSignature="(Ljava/util/List;)V" time="5546" count="0" lineNumber="-1" percent="0.7">
+        <node leaf="false" class="at.favre.tools.dconvert.DConvert$1" methodName="onFinished" methodSignature="(ILjava/util/List;Ljava/lang/StringBuilder;Ljava/util/List;Z)V" time="5546" count="0" lineNumber="-1" percent="0.7">
+          <node leaf="false" class="at.favre.tools.dconvert.WorkerHandler$InternalCallback" methodName="onJobFinished" methodSignature="(Lat/favre/tools/dconvert/converters/Result;)V" time="5546" count="0" lineNumber="-1" percent="0.7">
+            <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="5546" count="0" lineNumber="-1" percent="0.7"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.Convert" methodName="upScalingAlgo" methodSignature="(Z)Ljava/lang/String;" time="5479" count="0" lineNumber="-1" percent="0.7">
+    <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="5479" count="0" lineNumber="-1" percent="0.7"/>
+  </hotspot>
+  <hotspot leaf="false" class="com.twelvemonkeys.imageio.metadata.jpeg.JPEGSegmentUtil" methodName="readSegments" methodSignature="(Ljavax/imageio/stream/ImageInputStream;Ljava/util/Map;)Ljava/util/List;" time="5475" count="0" lineNumber="-1" percent="0.7">
+    <node leaf="false" class="com.twelvemonkeys.imageio.metadata.jpeg.JPEGSegmentUtil" methodName="readSegments" methodSignature="(Ljavax/imageio/stream/ImageInputStream;ILjava/lang/String;)Ljava/util/List;" time="5475" count="0" lineNumber="-1" percent="0.7">
+      <node leaf="false" class="at.favre.tools.dconvert.util.ImageUtil" methodName="readExif" methodSignature="(Ljava/io/File;)Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;" time="5475" count="0" lineNumber="-1" percent="0.7">
+        <node leaf="false" class="at.favre.tools.dconvert.util.ImageUtil" methodName="loadImage" methodSignature="(Ljava/io/File;)Lat/favre/tools/dconvert/util/LoadedImage;" time="5475" count="0" lineNumber="-1" percent="0.7">
+          <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="5475" count="0" lineNumber="-1" percent="0.7">
+            <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="5475" count="0" lineNumber="-1" percent="0.7"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.WorkerHandler" methodName="start" methodSignature="(Ljava/util/List;)V" time="5359" count="0" lineNumber="-1" percent="0.7">
+    <node leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="execute" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V" time="5359" count="0" lineNumber="-1" percent="0.7">
+      <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="5359" count="0" lineNumber="-1" percent="0.7"/>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="execute" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V" time="5289" count="0" lineNumber="-1" percent="0.6">
+    <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="5289" count="0" lineNumber="-1" percent="0.6"/>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.arg.EScalingAlgorithm" methodName="&lt;clinit&gt;" methodSignature="()V" time="5154" count="0" lineNumber="-1" percent="0.6">
+    <node leaf="false" class="at.favre.tools.dconvert.Convert" methodName="upScalingAlgo" methodSignature="(Z)Ljava/lang/String;" time="5154" count="0" lineNumber="-1" percent="0.6">
+      <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="5154" count="0" lineNumber="-1" percent="0.6"/>
+    </node>
+  </hotspot>
+</tree>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree type="Hot Spots" threadSelection="All thread groups" threadStatus="Runnable" aggregationLevel="Methods" hotSpotCalculation="Self times" unprofiledClasses="Show separately">
+  <hotspot leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="verticalFromWorkToDst" methodSignature="([[B[BII)V" time="18798749" count="0" lineNumber="-1" percent="54.2">
+    <node leaf="true" class="com.mortennobel.imagescaling.ResampleOp$2" methodName="run" methodSignature="()V" time="16538662" count="0" lineNumber="-1" percent="47.6"/>
+    <node leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="doFilter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="2260087" count="0" lineNumber="-1" percent="6.5">
+      <node leaf="false" class="com.mortennobel.imagescaling.AdvancedResizeOp" methodName="filter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;" time="2260087" count="0" lineNumber="-1" percent="6.5">
+        <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm" methodName="scale" methodSignature="(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="2260087" count="0" lineNumber="-1" percent="6.5">
+          <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="scale" methodSignature="(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;" time="2260087" count="0" lineNumber="-1" percent="6.5">
+            <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="saveToFile" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;" time="2260087" count="0" lineNumber="-1" percent="6.5">
+              <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V" time="2260087" count="0" lineNumber="-1" percent="6.5">
+                <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="converttvdpi" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V" time="1995042" count="0" lineNumber="-1" percent="5.7">
+                  <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="1995042" count="0" lineNumber="-1" percent="5.7">
+                    <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="1995042" count="0" lineNumber="-1" percent="5.7"/>
+                  </node>
+                </node>
+                <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="265045" count="0" lineNumber="-1" percent="0.8">
+                  <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="265045" count="0" lineNumber="-1" percent="0.8"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="compressJpeg" methodSignature="(Ljava/awt/image/BufferedImage;Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;FLjava/io/File;)V" time="7670340" count="0" lineNumber="-1" percent="22.1">
+    <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="saveToFile" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;" time="7670340" count="0" lineNumber="-1" percent="22.1">
+      <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V" time="7670340" count="0" lineNumber="-1" percent="22.1">
+        <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="converttvdpi" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V" time="6183171" count="0" lineNumber="-1" percent="17.8">
+          <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="6183171" count="0" lineNumber="-1" percent="17.8">
+            <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="6183171" count="0" lineNumber="-1" percent="17.8"/>
+          </node>
+        </node>
+        <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="1487169" count="0" lineNumber="-1" percent="4.3">
+          <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="1487169" count="0" lineNumber="-1" percent="4.3"/>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="horizontallyFromSrcToWork" methodSignature="(Ljava/awt/image/BufferedImage;[[BII)V" time="4865628" count="0" lineNumber="-1" percent="14.0">
+    <node leaf="true" class="com.mortennobel.imagescaling.ResampleOp$1" methodName="run" methodSignature="()V" time="4631134" count="0" lineNumber="-1" percent="13.3"/>
+    <node leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="doFilter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="234494" count="0" lineNumber="-1" percent="0.7">
+      <node leaf="false" class="com.mortennobel.imagescaling.AdvancedResizeOp" methodName="filter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;" time="234494" count="0" lineNumber="-1" percent="0.7">
+        <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm" methodName="scale" methodSignature="(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="234494" count="0" lineNumber="-1" percent="0.7">
+          <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="scale" methodSignature="(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;" time="234494" count="0" lineNumber="-1" percent="0.7">
+            <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="saveToFile" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;" time="234494" count="0" lineNumber="-1" percent="0.7">
+              <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V" time="234494" count="0" lineNumber="-1" percent="0.7">
+                <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="234494" count="0" lineNumber="-1" percent="0.7">
+                  <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="234494" count="0" lineNumber="-1" percent="0.7"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="scale" methodSignature="(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;" time="933246" count="0" lineNumber="-1" percent="2.7">
+    <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="saveToFile" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;" time="933246" count="0" lineNumber="-1" percent="2.7">
+      <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V" time="933246" count="0" lineNumber="-1" percent="2.7">
+        <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="converttvdpi" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V" time="753752" count="0" lineNumber="-1" percent="2.2">
+          <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="753752" count="0" lineNumber="-1" percent="2.2">
+            <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="753752" count="0" lineNumber="-1" percent="2.2"/>
+          </node>
+        </node>
+        <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="179494" count="0" lineNumber="-1" percent="0.5">
+          <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="179494" count="0" lineNumber="-1" percent="0.5"/>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="com.mortennobel.imagescaling.ImageUtils" methodName="setBGRPixels" methodSignature="([BLjava/awt/image/BufferedImage;IIII)V" time="474138" count="0" lineNumber="-1" percent="1.4">
+    <node leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="doFilter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="474138" count="0" lineNumber="-1" percent="1.4">
+      <node leaf="false" class="com.mortennobel.imagescaling.AdvancedResizeOp" methodName="filter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;" time="474138" count="0" lineNumber="-1" percent="1.4">
+        <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm" methodName="scale" methodSignature="(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="474138" count="0" lineNumber="-1" percent="1.4">
+          <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="scale" methodSignature="(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;" time="474138" count="0" lineNumber="-1" percent="1.4">
+            <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="saveToFile" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;" time="474138" count="0" lineNumber="-1" percent="1.4">
+              <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V" time="474138" count="0" lineNumber="-1" percent="1.4">
+                <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="converttvdpi" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V" time="452968" count="0" lineNumber="-1" percent="1.3">
+                  <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="452968" count="0" lineNumber="-1" percent="1.3">
+                    <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="452968" count="0" lineNumber="-1" percent="1.3"/>
+                  </node>
+                </node>
+                <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="21170" count="0" lineNumber="-1" percent="0.1">
+                  <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="21170" count="0" lineNumber="-1" percent="0.1"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.util.ImageUtil" methodName="read" methodSignature="(Ljavax/imageio/stream/ImageInputStream;Lat/favre/tools/dconvert/arg/ImageType;)Lat/favre/tools/dconvert/util/LoadedImage;" time="452336" count="0" lineNumber="-1" percent="1.3">
+    <node leaf="false" class="at.favre.tools.dconvert.util.ImageUtil" methodName="loadImage" methodSignature="(Ljava/io/File;)Lat/favre/tools/dconvert/util/LoadedImage;" time="452336" count="0" lineNumber="-1" percent="1.3">
+      <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="452336" count="0" lineNumber="-1" percent="1.3">
+        <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="452336" count="0" lineNumber="-1" percent="1.3"/>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="com.mortennobel.imagescaling.AdvancedResizeOp" methodName="fireProgressChanged" methodSignature="(F)V" time="443214" count="0" lineNumber="-1" percent="1.3">
+    <node leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="setProgress" methodSignature="()V" time="443214" count="0" lineNumber="-1" percent="1.3">
+      <node leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="horizontallyFromSrcToWork" methodSignature="(Ljava/awt/image/BufferedImage;[[BII)V" time="443214" count="0" lineNumber="-1" percent="1.3">
+        <node leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="doFilter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="443214" count="0" lineNumber="-1" percent="1.3">
+          <node leaf="false" class="com.mortennobel.imagescaling.AdvancedResizeOp" methodName="filter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;" time="443214" count="0" lineNumber="-1" percent="1.3">
+            <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm" methodName="scale" methodSignature="(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="443214" count="0" lineNumber="-1" percent="1.3">
+              <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="scale" methodSignature="(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;" time="443214" count="0" lineNumber="-1" percent="1.3">
+                <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="saveToFile" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;" time="443214" count="0" lineNumber="-1" percent="1.3">
+                  <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V" time="443214" count="0" lineNumber="-1" percent="1.3">
+                    <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="converttvdpi" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V" time="443214" count="0" lineNumber="-1" percent="1.3">
+                      <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="443214" count="0" lineNumber="-1" percent="1.3">
+                        <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="443214" count="0" lineNumber="-1" percent="1.3"/>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="getRegisteredImageReadersAndWriters" methodSignature="()Ljava/lang/String;" time="330016" count="0" lineNumber="-1" percent="1.0">
+    <node leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="execute" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V" time="330016" count="0" lineNumber="-1" percent="1.0">
+      <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="330016" count="0" lineNumber="-1" percent="1.0"/>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="com.mortennobel.imagescaling.ImageUtils" methodName="getPixelsBGR" methodSignature="(Ljava/awt/image/BufferedImage;II[B[I)[B" time="264748" count="0" lineNumber="-1" percent="0.8">
+    <node leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="horizontallyFromSrcToWork" methodSignature="(Ljava/awt/image/BufferedImage;[[BII)V" time="264748" count="0" lineNumber="-1" percent="0.8">
+      <node leaf="true" class="com.mortennobel.imagescaling.ResampleOp$1" methodName="run" methodSignature="()V" time="241463" count="0" lineNumber="-1" percent="0.7"/>
+      <node leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="doFilter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="23285" count="0" lineNumber="-1" percent="0.1">
+        <node leaf="false" class="com.mortennobel.imagescaling.AdvancedResizeOp" methodName="filter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;" time="23285" count="0" lineNumber="-1" percent="0.1">
+          <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm" methodName="scale" methodSignature="(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="23285" count="0" lineNumber="-1" percent="0.1">
+            <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="scale" methodSignature="(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;" time="23285" count="0" lineNumber="-1" percent="0.1">
+              <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="saveToFile" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;" time="23285" count="0" lineNumber="-1" percent="0.1">
+                <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V" time="23285" count="0" lineNumber="-1" percent="0.1">
+                  <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="23285" count="0" lineNumber="-1" percent="0.1">
+                    <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="23285" count="0" lineNumber="-1" percent="0.1"/>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="doFilter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="219588" count="0" lineNumber="-1" percent="0.6">
+    <node leaf="false" class="com.mortennobel.imagescaling.AdvancedResizeOp" methodName="filter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;" time="219588" count="0" lineNumber="-1" percent="0.6">
+      <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm" methodName="scale" methodSignature="(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="219588" count="0" lineNumber="-1" percent="0.6">
+        <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="scale" methodSignature="(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;" time="219588" count="0" lineNumber="-1" percent="0.6">
+          <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="saveToFile" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;" time="219588" count="0" lineNumber="-1" percent="0.6">
+            <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V" time="219588" count="0" lineNumber="-1" percent="0.6">
+              <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="converttvdpi" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V" time="202588" count="0" lineNumber="-1" percent="0.6">
+                <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="202588" count="0" lineNumber="-1" percent="0.6">
+                  <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="202588" count="0" lineNumber="-1" percent="0.6"/>
+                </node>
+              </node>
+              <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="17000" count="0" lineNumber="-1" percent="0.0">
+                <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="17000" count="0" lineNumber="-1" percent="0.0"/>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="createSubSampling" methodSignature="(Lcom/mortennobel/imagescaling/ResampleFilter;II)Lcom/mortennobel/imagescaling/ResampleOp$SubSamplingData;" time="133210" count="0" lineNumber="-1" percent="0.4">
+    <node leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="doFilter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="133210" count="0" lineNumber="-1" percent="0.4">
+      <node leaf="false" class="com.mortennobel.imagescaling.AdvancedResizeOp" methodName="filter" methodSignature="(Ljava/awt/image/BufferedImage;Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;" time="133210" count="0" lineNumber="-1" percent="0.4">
+        <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm" methodName="scale" methodSignature="(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="133210" count="0" lineNumber="-1" percent="0.4">
+          <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="scale" methodSignature="(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;" time="133210" count="0" lineNumber="-1" percent="0.4">
+            <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="saveToFile" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;" time="133210" count="0" lineNumber="-1" percent="0.4">
+              <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V" time="133210" count="0" lineNumber="-1" percent="0.4">
+                <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="converttvdpi" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V" time="99992" count="0" lineNumber="-1" percent="0.3">
+                  <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="99992" count="0" lineNumber="-1" percent="0.3">
+                    <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="99992" count="0" lineNumber="-1" percent="0.3"/>
+                  </node>
+                </node>
+                <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="33218" count="0" lineNumber="-1" percent="0.1">
+                  <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="33218" count="0" lineNumber="-1" percent="0.1"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.util.PostProcessorUtil" methodName="canRunCmd" methodSignature="([Ljava/lang/String;)Z" time="20003" count="0" lineNumber="-1" percent="0.1">
+    <node leaf="false" class="at.favre.tools.dconvert.converters.postprocessing.MozJpegProcessor" methodName="isSupported" methodSignature="()Z" time="20003" count="0" lineNumber="-1" percent="0.1">
+      <node leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="execute" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V" time="20003" count="0" lineNumber="-1" percent="0.1">
+        <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="20003" count="0" lineNumber="-1" percent="0.1"/>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V" time="11711" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="11711" count="0" lineNumber="-1" percent="0.0">
+      <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="11711" count="0" lineNumber="-1" percent="0.0"/>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.arg.EScalingAlgorithm" methodName="&lt;clinit&gt;" methodSignature="()V" time="11484" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="false" class="at.favre.tools.dconvert.Convert" methodName="upScalingAlgo" methodSignature="(Z)Ljava/lang/String;" time="11484" count="0" lineNumber="-1" percent="0.0">
+      <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="11484" count="0" lineNumber="-1" percent="0.0"/>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.util.DensityBucketUtil" methodName="getDensityBucketsWithFactorScale" methodSignature="(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;F)Ljava/util/Map;" time="11456" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="false" class="at.favre.tools.dconvert.util.DensityBucketUtil" methodName="getDensityBuckets" methodSignature="(Ljava/util/List;Ljava/awt/Dimension;Lat/favre/tools/dconvert/arg/Arguments;FZ)Ljava/util/Map;" time="11456" count="0" lineNumber="-1" percent="0.0">
+      <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="11456" count="0" lineNumber="-1" percent="0.0">
+        <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="11456" count="0" lineNumber="-1" percent="0.0"/>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="11078" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="true" time="11078" count="0" lineNumber="-1" percent="0.0" filtered="true"/>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.arg.EPlatform" methodName="&lt;clinit&gt;" methodSignature="()V" time="10582" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="false" class="at.favre.tools.dconvert.Convert" methodName="getPlatform" methodSignature="(Ljava/lang/String;)Ljava/util/Set;" time="10582" count="0" lineNumber="-1" percent="0.0">
+      <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="10582" count="0" lineNumber="-1" percent="0.0"/>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.Convert" methodName="upScalingAlgo" methodSignature="(Z)Ljava/lang/String;" time="6132" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="6132" count="0" lineNumber="-1" percent="0.0"/>
+  </hotspot>
+  <hotspot leaf="false" class="com.mortennobel.imagescaling.AdvancedResizeOp" methodName="&lt;init&gt;" methodSignature="(Lcom/mortennobel/imagescaling/DimensionConstrain;)V" time="5730" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="&lt;init&gt;" methodSignature="(Lcom/mortennobel/imagescaling/DimensionConstrain;)V" time="5730" count="0" lineNumber="-1" percent="0.0">
+      <node leaf="false" class="com.mortennobel.imagescaling.ResampleOp" methodName="&lt;init&gt;" methodSignature="(II)V" time="5730" count="0" lineNumber="-1" percent="0.0">
+        <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm" methodName="scale" methodSignature="(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="5730" count="0" lineNumber="-1" percent="0.0">
+          <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="scale" methodSignature="(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;" time="5730" count="0" lineNumber="-1" percent="0.0">
+            <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="saveToFile" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;" time="5730" count="0" lineNumber="-1" percent="0.0">
+              <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V" time="5730" count="0" lineNumber="-1" percent="0.0">
+                <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="5730" count="0" lineNumber="-1" percent="0.0">
+                  <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="5730" count="0" lineNumber="-1" percent="0.0"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="com.twelvemonkeys.imageio.metadata.jpeg.JPEGSegmentUtil" methodName="&lt;clinit&gt;" methodSignature="()V" time="5706" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="false" class="at.favre.tools.dconvert.util.ImageUtil" methodName="readExif" methodSignature="(Ljava/io/File;)Lcom/twelvemonkeys/imageio/metadata/CompoundDirectory;" time="5706" count="0" lineNumber="-1" percent="0.0">
+      <node leaf="false" class="at.favre.tools.dconvert.util.ImageUtil" methodName="loadImage" methodSignature="(Ljava/io/File;)Lat/favre/tools/dconvert/util/LoadedImage;" time="5706" count="0" lineNumber="-1" percent="0.0">
+        <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="5706" count="0" lineNumber="-1" percent="0.0">
+          <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="5706" count="0" lineNumber="-1" percent="0.0"/>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.util.MiscUtil" methodName="deleteFolder" methodSignature="(Ljava/io/File;)V" time="5511" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="false" class="at.favre.tools.dconvert.converters.AndroidConverter" methodName="clean" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;)V" time="5511" count="0" lineNumber="-1" percent="0.0">
+      <node leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="execute" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V" time="5511" count="0" lineNumber="-1" percent="0.0">
+        <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="5511" count="0" lineNumber="-1" percent="0.0"/>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="5365" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="5365" count="0" lineNumber="-1" percent="0.0"/>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="informFinished" methodSignature="(ILjava/util/List;Z)V" time="5331" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="false" class="at.favre.tools.dconvert.DConvert$1$1" methodName="onFinished" methodSignature="(ILjava/util/List;Ljava/lang/StringBuilder;Ljava/util/List;Z)V" time="5331" count="0" lineNumber="-1" percent="0.0">
+      <node leaf="false" class="at.favre.tools.dconvert.WorkerHandler" methodName="start" methodSignature="(Ljava/util/List;)V" time="5331" count="0" lineNumber="-1" percent="0.0">
+        <node leaf="false" class="at.favre.tools.dconvert.DConvert$1" methodName="onFinished" methodSignature="(ILjava/util/List;Ljava/lang/StringBuilder;Ljava/util/List;Z)V" time="5331" count="0" lineNumber="-1" percent="0.0">
+          <node leaf="false" class="at.favre.tools.dconvert.WorkerHandler$InternalCallback" methodName="onJobFinished" methodSignature="(Lat/favre/tools/dconvert/converters/Result;)V" time="5331" count="0" lineNumber="-1" percent="0.0">
+            <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="5331" count="0" lineNumber="-1" percent="0.0"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.WorkerHandler" methodName="start" methodSignature="(Ljava/util/List;)V" time="5229" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="false" class="at.favre.tools.dconvert.DConvert" methodName="execute" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;ZLat/favre/tools/dconvert/DConvert$HandlerCallback;)V" time="5229" count="0" lineNumber="-1" percent="0.0">
+      <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="5229" count="0" lineNumber="-1" percent="0.0"/>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="com.mortennobel.imagescaling.ResampleFilters" methodName="&lt;clinit&gt;" methodSignature="()V" time="5199" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="false" class="at.favre.tools.dconvert.arg.EScalingAlgorithm" methodName="&lt;clinit&gt;" methodSignature="()V" time="5199" count="0" lineNumber="-1" percent="0.0">
+      <node leaf="false" class="at.favre.tools.dconvert.Convert" methodName="upScalingAlgo" methodSignature="(Z)Ljava/lang/String;" time="5199" count="0" lineNumber="-1" percent="0.0">
+        <node leaf="true" class="at.favre.tools.dconvert.Convert" methodName="main" methodSignature="([Ljava/lang/String;)V" time="5199" count="0" lineNumber="-1" percent="0.0"/>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.converters.scaling.ResampleAlgorithm" methodName="scale" methodSignature="(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;" time="5175" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="scale" methodSignature="(Lat/favre/tools/dconvert/converters/scaling/ScaleAlgorithm;Ljava/awt/image/BufferedImage;IILat/favre/tools/dconvert/arg/ImageType$ECompression;Ljava/awt/Color;)Ljava/awt/image/BufferedImage;" time="5175" count="0" lineNumber="-1" percent="0.0">
+      <node leaf="false" class="at.favre.tools.dconvert.converters.scaling.ImageHandler" methodName="saveToFile" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;" time="5175" count="0" lineNumber="-1" percent="0.0">
+        <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V" time="5175" count="0" lineNumber="-1" percent="0.0">
+          <node leaf="false" class="at.favre.tools.dconvert.converters.APlatformConverter" methodName="convert" methodSignature="(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;" time="5175" count="0" lineNumber="-1" percent="0.0">
+            <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="5175" count="0" lineNumber="-1" percent="0.0"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </hotspot>
+  <hotspot leaf="false" class="at.favre.tools.dconvert.DConvert$1" methodName="onFinished" methodSignature="(ILjava/util/List;Ljava/lang/StringBuilder;Ljava/util/List;Z)V" time="5105" count="0" lineNumber="-1" percent="0.0">
+    <node leaf="false" class="at.favre.tools.dconvert.WorkerHandler$InternalCallback" methodName="onJobFinished" methodSignature="(Lat/favre/tools/dconvert/converters/Result;)V" time="5105" count="0" lineNumber="-1" percent="0.0">
+      <node leaf="true" class="at.favre.tools.dconvert.WorkerHandler$Worker" methodName="run" methodSignature="()V" time="5105" count="0" lineNumber="-1" percent="0.0"/>
+    </node>
+  </hotspot>
+</tree>
