@@ -47,7 +47,7 @@ public class PrettyInfluenceModelBuilderTest {
     for (LocalPerformanceModel<Partition> localModel : relevantLocalModels) {
       PrettyInfluenceModelBuilder builder =
           new PrettyInfluenceModelBuilder(
-              programName, BaseExecutor.REAL, getRegion(localModel.getRegion(), regions), 0.1, 2);
+              programName, BaseExecutor.REAL, getRegion(localModel.getRegion(), regions), 1.0, -1);
       args = new String[2];
       args[0] = "-delres";
       args[1] = "-saveres";
@@ -81,7 +81,7 @@ public class PrettyInfluenceModelBuilderTest {
     for (LocalPerformanceModel<Partition> localModel : relevantLocalModels) {
       PrettyInfluenceModelBuilder builder =
           new PrettyInfluenceModelBuilder(
-              programName, BaseExecutor.REAL, getRegion(localModel.getRegion(), regions), 0.1, -1);
+              programName, BaseExecutor.REAL, getRegion(localModel.getRegion(), regions), 1.0, -1);
       args = new String[2];
       args[0] = "-delres";
       args[1] = "-saveres";
@@ -115,7 +115,7 @@ public class PrettyInfluenceModelBuilderTest {
     for (LocalPerformanceModel<Partition> localModel : relevantLocalModels) {
       PrettyInfluenceModelBuilder builder =
           new PrettyInfluenceModelBuilder(
-              programName, BaseExecutor.USER, getRegion(localModel.getRegion(), regions), 0.1, 2);
+              programName, BaseExecutor.USER, getRegion(localModel.getRegion(), regions), 0.3, -1);
       args = new String[2];
       args[0] = "-delres";
       args[1] = "-saveres";
@@ -149,7 +149,7 @@ public class PrettyInfluenceModelBuilderTest {
     for (LocalPerformanceModel<Partition> localModel : relevantLocalModels) {
       PrettyInfluenceModelBuilder builder =
           new PrettyInfluenceModelBuilder(
-              programName, BaseExecutor.USER, getRegion(localModel.getRegion(), regions), 0.1, 2);
+              programName, BaseExecutor.USER, getRegion(localModel.getRegion(), regions), 1.0, -1);
       args = new String[2];
       args[0] = "-delres";
       args[1] = "-saveres";
