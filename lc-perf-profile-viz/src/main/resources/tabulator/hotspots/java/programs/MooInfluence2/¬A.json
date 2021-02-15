@@ -1,0 +1,21 @@
+[ {
+  "method" : "edu.cmu.cs.mvelezce.perf.ExpensiveCalls.getFactors()V",
+  "time" : 43.677182,
+  "tabulatorEntries" : [ {
+    "method" : "edu.cmu.cs.mvelezce.perf.MooInfluence2.moo(I)V",
+    "time" : 43.677182,
+    "tabulatorEntries" : [ {
+      "method" : "edu.cmu.cs.mvelezce.perf.MooInfluence2.cow(I)V",
+      "time" : 43.677182,
+      "tabulatorEntries" : [ {
+        "method" : "edu.cmu.cs.mvelezce.perf.MooInfluence2.foo(Z)V",
+        "time" : 43.677182,
+        "tabulatorEntries" : [ {
+          "method" : "edu.cmu.cs.mvelezce.perf.MooInfluence2.main([Ljava/lang/String;)V",
+          "time" : 43.677182,
+          "tabulatorEntries" : [ ]
+        } ]
+      } ]
+    } ]
+  } ]
+} ]
