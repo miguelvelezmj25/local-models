@@ -33,6 +33,66 @@ public class DotViewer implements Analysis<Void> {
 
   @Override
   public Void analyze() throws IOException {
+    Map<String, Set<List<HotspotDiffEntry>>> hotspotsToDiffs = this.getHotspotsToDiffs();
+    for (Map.Entry<String, Set<List<HotspotDiffEntry>>> entry : hotspotsToDiffs.entrySet()) {
+      Set<DotNode> dotNodes = this.getDotNodes(entry);
+      System.out.println();
+    }
+    //        List<Node> nodes = new ArrayList<>();
+
+    //          for (Map.Entry<String, Double> configToTime :
+    // diffEntry.getConfigsToTimes().entrySet()) {
+    //            Node node =
+    //                Factory.node(Label.of(diffEntry.getMethod() + configToTime.getKey()))
+    //                    .with(
+    //                        Records.of(
+    //                            Records.rec("1", diffEntry.getMethod()),
+    //                            Records.rec("2", configToTime.getKey()),
+    //                            Records.rec("3", String.valueOf(configToTime.getValue()))));
+    //            nodes.add(node);
+    //          }
+    //        }
+    //
+    //        for (int i = 0; i < (nodes.size() - 1); i++) {
+    //          Node currentNode = nodes.get(i);
+    //          Node nextNode = nodes.get(i + 1);
+    //          graph.add(
+    //                  currentNode.link(Link.between(currentNode.port("1").port(),
+    // nextNode.port("1"))));
+    //        }
+    System.out.println();
+
+    throw new UnsupportedOperationException("implement");
+  }
+
+  private Set<DotNode> getDotNodes(Map.Entry<String, Set<List<HotspotDiffEntry>>> entry) {
+    Map<DotNode, DotNode> dotNodes = new HashMap<>();
+    for (List<HotspotDiffEntry> diff : entry.getValue()) {
+      List<DotNode> ancestors = new ArrayList<>();
+      for (HotspotDiffEntry diffEntry : diff) {
+        DotNode dotNode = new DotNode(diffEntry.getMethod());
+        dotNode.getAncestors().addAll(new ArrayList<>(ancestors));
+        dotNodes.putIfAbsent(dotNode, dotNode);
+        ancestors.add(dotNode);
+      }
+    }
+
+    for (List<HotspotDiffEntry> diff : entry.getValue()) {
+      List<DotNode> ancestors = new ArrayList<>();
+      for (HotspotDiffEntry diffEntry : diff) {
+        DotNode dotNode = new DotNode(diffEntry.getMethod());
+        dotNode.getAncestors().addAll(new ArrayList<>(ancestors));
+        DotNode x = dotNodes.get(dotNode);
+        x.getConfigsToTimes().putAll(diffEntry.getConfigsToTimes());
+        System.out.println();
+        ancestors.add(dotNode);
+      }
+    }
+
+    return dotNodes.keySet();
+  }
+
+  private Map<String, Set<List<HotspotDiffEntry>>> getHotspotsToDiffs() throws IOException {
     File snapshotsDir = new File(TabulatorHotspotParser.OUTPUT_DIR + "/" + this.programName);
     Collection<File> tabulatorEntryFiles =
         FileUtils.listFiles(snapshotsDir, new String[] {"json"}, false);
@@ -109,7 +169,7 @@ public class DotViewer implements Analysis<Void> {
       }
     }
 
-    throw new UnsupportedOperationException("implement");
+    return hotspotsToDiffs;
   }
 
   private void populateDiffs(

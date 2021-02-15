@@ -6,7 +6,7 @@ import java.util.Map;
 public class HotspotDiffEntry {
 
   private final String method;
-  private final Map<String, Double> ConfigsToTimes = new HashMap<>();
+  private final Map<String, Double> configsToTimes = new HashMap<>();
 
   public HotspotDiffEntry(String method) {
     this.method = method;
@@ -21,6 +21,6 @@ public class HotspotDiffEntry {
   }
 
   public Map<String, Double> getConfigsToTimes() {
-    return ConfigsToTimes;
+    return configsToTimes;
   }
 }
