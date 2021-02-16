@@ -6,10 +6,7 @@ import edu.cmu.cs.mvelezce.analysis.Analysis;
 import edu.cmu.cs.mvelezce.lc.perf.profile.viz.parser.TabulatorEntry;
 import edu.cmu.cs.mvelezce.lc.perf.profile.viz.parser.TabulatorHotspotParser;
 import edu.cmu.cs.mvelezce.utils.config.Options;
-import guru.nidi.graphviz.attribute.Label;
-import guru.nidi.graphviz.attribute.Rank;
-import guru.nidi.graphviz.attribute.Records;
-import guru.nidi.graphviz.attribute.Style;
+import guru.nidi.graphviz.attribute.*;
 import guru.nidi.graphviz.engine.Graphviz;
 import guru.nidi.graphviz.engine.Rasterizer;
 import guru.nidi.graphviz.model.Factory;
@@ -57,13 +54,13 @@ public class DotViewer implements Analysis<Void> {
         if (!dotNode.getMethod().contains("main([Ljava/lang/String;)V")) {
           continue;
         }
-        this.addNodes(graph, dotNode, configs);
+        this.addNodes(graph, dotNode, configs, dotNodes);
       }
       for (DotNode dotNode : dotNodes) {
         if (dotNode.getMethod().contains("main([Ljava/lang/String;)V")) {
           continue;
         }
-        this.addNodes(graph, dotNode, configs);
+        this.addNodes(graph, dotNode, configs, dotNodes);
       }
 
       for (MutableNode graphNode : graph.nodes()) {
@@ -107,7 +104,8 @@ public class DotViewer implements Analysis<Void> {
     return configs;
   }
 
-  private void addNodes(MutableGraph graph, DotNode dotNode, Set<String> configs) {
+  private void addNodes(
+      MutableGraph graph, DotNode dotNode, Set<String> configs, Set<DotNode> dotNodes) {
     int i = 0;
     List<String> records = new ArrayList<>();
     if (dotNode.isHotspot()) {
@@ -117,6 +115,30 @@ public class DotViewer implements Analysis<Void> {
       i++;
     }
 
+    String configRecords = this.getConfigRecords(dotNode, records, configs, i, dotNodes);
+    records = new ArrayList<>();
+    if (!configRecords.isEmpty()) {
+      records.add(configRecords);
+    }
+    records.add(0, Records.rec("method", dotNode.getMethod()));
+
+    Color bgColor = dotNode.getBgColor(configs, dotNodes);
+    MutableNode graphNode =
+        Factory.mutNode(
+                String.valueOf(
+                    Label.lines(
+                        Label.Justification.LEFT, String.valueOf(Math.abs(dotNode.hashCode())))))
+            .add(Records.of(records.toArray(new String[0])))
+            .add(Style.FILLED, bgColor)
+            .add(bgColor.equals(DotNode.NORMAL_BG) ? Color.BLACK : Color.LIGHTSLATEBLUE);
+    graph.add(graphNode);
+  }
+
+  private String getConfigRecords(
+      DotNode dotNode, List<String> records, Set<String> configs, int i, Set<DotNode> dotNodes) {
+    if (!dotNode.isHotspot() && !this.ancestorHasMultipleCallers(dotNode, dotNodes)) {
+      return "";
+    }
     Set<String> configsWithTime = new HashSet<>();
     for (Map.Entry<String, Double> configToTime : dotNode.getConfigsToTimes().entrySet()) {
       records.add(
@@ -140,19 +162,27 @@ public class DotViewer implements Analysis<Void> {
       i++;
     }
 
-    String configRecords = Records.turn(records.toArray(new String[0]));
-    records.clear();
-    records.add(Records.rec("method", dotNode.getMethod()));
-    records.add(configRecords);
+    return Records.turn(records.toArray(new String[0]));
+  }
 
-    MutableNode graphNode =
-        Factory.mutNode(
-                String.valueOf(
-                    Label.lines(
-                        Label.Justification.LEFT, String.valueOf(Math.abs(dotNode.hashCode())))))
-            .add(Records.of(records.toArray(new String[0])))
-            .add(Style.FILLED, dotNode.getBgColor(configs));
-    graph.add(graphNode);
+  private boolean ancestorHasMultipleCallers(DotNode dotNode, Set<DotNode> dotNodes) {
+    if (dotNode.isHotspot()) {
+      return false;
+    }
+    DotNode ancestor = dotNode.getAncestors().get(dotNode.getAncestors().size() - 1);
+    for (DotNode otherNode : dotNodes) {
+      if (dotNode.equals(otherNode)) {
+        continue;
+      }
+      List<DotNode> otherNodeAncestors = otherNode.getAncestors();
+      if (otherNodeAncestors.isEmpty()) {
+        continue;
+      }
+      if (otherNodeAncestors.get(otherNodeAncestors.size() - 1).equals(ancestor)) {
+        return true;
+      }
+    }
+    return false;
   }
 
   private MutableNode getGraphNode(DotNode dotNode, Collection<MutableNode> nodes) {
