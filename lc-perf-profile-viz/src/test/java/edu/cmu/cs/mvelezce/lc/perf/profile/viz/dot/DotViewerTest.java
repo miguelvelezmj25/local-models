@@ -47,4 +47,14 @@ public class DotViewerTest {
     args[1] = "-saveres";
     viewer.analyze(args);
   }
+
+  @Test
+  public void ConvertStudy() throws IOException {
+    String programName = "ConvertStudy";
+    DotViewer viewer = new DotViewer(programName);
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+    viewer.analyze(args);
+  }
 }
