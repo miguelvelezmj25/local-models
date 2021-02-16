@@ -110,6 +110,13 @@ public class DotViewer implements Analysis<Void> {
   private void addNodes(MutableGraph graph, DotNode dotNode, Set<String> configs) {
     int i = 0;
     List<String> records = new ArrayList<>();
+    if (dotNode.isHotspot()) {
+      records.add(
+          Records.rec(
+              String.valueOf(i), Label.lines(Label.Justification.MIDDLE, "Self-time").toString()));
+      i++;
+    }
+
     Set<String> configsWithTime = new HashSet<>();
     for (Map.Entry<String, Double> configToTime : dotNode.getConfigsToTimes().entrySet()) {
       records.add(
