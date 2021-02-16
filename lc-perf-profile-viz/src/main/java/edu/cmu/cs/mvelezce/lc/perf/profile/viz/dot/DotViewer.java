@@ -43,6 +43,7 @@ public class DotViewer implements Analysis<Void> {
   @Override
   public Void analyze() throws IOException {
     Map<String, Set<List<HotspotDiffEntry>>> hotspotsToDiffs = this.getHotspotsToDiffs();
+    Set<String> configs = this.getConfigs(hotspotsToDiffs.values());
     for (Map.Entry<String, Set<List<HotspotDiffEntry>>> hotspotToDiffs :
         hotspotsToDiffs.entrySet()) {
       Set<DotNode> dotNodes = this.getDotNodes(hotspotToDiffs);
@@ -55,13 +56,13 @@ public class DotViewer implements Analysis<Void> {
         if (!dotNode.getMethod().contains("main([Ljava/lang/String;)V")) {
           continue;
         }
-        this.addNodes(graph, dotNode);
+        this.addNodes(graph, dotNode, new HashSet<>(configs));
       }
       for (DotNode dotNode : dotNodes) {
         if (dotNode.getMethod().contains("main([Ljava/lang/String;)V")) {
           continue;
         }
-        this.addNodes(graph, dotNode);
+        this.addNodes(graph, dotNode, new HashSet<>(configs));
       }
 
       for (MutableNode graphNode : graph.nodes()) {
@@ -93,13 +94,33 @@ public class DotViewer implements Analysis<Void> {
     return null;
   }
 
-  private void addNodes(MutableGraph graph, DotNode dotNode) {
-    int i = 2;
+  private Set<String> getConfigs(Collection<Set<List<HotspotDiffEntry>>> allDiffs) {
+    Set<String> configs = new HashSet<>();
+    for (Set<List<HotspotDiffEntry>> diffs : allDiffs) {
+      for (List<HotspotDiffEntry> diff : diffs) {
+        for (HotspotDiffEntry diffEntry : diff) {
+          configs.addAll(diffEntry.getConfigsToTimes().keySet());
+        }
+      }
+    }
+    return configs;
+  }
+
+  private void addNodes(MutableGraph graph, DotNode dotNode, Set<String> configs) {
+    int i = 0;
     List<String> records = new ArrayList<>();
     records.add(Records.rec("method", dotNode.getMethod()));
+    Set<String> configsWithTime = new HashSet<>();
     for (Map.Entry<String, Double> configToTime : dotNode.getConfigsToTimes().entrySet()) {
       records.add(
-          Records.rec(String.valueOf(i), configToTime.getKey() + " " + configToTime.getValue()));
+          Records.rec(String.valueOf(i), configToTime.getKey() + " - " + configToTime.getValue()));
+      i++;
+      configsWithTime.add(configToTime.getKey());
+    }
+
+    configs.removeAll(configsWithTime);
+    for (String config : configs) {
+      records.add(Records.rec(String.valueOf(i), config + " - X"));
       i++;
     }
 
@@ -144,8 +165,8 @@ public class DotViewer implements Analysis<Void> {
       for (HotspotDiffEntry diffEntry : diff) {
         DotNode dotNode = new DotNode(diffEntry.getMethod());
         dotNode.getAncestors().addAll(new ArrayList<>(ancestors));
-        DotNode x = dotNodes.get(dotNode);
-        x.getConfigsToTimes().putAll(diffEntry.getConfigsToTimes());
+        DotNode existingDotNode = dotNodes.get(dotNode);
+        existingDotNode.getConfigsToTimes().putAll(diffEntry.getConfigsToTimes());
         ancestors.add(dotNode);
       }
     }
