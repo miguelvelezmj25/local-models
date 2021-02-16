@@ -9,6 +9,8 @@ import edu.cmu.cs.mvelezce.utils.config.Options;
 import guru.nidi.graphviz.attribute.Label;
 import guru.nidi.graphviz.attribute.Rank;
 import guru.nidi.graphviz.attribute.Records;
+import guru.nidi.graphviz.engine.Graphviz;
+import guru.nidi.graphviz.engine.Rasterizer;
 import guru.nidi.graphviz.model.Factory;
 import guru.nidi.graphviz.model.Link;
 import guru.nidi.graphviz.model.MutableGraph;
@@ -72,9 +74,23 @@ public class DotViewer implements Analysis<Void> {
         graphNode.addLink(
             Link.between(graphNode.port("method").port(), calleeGraphNode.port("method")));
       }
+
+      String hotspot = hotspotToDiffs.getKey();
+      hotspot = hotspot.substring(hotspot.lastIndexOf(".") + 1);
+      hotspot = hotspot.substring(0, hotspot.indexOf("("));
+
+      Graphviz.fromGraph(graph)
+          .rasterize(Rasterizer.builtIn("pdf"))
+          .toFile(
+              new File(
+                  Options.DIRECTORY
+                      + "/dot/hotspots/java/programs/"
+                      + this.programName
+                      + "/"
+                      + hotspot));
     }
 
-    throw new UnsupportedOperationException("implement");
+    return null;
   }
 
   private void addNodes(MutableGraph graph, DotNode dotNode) {
@@ -130,7 +146,6 @@ public class DotViewer implements Analysis<Void> {
         dotNode.getAncestors().addAll(new ArrayList<>(ancestors));
         DotNode x = dotNodes.get(dotNode);
         x.getConfigsToTimes().putAll(diffEntry.getConfigsToTimes());
-        System.out.println();
         ancestors.add(dotNode);
       }
     }
