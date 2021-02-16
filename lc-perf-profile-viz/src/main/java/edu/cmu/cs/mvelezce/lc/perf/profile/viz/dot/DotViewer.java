@@ -6,6 +6,13 @@ import edu.cmu.cs.mvelezce.analysis.Analysis;
 import edu.cmu.cs.mvelezce.lc.perf.profile.viz.parser.TabulatorEntry;
 import edu.cmu.cs.mvelezce.lc.perf.profile.viz.parser.TabulatorHotspotParser;
 import edu.cmu.cs.mvelezce.utils.config.Options;
+import guru.nidi.graphviz.attribute.Label;
+import guru.nidi.graphviz.attribute.Rank;
+import guru.nidi.graphviz.attribute.Records;
+import guru.nidi.graphviz.model.Factory;
+import guru.nidi.graphviz.model.Link;
+import guru.nidi.graphviz.model.MutableGraph;
+import guru.nidi.graphviz.model.MutableNode;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -34,35 +41,74 @@ public class DotViewer implements Analysis<Void> {
   @Override
   public Void analyze() throws IOException {
     Map<String, Set<List<HotspotDiffEntry>>> hotspotsToDiffs = this.getHotspotsToDiffs();
-    for (Map.Entry<String, Set<List<HotspotDiffEntry>>> entry : hotspotsToDiffs.entrySet()) {
-      Set<DotNode> dotNodes = this.getDotNodes(entry);
-      System.out.println();
-    }
-    //        List<Node> nodes = new ArrayList<>();
+    for (Map.Entry<String, Set<List<HotspotDiffEntry>>> hotspotToDiffs :
+        hotspotsToDiffs.entrySet()) {
+      Set<DotNode> dotNodes = this.getDotNodes(hotspotToDiffs);
+      MutableGraph graph =
+          Factory.mutGraph(hotspotToDiffs.getKey())
+              .setDirected(false)
+              .graphAttrs()
+              .add(Rank.dir(Rank.RankDir.BOTTOM_TO_TOP));
+      for (DotNode dotNode : dotNodes) {
+        if (!dotNode.getMethod().contains("main([Ljava/lang/String;)V")) {
+          continue;
+        }
+        this.addNodes(graph, dotNode);
+      }
+      for (DotNode dotNode : dotNodes) {
+        if (dotNode.getMethod().contains("main([Ljava/lang/String;)V")) {
+          continue;
+        }
+        this.addNodes(graph, dotNode);
+      }
 
-    //          for (Map.Entry<String, Double> configToTime :
-    // diffEntry.getConfigsToTimes().entrySet()) {
-    //            Node node =
-    //                Factory.node(Label.of(diffEntry.getMethod() + configToTime.getKey()))
-    //                    .with(
-    //                        Records.of(
-    //                            Records.rec("1", diffEntry.getMethod()),
-    //                            Records.rec("2", configToTime.getKey()),
-    //                            Records.rec("3", String.valueOf(configToTime.getValue()))));
-    //            nodes.add(node);
-    //          }
-    //        }
-    //
-    //        for (int i = 0; i < (nodes.size() - 1); i++) {
-    //          Node currentNode = nodes.get(i);
-    //          Node nextNode = nodes.get(i + 1);
-    //          graph.add(
-    //                  currentNode.link(Link.between(currentNode.port("1").port(),
-    // nextNode.port("1"))));
-    //        }
-    System.out.println();
+      for (MutableNode graphNode : graph.nodes()) {
+        DotNode dotNode = this.getDotNode(graphNode.name().toString(), dotNodes);
+        if (dotNode.getAncestors().isEmpty()) {
+          continue;
+        }
+        DotNode calleeDotNode = dotNode.getAncestors().get(dotNode.getAncestors().size() - 1);
+        MutableNode calleeGraphNode = this.getGraphNode(calleeDotNode, graph.nodes());
+        graphNode.addLink(
+            Link.between(graphNode.port("method").port(), calleeGraphNode.port("method")));
+      }
+    }
 
     throw new UnsupportedOperationException("implement");
+  }
+
+  private void addNodes(MutableGraph graph, DotNode dotNode) {
+    int i = 2;
+    List<String> records = new ArrayList<>();
+    records.add(Records.rec("method", dotNode.getMethod()));
+    for (Map.Entry<String, Double> configToTime : dotNode.getConfigsToTimes().entrySet()) {
+      records.add(
+          Records.rec(String.valueOf(i), configToTime.getKey() + " " + configToTime.getValue()));
+      i++;
+    }
+
+    MutableNode graphNode =
+        Factory.mutNode(String.valueOf(Label.of(Math.abs(dotNode.hashCode()))))
+            .add(Records.of(records.toArray(new String[0])));
+    graph.add(graphNode);
+  }
+
+  private MutableNode getGraphNode(DotNode dotNode, Collection<MutableNode> nodes) {
+    for (MutableNode mutableNode : nodes) {
+      if (String.valueOf(Math.abs(dotNode.hashCode())).equals(mutableNode.name().toString())) {
+        return mutableNode;
+      }
+    }
+    throw new RuntimeException("Could not find graph node");
+  }
+
+  private DotNode getDotNode(String graphNodeName, Set<DotNode> dotNodes) {
+    for (DotNode dotNode : dotNodes) {
+      if (graphNodeName.equals(String.valueOf(Math.abs(dotNode.hashCode())))) {
+        return dotNode;
+      }
+    }
+    throw new RuntimeException("Could not find dot node");
   }
 
   private Set<DotNode> getDotNodes(Map.Entry<String, Set<List<HotspotDiffEntry>>> entry) {
