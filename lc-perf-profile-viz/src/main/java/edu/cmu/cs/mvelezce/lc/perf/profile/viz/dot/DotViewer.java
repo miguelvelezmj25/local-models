@@ -109,30 +109,46 @@ public class DotViewer implements Analysis<Void> {
   private void addNodes(MutableGraph graph, DotNode dotNode, Set<String> configs) {
     int i = 0;
     List<String> records = new ArrayList<>();
-    records.add(Records.rec("method", dotNode.getMethod()));
     Set<String> configsWithTime = new HashSet<>();
     for (Map.Entry<String, Double> configToTime : dotNode.getConfigsToTimes().entrySet()) {
       records.add(
-          Records.rec(String.valueOf(i), configToTime.getKey() + " - " + configToTime.getValue()));
+          Records.rec(
+              String.valueOf(i),
+              Label.lines(
+                      Label.Justification.LEFT,
+                      configToTime.getKey() + " - " + configToTime.getValue())
+                  .toString()));
       i++;
       configsWithTime.add(configToTime.getKey());
     }
 
     configs.removeAll(configsWithTime);
     for (String config : configs) {
-      records.add(Records.rec(String.valueOf(i), config + " - X"));
+      records.add(
+          Records.rec(
+              String.valueOf(i),
+              Label.lines(Label.Justification.LEFT, config + " - X").toString()));
       i++;
     }
 
+    String configRecords = Records.turn(records.toArray(new String[0]));
+    records.clear();
+    records.add(Records.rec("method", dotNode.getMethod()));
+    records.add(configRecords);
+
     MutableNode graphNode =
-        Factory.mutNode(String.valueOf(Label.of(Math.abs(dotNode.hashCode()))))
+        Factory.mutNode(
+                String.valueOf(
+                    Label.lines(
+                        Label.Justification.LEFT, String.valueOf(Math.abs(dotNode.hashCode())))))
             .add(Records.of(records.toArray(new String[0])));
     graph.add(graphNode);
   }
 
   private MutableNode getGraphNode(DotNode dotNode, Collection<MutableNode> nodes) {
     for (MutableNode mutableNode : nodes) {
-      if (String.valueOf(Math.abs(dotNode.hashCode())).equals(mutableNode.name().toString())) {
+      if (String.valueOf(Math.abs(dotNode.hashCode()) + "\\l")
+          .equals(mutableNode.name().toString())) {
         return mutableNode;
       }
     }
@@ -141,7 +157,7 @@ public class DotViewer implements Analysis<Void> {
 
   private DotNode getDotNode(String graphNodeName, Set<DotNode> dotNodes) {
     for (DotNode dotNode : dotNodes) {
-      if (graphNodeName.equals(String.valueOf(Math.abs(dotNode.hashCode())))) {
+      if (graphNodeName.equals(String.valueOf(Math.abs(dotNode.hashCode())) + "\\l")) {
         return dotNode;
       }
     }
