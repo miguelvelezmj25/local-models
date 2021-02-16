@@ -9,6 +9,7 @@ import edu.cmu.cs.mvelezce.utils.config.Options;
 import guru.nidi.graphviz.attribute.Label;
 import guru.nidi.graphviz.attribute.Rank;
 import guru.nidi.graphviz.attribute.Records;
+import guru.nidi.graphviz.attribute.Style;
 import guru.nidi.graphviz.engine.Graphviz;
 import guru.nidi.graphviz.engine.Rasterizer;
 import guru.nidi.graphviz.model.Factory;
@@ -56,13 +57,13 @@ public class DotViewer implements Analysis<Void> {
         if (!dotNode.getMethod().contains("main([Ljava/lang/String;)V")) {
           continue;
         }
-        this.addNodes(graph, dotNode, new HashSet<>(configs));
+        this.addNodes(graph, dotNode, configs);
       }
       for (DotNode dotNode : dotNodes) {
         if (dotNode.getMethod().contains("main([Ljava/lang/String;)V")) {
           continue;
         }
-        this.addNodes(graph, dotNode, new HashSet<>(configs));
+        this.addNodes(graph, dotNode, configs);
       }
 
       for (MutableNode graphNode : graph.nodes()) {
@@ -122,8 +123,9 @@ public class DotViewer implements Analysis<Void> {
       configsWithTime.add(configToTime.getKey());
     }
 
-    configs.removeAll(configsWithTime);
-    for (String config : configs) {
+    Set<String> configsMissed = new HashSet<>(configs);
+    configsMissed.removeAll(configsWithTime);
+    for (String config : configsMissed) {
       records.add(
           Records.rec(
               String.valueOf(i),
@@ -141,14 +143,14 @@ public class DotViewer implements Analysis<Void> {
                 String.valueOf(
                     Label.lines(
                         Label.Justification.LEFT, String.valueOf(Math.abs(dotNode.hashCode())))))
-            .add(Records.of(records.toArray(new String[0])));
+            .add(Records.of(records.toArray(new String[0])))
+            .add(Style.FILLED, dotNode.getBgColor(configs));
     graph.add(graphNode);
   }
 
   private MutableNode getGraphNode(DotNode dotNode, Collection<MutableNode> nodes) {
     for (MutableNode mutableNode : nodes) {
-      if (String.valueOf(Math.abs(dotNode.hashCode()) + "\\l")
-          .equals(mutableNode.name().toString())) {
+      if ((Math.abs(dotNode.hashCode()) + "\\l").equals(mutableNode.name().toString())) {
         return mutableNode;
       }
     }
@@ -157,7 +159,7 @@ public class DotViewer implements Analysis<Void> {
 
   private DotNode getDotNode(String graphNodeName, Set<DotNode> dotNodes) {
     for (DotNode dotNode : dotNodes) {
-      if (graphNodeName.equals(String.valueOf(Math.abs(dotNode.hashCode())) + "\\l")) {
+      if (graphNodeName.equals(Math.abs(dotNode.hashCode()) + "\\l")) {
         return dotNode;
       }
     }
@@ -169,7 +171,8 @@ public class DotViewer implements Analysis<Void> {
     for (List<HotspotDiffEntry> diff : entry.getValue()) {
       List<DotNode> ancestors = new ArrayList<>();
       for (HotspotDiffEntry diffEntry : diff) {
-        DotNode dotNode = new DotNode(diffEntry.getMethod());
+        DotNode dotNode =
+            new DotNode(diffEntry.getMethod(), diffEntry.getMethod().equals(entry.getKey()));
         dotNode.getAncestors().addAll(new ArrayList<>(ancestors));
         dotNodes.putIfAbsent(dotNode, dotNode);
         ancestors.add(dotNode);
@@ -179,7 +182,8 @@ public class DotViewer implements Analysis<Void> {
     for (List<HotspotDiffEntry> diff : entry.getValue()) {
       List<DotNode> ancestors = new ArrayList<>();
       for (HotspotDiffEntry diffEntry : diff) {
-        DotNode dotNode = new DotNode(diffEntry.getMethod());
+        DotNode dotNode =
+            new DotNode(diffEntry.getMethod(), diffEntry.getMethod().equals(entry.getKey()));
         dotNode.getAncestors().addAll(new ArrayList<>(ancestors));
         DotNode existingDotNode = dotNodes.get(dotNode);
         existingDotNode.getConfigsToTimes().putAll(diffEntry.getConfigsToTimes());
