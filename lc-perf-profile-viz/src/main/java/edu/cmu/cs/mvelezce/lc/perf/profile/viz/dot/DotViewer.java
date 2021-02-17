@@ -136,9 +136,9 @@ public class DotViewer implements Analysis<Void> {
 
   private String getConfigRecords(
       DotNode dotNode, List<String> records, Set<String> configs, int i, Set<DotNode> dotNodes) {
-    if (!dotNode.isHotspot() && !this.ancestorHasMultipleCallers(dotNode, dotNodes)) {
-      return "";
-    }
+//    if (!dotNode.isHotspot() && !this.ancestorHasMultipleCallers(dotNode, dotNodes)) {
+//      return "";
+//    }
     Set<String> configsWithTime = new HashSet<>();
     for (Map.Entry<String, Double> configToTime : dotNode.getConfigsToTimes().entrySet()) {
       records.add(
