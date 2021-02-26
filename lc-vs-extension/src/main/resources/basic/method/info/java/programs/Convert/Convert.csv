@@ -1,0 +1,16 @@
+com.mortennobel.imagescaling.ImageUtils.setBGRPixels,0.07 seconds,1.48
+at.favre.tools.dconvert.util.ImageUtil.read,0.45 seconds,0.44
+at.favre.tools.dconvert.converters.scaling.ImageHandler.scale,0.34 seconds,7.12
+at.favre.tools.dconvert.converters.APlatformConverter.convert,0.01 seconds,0.00
+at.favre.tools.dconvert.converters.APlatformConverter.convertImage,0.01 seconds,0.02
+at.favre.tools.dconvert.util.PostProcessorUtil.canRunCmd,0.02 seconds,0.00
+at.favre.tools.dconvert.WorkerHandler.<init>,0.00 seconds,0.01
+com.mortennobel.imagescaling.ResampleOp.verticalFromWorkToDst,6.74 seconds,88.03
+com.mortennobel.imagescaling.ImageUtils.getPixelsBGR,0.56 seconds,1.01
+com.mortennobel.imagescaling.ResampleOp.horizontallyFromSrcToWork,5.61 seconds,17.60
+com.mortennobel.imagescaling.ResampleOp.doFilter,0.09 seconds,0.27
+at.favre.tools.dconvert.DConvert.getRegisteredImageReadersAndWriters,0.27 seconds,0.26
+com.mortennobel.imagescaling.ResampleOp.createSubSampling,0.09 seconds,0.19
+at.favre.tools.dconvert.util.DensityBucketUtil.getDensityBucketsWithFactorScale,0.01 seconds,0.01
+com.mortennobel.imagescaling.AdvancedResizeOp.fireProgressChanged,0.89 seconds,0.00
+at.favre.tools.dconvert.converters.scaling.ImageHandler.compressJpeg,3.30 seconds,34.04
