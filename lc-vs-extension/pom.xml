@@ -45,6 +45,11 @@
             <artifactId>lc-perf-profile-viz</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>edu.cmu.cs.mvelezce</groupId>
+            <artifactId>lc-perf-behavior</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
