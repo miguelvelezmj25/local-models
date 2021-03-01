@@ -92,7 +92,7 @@ public class DotViewer implements Analysis<Void> {
     return null;
   }
 
-  private Set<String> getConfigs(Collection<Set<List<HotspotDiffEntry>>> allDiffs) {
+  protected Set<String> getConfigs(Collection<Set<List<HotspotDiffEntry>>> allDiffs) {
     Set<String> configs = new HashSet<>();
     for (Set<List<HotspotDiffEntry>> diffs : allDiffs) {
       for (List<HotspotDiffEntry> diff : diffs) {
@@ -203,7 +203,7 @@ public class DotViewer implements Analysis<Void> {
     throw new RuntimeException("Could not find dot node");
   }
 
-  private Set<DotNode> getDotNodes(Map.Entry<String, Set<List<HotspotDiffEntry>>> entry) {
+  protected Set<DotNode> getDotNodes(Map.Entry<String, Set<List<HotspotDiffEntry>>> entry) {
     Map<DotNode, DotNode> dotNodes = new HashMap<>();
     for (List<HotspotDiffEntry> diff : entry.getValue()) {
       List<DotNode> ancestors = new ArrayList<>();
@@ -231,7 +231,7 @@ public class DotViewer implements Analysis<Void> {
     return dotNodes.keySet();
   }
 
-  private Map<String, Set<List<HotspotDiffEntry>>> getHotspotsToDiffs() throws IOException {
+  protected Map<String, Set<List<HotspotDiffEntry>>> getHotspotsToDiffs() throws IOException {
     File snapshotsDir = new File(TabulatorHotspotParser.OUTPUT_DIR + "/" + this.programName);
     Collection<File> tabulatorEntryFiles =
         FileUtils.listFiles(snapshotsDir, new String[] {"json"}, false);
@@ -478,6 +478,10 @@ public class DotViewer implements Analysis<Void> {
   @Override
   public String outputDir() {
     return OUTPUT_DIR + "/" + this.programName;
+  }
+
+  public String getProgramName() {
+    return programName;
   }
 
   @Override
