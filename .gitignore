@@ -238,3 +238,4 @@ vignettes/*.pdf
 #/cc-execute-e2e/data/
 #/cc-execute/callTree.xml
 /lc-stack-analysis/calltree.xml
+/hotspotdiff.txt
