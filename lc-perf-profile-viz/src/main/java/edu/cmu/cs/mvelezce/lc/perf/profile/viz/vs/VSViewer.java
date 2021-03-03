@@ -6,29 +6,69 @@ import edu.cmu.cs.mvelezce.lc.perf.profile.viz.dot.HotspotDiffEntry;
 import edu.cmu.cs.mvelezce.utils.config.Options;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
 
 public class VSViewer extends DotViewer {
 
   public static final String OUTPUT_DIR = Options.DIRECTORY + "/vs/hotspots/java/programs";
+  public static final String HOTSPOT_DIFF_FILE = "./hotspotdiff.txt";
 
-  public VSViewer(String programName) {
+  private final String config1;
+  private final String config2;
+
+  public VSViewer(String programName, String config1, String config2) {
     super(programName);
+
+    this.config1 = config1;
+    this.config2 = config2;
   }
 
   @Override
   public Void analyze() throws IOException {
     Map<String, Set<List<HotspotDiffEntry>>> hotspotsToDiffs = this.getHotspotsToDiffs();
-    Set<String> configs = this.getConfigs(hotspotsToDiffs.values());
+    StringBuilder tabulatorData = new StringBuilder("");
     for (Map.Entry<String, Set<List<HotspotDiffEntry>>> hotspotToDiffs :
         hotspotsToDiffs.entrySet()) {
+      this.removeOtherConfigs(hotspotToDiffs.getValue());
+      if (hotspotToDiffs.getValue().isEmpty()) {
+        continue;
+      }
       Set<DotNode> dotNodes = this.getDotNodes(hotspotToDiffs);
       Map<TabulatorNode, TabulatorNode> tabulatorNodes = this.getTabulatorNodes(dotNodes);
-      this.something(tabulatorNodes, new ArrayList<>(configs));
-      throw new UnsupportedOperationException("implement");
+      tabulatorData.append(this.getTabulatorData(tabulatorNodes));
+      tabulatorData.append(",\n");
+    }
+    tabulatorData.setLength(tabulatorData.length() - 2);
+
+    PrintWriter result = new PrintWriter(HOTSPOT_DIFF_FILE);
+    result.println(tabulatorData);
+    result.close();
+    return null;
+  }
+
+  private void removeOtherConfigs(Set<List<HotspotDiffEntry>> hotspotDiffs) {
+    for (List<HotspotDiffEntry> hotspotDiff : hotspotDiffs) {
+      for (HotspotDiffEntry diffEntry : hotspotDiff) {
+        Set<String> entriesToRemove = new HashSet<>();
+        for (String config : diffEntry.getConfigsToTimes().keySet()) {
+          if (!config.equals(this.config1) && !config.equals(this.config2)) {
+            entriesToRemove.add(config);
+          }
+        }
+        for (String entry : entriesToRemove) {
+          diffEntry.getConfigsToTimes().remove(entry);
+        }
+      }
     }
 
-    throw new UnsupportedOperationException("implement");
+    Set<List<HotspotDiffEntry>> pathsToRemove = new HashSet<>();
+    for (List<HotspotDiffEntry> hotspotDiff : hotspotDiffs) {
+      if (hotspotDiff.get(0).getConfigsToTimes().isEmpty()) {
+        pathsToRemove.add(hotspotDiff);
+      }
+    }
+    hotspotDiffs.removeAll(pathsToRemove);
   }
 
   private Map<TabulatorNode, TabulatorNode> getTabulatorNodes(Set<DotNode> dotNodes) {
@@ -64,8 +104,7 @@ public class VSViewer extends DotViewer {
     return tabulatorNodes;
   }
 
-  private String something(
-      Map<TabulatorNode, TabulatorNode> tabulatorNodes, ArrayList<String> configs) {
+  private String getTabulatorData(Map<TabulatorNode, TabulatorNode> tabulatorNodes) {
     Deque<TabulatorNode> stack = new ArrayDeque<>();
     for (TabulatorNode tabulatorNode : tabulatorNodes.keySet()) {
       if (tabulatorNode.isHotspot()) {
@@ -77,7 +116,7 @@ public class VSViewer extends DotViewer {
     Set<TabulatorNode> added = new HashSet<>();
     Map<TabulatorNode, Set<TabulatorNode>> children = new HashMap<>();
     Map<TabulatorNode, TabulatorNode> haveSiblings = new HashMap<>();
-    StringBuilder result = new StringBuilder("[");
+    StringBuilder result = new StringBuilder();
     while (!stack.isEmpty()) {
       TabulatorNode current = stack.peekFirst();
       if (added.contains(current)) {
@@ -102,10 +141,10 @@ public class VSViewer extends DotViewer {
       Map<String, Double> configsToTimes = current.getConfigsToTimes();
       result.append("\", config1: ");
       result.append(
-          configsToTimes.containsKey(configs.get(0)) ? configsToTimes.get(configs.get(0)) : "\"\"");
+          configsToTimes.containsKey(this.config1) ? configsToTimes.get(this.config1) : "\"\"");
       result.append(", config2: ");
       result.append(
-          configsToTimes.containsKey(configs.get(1)) ? configsToTimes.get(configs.get(1)) : "\"\"");
+          configsToTimes.containsKey(this.config2) ? configsToTimes.get(this.config2) : "\"\"");
       added.add(current);
       if (current.getChildren().isEmpty()) {
         continue;
@@ -124,8 +163,7 @@ public class VSViewer extends DotViewer {
       }
     }
 
-    result.setLength(result.length() - 2);
-    result.append(";");
+    result.setLength(result.length() - 3);
     return result.toString();
   }
 

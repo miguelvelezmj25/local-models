@@ -115,7 +115,7 @@ public class DotViewer implements Analysis<Void> {
       i++;
     }
 
-    String configRecords = this.getConfigRecords(dotNode, records, configs, i, dotNodes);
+    String configRecords = this.getConfigRecords(dotNode, records, configs, i);
     records = new ArrayList<>();
     if (!configRecords.isEmpty()) {
       records.add(configRecords);
@@ -135,10 +135,7 @@ public class DotViewer implements Analysis<Void> {
   }
 
   private String getConfigRecords(
-      DotNode dotNode, List<String> records, Set<String> configs, int i, Set<DotNode> dotNodes) {
-//    if (!dotNode.isHotspot() && !this.ancestorHasMultipleCallers(dotNode, dotNodes)) {
-//      return "";
-//    }
+      DotNode dotNode, List<String> records, Set<String> configs, int i) {
     Set<String> configsWithTime = new HashSet<>();
     for (Map.Entry<String, Double> configToTime : dotNode.getConfigsToTimes().entrySet()) {
       records.add(
@@ -163,26 +160,6 @@ public class DotViewer implements Analysis<Void> {
     }
 
     return Records.turn(records.toArray(new String[0]));
-  }
-
-  private boolean ancestorHasMultipleCallers(DotNode dotNode, Set<DotNode> dotNodes) {
-    if (dotNode.isHotspot()) {
-      return false;
-    }
-    DotNode ancestor = dotNode.getAncestors().get(dotNode.getAncestors().size() - 1);
-    for (DotNode otherNode : dotNodes) {
-      if (dotNode.equals(otherNode)) {
-        continue;
-      }
-      List<DotNode> otherNodeAncestors = otherNode.getAncestors();
-      if (otherNodeAncestors.isEmpty()) {
-        continue;
-      }
-      if (otherNodeAncestors.get(otherNodeAncestors.size() - 1).equals(ancestor)) {
-        return true;
-      }
-    }
-    return false;
   }
 
   private MutableNode getGraphNode(DotNode dotNode, Collection<MutableNode> nodes) {
@@ -232,7 +209,9 @@ public class DotViewer implements Analysis<Void> {
   }
 
   protected Map<String, Set<List<HotspotDiffEntry>>> getHotspotsToDiffs() throws IOException {
-    File snapshotsDir = new File(TabulatorHotspotParser.OUTPUT_DIR + "/" + this.programName);
+    File snapshotsDir =
+        new File(
+            "./lc-perf-profile-viz/" + TabulatorHotspotParser.OUTPUT_DIR + "/" + this.programName);
     Collection<File> tabulatorEntryFiles =
         FileUtils.listFiles(snapshotsDir, new String[] {"json"}, false);
 
