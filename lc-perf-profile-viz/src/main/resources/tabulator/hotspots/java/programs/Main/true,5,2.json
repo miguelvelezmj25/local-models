@@ -1,0 +1,61 @@
+[ {
+  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.utils.Utils.incrementStorage()V",
+  "time" : 2.514661,
+  "tabulatorEntries" : [ {
+    "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.allocateSpace(I)V",
+    "time" : 2.514661,
+    "tabulatorEntries" : [ {
+      "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
+      "time" : 2.514661,
+      "tabulatorEntries" : [ {
+        "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
+        "time" : 2.514661,
+        "tabulatorEntries" : [ ]
+      } ]
+    } ]
+  } ]
+}, {
+  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.utils.Utils.write(I)V",
+  "time" : 1.517794,
+  "tabulatorEntries" : [ {
+    "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.populate(I)V",
+    "time" : 1.517794,
+    "tabulatorEntries" : [ {
+      "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.populate(I)V",
+      "time" : 1.517794,
+      "tabulatorEntries" : [ {
+        "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
+        "time" : 1.517794,
+        "tabulatorEntries" : [ {
+          "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
+          "time" : 1.517794,
+          "tabulatorEntries" : [ ]
+        } ]
+      } ]
+    } ]
+  } ]
+}, {
+  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.utils.Utils.clean()V",
+  "time" : 0.701243,
+  "tabulatorEntries" : [ {
+    "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.clean(Z)V",
+    "time" : 0.701243,
+    "tabulatorEntries" : [ {
+      "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
+      "time" : 0.701243,
+      "tabulatorEntries" : [ {
+        "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
+        "time" : 0.701243,
+        "tabulatorEntries" : [ ]
+      } ]
+    } ]
+  } ]
+}, {
+  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
+  "time" : 0.00558,
+  "tabulatorEntries" : [ {
+    "method" : ".",
+    "time" : 0.00558,
+    "tabulatorEntries" : [ ]
+  } ]
+} ]

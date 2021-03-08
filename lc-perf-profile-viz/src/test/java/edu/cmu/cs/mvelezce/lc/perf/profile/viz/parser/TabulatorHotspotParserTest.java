@@ -27,4 +27,14 @@ public class TabulatorHotspotParserTest {
     args[1] = "-saveres";
     parser.analyze(args);
   }
+
+  @Test
+  public void Main() throws IOException {
+    String programName = "Main";
+    TabulatorHotspotParser parser = new TabulatorHotspotParser(programName);
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+    parser.analyze(args);
+  }
 }
