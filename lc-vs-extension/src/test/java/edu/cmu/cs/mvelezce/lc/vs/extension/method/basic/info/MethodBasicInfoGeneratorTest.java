@@ -23,8 +23,8 @@ class MethodBasicInfoGeneratorTest {
   @Test
   void main() throws IOException {
     String programName = "Main";
-    String defaultConfig = "false,5,1";
-    String reportConfig = "true,10,2";
+    String defaultConfig = "true,5,1";
+    String reportConfig = "false,10,2";
     MethodBasicInfoGenerator generator =
         new MethodBasicInfoGenerator(programName, defaultConfig, reportConfig);
     String[] args = new String[2];
