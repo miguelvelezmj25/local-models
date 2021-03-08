@@ -29,4 +29,15 @@ public class JProfilerHotspotExporterTest {
     args[1] = "-saveres";
     builder.analyze(args);
   }
+
+  @Test
+  public void Main() throws IOException, InterruptedException {
+    String programName = "Main";
+    JProfilerHotspotExporter builder =
+        new JProfilerHotspotExporter(programName, JProfilerHotspotExporter.ALL_THREAD_STATUS);
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+    builder.analyze(args);
+  }
 }
