@@ -1,3 +1,3 @@
-edu.cmu.cs.mvelezce.perf.debug.config.utils.Utils.incrementStorage,2.52 seconds,5.03
-edu.cmu.cs.mvelezce.perf.debug.config.utils.Utils.clean,0.70 seconds,0.00
-edu.cmu.cs.mvelezce.perf.debug.config.utils.Utils.write,1.52 seconds,6.06
+edu.cmu.cs.mvelezce.perf.debug.config.core.Task.clean,0.70 seconds,0.00
+edu.cmu.cs.mvelezce.perf.debug.config.core.Task.populate,1.51 seconds,12.09
+edu.cmu.cs.mvelezce.perf.debug.config.core.Task.allocateSpace,2.51 seconds,5.03
