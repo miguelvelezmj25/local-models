@@ -38,12 +38,4 @@
       "tabulatorEntries" : [ ]
     } ]
   } ]
-}, {
-  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
-  "time" : 0.005744,
-  "tabulatorEntries" : [ {
-    "method" : ".",
-    "time" : 0.005744,
-    "tabulatorEntries" : [ ]
-  } ]
 } ]

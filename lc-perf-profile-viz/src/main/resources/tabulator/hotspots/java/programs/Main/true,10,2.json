@@ -50,16 +50,4 @@
       "tabulatorEntries" : [ ]
     } ]
   } ]
-}, {
-  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.populate(I)V",
-  "time" : 0.006493,
-  "tabulatorEntries" : [ {
-    "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
-    "time" : 0.006493,
-    "tabulatorEntries" : [ {
-      "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
-      "time" : 0.006493,
-      "tabulatorEntries" : [ ]
-    } ]
-  } ]
 } ]

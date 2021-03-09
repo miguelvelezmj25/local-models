@@ -17,7 +17,4 @@
       <node leaf="true" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Main" methodName="main" methodSignature="([Ljava/lang/String;)V" time="5027598" count="0" lineNumber="-1" percent="29.4"/>
     </node>
   </hotspot>
-  <hotspot leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Main" methodName="main" methodSignature="([Ljava/lang/String;)V" time="5744" count="0" lineNumber="-1" percent="0.0">
-    <node leaf="true" time="5744" count="0" lineNumber="-1" percent="0.0" filtered="true"/>
-  </hotspot>
 </tree>
