@@ -139,7 +139,10 @@ public class VSViewer extends DotViewer {
       }
 
       result.append("{ method: \"");
-      result.append(current.getMethod());
+      String method = current.getMethod();
+      method = method.substring(0, method.indexOf("("));
+      method += "()";
+      result.append(method);
       Map<String, Double> configsToTimes = current.getConfigsToTimes();
       result.append("\", config1: ");
       result.append(
