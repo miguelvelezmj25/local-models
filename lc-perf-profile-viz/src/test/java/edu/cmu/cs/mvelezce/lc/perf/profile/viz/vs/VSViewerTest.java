@@ -9,6 +9,16 @@ import java.io.IOException;
 public class VSViewerTest {
 
   @Test
+  public void Main() throws IOException {
+    String programName = "Main";
+    VSViewer viewer = new VSViewer(programName, "false,10,1", "true,5,2");
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+    viewer.analyze(args);
+  }
+
+  @Test
   public void MooInfluence() throws IOException {
     String programName = BaseMooInfluenceAdapter.PROGRAM_NAME;
     VSViewer viewer = new VSViewer(programName, "¬A", "A");

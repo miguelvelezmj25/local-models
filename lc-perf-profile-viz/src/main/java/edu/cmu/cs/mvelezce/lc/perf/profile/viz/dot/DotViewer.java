@@ -209,9 +209,14 @@ public class DotViewer implements Analysis<Void> {
   }
 
   protected Map<String, Set<List<HotspotDiffEntry>>> getHotspotsToDiffs() throws IOException {
+    String userHome = System.getProperty("user.home");
     File snapshotsDir =
         new File(
-            "./lc-perf-profile-viz/" + TabulatorHotspotParser.OUTPUT_DIR + "/" + this.programName);
+            userHome
+                + "/Documents/programming/java/projects/local-models/lc-perf-profile-viz/"
+                + TabulatorHotspotParser.OUTPUT_DIR
+                + "/"
+                + this.programName);
     Collection<File> tabulatorEntryFiles =
         FileUtils.listFiles(snapshotsDir, new String[] {"json"}, false);
 
