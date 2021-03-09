@@ -74,5 +74,8 @@ public class HotspotDiffHandler implements HttpHandler {
     httpExchange.sendResponseHeaders(HttpURLConnection.HTTP_OK, response.length);
     httpExchange.getResponseBody().write(response);
     httpExchange.close();
+
+    System.out.println("\n\n\n\n");
+    System.gc();
   }
 }
