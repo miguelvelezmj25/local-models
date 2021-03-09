@@ -7,12 +7,14 @@ import edu.cmu.cs.mvelezce.utils.config.Options;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
 import java.util.*;
 
 public class VSViewer extends DotViewer {
 
   public static final String OUTPUT_DIR = Options.DIRECTORY + "/vs/hotspots/java/programs";
   public static final String HOTSPOT_DIFF_FILE = "./hotspotdiff.txt";
+  private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.000");
 
   private final String config1;
   private final String config2;
@@ -141,10 +143,14 @@ public class VSViewer extends DotViewer {
       Map<String, Double> configsToTimes = current.getConfigsToTimes();
       result.append("\", config1: ");
       result.append(
-          configsToTimes.containsKey(this.config1) ? configsToTimes.get(this.config1) : "\"\"");
+          configsToTimes.containsKey(this.config1)
+              ? DECIMAL_FORMAT.format(configsToTimes.get(this.config1))
+              : "\"X\"");
       result.append(", config2: ");
       result.append(
-          configsToTimes.containsKey(this.config2) ? configsToTimes.get(this.config2) : "\"\"");
+          configsToTimes.containsKey(this.config2)
+              ? DECIMAL_FORMAT.format(configsToTimes.get(this.config2))
+              : "\"X\"");
       added.add(current);
       if (current.getChildren().isEmpty()) {
         continue;
