@@ -1,40 +1,40 @@
 [ {
-  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.allocateSpace(I)V",
-  "time" : 2.512425,
-  "tabulatorEntries" : [ {
-    "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
-    "time" : 2.512425,
-    "tabulatorEntries" : [ {
-      "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
-      "time" : 2.512425,
-      "tabulatorEntries" : [ ]
-    } ]
-  } ]
-}, {
   "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.populate(I)V",
-  "time" : 1.508898,
+  "time" : 12.101,
   "tabulatorEntries" : [ {
     "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.populate(I)V",
-    "time" : 1.508898,
+    "time" : 12.101,
     "tabulatorEntries" : [ {
       "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
-      "time" : 1.508898,
+      "time" : 6.101,
       "tabulatorEntries" : [ {
         "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
-        "time" : 1.508898,
+        "time" : 6.101,
         "tabulatorEntries" : [ ]
+      } ]
+    }, {
+      "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.validate(I)V",
+      "time" : 6.002,
+      "tabulatorEntries" : [ {
+        "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
+        "time" : 6.002,
+        "tabulatorEntries" : [ {
+          "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
+          "time" : 6.002,
+          "tabulatorEntries" : [ ]
+        } ]
       } ]
     } ]
   } ]
 }, {
-  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.clean(Z)V",
-  "time" : 0.703925,
+  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.allocateSpace(I)V",
+  "time" : 5.002,
   "tabulatorEntries" : [ {
     "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
-    "time" : 0.703925,
+    "time" : 5.002,
     "tabulatorEntries" : [ {
       "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
-      "time" : 0.703925,
+      "time" : 5.002,
       "tabulatorEntries" : [ ]
     } ]
   } ]
