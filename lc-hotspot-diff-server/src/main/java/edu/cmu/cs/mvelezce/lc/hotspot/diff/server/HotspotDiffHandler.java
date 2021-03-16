@@ -57,8 +57,12 @@ public class HotspotDiffHandler implements HttpHandler {
     String config2 = json.getString("config2");
     System.out.println(
         "Creating hotspot diff for : " + programName + " - " + config1 + " - " + config2);
-    VSViewer vsViewer = new VSViewer(programName, config1, config2);
-    vsViewer.analyze();
+    try {
+      VSViewer vsViewer = new VSViewer(programName, config1, config2);
+      vsViewer.analyze();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
     System.out.println("Completed hotspot diff");
 
     StringBuilder contentBuilder = new StringBuilder();
