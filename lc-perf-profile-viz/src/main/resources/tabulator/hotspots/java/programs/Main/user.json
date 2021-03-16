@@ -1,9 +1,9 @@
 [ {
   "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.populate(I)V",
-  "time" : 12.101,
+  "time" : 12.102,
   "tabulatorEntries" : [ {
     "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.populate(I)V",
-    "time" : 12.101,
+    "time" : 12.102,
     "tabulatorEntries" : [ {
       "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
       "time" : 6.101,
@@ -14,13 +14,13 @@
       } ]
     }, {
       "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.validate(I)V",
-      "time" : 6.002,
+      "time" : 6.001,
       "tabulatorEntries" : [ {
         "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
-        "time" : 6.002,
+        "time" : 6.001,
         "tabulatorEntries" : [ {
           "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
-          "time" : 6.002,
+          "time" : 6.001,
           "tabulatorEntries" : [ ]
         } ]
       } ]
