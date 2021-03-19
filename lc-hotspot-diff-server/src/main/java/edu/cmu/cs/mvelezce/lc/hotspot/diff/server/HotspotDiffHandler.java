@@ -4,6 +4,8 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import edu.cmu.cs.mvelezce.lc.perf.profile.viz.vs.VSViewer;
 import org.json.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -73,7 +75,16 @@ public class HotspotDiffHandler implements HttpHandler {
       e.printStackTrace();
     }
 
-    byte[] response = contentBuilder.toString().getBytes();
+    JSONObject dataToSend = new JSONObject();
+    try {
+      JSONParser parser = new JSONParser();
+      Object res = parser.parse("[" + contentBuilder.toString() + "]");
+      dataToSend.put("data", res);
+    } catch (ParseException e) {
+      e.printStackTrace();
+      dataToSend.put("data", "error");
+    }
+    byte[] response = dataToSend.toString().getBytes();
     //    byte[] response = "{option: \"wait\"}".getBytes();
     httpExchange.sendResponseHeaders(HttpURLConnection.HTTP_OK, response.length);
     httpExchange.getResponseBody().write(response);

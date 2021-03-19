@@ -138,18 +138,18 @@ public class VSViewer extends DotViewer {
         continue;
       }
 
-      result.append("{ method: \"");
+      result.append("{ \"method\": \"");
       String method = current.getMethod();
       method = method.substring(0, method.indexOf("("));
       method += "()";
       result.append(method);
       Map<String, Double> configsToTimes = current.getConfigsToTimes();
-      result.append("\", config1: ");
+      result.append("\", \"config1\": ");
       result.append(
           configsToTimes.containsKey(this.config1)
               ? DECIMAL_FORMAT.format(configsToTimes.get(this.config1))
               : "\"Not executed\"");
-      result.append(", config2: ");
+      result.append(", \"config2\": ");
       result.append(
           configsToTimes.containsKey(this.config2)
               ? DECIMAL_FORMAT.format(configsToTimes.get(this.config2))
@@ -159,7 +159,7 @@ public class VSViewer extends DotViewer {
         continue;
       }
 
-      result.append(", _children: \n[");
+      result.append(", \"_children\": \n[");
       for (TabulatorNode child : current.getChildren()) {
         stack.addFirst(tabulatorNodes.get(child));
       }
