@@ -19,6 +19,19 @@ public class TabulatorNode {
     this.isHotspot = isHotspot;
   }
 
+  public String getShortMethod() {
+    String[] entries = this.method.split("\\.");
+    StringBuilder result = new StringBuilder();
+    for (int i = 0; i < (entries.length - 2); i++) {
+      result.append(entries[i].charAt(0));
+      result.append(".");
+    }
+    result.append(entries[entries.length - 2]);
+    result.append(".");
+    result.append(entries[entries.length - 1]);
+    return result.toString();
+  }
+
   public String getMethod() {
     return method;
   }
