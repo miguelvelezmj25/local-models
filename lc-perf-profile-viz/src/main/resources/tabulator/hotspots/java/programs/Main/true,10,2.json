@@ -2,7 +2,7 @@
   "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.populate(I)V",
   "time" : 12.080971,
   "tabulatorEntries" : [ {
-    "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.populate(I)V",
+    "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.insert(I)V",
     "time" : 12.080971,
     "tabulatorEntries" : [ {
       "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
@@ -39,7 +39,7 @@
     } ]
   } ]
 }, {
-  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.clean(Z)V",
+  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.prep(Z)V",
   "time" : 0.70077,
   "tabulatorEntries" : [ {
     "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
