@@ -1,0 +1,16 @@
+{
+  "base": 0.7,
+  "model": [
+    {
+      "options": [
+        {
+          "option": "CLEAN",
+          "from": "true",
+          "to": "false"
+        }
+      ],
+      "sign": "-",
+      "value": 0.70
+    }
+  ]
+}

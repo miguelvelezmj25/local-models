@@ -1,0 +1,43 @@
+{
+  "base": 1.50,
+  "model": [
+    {
+      "options": [
+        {
+          "option": "DATA_SIZE",
+          "from": "5",
+          "to": "10"
+        }
+      ],
+      "sign": "+",
+      "value": 1.5
+    },
+    {
+      "options": [
+        {
+          "option": "DATA_SIZE",
+          "from": "5",
+          "to": "10"
+        },
+        {
+          "option": "ROUNDS",
+          "from": "1",
+          "to": "2"
+        }
+      ],
+      "sign": "+",
+      "value": 7.60
+    },
+    {
+      "options": [
+        {
+          "option": "ROUNDS",
+          "from": "1",
+          "to": "2"
+        }
+      ],
+      "sign": "+",
+      "value": 1.50
+    }
+  ]
+}

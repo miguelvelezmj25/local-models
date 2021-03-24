@@ -1,0 +1,16 @@
+{
+  "base": 2.50,
+  "model": [
+    {
+      "options": [
+        {
+          "option": "DATA_SIZE",
+          "from": "5",
+          "to": "10"
+        }
+      ],
+      "sign": "+",
+      "value": 2.50
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "models": [
+    {
+      "terms": [
+        {
+          "options": [],
+          "time": 0.7
+        },
+        {
+          "options": [
+            {
+              "from": "true",
+              "to": "false",
+              "option": "CLEAN"
+            }
+          ],
+          "time": -0.7
+        }
+      ],
+      "name": "default"
+    },
+    {
+      "terms": [
+        {
+          "options": [
+            {
+              "from": "false",
+              "to": "true",
+              "option": "CLEAN"
+            }
+          ],
+          "time": 0.7
+        },
+        {
+          "options": [],
+          "time": 0.0
+        }
+      ],
+      "name": "user"
+    }
+  ]
+}
