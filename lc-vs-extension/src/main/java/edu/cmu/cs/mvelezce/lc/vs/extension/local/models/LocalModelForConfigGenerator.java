@@ -117,14 +117,18 @@ public class LocalModelForConfigGenerator {
           double influence = configs2Times.get(diffConfig);
 
           for (Map.Entry<Set<String>, Double> term : model.entrySet()) {
-            // TODO we might need to check for how different the diffConfig and model term are
             Sets.SetView<String> diffConfigTermDiff =
                 Sets.symmetricDifference(diffConfig, term.getKey());
+            if (diffConfigTermDiff.size() > i) {
+              continue;
+            }
             Set<String> undoChange = new HashSet<>(diffConfig);
-            if (diffConfig.containsAll(diffConfigTermDiff)) {
-              undoChange.removeAll(diffConfigTermDiff);
-            } else {
-              undoChange.addAll(diffConfigTermDiff);
+            for (String diffTerm : diffConfigTermDiff) {
+              if (diffConfig.contains(diffTerm)) {
+                undoChange.remove(diffTerm);
+              } else {
+                undoChange.add(diffTerm);
+              }
             }
             if (!undoChange.equals(term.getKey())) {
               continue;
