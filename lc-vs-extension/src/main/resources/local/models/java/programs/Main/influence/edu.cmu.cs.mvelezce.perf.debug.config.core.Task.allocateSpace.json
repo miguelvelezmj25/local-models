@@ -22,6 +22,25 @@
     {
       "terms": [
         {
+          "options": [],
+          "time": 2.5
+        },
+        {
+          "options": [
+            {
+              "from": "5",
+              "to": "10",
+              "option": "DATA_SIZE"
+            }
+          ],
+          "time": 2.5
+        }
+      ],
+      "name": "miguel"
+    },
+    {
+      "terms": [
+        {
           "options": [
             {
               "from": "10",

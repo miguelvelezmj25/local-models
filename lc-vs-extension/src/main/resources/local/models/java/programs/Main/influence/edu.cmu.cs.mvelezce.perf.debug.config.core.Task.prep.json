@@ -22,6 +22,25 @@
     {
       "terms": [
         {
+          "options": [],
+          "time": 0.7
+        },
+        {
+          "options": [
+            {
+              "from": "true",
+              "to": "false",
+              "option": "CLEAN"
+            }
+          ],
+          "time": -0.7
+        }
+      ],
+      "name": "miguel"
+    },
+    {
+      "terms": [
+        {
           "options": [
             {
               "from": "false",

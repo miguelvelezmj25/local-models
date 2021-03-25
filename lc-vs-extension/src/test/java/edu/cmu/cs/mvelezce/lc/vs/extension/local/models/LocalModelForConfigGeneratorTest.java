@@ -23,6 +23,10 @@ class LocalModelForConfigGeneratorTest {
     config.add("ROUNDS");
     configs.put("user", config);
 
+    config = new HashSet<>();
+    config.add("ROUNDS");
+    configs.put("miguel", config);
+
     String programName = "Main";
     LocalModelForConfigGenerator generator = new LocalModelForConfigGenerator(programName, configs);
     generator.generate();
