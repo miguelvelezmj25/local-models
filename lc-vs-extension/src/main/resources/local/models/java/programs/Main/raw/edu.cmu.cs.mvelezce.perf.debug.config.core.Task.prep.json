@@ -5,11 +5,11 @@
       "options": [
         {
           "option": "CLEAN",
-          "from": "true",
-          "to": "false"
+          "from": "false",
+          "to": "true"
         }
       ],
-      "sign": "-",
+      "sign": "+",
       "value": 0.70
     }
   ]

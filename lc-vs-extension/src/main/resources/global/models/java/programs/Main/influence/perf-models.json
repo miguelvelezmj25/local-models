@@ -9,6 +9,16 @@
         {
           "options": [
             {
+              "from": "false",
+              "to": "true",
+              "option": "CLEAN"
+            }
+          ],
+          "time": 0.7
+        },
+        {
+          "options": [
+            {
               "from": "5",
               "to": "10",
               "option": "DATA_SIZE"
@@ -34,16 +44,6 @@
         {
           "options": [
             {
-              "from": "true",
-              "to": "false",
-              "option": "CLEAN"
-            }
-          ],
-          "time": -0.7
-        },
-        {
-          "options": [
-            {
               "from": "5",
               "to": "10",
               "option": "DATA_SIZE"
@@ -58,71 +58,7 @@
       "terms": [
         {
           "options": [],
-          "time": 6.2
-        },
-        {
-          "options": [
-            {
-              "from": "2",
-              "to": "1",
-              "option": "ROUNDS"
-            }
-          ],
-          "time": -1.5
-        },
-        {
-          "options": [
-            {
-              "from": "5",
-              "to": "10",
-              "option": "DATA_SIZE"
-            },
-            {
-              "from": "2",
-              "to": "1",
-              "option": "ROUNDS"
-            }
-          ],
-          "time": -7.6
-        },
-        {
-          "options": [
-            {
-              "from": "true",
-              "to": "false",
-              "option": "CLEAN"
-            }
-          ],
-          "time": -0.7
-        },
-        {
-          "options": [
-            {
-              "from": "5",
-              "to": "10",
-              "option": "DATA_SIZE"
-            }
-          ],
-          "time": 11.6
-        }
-      ],
-      "name": "miguel"
-    },
-    {
-      "terms": [
-        {
-          "options": [],
-          "time": 17.1
-        },
-        {
-          "options": [
-            {
-              "from": "false",
-              "to": "true",
-              "option": "CLEAN"
-            }
-          ],
-          "time": 0.7
+          "time": 18.5
         },
         {
           "options": [
@@ -152,12 +88,76 @@
         {
           "options": [
             {
+              "from": "true",
+              "to": "false",
+              "option": "CLEAN"
+            }
+          ],
+          "time": -0.7
+        },
+        {
+          "options": [
+            {
               "from": "10",
               "to": "5",
               "option": "DATA_SIZE"
             }
           ],
           "time": -11.6
+        }
+      ],
+      "name": "miguel"
+    },
+    {
+      "terms": [
+        {
+          "options": [],
+          "time": 9.4
+        },
+        {
+          "options": [
+            {
+              "from": "10",
+              "to": "5",
+              "option": "DATA_SIZE"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "option": "ROUNDS"
+            }
+          ],
+          "time": -7.6
+        },
+        {
+          "options": [
+            {
+              "from": "1",
+              "to": "2",
+              "option": "ROUNDS"
+            }
+          ],
+          "time": 9.1
+        },
+        {
+          "options": [
+            {
+              "from": "true",
+              "to": "false",
+              "option": "CLEAN"
+            }
+          ],
+          "time": -0.7
+        },
+        {
+          "options": [
+            {
+              "from": "10",
+              "to": "5",
+              "option": "DATA_SIZE"
+            }
+          ],
+          "time": -4.0
         }
       ],
       "name": "user"

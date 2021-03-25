@@ -9,22 +9,18 @@
         {
           "options": [
             {
-              "from": "true",
-              "to": "false",
+              "from": "false",
+              "to": "true",
               "option": "CLEAN"
             }
           ],
-          "time": -0.7
+          "time": 0.7
         }
       ],
       "name": "default"
     },
     {
       "terms": [
-        {
-          "options": [],
-          "time": 0.7
-        },
         {
           "options": [
             {
@@ -34,6 +30,10 @@
             }
           ],
           "time": -0.7
+        },
+        {
+          "options": [],
+          "time": 1.4
         }
       ],
       "name": "miguel"
@@ -43,16 +43,16 @@
         {
           "options": [
             {
-              "from": "false",
-              "to": "true",
+              "from": "true",
+              "to": "false",
               "option": "CLEAN"
             }
           ],
-          "time": 0.7
+          "time": -0.7
         },
         {
           "options": [],
-          "time": 0.0
+          "time": 1.4
         }
       ],
       "name": "user"

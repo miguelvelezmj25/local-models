@@ -1,40 +1,40 @@
 [ {
-  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.allocateSpace(I)V",
-  "time" : 5.02899,
-  "tabulatorEntries" : [ {
-    "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
-    "time" : 5.02899,
-    "tabulatorEntries" : [ {
-      "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
-      "time" : 5.02899,
-      "tabulatorEntries" : [ ]
-    } ]
-  } ]
-}, {
   "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.populate(I)V",
-  "time" : 3.017276,
+  "time" : 3.020942,
   "tabulatorEntries" : [ {
     "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.insert(I)V",
-    "time" : 3.017276,
+    "time" : 3.020942,
     "tabulatorEntries" : [ {
       "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
-      "time" : 3.017276,
+      "time" : 3.020942,
       "tabulatorEntries" : [ {
         "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
-        "time" : 3.017276,
+        "time" : 3.020942,
         "tabulatorEntries" : [ ]
       } ]
     } ]
   } ]
 }, {
-  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.prep(Z)V",
-  "time" : 0.70407,
+  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.allocateSpace(I)V",
+  "time" : 2.515242,
   "tabulatorEntries" : [ {
     "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
-    "time" : 0.70407,
+    "time" : 2.515242,
     "tabulatorEntries" : [ {
       "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
-      "time" : 0.70407,
+      "time" : 2.515242,
+      "tabulatorEntries" : [ ]
+    } ]
+  } ]
+}, {
+  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.prep(Z)V",
+  "time" : 0.706022,
+  "tabulatorEntries" : [ {
+    "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
+    "time" : 0.706022,
+    "tabulatorEntries" : [ {
+      "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
+      "time" : 0.706022,
       "tabulatorEntries" : [ ]
     } ]
   } ]
