@@ -1,5 +1,5 @@
 {
-  "base": 7.06,
+  "base": 7.38,
   "model": [
     {
       "options": [
@@ -15,7 +15,7 @@
         }
       ],
       "sign": "-",
-      "value": 82.59
+      "value": 15.79
     },
     {
       "options": [
@@ -26,7 +26,7 @@
         }
       ],
       "sign": "+",
-      "value": 80.97
+      "value": 11.04
     },
     {
       "options": [
@@ -37,7 +37,7 @@
         }
       ],
       "sign": "-",
-      "value": 5.44
+      "value": 2.64
     },
     {
       "options": [
@@ -53,7 +53,7 @@
         }
       ],
       "sign": "-",
-      "value": 88.03
+      "value": 11.04
     },
     {
       "options": [
@@ -64,7 +64,7 @@
         }
       ],
       "sign": "-",
-      "value": 7.06
+      "value": 7.38
     },
     {
       "options": [
@@ -80,7 +80,7 @@
         }
       ],
       "sign": "-",
-      "value": 44.99
+      "value": 4.87
     },
     {
       "options": [
@@ -91,7 +91,7 @@
         }
       ],
       "sign": "-",
-      "value": 6.46
+      "value": 4.01
     },
     {
       "options": [
@@ -107,7 +107,7 @@
         }
       ],
       "sign": "+",
-      "value": 44.99
+      "value": 1.93
     },
     {
       "options": [
@@ -118,34 +118,7 @@
         }
       ],
       "sign": "+",
-      "value": 1.46
-    },
-    {
-      "options": [
-        {
-          "option": "ANDROID_MIPMAP_INSTEAD_OF_DRAWABLE",
-          "from": "false",
-          "to": "true"
-        },
-        {
-          "option": "SCALE",
-          "from": "3",
-          "to": "1"
-        }
-      ],
-      "sign": "+",
-      "value": 7.96
-    },
-    {
-      "options": [
-        {
-          "option": "ANDROID_MIPMAP_INSTEAD_OF_DRAWABLE",
-          "from": "false",
-          "to": "true"
-        }
-      ],
-      "sign": "+",
-      "value": 0.14
+      "value": 2.77
     },
     {
       "options": [
@@ -161,7 +134,7 @@
         }
       ],
       "sign": "+",
-      "value": 6.46
+      "value": 4.01
     },
     {
       "options": [
@@ -177,7 +150,7 @@
         }
       ],
       "sign": "+",
-      "value": 5.44
+      "value": 2.64
     },
     {
       "options": [
@@ -193,7 +166,7 @@
         }
       ],
       "sign": "+",
-      "value": 5.44
+      "value": 2.64
     },
     {
       "options": [
@@ -209,7 +182,7 @@
         }
       ],
       "sign": "-",
-      "value": 1.46
+      "value": 2.77
     },
     {
       "options": [
@@ -225,23 +198,7 @@
         }
       ],
       "sign": "-",
-      "value": 1.46
-    },
-    {
-      "options": [
-        {
-          "option": "ANDROID_INCLUDE_LDPI_TVDPI",
-          "from": "false",
-          "to": "true"
-        },
-        {
-          "option": "ANDROID_MIPMAP_INSTEAD_OF_DRAWABLE",
-          "from": "false",
-          "to": "true"
-        }
-      ],
-      "sign": "-",
-      "value": 0.20
+      "value": 2.77
     },
     {
       "options": [
@@ -251,45 +208,13 @@
           "to": "true"
         },
         {
-          "option": "SKIP_UPSCALING",
-          "from": "false",
-          "to": "true"
+          "option": "SCALE",
+          "from": "3",
+          "to": "1"
         }
       ],
-      "sign": "-",
-      "value": 0.15
-    },
-    {
-      "options": [
-        {
-          "option": "ANDROID_MIPMAP_INSTEAD_OF_DRAWABLE",
-          "from": "false",
-          "to": "true"
-        },
-        {
-          "option": "DRY_RUN",
-          "from": "false",
-          "to": "true"
-        }
-      ],
-      "sign": "-",
-      "value": 0.14
-    },
-    {
-      "options": [
-        {
-          "option": "ANDROID_MIPMAP_INSTEAD_OF_DRAWABLE",
-          "from": "false",
-          "to": "true"
-        },
-        {
-          "option": "PLATFORM",
-          "from": "android",
-          "to": "ios"
-        }
-      ],
-      "sign": "-",
-      "value": 0.14
+      "sign": "+",
+      "value": 0.75
     }
   ]
 }

@@ -1,0 +1,64 @@
+{
+  "base": 0.05,
+  "model": [
+    {
+      "options": [
+        {
+          "option": "SCALE",
+          "from": "3",
+          "to": "1"
+        },
+        {
+          "option": "SKIP_UPSCALING",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "sign": "-",
+      "value": 1.21
+    },
+    {
+      "options": [
+        {
+          "option": "SCALE",
+          "from": "3",
+          "to": "1"
+        }
+      ],
+      "sign": "+",
+      "value": 1.40
+    },
+    {
+      "options": [
+        {
+          "option": "DRY_RUN",
+          "from": "false",
+          "to": "true"
+        },
+        {
+          "option": "SCALE",
+          "from": "3",
+          "to": "1"
+        }
+      ],
+      "sign": "-",
+      "value": 1.40
+    },
+    {
+      "options": [
+        {
+          "option": "ANDROID_INCLUDE_LDPI_TVDPI",
+          "from": "false",
+          "to": "true"
+        },
+        {
+          "option": "SCALE",
+          "from": "3",
+          "to": "1"
+        }
+      ],
+      "sign": "+",
+      "value": 0.11
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "base": 0.09,
+  "model": [
+    {
+      "options": [
+        {
+          "option": "ANDROID_MIPMAP_INSTEAD_OF_DRAWABLE",
+          "from": "false",
+          "to": "true"
+        },
+        {
+          "option": "SCALE",
+          "from": "3",
+          "to": "1"
+        }
+      ],
+      "sign": "+",
+      "value": 0.16
+    }
+  ]
+}
