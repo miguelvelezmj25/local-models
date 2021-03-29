@@ -1,1 +1,136 @@
-{"models":[{"terms":[{"options":[],"time":1.5},{"options":[{"from":"5","to":"10","option":"DATA_SIZE"}],"time":1.5},{"options":[{"from":"1","to":"2","option":"ROUNDS"}],"time":1.5},{"options":[{"from":"5","to":"10","option":"DATA_SIZE"},{"from":"1","to":"2","option":"ROUNDS"}],"time":7.6}],"name":"default"},{"terms":[{"options":[{"from":"10","to":"5","option":"DATA_SIZE"},{"from":"2","to":"1","option":"ROUNDS"}],"time":7.6},{"options":[{"from":"2","to":"1","option":"ROUNDS"}],"time":-9.1},{"options":[],"time":12.1},{"options":[{"from":"10","to":"5","option":"DATA_SIZE"}],"time":-9.1}],"name":"miguel"},{"terms":[{"options":[{"from":"10","to":"5","option":"DATA_SIZE"}],"time":-1.5},{"options":[],"time":3.0},{"options":[{"from":"1","to":"2","option":"ROUNDS"}],"time":9.1},{"options":[{"from":"10","to":"5","option":"DATA_SIZE"},{"from":"1","to":"2","option":"ROUNDS"}],"time":-7.6}],"name":"user"}]}
+{
+  "models": [
+    {
+      "terms": [
+        {
+          "options": [],
+          "time": 1.5
+        },
+        {
+          "options": [
+            {
+              "from": "5",
+              "to": "10",
+              "option": "DATA_SIZE"
+            }
+          ],
+          "time": 1.5
+        },
+        {
+          "options": [
+            {
+              "from": "1",
+              "to": "2",
+              "option": "ROUNDS"
+            }
+          ],
+          "time": 1.5
+        },
+        {
+          "options": [
+            {
+              "from": "5",
+              "to": "10",
+              "option": "DATA_SIZE"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "option": "ROUNDS"
+            }
+          ],
+          "time": 7.6
+        }
+      ],
+      "name": "default"
+    },
+    {
+      "terms": [
+        {
+          "options": [
+            {
+              "from": "10",
+              "to": "5",
+              "option": "DATA_SIZE"
+            },
+            {
+              "from": "2",
+              "to": "1",
+              "option": "ROUNDS"
+            }
+          ],
+          "time": 7.6
+        },
+        {
+          "options": [
+            {
+              "from": "2",
+              "to": "1",
+              "option": "ROUNDS"
+            }
+          ],
+          "time": -9.1
+        },
+        {
+          "options": [],
+          "time": 12.1
+        },
+        {
+          "options": [
+            {
+              "from": "10",
+              "to": "5",
+              "option": "DATA_SIZE"
+            }
+          ],
+          "time": -9.1
+        }
+      ],
+      "name": "miguel"
+    },
+    {
+      "terms": [
+        {
+          "options": [
+            {
+              "from": "10",
+              "to": "5",
+              "option": "DATA_SIZE"
+            }
+          ],
+          "time": -1.5
+        },
+        {
+          "options": [],
+          "time": 3.0
+        },
+        {
+          "options": [
+            {
+              "from": "1",
+              "to": "2",
+              "option": "ROUNDS"
+            }
+          ],
+          "time": 9.1
+        },
+        {
+          "options": [
+            {
+              "from": "10",
+              "to": "5",
+              "option": "DATA_SIZE"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "option": "ROUNDS"
+            }
+          ],
+          "time": -7.6
+        }
+      ],
+      "name": "user"
+    }
+  ]
+}
