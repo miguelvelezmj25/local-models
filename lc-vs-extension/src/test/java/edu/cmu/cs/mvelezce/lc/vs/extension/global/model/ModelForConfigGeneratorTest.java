@@ -20,4 +20,15 @@ class ModelForConfigGeneratorTest {
     ModelForConfigGenerator generator = new ModelForConfigGenerator(programName, configs);
     generator.generate();
   }
+
+  @Test
+  void convert() throws IOException, ParseException {
+    Set<String> configs = new HashSet<>();
+    configs.add("default");
+    configs.add("user");
+
+    String programName = "Convert";
+    ModelForConfigGenerator generator = new ModelForConfigGenerator(programName, configs);
+    generator.generate();
+  }
 }

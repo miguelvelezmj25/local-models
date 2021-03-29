@@ -108,48 +108,48 @@ public class LocalModelForConfigGenerator {
     for (Map.Entry<String, Set<String>> entry : this.configs.entrySet()) {
       Set<String> config = entry.getValue();
       Sets.SetView<String> selectedOptions = Sets.intersection(config, allOptions);
+      Map<Set<String>, Set<String>> allDiffConfigs = new HashMap<>();
       Map<Set<String>, Double> model = new HashMap<>();
 
-      for (int i = 0; i <= allOptions.size(); i++) {
-        Set<Set<String>> diffConfigs =
+      for (int i = 0; i <= Math.min(allOptions.size(), 2); i++) {
+        //      for (int i = 0; i <= allOptions.size(); i++) {
+        Map<Set<String>, Set<String>> diffConfigs =
             this.getDiffConfigs(selectedOptions, i, configs2Times.keySet());
-        for (Set<String> diffConfig : diffConfigs) {
+        for (Map.Entry<Set<String>, Set<String>> diffConfigEntry : diffConfigs.entrySet()) {
+          Set<String> diffConfig = diffConfigEntry.getValue();
           double influence = configs2Times.get(diffConfig);
+          Set<String> difference = diffConfigEntry.getKey();
 
-          for (Map.Entry<Set<String>, Double> term : model.entrySet()) {
-            Sets.SetView<String> diffConfigTermDiff =
-                Sets.symmetricDifference(diffConfig, term.getKey());
-            if (diffConfigTermDiff.size() > i) {
+          for (Map.Entry<Set<String>, Set<String>> previousDiffConfig : allDiffConfigs.entrySet()) {
+            if (!difference.containsAll(previousDiffConfig.getKey())) {
               continue;
             }
-            Set<String> undoChange = new HashSet<>(diffConfig);
-            for (String diffTerm : diffConfigTermDiff) {
-              if (diffConfig.contains(diffTerm)) {
-                undoChange.remove(diffTerm);
-              } else {
-                undoChange.add(diffTerm);
-              }
-            }
-            if (!undoChange.equals(term.getKey())) {
-              continue;
-            }
-            influence -= term.getValue();
+            influence -= model.get(previousDiffConfig.getValue());
           }
           model.put(diffConfig, influence);
         }
+
+        allDiffConfigs.putAll(diffConfigs);
       }
+
       configs2Models.put(entry.getKey(), model);
     }
 
     return configs2Models;
   }
 
-  private Set<Set<String>> getDiffConfigs(
+  private Map<Set<String>, Set<String>> getDiffConfigs(
       Set<String> config, int diffTerms, Set<Set<String>> configs) {
-    Set<Set<String>> diffConfigs = new HashSet<>();
+    Map<Set<String>, Set<String>> diffConfigs = new HashMap<>();
+    if (diffTerms == 0) {
+      diffConfigs.put(new HashSet<>(), new HashSet<>(config));
+      return diffConfigs;
+    }
+
     for (Set<String> candidate : configs) {
-      if (Sets.symmetricDifference(config, candidate).size() == diffTerms) {
-        diffConfigs.add(candidate);
+      Sets.SetView<String> diff = Sets.symmetricDifference(config, candidate);
+      if (diff.size() == diffTerms) {
+        diffConfigs.put(new HashSet<>(diff), candidate);
       }
     }
     return diffConfigs;
@@ -179,7 +179,7 @@ public class LocalModelForConfigGenerator {
           time -= modelTerm.getValue();
         }
       }
-      configs2Times.put(config, time);
+      configs2Times.put(config, Math.max(0.0, time));
     }
     return configs2Times;
   }

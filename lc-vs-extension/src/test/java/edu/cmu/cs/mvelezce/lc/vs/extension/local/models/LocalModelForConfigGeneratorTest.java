@@ -21,13 +21,29 @@ class LocalModelForConfigGeneratorTest {
     config.add("CLEAN");
     config.add("DATA_SIZE");
     config.add("ROUNDS");
-    configs.put("user", config);
-
-    config = new HashSet<>();
-    config.add("ROUNDS");
     configs.put("miguel", config);
 
+    config = new HashSet<>();
+    config.add("CLEAN");
+    config.add("DATA_SIZE");
+    configs.put("user", config);
+
     String programName = "Main";
+    LocalModelForConfigGenerator generator = new LocalModelForConfigGenerator(programName, configs);
+    generator.generate();
+  }
+
+  @Test
+  void convert() throws IOException, ParseException {
+    Map<String, Set<String>> configs = new HashMap<>();
+    Set<String> config = new HashSet<>();
+    configs.put("default", config);
+
+    config = new HashSet<>();
+    config.add("SCALE");
+    configs.put("user", config);
+
+    String programName = "Convert";
     LocalModelForConfigGenerator generator = new LocalModelForConfigGenerator(programName, configs);
     generator.generate();
   }
