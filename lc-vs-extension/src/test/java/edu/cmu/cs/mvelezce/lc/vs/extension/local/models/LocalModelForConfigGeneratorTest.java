@@ -25,7 +25,7 @@ class LocalModelForConfigGeneratorTest {
 
     config = new HashSet<>();
     config.add("CLEAN");
-    config.add("DATA_SIZE");
+    config.add("ROUNDS");
     configs.put("user", config);
 
     String programName = "Main";

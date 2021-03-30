@@ -14,7 +14,7 @@
               "option": "DATA_SIZE"
             }
           ],
-          "time": 1.5
+          "time": 4.5
         },
         {
           "options": [
@@ -24,7 +24,7 @@
               "option": "ROUNDS"
             }
           ],
-          "time": 1.5
+          "time": 4.5
         },
         {
           "options": [
@@ -39,7 +39,7 @@
               "option": "ROUNDS"
             }
           ],
-          "time": 7.6
+          "time": 1.5
         }
       ],
       "name": "default"
@@ -59,7 +59,7 @@
               "option": "ROUNDS"
             }
           ],
-          "time": 7.6
+          "time": 1.5
         },
         {
           "options": [
@@ -69,11 +69,11 @@
               "option": "ROUNDS"
             }
           ],
-          "time": -9.1
+          "time": -6.0
         },
         {
           "options": [],
-          "time": 12.1
+          "time": 12.0
         },
         {
           "options": [
@@ -83,7 +83,7 @@
               "option": "DATA_SIZE"
             }
           ],
-          "time": -9.1
+          "time": -6.0
         }
       ],
       "name": "miguel"
@@ -93,41 +93,41 @@
         {
           "options": [
             {
-              "from": "10",
-              "to": "5",
+              "from": "2",
+              "to": "1",
+              "option": "ROUNDS"
+            }
+          ],
+          "time": -4.5
+        },
+        {
+          "options": [
+            {
+              "from": "5",
+              "to": "10",
               "option": "DATA_SIZE"
+            },
+            {
+              "from": "2",
+              "to": "1",
+              "option": "ROUNDS"
             }
           ],
           "time": -1.5
         },
         {
           "options": [],
-          "time": 3.0
+          "time": 6.0
         },
         {
           "options": [
             {
-              "from": "1",
-              "to": "2",
-              "option": "ROUNDS"
-            }
-          ],
-          "time": 9.1
-        },
-        {
-          "options": [
-            {
-              "from": "10",
-              "to": "5",
+              "from": "5",
+              "to": "10",
               "option": "DATA_SIZE"
-            },
-            {
-              "from": "1",
-              "to": "2",
-              "option": "ROUNDS"
             }
           ],
-          "time": -7.6
+          "time": 6.0
         }
       ],
       "name": "user"

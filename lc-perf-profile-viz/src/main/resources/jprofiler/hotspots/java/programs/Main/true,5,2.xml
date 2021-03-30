@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tree type="Hot Spots" threadSelection="All thread groups" threadStatus="All states" aggregationLevel="Methods" hotSpotCalculation="Self times" unprofiledClasses="Show separately">
-  <hotspot leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Task" methodName="populate" methodSignature="(I)V" time="3020942" count="0" lineNumber="-1" percent="48.4">
-    <node leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler" methodName="populate" methodSignature="(I)V" time="3020942" count="0" lineNumber="-1" percent="48.4">
-      <node leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler" methodName="work" methodSignature="()V" time="3020942" count="0" lineNumber="-1" percent="48.4">
-        <node leaf="true" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Main" methodName="main" methodSignature="([Ljava/lang/String;)V" time="3020942" count="0" lineNumber="-1" percent="48.4"/>
+  <hotspot leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Task" methodName="populate" methodSignature="(I)V" time="6039973" count="0" lineNumber="-1" percent="65.1">
+    <node leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler" methodName="insert" methodSignature="(I)V" time="6039973" count="0" lineNumber="-1" percent="65.1">
+      <node leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler" methodName="work" methodSignature="()V" time="3024397" count="0" lineNumber="-1" percent="32.6">
+        <node leaf="true" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Main" methodName="main" methodSignature="([Ljava/lang/String;)V" time="3024397" count="0" lineNumber="-1" percent="32.6"/>
+      </node>
+      <node leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler" methodName="validate" methodSignature="(I)V" time="3015576" count="0" lineNumber="-1" percent="32.5">
+        <node leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler" methodName="work" methodSignature="()V" time="3015576" count="0" lineNumber="-1" percent="32.5">
+          <node leaf="true" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Main" methodName="main" methodSignature="([Ljava/lang/String;)V" time="3015576" count="0" lineNumber="-1" percent="32.5"/>
+        </node>
       </node>
     </node>
   </hotspot>
-  <hotspot leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Task" methodName="allocateSpace" methodSignature="(I)V" time="2515242" count="0" lineNumber="-1" percent="40.3">
-    <node leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler" methodName="work" methodSignature="()V" time="2515242" count="0" lineNumber="-1" percent="40.3">
-      <node leaf="true" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Main" methodName="main" methodSignature="([Ljava/lang/String;)V" time="2515242" count="0" lineNumber="-1" percent="40.3"/>
+  <hotspot leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Task" methodName="allocateSpace" methodSignature="(I)V" time="2517884" count="0" lineNumber="-1" percent="27.2">
+    <node leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler" methodName="work" methodSignature="()V" time="2517884" count="0" lineNumber="-1" percent="27.2">
+      <node leaf="true" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Main" methodName="main" methodSignature="([Ljava/lang/String;)V" time="2517884" count="0" lineNumber="-1" percent="27.2"/>
     </node>
   </hotspot>
-  <hotspot leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Task" methodName="clean" methodSignature="(Z)V" time="706022" count="0" lineNumber="-1" percent="11.3">
-    <node leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler" methodName="work" methodSignature="()V" time="706022" count="0" lineNumber="-1" percent="11.3">
-      <node leaf="true" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Main" methodName="main" methodSignature="([Ljava/lang/String;)V" time="706022" count="0" lineNumber="-1" percent="11.3"/>
+  <hotspot leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Task" methodName="prep" methodSignature="(Z)V" time="713152" count="0" lineNumber="-1" percent="7.7">
+    <node leaf="false" class="edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler" methodName="work" methodSignature="()V" time="713152" count="0" lineNumber="-1" percent="7.7">
+      <node leaf="true" class="edu.cmu.cs.mvelezce.perf.debug.config.core.Main" methodName="main" methodSignature="([Ljava/lang/String;)V" time="713152" count="0" lineNumber="-1" percent="7.7"/>
     </node>
   </hotspot>
 </tree>

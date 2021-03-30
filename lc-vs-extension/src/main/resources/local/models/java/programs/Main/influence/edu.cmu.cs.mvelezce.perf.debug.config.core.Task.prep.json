@@ -4,7 +4,7 @@
       "terms": [
         {
           "options": [],
-          "time": 0.7
+          "time": 0.0
         },
         {
           "options": [
@@ -33,7 +33,7 @@
         },
         {
           "options": [],
-          "time": 1.4
+          "time": 0.7
         }
       ],
       "name": "miguel"
@@ -52,7 +52,7 @@
         },
         {
           "options": [],
-          "time": 1.4
+          "time": 0.7
         }
       ],
       "name": "user"
