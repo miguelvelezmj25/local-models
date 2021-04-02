@@ -155,12 +155,12 @@ public class VSViewer extends DotViewer {
       result.append(
           configsToTimes.containsKey(this.config1)
               ? DECIMAL_FORMAT.format(configsToTimes.get(this.config1))
-              : "\"Not executed\"");
+              : "\"No entry\"");
       result.append(", \"config2\": ");
       result.append(
           configsToTimes.containsKey(this.config2)
               ? DECIMAL_FORMAT.format(configsToTimes.get(this.config2))
-              : "\"Not executed\"");
+              : "\"No entry\"");
       added.add(current);
       if (current.getChildren().isEmpty()) {
         continue;
