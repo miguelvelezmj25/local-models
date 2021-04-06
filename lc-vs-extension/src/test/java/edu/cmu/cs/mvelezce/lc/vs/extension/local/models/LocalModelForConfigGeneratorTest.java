@@ -40,7 +40,7 @@ class LocalModelForConfigGeneratorTest {
     configs.put("default", config);
 
     config = new HashSet<>();
-    config.add("SCALE");
+    config.add("FRACTION");
     configs.put("user", config);
 
     String programName = "Convert";

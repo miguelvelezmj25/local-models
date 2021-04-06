@@ -1,12 +1,12 @@
 {
-  "base": 0.85,
+  "base": 0.55,
   "model": [
     {
       "options": [
         {
-          "option": "SCALE",
-          "from": "3",
-          "to": "1"
+          "option": "FRACTION",
+          "from": "0.9",
+          "to": "0.5"
         },
         {
           "option": "SKIP_UPSCALING",
@@ -20,13 +20,13 @@
     {
       "options": [
         {
-          "option": "SCALE",
-          "from": "3",
-          "to": "1"
+          "option": "FRACTION",
+          "from": "0.9",
+          "to": "0.5"
         }
       ],
       "sign": "+",
-      "value": 0.55
+      "value": 0.44
     },
     {
       "options": [
@@ -36,13 +36,13 @@
           "to": "true"
         },
         {
-          "option": "SCALE",
-          "from": "3",
-          "to": "1"
+          "option": "FRACTION",
+          "from": "0.9",
+          "to": "0.5"
         }
       ],
       "sign": "-",
-      "value": 0.55
+      "value": 0.44
     },
     {
       "options": [
@@ -53,7 +53,7 @@
         }
       ],
       "sign": "-",
-      "value": 0.55
+      "value": 0.44
     },
     {
       "options": [
@@ -63,9 +63,9 @@
           "to": "ios"
         },
         {
-          "option": "SCALE",
-          "from": "3",
-          "to": "1"
+          "option": "FRACTION",
+          "from": "0.9",
+          "to": "0.5"
         }
       ],
       "sign": "+",
@@ -90,9 +90,9 @@
           "to": "true"
         },
         {
-          "option": "SCALE",
-          "from": "3",
-          "to": "1"
+          "option": "FRACTION",
+          "from": "0.9",
+          "to": "0.5"
         }
       ],
       "sign": "+",

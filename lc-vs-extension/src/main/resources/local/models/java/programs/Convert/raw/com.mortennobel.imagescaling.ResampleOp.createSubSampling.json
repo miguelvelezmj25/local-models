@@ -1,5 +1,5 @@
 {
-  "base": 0.09,
+  "base": 0.08,
   "model": [
     {
       "options": [
@@ -9,13 +9,13 @@
           "to": "true"
         },
         {
-          "option": "SCALE",
-          "from": "3",
-          "to": "1"
+          "option": "FRACTION",
+          "from": "0.9",
+          "to": "0.5"
         }
       ],
       "sign": "+",
-      "value": 0.16
+      "value": 0.10
     }
   ]
 }
