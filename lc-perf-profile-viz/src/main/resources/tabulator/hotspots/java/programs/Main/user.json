@@ -40,13 +40,13 @@
   } ]
 }, {
   "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.prep(Z)V",
-  "time" : 0.713152,
+  "time" : 6.703152,
   "tabulatorEntries" : [ {
     "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
-    "time" : 0.713152,
+    "time" : 6.703152,
     "tabulatorEntries" : [ {
       "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
-      "time" : 0.713152,
+      "time" : 6.703152,
       "tabulatorEntries" : [ ]
     } ]
   } ]

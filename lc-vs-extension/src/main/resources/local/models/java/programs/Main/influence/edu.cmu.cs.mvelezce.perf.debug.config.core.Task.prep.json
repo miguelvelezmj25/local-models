@@ -14,7 +14,7 @@
               "option": "CLEAN"
             }
           ],
-          "time": 0.7
+          "time": 6.7
         }
       ],
       "name": "default"
@@ -29,11 +29,11 @@
               "option": "CLEAN"
             }
           ],
-          "time": -0.7
+          "time": -6.7
         },
         {
           "options": [],
-          "time": 0.7
+          "time": 6.7
         }
       ],
       "name": "miguel"
@@ -48,11 +48,11 @@
               "option": "CLEAN"
             }
           ],
-          "time": -0.7
+          "time": -6.7
         },
         {
           "options": [],
-          "time": 0.7
+          "time": 6.7
         }
       ],
       "name": "user"
