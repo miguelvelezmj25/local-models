@@ -43,10 +43,10 @@
   "time" : 34.042405,
   "tabulatorEntries" : [ {
     "method" : "at.favre.tools.dconvert.converters.scaling.ImageHandler.saveToFile(Ljava/io/File;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/awt/Dimension;Z)Ljava/util/List;",
-    "time" : 34.042405,
+    "time" : 28.05793,
     "tabulatorEntries" : [ {
       "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convertImage(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;ZLjava/lang/StringBuilder;Ljava/util/List;Ljava/awt/Dimension;Ljava/io/File;)V",
-      "time" : 34.042405,
+      "time" : 28.05793,
       "tabulatorEntries" : [ {
         "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
         "time" : 28.05793,
@@ -55,18 +55,18 @@
           "time" : 28.05793,
           "tabulatorEntries" : [ ]
         } ]
-      }, {
-        "method" : "at.favre.tools.dconvert.converters.APlatformConverter.stdDimension(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V",
+      } ]
+    } ]
+  }, {
+    "method" : "at.favre.tools.dconvert.converters.APlatformConverter.stdDimension(Lat/favre/tools/dconvert/arg/Arguments;Lat/favre/tools/dconvert/util/LoadedImage;Ljava/lang/String;ZLjava/lang/StringBuilder;Ljava/io/File;Ljava/util/List;)V",
+    "time" : 5.984475,
+    "tabulatorEntries" : [ {
+      "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
+      "time" : 5.984475,
+      "tabulatorEntries" : [ {
+        "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
         "time" : 5.984475,
-        "tabulatorEntries" : [ {
-          "method" : "at.favre.tools.dconvert.converters.APlatformConverter.convert(Ljava/io/File;Lat/favre/tools/dconvert/arg/Arguments;)Lat/favre/tools/dconvert/converters/Result;",
-          "time" : 5.984475,
-          "tabulatorEntries" : [ {
-            "method" : "at.favre.tools.dconvert.WorkerHandler$Worker.run()V",
-            "time" : 5.984475,
-            "tabulatorEntries" : [ ]
-          } ]
-        } ]
+        "tabulatorEntries" : [ ]
       } ]
     } ]
   } ]
