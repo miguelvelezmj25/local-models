@@ -1,6 +1,7 @@
 package edu.cmu.cs.mvelezce.lc.perf.profile.viz.hotspot;
 
 import edu.cmu.cs.mvelezce.adapters.convert.BaseConvertAdapter;
+import edu.cmu.cs.mvelezce.adapters.measureDiskOrderedScan.BaseMeasureDiskOrderedScanAdapter;
 import edu.cmu.cs.mvelezce.lc.adapters.mooInfluence.BaseMooInfluenceAdapter;
 import org.junit.Test;
 
@@ -24,6 +25,17 @@ public class JProfilerHotspotExporterTest {
     String programName = BaseConvertAdapter.PROGRAM_NAME;
     JProfilerHotspotExporter builder =
         new JProfilerHotspotExporter(programName, JProfilerHotspotExporter.RUNNING_THREAD_STATUS);
+    String[] args = new String[2];
+    args[0] = "-delres";
+    args[1] = "-saveres";
+    builder.analyze(args);
+  }
+
+  @Test
+  public void Berkeley() throws IOException, InterruptedException {
+    String programName = BaseMeasureDiskOrderedScanAdapter.PROGRAM_NAME;
+    JProfilerHotspotExporter builder =
+            new JProfilerHotspotExporter(programName, JProfilerHotspotExporter.RUNNING_THREAD_STATUS);
     String[] args = new String[2];
     args[0] = "-delres";
     args[1] = "-saveres";
