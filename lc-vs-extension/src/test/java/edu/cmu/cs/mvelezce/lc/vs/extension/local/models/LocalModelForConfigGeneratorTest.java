@@ -47,4 +47,20 @@ class LocalModelForConfigGeneratorTest {
     LocalModelForConfigGenerator generator = new LocalModelForConfigGenerator(programName, configs);
     generator.generate();
   }
+
+  @Test
+  void berkeley() throws IOException, ParseException {
+    Map<String, Set<String>> configs = new HashMap<>();
+    Set<String> config = new HashSet<>();
+    configs.put("default", config);
+
+    config = new HashSet<>();
+    config.add("DUPLICATES");
+    config.add("TRANSACTIONS");
+    configs.put("user", config);
+
+    String programName = "Berkeley";
+    LocalModelForConfigGenerator generator = new LocalModelForConfigGenerator(programName, configs);
+    generator.generate();
+  }
 }

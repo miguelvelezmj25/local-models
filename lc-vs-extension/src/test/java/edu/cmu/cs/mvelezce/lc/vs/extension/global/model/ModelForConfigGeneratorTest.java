@@ -31,4 +31,15 @@ class ModelForConfigGeneratorTest {
     ModelForConfigGenerator generator = new ModelForConfigGenerator(programName, configs);
     generator.generate();
   }
+
+  @Test
+  void Berkeley() throws IOException, ParseException {
+    Set<String> configs = new HashSet<>();
+    configs.add("default");
+    configs.add("user");
+
+    String programName = "Berkeley";
+    ModelForConfigGenerator generator = new ModelForConfigGenerator(programName, configs);
+    generator.generate();
+  }
 }

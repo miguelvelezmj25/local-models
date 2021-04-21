@@ -1,0 +1,81 @@
+{
+  "base": 4.74,
+  "model": [
+    {
+      "options": [
+        {
+          "option": "DUPLICATES",
+          "from": "false",
+          "to": "true"
+        },
+        {
+          "option": "TRANSACTIONS",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "sign": "+",
+      "value": 54.23
+    },
+    {
+      "options": [
+        {
+          "option": "DUPLICATES",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "sign": "+",
+      "value": 8.89
+    },
+    {
+      "options": [
+        {
+          "option": "TRANSACTIONS",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "sign": "+",
+      "value": 6.45
+    },
+    {
+      "options": [
+        {
+          "option": "TEMPORARY",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "sign": "-",
+      "value": 2.22
+    },
+    {
+      "options": [
+        {
+          "option": "SEQUENTIAL",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "sign": "+",
+      "value": 1.76
+    },
+    {
+      "options": [
+        {
+          "option": "TEMPORARY",
+          "from": "false",
+          "to": "true"
+        },
+        {
+          "option": "SEQUENTIAL",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "sign": "+",
+      "value": 3.48
+    }
+  ]
+}
