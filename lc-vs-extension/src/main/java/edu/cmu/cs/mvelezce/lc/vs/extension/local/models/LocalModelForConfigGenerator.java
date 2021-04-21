@@ -61,6 +61,10 @@ public class LocalModelForConfigGenerator {
       Sets.SetView<String> selectedOptions = Sets.intersection(config, allOptions);
       JSONArray terms = new JSONArray();
       for (Map.Entry<Set<String>, Double> modelEntry : entry.getValue().entrySet()) {
+        if(modelEntry.getValue() == 0.00) {
+          continue;
+        }
+
         JSONObject termEntry = new JSONObject();
         JSONArray termEntries = new JSONArray();
         Sets.SetView<String> diff = Sets.symmetricDifference(selectedOptions, modelEntry.getKey());

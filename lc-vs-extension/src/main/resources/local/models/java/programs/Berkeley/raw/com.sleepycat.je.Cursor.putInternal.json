@@ -31,17 +31,6 @@
     {
       "options": [
         {
-          "option": "TRANSACTIONS",
-          "from": "false",
-          "to": "true"
-        }
-      ],
-      "sign": "+",
-      "value": 6.45
-    },
-    {
-      "options": [
-        {
           "option": "TEMPORARY",
           "from": "false",
           "to": "true"

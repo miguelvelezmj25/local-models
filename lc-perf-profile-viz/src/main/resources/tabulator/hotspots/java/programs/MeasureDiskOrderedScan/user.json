@@ -1,21 +1,21 @@
 [ {
   "method" : "com.sleepycat.je.Cursor.putInternal()V",
-  "time" : 74.312,
+  "time" : 67.861,
   "tabulatorEntries" : [ {
     "method" : "com.sleepycat.je.Database.put()V",
-    "time" : 74.312,
+    "time" : 67.861,
     "tabulatorEntries" : [ {
       "method" : "com.sleepycat.je.Database.putNoDupData()V",
-      "time" : 74.312,
+      "time" : 67.861,
       "tabulatorEntries" : [ {
         "method" : "com.sleepycat.analysis.MeasureDiskOrderedScan.populate()V",
-        "time" : 74.312,
+        "time" : 67.861,
         "tabulatorEntries" : [ {
           "method" : "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
-          "time" : 74.312,
+          "time" : 67.861,
           "tabulatorEntries" : [ {
             "method" : "com.sleepycat.analysis.MeasureDiskOrderedScan.main()V",
-            "time" : 74.312,
+            "time" : 67.861,
             "tabulatorEntries" : [ ]
           } ]
         } ]
