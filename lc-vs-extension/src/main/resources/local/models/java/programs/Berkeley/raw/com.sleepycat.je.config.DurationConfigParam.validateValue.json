@@ -1,5 +1,5 @@
 {
-  "base": 3.74,
+  "base": 1.67,
   "model": [
     {
       "options": [
@@ -15,7 +15,7 @@
         }
       ],
       "sign": "+",
-      "value": 54.23
+      "value": 0.23
     },
     {
       "options": [
@@ -25,8 +25,8 @@
           "to": "true"
         }
       ],
-      "sign": "+",
-      "value": 8.89
+      "sign": "-",
+      "value": 0.17
     },
     {
       "options": [
@@ -37,7 +37,7 @@
         }
       ],
       "sign": "-",
-      "value": 2.22
+      "value": 0.22
     },
     {
       "options": [
@@ -48,7 +48,7 @@
         }
       ],
       "sign": "+",
-      "value": 1.76
+      "value": 0.48
     },
     {
       "options": [
@@ -63,8 +63,8 @@
           "to": "true"
         }
       ],
-      "sign": "+",
-      "value": 3.48
+      "sign": "-",
+      "value": 0.21
     }
   ]
 }

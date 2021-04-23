@@ -4,7 +4,7 @@
       "terms": [
         {
           "options": [],
-          "time": 3.74
+          "time": 1.67
         },
         {
           "options": [
@@ -19,7 +19,7 @@
               "option": "TRANSACTIONS"
             }
           ],
-          "time": 54.23
+          "time": 0.22999999999999998
         },
         {
           "options": [
@@ -29,7 +29,7 @@
               "option": "TEMPORARY"
             }
           ],
-          "time": -2.22
+          "time": -0.21999999999999997
         },
         {
           "options": [
@@ -39,7 +39,7 @@
               "option": "DUPLICATES"
             }
           ],
-          "time": 8.89
+          "time": -0.16999999999999993
         },
         {
           "options": [
@@ -54,7 +54,7 @@
               "option": "SEQUENTIAL"
             }
           ],
-          "time": 3.4800000000000004
+          "time": -0.20999999999999996
         },
         {
           "options": [
@@ -64,7 +64,7 @@
               "option": "SEQUENTIAL"
             }
           ],
-          "time": 1.7599999999999998
+          "time": 0.48
         }
       ],
       "name": "default"
@@ -84,22 +84,7 @@
               "option": "TRANSACTIONS"
             }
           ],
-          "time": 54.23
-        },
-        {
-          "options": [
-            {
-              "from": "false",
-              "to": "true",
-              "option": "SEQUENTIAL"
-            },
-            {
-              "from": "true",
-              "to": "false",
-              "option": "TRANSACTIONS"
-            }
-          ],
-          "time": -7.105427357601002E-15
+          "time": 0.22999999999999998
         },
         {
           "options": [
@@ -109,41 +94,11 @@
               "option": "SEQUENTIAL"
             }
           ],
-          "time": 1.7600000000000051
-        },
-        {
-          "options": [
-            {
-              "from": "false",
-              "to": "true",
-              "option": "TEMPORARY"
-            },
-            {
-              "from": "true",
-              "to": "false",
-              "option": "TRANSACTIONS"
-            }
-          ],
-          "time": -7.105427357601002E-15
+          "time": 0.48
         },
         {
           "options": [],
-          "time": 66.86
-        },
-        {
-          "options": [
-            {
-              "from": "false",
-              "to": "true",
-              "option": "TEMPORARY"
-            },
-            {
-              "from": "true",
-              "to": "false",
-              "option": "DUPLICATES"
-            }
-          ],
-          "time": -7.105427357601002E-15
+          "time": 1.73
         },
         {
           "options": [
@@ -153,7 +108,7 @@
               "option": "TEMPORARY"
             }
           ],
-          "time": -2.219999999999999
+          "time": -0.21999999999999997
         },
         {
           "options": [
@@ -168,7 +123,7 @@
               "option": "SEQUENTIAL"
             }
           ],
-          "time": 3.4799999999999898
+          "time": -0.20999999999999996
         },
         {
           "options": [
@@ -178,7 +133,7 @@
               "option": "TRANSACTIONS"
             }
           ],
-          "time": -54.23
+          "time": -0.22999999999999998
         },
         {
           "options": [
@@ -188,22 +143,7 @@
               "option": "DUPLICATES"
             }
           ],
-          "time": -63.12
-        },
-        {
-          "options": [
-            {
-              "from": "true",
-              "to": "false",
-              "option": "DUPLICATES"
-            },
-            {
-              "from": "false",
-              "to": "true",
-              "option": "SEQUENTIAL"
-            }
-          ],
-          "time": -7.105427357601002E-15
+          "time": -0.06000000000000005
         }
       ],
       "name": "user"
