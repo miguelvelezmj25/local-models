@@ -8,7 +8,7 @@
         "time": 67.861,
         "tabulatorEntries": [
           {
-            "method": "com.sleepycat.je.Database.putNoDupData()V",
+            "method": "com.sleepycat.je.Database.putDupData()V",
             "time": 67.861,
             "tabulatorEntries": [
               {
