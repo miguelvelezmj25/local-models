@@ -3,6 +3,7 @@ package edu.cmu.cs.mvelezce.lc.hotspot.diff.server;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import edu.cmu.cs.mvelezce.lc.perf.profile.viz.vs.VSViewer;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -55,8 +56,32 @@ public class HotspotDiffHandler implements HttpHandler {
 
     System.out.println("json object is not empty");
     String programName = json.getString("programName");
-    String config1 = json.getString("config1");
-    String config2 = json.getString("config2");
+    String config1;
+    String config2;
+    if (json.has("config1") && json.has("config2")) {
+      config1 = json.getString("config1");
+      config2 = json.getString("config2");
+    } else {
+      JSONArray values = json.getJSONArray("config");
+      boolean userConfig = true;
+      for (int i = 0; i < values.length(); i++) {
+        JSONObject entry = (JSONObject) values.get(i);
+        if ((entry.getString("option").equals("DUPLICATES")
+                || entry.getString("option").equals("TRANSACTIONS"))
+            && entry.getString("value").equals("false")) {
+          userConfig = false;
+          break;
+        }
+      }
+      if (userConfig) {
+        config1 = "user";
+        config2 = "user";
+      } else {
+        config1 = "default";
+        config2 = "default";
+      }
+    }
+
     System.out.println(
         "Creating hotspot diff for : " + programName + " - " + config1 + " - " + config2);
     try {
