@@ -1,0 +1,22 @@
+{
+  "models": [
+    {
+      "terms": [
+        {
+          "options": [],
+          "time": 3.67
+        }
+      ],
+      "name": "default"
+    },
+    {
+      "terms": [
+        {
+          "options": [],
+          "time": 3.67
+        }
+      ],
+      "name": "user"
+    }
+  ]
+}

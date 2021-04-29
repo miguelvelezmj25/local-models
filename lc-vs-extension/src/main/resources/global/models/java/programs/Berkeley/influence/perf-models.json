@@ -4,7 +4,7 @@
       "terms": [
         {
           "options": [],
-          "time": 5.79
+          "time": 8.46
         },
         {
           "options": [
@@ -14,7 +14,7 @@
               "option": "DUPLICATES"
             }
           ],
-          "time": 0.8999999999999998
+          "time": 0.9000000000000002
         },
         {
           "options": [
@@ -24,7 +24,22 @@
               "option": "TEMPORARY"
             }
           ],
-          "time": -1.3499999999999996
+          "time": -1.35
+        },
+        {
+          "options": [
+            {
+              "from": "false",
+              "to": "true",
+              "option": "TEMPORARY"
+            },
+            {
+              "from": "false",
+              "to": "true",
+              "option": "DUPLICATES"
+            }
+          ],
+          "time": -2.220446049250313E-16
         },
         {
           "options": [
@@ -39,7 +54,7 @@
               "option": "SEQUENTIAL"
             }
           ],
-          "time": -5.551115123125783E-17
+          "time": -4.996003610813204E-16
         },
         {
           "options": [
@@ -54,7 +69,7 @@
               "option": "TRANSACTIONS"
             }
           ],
-          "time": 54.699999999999996
+          "time": 65.59
         },
         {
           "options": [
@@ -88,7 +103,7 @@
       "terms": [
         {
           "options": [],
-          "time": 61.39
+          "time": 74.95
         },
         {
           "options": [
@@ -108,7 +123,7 @@
               "option": "DUPLICATES"
             }
           ],
-          "time": -55.599999999999994
+          "time": -66.49000000000001
         },
         {
           "options": [
@@ -123,7 +138,7 @@
               "option": "TRANSACTIONS"
             }
           ],
-          "time": 54.699999999999996
+          "time": 65.59
         },
         {
           "options": [
@@ -145,25 +160,10 @@
             {
               "from": "false",
               "to": "true",
-              "option": "TEMPORARY"
-            },
-            {
-              "from": "true",
-              "to": "false",
-              "option": "TRANSACTIONS"
-            }
-          ],
-          "time": -7.105427357601002E-15
-        },
-        {
-          "options": [
-            {
-              "from": "false",
-              "to": "true",
               "option": "SEQUENTIAL"
             }
           ],
-          "time": 2.169999999999998
+          "time": 2.1700000000000053
         },
         {
           "options": [
@@ -178,7 +178,7 @@
               "option": "SEQUENTIAL"
             }
           ],
-          "time": 1.749999999999997
+          "time": 1.750000000000004
         },
         {
           "options": [
@@ -188,7 +188,7 @@
               "option": "TRANSACTIONS"
             }
           ],
-          "time": -54.699999999999996
+          "time": -65.59
         }
       ],
       "name": "user"

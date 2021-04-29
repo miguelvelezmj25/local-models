@@ -1,5 +1,5 @@
 {
-  "base": 3.74,
+  "base": 2.74,
   "model": [
     {
       "options": [
@@ -15,7 +15,7 @@
         }
       ],
       "sign": "+",
-      "value": 54.23
+      "value": 65.12
     },
     {
       "options": [

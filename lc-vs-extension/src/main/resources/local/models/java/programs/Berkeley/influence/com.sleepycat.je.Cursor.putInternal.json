@@ -4,7 +4,37 @@
       "terms": [
         {
           "options": [],
-          "time": 3.74
+          "time": 2.74
+        },
+        {
+          "options": [
+            {
+              "from": "false",
+              "to": "true",
+              "option": "DUPLICATES"
+            },
+            {
+              "from": "false",
+              "to": "true",
+              "option": "SEQUENTIAL"
+            }
+          ],
+          "time": -4.440892098500626E-16
+        },
+        {
+          "options": [
+            {
+              "from": "false",
+              "to": "true",
+              "option": "TEMPORARY"
+            },
+            {
+              "from": "false",
+              "to": "true",
+              "option": "DUPLICATES"
+            }
+          ],
+          "time": -2.220446049250313E-16
         },
         {
           "options": [
@@ -19,7 +49,7 @@
               "option": "TRANSACTIONS"
             }
           ],
-          "time": 54.23
+          "time": 65.12
         },
         {
           "options": [
@@ -29,7 +59,7 @@
               "option": "TEMPORARY"
             }
           ],
-          "time": -1.2199999999999998
+          "time": -1.22
         },
         {
           "options": [
@@ -39,7 +69,7 @@
               "option": "DUPLICATES"
             }
           ],
-          "time": 0.8899999999999997
+          "time": 0.8900000000000001
         },
         {
           "options": [
@@ -84,7 +114,7 @@
               "option": "TRANSACTIONS"
             }
           ],
-          "time": 54.23
+          "time": 65.12
         },
         {
           "options": [
@@ -94,26 +124,11 @@
               "option": "SEQUENTIAL"
             }
           ],
-          "time": 1.759999999999998
-        },
-        {
-          "options": [
-            {
-              "from": "false",
-              "to": "true",
-              "option": "TEMPORARY"
-            },
-            {
-              "from": "true",
-              "to": "false",
-              "option": "TRANSACTIONS"
-            }
-          ],
-          "time": -7.105427357601002E-15
+          "time": 1.7600000000000051
         },
         {
           "options": [],
-          "time": 58.86
+          "time": 68.75
         },
         {
           "options": [
@@ -138,7 +153,7 @@
               "option": "SEQUENTIAL"
             }
           ],
-          "time": 1.4799999999999969
+          "time": 1.480000000000004
         },
         {
           "options": [
@@ -148,7 +163,7 @@
               "option": "TRANSACTIONS"
             }
           ],
-          "time": -54.23
+          "time": -65.12
         },
         {
           "options": [
@@ -158,7 +173,7 @@
               "option": "DUPLICATES"
             }
           ],
-          "time": -55.12
+          "time": -66.01
         }
       ],
       "name": "user"
