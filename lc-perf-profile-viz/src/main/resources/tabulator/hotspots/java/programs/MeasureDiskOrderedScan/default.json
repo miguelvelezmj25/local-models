@@ -1,39 +1,39 @@
 [
   {
     "method": "com.sleepycat.je.dbi.EnvironmentImpl.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/dbi/RepConfigProxy;)V",
-    "time": 5.248,
+    "time": 3.248,
     "tabulatorEntries": [
       {
         "method": "com.sleepycat.je.dbi.EnvironmentImpl.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
-        "time": 5.248,
+        "time": 3.248,
         "tabulatorEntries": [
           {
             "method": "com.sleepycat.je.dbi.DbEnvPool.getEnvironment(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
-            "time": 5.248,
+            "time": 3.248,
             "tabulatorEntries": [
               {
                 "method": "com.sleepycat.je.Environment.makeEnvironmentImpl(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
-                "time": 5.248,
+                "time": 3.248,
                 "tabulatorEntries": [
                   {
                     "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
-                    "time": 5.248,
+                    "time": 3.248,
                     "tabulatorEntries": [
                       {
                         "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
-                        "time": 5.248,
+                        "time": 3.248,
                         "tabulatorEntries": [
                           {
                             "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
-                            "time": 5.248,
+                            "time": 3.248,
                             "tabulatorEntries": [
                               {
                                 "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
-                                "time": 5.248,
+                                "time": 3.248,
                                 "tabulatorEntries": [
                                   {
                                     "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
-                                    "time": 5.248,
+                                    "time": 3.248,
                                     "tabulatorEntries": []
                                   }
                                 ]
@@ -54,27 +54,27 @@
   },
   {
     "method": "com.sleepycat.je.Cursor.putInternal()V",
-    "time": 4.741,
+    "time": 2.741,
     "tabulatorEntries": [
       {
         "method": "com.sleepycat.je.Database.put()V",
-        "time": 4.741,
+        "time": 2.741,
         "tabulatorEntries": [
           {
             "method": "com.sleepycat.je.Database.putNoOverwrite()V",
-            "time": 4.741,
+            "time": 2.741,
             "tabulatorEntries": [
               {
                 "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.populate()V",
-                "time": 4.741,
+                "time": 2.741,
                 "tabulatorEntries": [
                   {
                     "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
-                    "time": 4.741,
+                    "time": 2.741,
                     "tabulatorEntries": [
                       {
                         "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main()V",
-                        "time": 4.741,
+                        "time": 2.741,
                         "tabulatorEntries": []
                       }
                     ]
@@ -269,6 +269,802 @@
                                             "tabulatorEntries": []
                                           }
                                         ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.je.dbi.CompressedOopsDetector.isEnabledInternal()Ljava/lang/Boolean;",
+    "time": 0.089158,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.je.dbi.CompressedOopsDetector.isEnabled()Ljava/lang/Boolean;",
+        "time": 0.089158,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.je.dbi.MemoryBudget.<clinit>()V",
+            "time": 0.089158,
+            "tabulatorEntries": [
+              {
+                "method": "com.sleepycat.je.dbi.EnvironmentImpl.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/dbi/RepConfigProxy;)V",
+                "time": 0.089158,
+                "tabulatorEntries": [
+                  {
+                    "method": "com.sleepycat.je.dbi.EnvironmentImpl.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                    "time": 0.089158,
+                    "tabulatorEntries": [
+                      {
+                        "method": "com.sleepycat.je.dbi.DbEnvPool.getEnvironment(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                        "time": 0.089158,
+                        "tabulatorEntries": [
+                          {
+                            "method": "com.sleepycat.je.Environment.makeEnvironmentImpl(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                            "time": 0.089158,
+                            "tabulatorEntries": [
+                              {
+                                "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                                "time": 0.089158,
+                                "tabulatorEntries": [
+                                  {
+                                    "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+                                    "time": 0.089158,
+                                    "tabulatorEntries": [
+                                      {
+                                        "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
+                                        "time": 0.089158,
+                                        "tabulatorEntries": [
+                                          {
+                                            "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.run()V",
+                                            "time": 0.089158,
+                                            "tabulatorEntries": [
+                                              {
+                                                "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+                                                "time": 0.089158,
+                                                "tabulatorEntries": []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
+    "time": 0.011428,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
+        "time": 0.011428,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+            "time": 0.011428,
+            "tabulatorEntries": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.je.utilint.TracerFormatter.<clinit>()V",
+    "time": 0.00712,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.je.dbi.EnvironmentImpl.initFormatter()Ljava/util/logging/Formatter;",
+        "time": 0.00712,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.je.dbi.EnvironmentImpl.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/dbi/RepConfigProxy;)V",
+            "time": 0.00712,
+            "tabulatorEntries": [
+              {
+                "method": "com.sleepycat.je.dbi.EnvironmentImpl.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                "time": 0.00712,
+                "tabulatorEntries": [
+                  {
+                    "method": "com.sleepycat.je.dbi.DbEnvPool.getEnvironment(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                    "time": 0.00712,
+                    "tabulatorEntries": [
+                      {
+                        "method": "com.sleepycat.je.Environment.makeEnvironmentImpl(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                        "time": 0.00712,
+                        "tabulatorEntries": [
+                          {
+                            "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                            "time": 0.00712,
+                            "tabulatorEntries": [
+                              {
+                                "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+                                "time": 0.00712,
+                                "tabulatorEntries": [
+                                  {
+                                    "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
+                                    "time": 0.00712,
+                                    "tabulatorEntries": [
+                                      {
+                                        "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
+                                        "time": 0.00712,
+                                        "tabulatorEntries": [
+                                          {
+                                            "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+                                            "time": 0.00712,
+                                            "tabulatorEntries": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.je.latch.LatchFactory.createExclusiveLatch(Lcom/sleepycat/je/dbi/EnvironmentImpl;Ljava/lang/String;Z)Lcom/sleepycat/je/latch/Latch;",
+    "time": 0.005754,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.je.dbi.EnvironmentImpl.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/dbi/RepConfigProxy;)V",
+        "time": 0.005754,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.je.dbi.EnvironmentImpl.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+            "time": 0.005754,
+            "tabulatorEntries": [
+              {
+                "method": "com.sleepycat.je.dbi.DbEnvPool.getEnvironment(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                "time": 0.005754,
+                "tabulatorEntries": [
+                  {
+                    "method": "com.sleepycat.je.Environment.makeEnvironmentImpl(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                    "time": 0.005754,
+                    "tabulatorEntries": [
+                      {
+                        "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                        "time": 0.005754,
+                        "tabulatorEntries": [
+                          {
+                            "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+                            "time": 0.005754,
+                            "tabulatorEntries": [
+                              {
+                                "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
+                                "time": 0.005754,
+                                "tabulatorEntries": [
+                                  {
+                                    "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
+                                    "time": 0.005754,
+                                    "tabulatorEntries": [
+                                      {
+                                        "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+                                        "time": 0.005754,
+                                        "tabulatorEntries": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.je.dbi.DatabaseImpl.<init>(Lcom/sleepycat/je/txn/Locker;Ljava/lang/String;Lcom/sleepycat/je/dbi/DatabaseId;Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/DatabaseConfig;)V",
+    "time": 0.005672,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.je.dbi.DbTree.<init>(Lcom/sleepycat/je/dbi/EnvironmentImpl;ZZ)V",
+        "time": 0.005672,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.je.dbi.EnvironmentImpl.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/dbi/RepConfigProxy;)V",
+            "time": 0.005672,
+            "tabulatorEntries": [
+              {
+                "method": "com.sleepycat.je.dbi.EnvironmentImpl.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                "time": 0.005672,
+                "tabulatorEntries": [
+                  {
+                    "method": "com.sleepycat.je.dbi.DbEnvPool.getEnvironment(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                    "time": 0.005672,
+                    "tabulatorEntries": [
+                      {
+                        "method": "com.sleepycat.je.Environment.makeEnvironmentImpl(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                        "time": 0.005672,
+                        "tabulatorEntries": [
+                          {
+                            "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                            "time": 0.005672,
+                            "tabulatorEntries": [
+                              {
+                                "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+                                "time": 0.005672,
+                                "tabulatorEntries": [
+                                  {
+                                    "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
+                                    "time": 0.005672,
+                                    "tabulatorEntries": [
+                                      {
+                                        "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
+                                        "time": 0.005672,
+                                        "tabulatorEntries": [
+                                          {
+                                            "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+                                            "time": 0.005672,
+                                            "tabulatorEntries": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.je.Environment.setupDatabase(Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/Transaction;Lcom/sleepycat/je/Database;Ljava/lang/String;Lcom/sleepycat/je/DatabaseConfig;Z)V",
+    "time": 0.005513,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.je.Environment.openDatabase(Lcom/sleepycat/je/Transaction;Ljava/lang/String;Lcom/sleepycat/je/DatabaseConfig;)Lcom/sleepycat/je/Database;",
+        "time": 0.005513,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
+            "time": 0.005513,
+            "tabulatorEntries": [
+              {
+                "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
+                "time": 0.005513,
+                "tabulatorEntries": [
+                  {
+                    "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+                    "time": 0.005513,
+                    "tabulatorEntries": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
+    "time": 0.00544,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+        "time": 0.00544,
+        "tabulatorEntries": []
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.je.recovery.Checkpointer.flushDirtyNodes(Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/recovery/DirtyINMap;JZLcom/sleepycat/je/recovery/Checkpointer$FlushStats;)V",
+    "time": 0.005438,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.je.recovery.Checkpointer.doCheckpoint(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;Z)V",
+        "time": 0.005438,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.je.dbi.EnvironmentImpl.invokeCheckpoint(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;)V",
+            "time": 0.005438,
+            "tabulatorEntries": [
+              {
+                "method": "com.sleepycat.je.recovery.RecoveryManager.recover(Z)Lcom/sleepycat/je/recovery/RecoveryInfo;",
+                "time": 0.005438,
+                "tabulatorEntries": [
+                  {
+                    "method": "com.sleepycat.je.dbi.EnvironmentImpl.finishInit(Lcom/sleepycat/je/EnvironmentConfig;)Z",
+                    "time": 0.005438,
+                    "tabulatorEntries": [
+                      {
+                        "method": "com.sleepycat.je.dbi.DbEnvPool.getEnvironment(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                        "time": 0.005438,
+                        "tabulatorEntries": [
+                          {
+                            "method": "com.sleepycat.je.Environment.makeEnvironmentImpl(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                            "time": 0.005438,
+                            "tabulatorEntries": [
+                              {
+                                "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                                "time": 0.005438,
+                                "tabulatorEntries": [
+                                  {
+                                    "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+                                    "time": 0.005438,
+                                    "tabulatorEntries": [
+                                      {
+                                        "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
+                                        "time": 0.005438,
+                                        "tabulatorEntries": [
+                                          {
+                                            "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.run()V",
+                                            "time": 0.005438,
+                                            "tabulatorEntries": [
+                                              {
+                                                "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.run([Ljava/lang/String;)V",
+                                                "time": 0.005438,
+                                                "tabulatorEntries": [
+                                                  {
+                                                    "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+                                                    "time": 0.005438,
+                                                    "tabulatorEntries": []
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.je.recovery.DirtyINMap.addIN(Lcom/sleepycat/je/tree/IN;IZZ)V",
+    "time": 0.005422,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.je.recovery.DirtyINMap.selectForCheckpoint(Lcom/sleepycat/je/tree/IN;I)V",
+        "time": 0.005422,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.je.recovery.DirtyINMap.selectDirtyINsForCheckpoint()V",
+            "time": 0.005422,
+            "tabulatorEntries": [
+              {
+                "method": "com.sleepycat.je.recovery.Checkpointer.doCheckpoint(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;Z)V",
+                "time": 0.005422,
+                "tabulatorEntries": [
+                  {
+                    "method": "com.sleepycat.je.dbi.EnvironmentImpl.invokeCheckpoint(Lcom/sleepycat/je/CheckpointConfig;Ljava/lang/String;)V",
+                    "time": 0.005422,
+                    "tabulatorEntries": [
+                      {
+                        "method": "com.sleepycat.je.recovery.RecoveryManager.recover(Z)Lcom/sleepycat/je/recovery/RecoveryInfo;",
+                        "time": 0.005422,
+                        "tabulatorEntries": [
+                          {
+                            "method": "com.sleepycat.je.dbi.EnvironmentImpl.finishInit(Lcom/sleepycat/je/EnvironmentConfig;)Z",
+                            "time": 0.005422,
+                            "tabulatorEntries": [
+                              {
+                                "method": "com.sleepycat.je.dbi.DbEnvPool.getEnvironment(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                                "time": 0.005422,
+                                "tabulatorEntries": [
+                                  {
+                                    "method": "com.sleepycat.je.Environment.makeEnvironmentImpl(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                                    "time": 0.005422,
+                                    "tabulatorEntries": [
+                                      {
+                                        "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                                        "time": 0.005422,
+                                        "tabulatorEntries": [
+                                          {
+                                            "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+                                            "time": 0.005422,
+                                            "tabulatorEntries": [
+                                              {
+                                                "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
+                                                "time": 0.005422,
+                                                "tabulatorEntries": [
+                                                  {
+                                                    "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
+                                                    "time": 0.005422,
+                                                    "tabulatorEntries": [
+                                                      {
+                                                        "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+                                                        "time": 0.005422,
+                                                        "tabulatorEntries": []
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.je.cleaner.FileProcessor.countExpiration(J)Lcom/sleepycat/je/cleaner/ExpirationTracker;",
+    "time": 0.005403,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.je.cleaner.ExpirationProfile.populateCache(Lcom/sleepycat/je/dbi/StartupTracker$Counter;Lcom/sleepycat/je/ProgressListener;)V",
+        "time": 0.005403,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.je.recovery.RecoveryManager.recover(Z)Lcom/sleepycat/je/recovery/RecoveryInfo;",
+            "time": 0.005403,
+            "tabulatorEntries": [
+              {
+                "method": "com.sleepycat.je.dbi.EnvironmentImpl.finishInit(Lcom/sleepycat/je/EnvironmentConfig;)Z",
+                "time": 0.005403,
+                "tabulatorEntries": [
+                  {
+                    "method": "com.sleepycat.je.dbi.DbEnvPool.getEnvironment(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                    "time": 0.005403,
+                    "tabulatorEntries": [
+                      {
+                        "method": "com.sleepycat.je.Environment.makeEnvironmentImpl(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                        "time": 0.005403,
+                        "tabulatorEntries": [
+                          {
+                            "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                            "time": 0.005403,
+                            "tabulatorEntries": [
+                              {
+                                "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+                                "time": 0.005403,
+                                "tabulatorEntries": [
+                                  {
+                                    "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
+                                    "time": 0.005403,
+                                    "tabulatorEntries": [
+                                      {
+                                        "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
+                                        "time": 0.005403,
+                                        "tabulatorEntries": [
+                                          {
+                                            "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+                                            "time": 0.005403,
+                                            "tabulatorEntries": []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.je.log.CleanerFileReader.<init>(Lcom/sleepycat/je/dbi/EnvironmentImpl;IJLjava/lang/Long;Lcom/sleepycat/je/cleaner/FileSummary;Lcom/sleepycat/je/cleaner/INSummary;Lcom/sleepycat/je/cleaner/ExpirationTracker;)V",
+    "time": 0.005396,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.je.cleaner.FileProcessor.processFile(Ljava/lang/Long;Lcom/sleepycat/je/cleaner/FileSummary;Lcom/sleepycat/je/cleaner/INSummary;Lcom/sleepycat/je/cleaner/ExpirationTracker;)Z",
+        "time": 0.005396,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.je.cleaner.FileProcessor.countExpiration(J)Lcom/sleepycat/je/cleaner/ExpirationTracker;",
+            "time": 0.005396,
+            "tabulatorEntries": [
+              {
+                "method": "com.sleepycat.je.cleaner.ExpirationProfile.populateCache(Lcom/sleepycat/je/dbi/StartupTracker$Counter;Lcom/sleepycat/je/ProgressListener;)V",
+                "time": 0.005396,
+                "tabulatorEntries": [
+                  {
+                    "method": "com.sleepycat.je.recovery.RecoveryManager.recover(Z)Lcom/sleepycat/je/recovery/RecoveryInfo;",
+                    "time": 0.005396,
+                    "tabulatorEntries": [
+                      {
+                        "method": "com.sleepycat.je.dbi.EnvironmentImpl.finishInit(Lcom/sleepycat/je/EnvironmentConfig;)Z",
+                        "time": 0.005396,
+                        "tabulatorEntries": [
+                          {
+                            "method": "com.sleepycat.je.dbi.DbEnvPool.getEnvironment(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                            "time": 0.005396,
+                            "tabulatorEntries": [
+                              {
+                                "method": "com.sleepycat.je.Environment.makeEnvironmentImpl(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                                "time": 0.005396,
+                                "tabulatorEntries": [
+                                  {
+                                    "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                                    "time": 0.005396,
+                                    "tabulatorEntries": [
+                                      {
+                                        "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+                                        "time": 0.005396,
+                                        "tabulatorEntries": [
+                                          {
+                                            "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
+                                            "time": 0.005396,
+                                            "tabulatorEntries": [
+                                              {
+                                                "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
+                                                "time": 0.005396,
+                                                "tabulatorEntries": [
+                                                  {
+                                                    "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+                                                    "time": 0.005396,
+                                                    "tabulatorEntries": []
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.je.log.entry.BaseEntry.getNoArgsConstructor(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;",
+    "time": 0.005394,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.je.log.entry.BaseEntry.<init>(Ljava/lang/Class;)V",
+        "time": 0.005394,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.je.log.entry.INLogEntry.<init>(Ljava/lang/Class;)V",
+            "time": 0.005394,
+            "tabulatorEntries": [
+              {
+                "method": "com.sleepycat.je.log.entry.INLogEntry.create(Ljava/lang/Class;)Lcom/sleepycat/je/log/entry/INLogEntry;",
+                "time": 0.005394,
+                "tabulatorEntries": [
+                  {
+                    "method": "com.sleepycat.je.log.LogEntryType.<clinit>()V",
+                    "time": 0.005394,
+                    "tabulatorEntries": [
+                      {
+                        "method": "com.sleepycat.je.dbi.EnvironmentImpl.logMapTreeRoot(J)V",
+                        "time": 0.005394,
+                        "tabulatorEntries": [
+                          {
+                            "method": "com.sleepycat.je.dbi.EnvironmentImpl.logMapTreeRoot()V",
+                            "time": 0.005394,
+                            "tabulatorEntries": [
+                              {
+                                "method": "com.sleepycat.je.recovery.RecoveryManager.recover(Z)Lcom/sleepycat/je/recovery/RecoveryInfo;",
+                                "time": 0.005394,
+                                "tabulatorEntries": [
+                                  {
+                                    "method": "com.sleepycat.je.dbi.EnvironmentImpl.finishInit(Lcom/sleepycat/je/EnvironmentConfig;)Z",
+                                    "time": 0.005394,
+                                    "tabulatorEntries": [
+                                      {
+                                        "method": "com.sleepycat.je.dbi.DbEnvPool.getEnvironment(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                                        "time": 0.005394,
+                                        "tabulatorEntries": [
+                                          {
+                                            "method": "com.sleepycat.je.Environment.makeEnvironmentImpl(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                                            "time": 0.005394,
+                                            "tabulatorEntries": [
+                                              {
+                                                "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                                                "time": 0.005394,
+                                                "tabulatorEntries": [
+                                                  {
+                                                    "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+                                                    "time": 0.005394,
+                                                    "tabulatorEntries": [
+                                                      {
+                                                        "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
+                                                        "time": 0.005394,
+                                                        "tabulatorEntries": [
+                                                          {
+                                                            "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
+                                                            "time": 0.005394,
+                                                            "tabulatorEntries": [
+                                                              {
+                                                                "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+                                                                "time": 0.005394,
+                                                                "tabulatorEntries": []
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.je.config.EnvironmentParams.<clinit>()V",
+    "time": 0.005391,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.envBackgroundReadLimit(Z)Ljava/lang/String;",
+        "time": 0.005391,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exe([Ljava/lang/String;)V",
+            "time": 0.005391,
+            "tabulatorEntries": [
+              {
+                "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+                "time": 0.005391,
+                "tabulatorEntries": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "com.sleepycat.je.util.verify.DataVerifier.<init>(Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+    "time": 0.005378,
+    "tabulatorEntries": [
+      {
+        "method": "com.sleepycat.je.dbi.EnvironmentImpl.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;Lcom/sleepycat/je/dbi/RepConfigProxy;)V",
+        "time": 0.005378,
+        "tabulatorEntries": [
+          {
+            "method": "com.sleepycat.je.dbi.EnvironmentImpl.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+            "time": 0.005378,
+            "tabulatorEntries": [
+              {
+                "method": "com.sleepycat.je.dbi.DbEnvPool.getEnvironment(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;ZLcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                "time": 0.005378,
+                "tabulatorEntries": [
+                  {
+                    "method": "com.sleepycat.je.Environment.makeEnvironmentImpl(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;)Lcom/sleepycat/je/dbi/EnvironmentImpl;",
+                    "time": 0.005378,
+                    "tabulatorEntries": [
+                      {
+                        "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;Lcom/sleepycat/je/dbi/RepConfigProxy;Lcom/sleepycat/je/dbi/EnvironmentImpl;)V",
+                        "time": 0.005378,
+                        "tabulatorEntries": [
+                          {
+                            "method": "com.sleepycat.je.Environment.<init>(Ljava/io/File;Lcom/sleepycat/je/EnvironmentConfig;)V",
+                            "time": 0.005378,
+                            "tabulatorEntries": [
+                              {
+                                "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.open()V",
+                                "time": 0.005378,
+                                "tabulatorEntries": [
+                                  {
+                                    "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.exec()V",
+                                    "time": 0.005378,
+                                    "tabulatorEntries": [
+                                      {
+                                        "method": "com.sleepycat.analysis.MeasureDiskOrderedScan.main([Ljava/lang/String;)V",
+                                        "time": 0.005378,
+                                        "tabulatorEntries": []
                                       }
                                     ]
                                   }
