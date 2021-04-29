@@ -58,10 +58,13 @@ public class HotspotDiffHandler implements HttpHandler {
     String programName = json.getString("programName");
     String config1;
     String config2;
+    boolean control = false;
     if (json.has("config1") && json.has("config2")) {
       config1 = json.getString("config1");
       config2 = json.getString("config2");
     } else {
+      control = true;
+
       JSONArray values = json.getJSONArray("config");
       boolean userConfig = true;
       for (int i = 0; i < values.length(); i++) {
@@ -85,7 +88,7 @@ public class HotspotDiffHandler implements HttpHandler {
     System.out.println(
         "Creating hotspot diff for : " + programName + " - " + config1 + " - " + config2);
     try {
-      VSViewer vsViewer = new VSViewer(programName, config1, config2);
+      VSViewer vsViewer = new VSViewer(programName, config1, config2, control);
       vsViewer.analyze();
     } catch (Exception e) {
       e.printStackTrace();

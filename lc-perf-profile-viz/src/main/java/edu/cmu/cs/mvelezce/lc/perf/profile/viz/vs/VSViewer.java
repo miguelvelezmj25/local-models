@@ -18,12 +18,14 @@ public class VSViewer extends DotViewer {
 
   private final String config1;
   private final String config2;
+  private final boolean control;
 
-  public VSViewer(String programName, String config1, String config2) {
+  public VSViewer(String programName, String config1, String config2, boolean control) {
     super(programName);
 
     this.config1 = config1;
     this.config2 = config2;
+    this.control = control;
   }
 
   @Override
@@ -140,6 +142,9 @@ public class VSViewer extends DotViewer {
 
       result.append("{ \"method\": \"");
       String method = current.getShortMethod();
+      if (this.control) {
+        method = current.getMethod();
+      }
       method = method.substring(0, method.indexOf("("));
       method += "(...)";
       result.append(method);
