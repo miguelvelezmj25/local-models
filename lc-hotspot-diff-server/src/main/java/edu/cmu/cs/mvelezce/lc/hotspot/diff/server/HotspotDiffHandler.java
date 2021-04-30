@@ -65,23 +65,26 @@ public class HotspotDiffHandler implements HttpHandler {
     } else {
       control = true;
 
+      boolean duplicates = false;
+      boolean transactions = false;
       JSONArray values = json.getJSONArray("config");
-      boolean userConfig = true;
       for (int i = 0; i < values.length(); i++) {
         JSONObject entry = (JSONObject) values.get(i);
-        if ((entry.getString("option").equals("DUPLICATES")
-                || entry.getString("option").equals("TRANSACTIONS"))
-            && entry.getString("value").equals("false")) {
-          userConfig = false;
-          break;
+        if (entry.getString("option").equals("DUPLICATES")) {
+          duplicates = entry.getBoolean("value");
+        } else if (entry.getString("option").equals("TRANSACTIONS")) {
+          transactions = entry.getBoolean("value");
         }
       }
-      if (userConfig) {
+
+      config1 = "default";
+      config2 = "default";
+      if (duplicates && transactions) {
         config1 = "user";
         config2 = "user";
-      } else {
-        config1 = "default";
-        config2 = "default";
+      } else if (duplicates) {
+        config1 = "partial";
+        config2 = "partial";
       }
     }
 
