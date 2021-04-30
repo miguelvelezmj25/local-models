@@ -67,6 +67,8 @@ public class HotspotDiffHandler implements HttpHandler {
 
       boolean duplicates = false;
       boolean transactions = false;
+      boolean clean = false;
+      int rounds = 1;
       JSONArray values = json.getJSONArray("config");
       for (int i = 0; i < values.length(); i++) {
         JSONObject entry = (JSONObject) values.get(i);
@@ -74,6 +76,10 @@ public class HotspotDiffHandler implements HttpHandler {
           duplicates = entry.getBoolean("value");
         } else if (entry.getString("option").equals("TRANSACTIONS")) {
           transactions = entry.getBoolean("value");
+        } else if (entry.getString("option").equals("CLEAN")) {
+          clean = entry.getBoolean("value");
+        } else if (entry.getString("option").equals("ROUNDS")) {
+          rounds = entry.getInt("value");
         }
       }
 
@@ -85,6 +91,15 @@ public class HotspotDiffHandler implements HttpHandler {
       } else if (duplicates) {
         config1 = "partial";
         config2 = "partial";
+      } else if (clean && rounds == 2) {
+        config1 = "user";
+        config2 = "user";
+      } else if (clean) {
+        config1 = "clean";
+        config2 = "clean";
+      } else if (rounds == 2) {
+        config1 = "rounds";
+        config2 = "rounds";
       }
     }
 

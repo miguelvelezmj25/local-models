@@ -1,0 +1,46 @@
+[ {
+  "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.populate(I)V",
+  "time" : 6.039973,
+  "tabulatorEntries" : [ {
+    "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.insert(I)V",
+    "time" : 6.039973,
+    "tabulatorEntries" : [ {
+      "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
+      "time" : 3.024397,
+      "tabulatorEntries" : [ {
+        "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
+        "time" : 3.024397,
+        "tabulatorEntries" : [ ]
+      } ]
+    }, {
+      "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.validate(I)V",
+      "time" : 3.015576,
+      "tabulatorEntries" : [ {
+        "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
+        "time" : 3.015576,
+        "tabulatorEntries" : [ {
+          "method" : "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
+          "time" : 3.015576,
+          "tabulatorEntries" : [ ]
+        } ]
+      } ]
+    } ]
+  } ]
+},
+  {
+    "method": "edu.cmu.cs.mvelezce.perf.debug.config.core.Task.allocateSpace(I)V",
+    "time": 2.523892,
+    "tabulatorEntries": [
+      {
+        "method": "edu.cmu.cs.mvelezce.perf.debug.config.core.TaskHandler.work()V",
+        "time": 2.523892,
+        "tabulatorEntries": [
+          {
+            "method": "edu.cmu.cs.mvelezce.perf.debug.config.core.Main.main([Ljava/lang/String;)V",
+            "time": 2.523892,
+            "tabulatorEntries": []
+          }
+        ]
+      }
+    ]
+} ]
